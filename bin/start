@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+has_param() {
+    local term="$1"
+    shift
+    for arg; do
+        if [[ $arg == "$term" ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+. ./scripts/flags/declares.sh
+
+variables["-t"]="tag"
+variables["-n"]="name"
+
+. ./scripts/flags/arguments.sh
+
+tag=${tag:-"cpu"}
+name=${name:-"handshape-recognition"}
+
+echo "Creating $name container with tag $tag"
+echo $PWD
+
+u_flag=""
+runtime=""
+
+if ! has_param '--sudo' "$@"
+then
+    u_flag="-u $(id -u):$(id -g)"
+fi
+
+if [[ $tag == "gpu" ]]
+then
+    runtime="--runtime=nvidia"
+fi
+
+echo "user flag: ${u_flag:-"-"}"
+echo "runtime: ${runtime:-"-"}"
+
+if has_param '--build' "$@"
+then
+    echo "Build docker image"
+    docker build --build-arg DOCKER_ENV=$tag --rm -f dockerfiles/tf-py3-jupyter.Dockerfile -t $name:$tag .
+fi
+
+docker run \
+    -v $PWD:/develop \
+    -v $PWD/results:/tf/results \
+    -v $PWD/data:/tf/data \
+    -v $PWD/src:/tf/notebooks \
+    --rm $u_flag -p 6006:6006 -p 8888:8888 $runtime $name:$tag
