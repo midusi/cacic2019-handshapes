@@ -7,11 +7,11 @@ Experiments for the article "Handshape Recognition for Small Dataset"
 - [Datasets](#datasets)
 - [Models](#models)
   - [Prototypical Networks for Few-shot Learning](#prototypical-networks-for-few-shot-learning)
-    - [Training](#training-proto)
-    - [Evaluating](#evaluating-proto)
+    - [Training]
+    - [Evaluating]
   - [Dense Net](#dense-net)
-    - [Training](#training-dense)
-    - [Evaluating](#evaluating-dense)
+    - [Training]
+    - [Evaluating]
 - [Results](#results)
 
 
@@ -55,7 +55,7 @@ Tensorflow v2 implementation of NIPS 2017 Paper _Prototypical Networks for Few-s
 
 Implementation based on [protonet](https://github.com/ulises-jeremias/prototypical-networks-tf).
 
-#### Training {#training-proto}
+#### Training
 
 Run the following command to run training on `<config>` with default parameters.
 
@@ -65,7 +65,7 @@ $ ./bin/protonet --mode train --config <config>
 
 `<config> = lsa16 | rwth | ciarp`
 
-#### Evaluating {#evaluating-proto}
+#### Evaluating
 
 To run evaluation on a specific dataset
 
@@ -82,7 +82,7 @@ We implemented Densenet using squeeze and excitation layers in tensorflow 2 for 
 
 For more information about densenet please refer to the original paper (https://arxiv.org/abs/1608.06993).
 
-#### Training {#training-dense}
+#### Training
 
 To train Densenet on all the datasets and search for the best configuration execute `/bin/densenet_train_all.py`. This will give you the results of each configuration in the folder `/results` and the summary of the training of each configuration on `/results/summary.csv`.
 If you want to train densenet with your own configurations you can use `/src/dense_net/train.py`. You can customize your training modifying the parameters of train.py. Use it in your python code in the following way
@@ -98,7 +98,7 @@ train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range = 0
 
 To use your own datasets you can add them to `/src/dense_net/datasets/loader.py` and call `train.py` using the name you chose.
 
-#### Evaluating {#evaluating-dense}
+#### Evaluating
 
 For evaluation you can use `/src/dense_net/eval.py`
 
