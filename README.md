@@ -7,11 +7,11 @@ Experiments for the article "Handshape Recognition for Small Dataset"
 - [Datasets](#datasets)
 - [Models](#models)
   - [Prototypical Networks for Few-shot Learning](#prototypical-networks-for-few-shot-learning)
-    - [Training]
-    - [Evaluating]
+    - Training
+    - Evaluating
   - [Dense Net](#dense-net)
-    - [Training]
-    - [Evaluating]
+    - Training
+    - Evaluating
 - [Results](#results)
 
 
