@@ -1,24 +1,27 @@
 import argparse
 import configparser
 
-from eval_setup import eval
+from eval_setup import eval as evaluation
 
 parser = argparse.ArgumentParser(description="Run evaluation")
 
 
-def preprocess_config(c):
+def preprocess_config(conf):
+    """Preprocess config"""
+
     conf_dict = {}
     int_params = ["data.test_way", "data.test_support", "data.test_query",
                   "data.query", "data.support", "data.way", "data.episodes",
                   "data.gpu", "data.cuda", "train.patience", "model.nb_layers", "model.nb_filters"]
-    float_params = ["data.rotation_range", "data.width_shift_range", "data.height_shift_range", "data.train_size", "data.test_size"]
-    for param in c:
+    float_params = ["data.rotation_range", "data.width_shift_range", "data.height_shift_range",
+                    "data.train_size", "data.test_size"]
+    for param in conf:
         if param in int_params:
-            conf_dict[param] = int(c[param])
+            conf_dict[param] = int(conf[param])
         elif param in float_params:
-            conf_dict[param] = float(c[param])
+            conf_dict[param] = float(conf[param])
         else:
-            conf_dict[param] = c[param]
+            conf_dict[param] = conf[param]
     return conf_dict
 
 
@@ -53,5 +56,5 @@ args = vars(parser.parse_args())
 config = configparser.ConfigParser()
 config.read(args["config"])
 filtered_args = dict((k, v) for (k, v) in args.items() if not v is None)
-config = preprocess_config({ **config["EVAL"], **filtered_args })
-eval(config)
+config = preprocess_config({**config["EVAL"], **filtered_args})
+evaluation(config)
