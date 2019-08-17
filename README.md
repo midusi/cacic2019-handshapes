@@ -7,14 +7,12 @@ Experiments for the article "Handshape Recognition for Small Dataset"
 - [Datasets](#datasets)
 - [Models](#models)
   - [Prototypical Networks for Few-shot Learning](#prototypical-networks-for-few-shot-learning)
-    - Training
-    - Evaluating
+    - [Training](#training)
+    - [Evaluating](#evaluating)
   - [Dense Net](#dense-net)
-    - Training
-    - Evaluating
+    - [Training](#training-1)
+    - [Evaluating](#evaluating-1)
 - [Results](#results)
-
-
 
 ## Quickstart
 
@@ -53,7 +51,7 @@ In our paper we used the datasets RWTH-Phoenix, LSA16 and CIARP. We used the lib
 
 Tensorflow v2 implementation of NIPS 2017 Paper _Prototypical Networks for Few-shot Learning_.
 
-Implementation based on [protonet](https://github.com/ulises-jeremias/prototypical-networks-tf).
+Implementation using [protonet](https://github.com/ulises-jeremias/prototypical-networks-tf).
 
 #### Training
 
@@ -78,9 +76,9 @@ $ ./bin/protonet --mode eval --config <config>
 
 ### Dense Net
 
-We implemented Densenet using squeeze and excitation layers in tensorflow 2 for our experiments. To see its implementation go to (https://github.com/okason97/DenseNet-Tensorflow2).
+We implemented Densenet using squeeze and excitation layers in tensorflow 2 for our experiments. To see its implementation go to [densenet](https://github.com/okason97/DenseNet-Tensorflow2).
 
-For more information about densenet please refer to the original paper (https://arxiv.org/abs/1608.06993).
+For more information about densenet please refer to the [original paper](https://arxiv.org/abs/1608.06993).
 
 #### Training
 
@@ -89,10 +87,10 @@ If you want to train densenet with your own configurations you can use `/src/den
 
 ```python
 from src.dense_net.train import train_densenet
-train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range = 0.10,
-               height_shift_range = 0.10, horizontal_flip = True, growth_rate = 128,
-               nb_layers = [6,12], reduction = 0.0, lr = 0.001, epochs = 400,
-               max_patience = 25, batch_size= 16, checkpoints = False, weight_classes = False,
+train_densenet(dataset_name="rwth", rotation_range=10, width_shift_range=0.10,
+               height_shift_range=0.10, horizontal_flip=True, growth_rate=128,
+               nb_layers=[6,12], reduction=0.0, lr=0.001, epochs=400,
+               max_patience=25, batch_size=16, checkpoints=False, weight_classes=False,
                train_size=None, test_size=None)
 ```
 
@@ -104,8 +102,8 @@ For evaluation you can use `/src/dense_net/eval.py`
 
 ```python
 from src.dense_net.eval import eval_densenet
-eval_densenet(dataset_name = "rwth", growth_rate = 128, nb_layers = [6,12],
-              reduction = 0.0, batch_size = 16, weight_classes = False, model_path = "")
+eval_densenet(dataset_name="rwth", growth_rate=128, nb_layers=[6,12],
+              reduction=0.0, batch_size=16, weight_classes=False, model_path="")
 ```
 
 ## Results
