@@ -1,26 +1,28 @@
+"""Load ciarp dataset"""
+
 import os
 import numpy as np
 import handshape_datasets as hd
 
-def load_lsa16(dataset_name):
+def load_ciarp(dataset_name):
     """
-    Load lsa16 dataset.
+    Load ciarp dataset.
 
     Returns (x, y): as dataset x and y.
 
     """
-    DATASET_PATH = '/develop/data/{}/data'.format(dataset_name)
+    dataset_path = '/develop/data/{}/data'.format(dataset_name)
 
-    if not os.path.exists(DATASET_PATH):
-        os.makedirs(DATASET_PATH)
-    data = hd.load(dataset_name, DATASET_PATH)
+    if not os.path.exists(dataset_path):
+        os.makedirs(dataset_path)
+    data = hd.load(dataset_name, dataset_path)
 
     # TODO: define best way to do this
 
     x_train, y_train = data['train_Kinect_WithoutGabor']
     x_test, y_test = data['test_Kinect_WithoutGabor']
 
-    X = np.concatenate((x_train, x_test), axis=0)
+    x = np.concatenate((x_train, x_test), axis=0)
     y = np.concatenate((y_train, y_test), axis=0)
-    
-    return X, y
+
+    return x, y

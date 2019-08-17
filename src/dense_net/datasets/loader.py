@@ -1,3 +1,5 @@
+"""Dataset loader"""
+
 from .ciarp import load_ciarp
 from .lsa16 import load_lsa16
 from .rwth import load_rwth
