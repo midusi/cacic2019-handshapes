@@ -1,5 +1,5 @@
-"""Dense net experiments train"""
 #!/usr/bin/env python
+"""Dense net experiments train"""
 
 from src.dense_net.train import train_densenet as train
 
