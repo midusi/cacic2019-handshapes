@@ -120,13 +120,13 @@ def load_rwth(data_dir, config, splits):
         if split in ['val', 'test']:
             y = y_test
             x = x_test
-            dg = train_datagen
-            dg_args = train_datagen_args
+            dg = test_datagen
+            dg_args = test_datagen_args
         else:
             y = y_train
             x = x_train
-            dg = test_datagen
-            dg_args = test_datagen_args
+            dg = train_datagen
+            dg_args = train_datagen_args
 
         amountPerClass = amountPerTest if split in ['val', 'test'] else amountPerTrain
 
