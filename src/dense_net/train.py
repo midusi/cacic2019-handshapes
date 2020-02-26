@@ -1,21 +1,13 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-import tensorflow as tf
-
-import os, sys, getopt
+import os
+import sys
 import json
-from datetime import datetime
-
+import getopt
 import numpy as np
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from sklearn.model_selection import train_test_split
-from sklearn.utils.class_weight import compute_class_weight
-
-from .datasets import load
+import tensorflow as tf
+from datetime import datetime
 from densenet import densenet_model
-
-print(tf.__version__)
+from src.datasets import load
+from src.utils.weighted_loss import weightedLoss
 
 def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range = 0.10,
           height_shift_range = 0.10, horizontal_flip = True, growth_rate = 128,
@@ -38,7 +30,8 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
     identifier = "{}-growth-{}-densenet-{}".format(
         '-'.join([str(i) for i in nb_layers]),
         growth_rate, 
-        dataset_name) + date
+        dataset_name
+    ) + date
 
     summary_file = general_directory + 'summary.csv'
 
@@ -48,93 +41,27 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
         file.write("datetime, model, config, min_loss, min_loss_accuracy\n")
         file.close()
 
-    print("hyperparameters set")
-    #print(tf.test.is_gpu_available())
+    print("Hyperparameters set")
 
-    x, y = load(dataset_name)
-
-    image_shape = np.shape(x)[1:]
-
-    x_train, x_test, y_train, y_test = train_test_split(x,
-                                                        y,
-                                                        train_size=train_size,
-                                                        test_size=test_size,
-                                                        random_state=42,
-                                                        stratify=y)
-    x_train, x_test = x_train / 255.0, x_test / 255.0
-
-    n_classes = len(np.unique(y))
-
-    if weight_classes:
-        class_weights = compute_class_weight('balanced', 
-                                            np.unique(y),
-                                            y)
-    
-    print("data loaded")
-
-    datagen = ImageDataGenerator(
-        featurewise_center=True,
-        featurewise_std_normalization=True,
+    train, val, _, nb_classes, image_shape, class_weights = load(
+        dataset_name, batch_size=batch_size, datagen_flow=True,
+        train_size=train_size, test_size=test_size,
+        weight_classes=weight_classes,
         rotation_range=rotation_range,
         width_shift_range=width_shift_range,
         height_shift_range=height_shift_range,
         horizontal_flip=horizontal_flip,
-        fill_mode='constant',
-        cval=0)
-    datagen.fit(x_train)
+    )
 
-    test_datagen = ImageDataGenerator(
-        featurewise_center=True,
-        featurewise_std_normalization=True,
-        fill_mode='constant',
-        cval=0)
-    test_datagen.fit(x_train)
+    (train_gen, train_len, _) = train
+    (val_gen, val_len, _) = val
 
-    model = densenet_model(classes=n_classes, shape=image_shape, growth_rate=growth_rate, nb_layers=nb_layers, reduction=reduction)
+    model = densenet_model(classes=nb_classes, shape=image_shape, growth_rate=growth_rate, nb_layers=nb_layers, reduction=reduction)
 
-    print("model created")
+    print("DenseNet Model created")
 
     if weight_classes:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
-
-        def weightedLoss(originalLossFunc, weightsList):
-
-            @tf.function
-            def lossFunc(true, pred):
-
-                axis = -1 #if channels last 
-                #axis=  1 #if channels first
-
-                #argmax returns the index of the element with the greatest value
-                #done in the class axis, it returns the class index    
-                classSelectors = tf.argmax(true, axis=axis, output_type=tf.int32) 
-
-                #considering weights are ordered by class, for each class
-                #true(1) if the class index is equal to the weight index   
-                classSelectors = [tf.equal(i, classSelectors) for i in range(len(weightsList))]
-
-                #casting boolean to float for calculations  
-                #each tensor in the list contains 1 where ground true class is equal to its index 
-                #if you sum all these, you will get a tensor full of ones. 
-                classSelectors = [tf.cast(x, tf.float32) for x in classSelectors]
-
-                #for each of the selections above, multiply their respective weight
-                weights = [sel * w for sel,w in zip(classSelectors, weightsList)] 
-
-                #sums all the selections
-                #result is a tensor with the respective weight for each element in predictions
-                weightMultiplier = weights[0]
-                for i in range(1, len(weights)):
-                    weightMultiplier = weightMultiplier + weights[i]
-
-
-                #make sure your originalLossFunc only collapses the class axis
-                #you need the other axes intact to multiply the weights tensor
-                loss = originalLossFunc(true,pred) 
-                loss = loss * weightMultiplier
-
-                return loss
-            return lossFunc
         loss_object = weightedLoss(loss_object, class_weights)
     else:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
@@ -170,11 +97,7 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
     train_summary_writer = tf.summary.create_file_writer(save_directory + 'summaries/train/' + identifier)
     test_summary_writer = tf.summary.create_file_writer(save_directory +  'summaries/test/' + identifier)
 
-    # create data generators
-    train_gen =  datagen.flow(x_train, y_train, batch_size=batch_size)
-    test_gen = test_datagen.flow(x_test, y_test, batch_size=batch_size, shuffle=False)
-
-    print("starting training")
+    print("Starting training")
 
     min_loss = 100
     min_loss_acc = 0
@@ -185,16 +108,16 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
         for images, labels in train_gen:
             train_step(images, labels)
             batches += 1
-            if batches >= len(x_train) / 32:
+            if batches >= train_len / batch_size:
                 # we need to break the loop by hand because
                 # the generator loops indefinitely
                 break
 
         batches = 0
-        for test_images, test_labels in test_gen:
+        for test_images, test_labels in val_gen:
             test_step(test_images, test_labels)
             batches += 1
-            if batches >= len(x_test) / 32:
+            if batches >= val_len / batch_size:
                 # we need to break the loop by hand because
                 # the generator loops indefinitely
                 break
@@ -245,6 +168,7 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
 
     if not os.path.exists(save_directory + results_directory):
         os.makedirs(save_directory + results_directory)
+
     file = open(save_directory + results_directory + 'results-'+ identifier + '.csv','w') 
     file.write(results) 
     file.close()
