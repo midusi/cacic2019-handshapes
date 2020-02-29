@@ -35,10 +35,10 @@ def load(dataset_name, datagen_flow=False,
     image_shape = np.shape(x)[1:]
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=train_size, test_size=test_size,
-                                                        random_state=42, stratify=y)
-    x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, 
+                                                        random_state=42)
+    x_train, x_val, y_train, y_val = train_test_split(x_train, y_train,
                                                       train_size=train_size, test_size=test_size,
-                                                      random_state=42, stratify=y)
+                                                      random_state=42)
     x_train, x_test, x_val = x_train / 255.0, x_test / 255.0, x_val / 255.0
 
     nb_classes = len(np.unique(y))

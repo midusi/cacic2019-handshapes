@@ -9,22 +9,22 @@ from densenet import densenet_model
 from src.datasets import load
 from src.utils.weighted_loss import weightedLoss
 
-def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range = 0.10,
-          height_shift_range = 0.10, horizontal_flip = True, growth_rate = 128,
-          nb_layers = [6,12], reduction = 0.0, lr = 0.001, epochs = 400,
-          max_patience = 25, batch_size= 16, checkpoints = False, weight_classes = False,
+def train_densenet(dataset_name="rwth", rotation_range=10, width_shift_range=0.10,
+          height_shift_range=0.10, horizontal_flip=True, growth_rate=128,
+          nb_layers=[6,12], reduction=0.0, lr=0.001, epochs=400,
+          max_patience=25, batch_size=16, checkpoints=False, weight_classes=False,
           train_size=None, test_size=None):
 
     # log
     log_freq = 1
     save_freq = 40
-    models_directory = 'models/'
+    models_directory = 'checkpoints/'
     results_directory = 'results/'
     config_directory = 'config/'
 
     general_directory = "./results/"
     save_directory = general_directory + "{}/dense-net/".format(dataset_name)
-    results = 'epoch,loss,accuracy,test_loss,test_accuracy\n'
+    results = 'epoch,loss,accuracy,val_loss,val_accuracy\n'
 
     date = datetime.now().strftime("%Y_%m_%d-%H:%M:%S")
     identifier = "{}-growth-{}-densenet-{}".format(
@@ -71,8 +71,8 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
     train_loss = tf.keras.metrics.Mean(name='train_loss')
     train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
 
-    test_loss = tf.keras.metrics.Mean(name='test_loss')
-    test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
+    val_loss = tf.keras.metrics.Mean(name='val_loss')
+    val_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='val_accuracy')
 
     @tf.function
     def train_step(images, labels):
@@ -86,16 +86,15 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
         train_accuracy(labels, predictions)
 
     @tf.function
-    def test_step(images, labels):
+    def val_step(images, labels):
         predictions = model(tf.cast(images, tf.float32), training=False)
         t_loss = loss_object(labels, predictions)
-
-        test_loss(t_loss)
-        test_accuracy(labels, predictions)
+        val_loss(t_loss)
+        val_accuracy(labels, predictions)
 
     # create summary writers
     train_summary_writer = tf.summary.create_file_writer(save_directory + 'summaries/train/' + identifier)
-    test_summary_writer = tf.summary.create_file_writer(save_directory +  'summaries/test/' + identifier)
+    val_summary_writer = tf.summary.create_file_writer(save_directory +  'summaries/test/' + identifier)
 
     print("Starting training")
 
@@ -114,8 +113,8 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
                 break
 
         batches = 0
-        for test_images, test_labels in val_gen:
-            test_step(test_images, test_labels)
+        for val_images, val_labels in val_gen:
+            val_step(val_images, val_labels)
             batches += 1
             if batches >= val_len / batch_size:
                 # we need to break the loop by hand because
@@ -123,24 +122,26 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
                 break
 
         if (epoch % log_freq == 0):
-            results += '{},{},{},{},{}\n'.format(epoch,
-                                train_loss.result(),
-                                train_accuracy.result()*100,
-                                test_loss.result(),
-                                test_accuracy.result()*100)
-            print ('Epoch: {}, Train Loss: {}, Train Acc:{}, Test Loss: {}, Test Acc: {}'.format(epoch,
-                                train_loss.result(),
-                                train_accuracy.result()*100,
-                                test_loss.result(),
-                                test_accuracy.result()*100))
+            results += '{},{},{},{},{}\n'.format(
+                epoch,
+                train_loss.result(),
+                train_accuracy.result()*100,
+                val_loss.result(),
+                val_accuracy.result()*100)
+            print ('Epoch: {}, Train Loss: {}, Train Acc:{}, Test Loss: {}, Test Acc: {}'.format(
+                epoch,
+                train_loss.result(),
+                train_accuracy.result()*100,
+                val_loss.result(),
+                val_accuracy.result()*100))
 
-            if (test_loss.result() < min_loss):    
+            if (val_loss.result() < min_loss):    
                 if not os.path.exists(save_directory + models_directory):
                     os.makedirs(save_directory + models_directory)
                 # serialize weights to HDF5
-                model.save_weights(save_directory + models_directory + "best{}.h5".format(identifier))
-                min_loss = test_loss.result()
-                min_loss_acc = test_accuracy.result()
+                model.save_weights(save_directory + models_directory + "checkpoint.{}.h5".format(identifier))
+                min_loss = val_loss.result()
+                min_loss_acc = val_accuracy.result()
                 patience = 0
             else:
                 patience += 1
@@ -151,11 +152,11 @@ def train_densenet(dataset_name = "rwth", rotation_range = 10, width_shift_range
                 train_loss.reset_states()           
                 train_accuracy.reset_states()           
 
-            with test_summary_writer.as_default():
-                tf.summary.scalar('loss', test_loss.result(), step=epoch)
-                tf.summary.scalar('accuracy', test_accuracy.result(), step=epoch)
-                test_loss.reset_states()           
-                test_accuracy.reset_states()   
+            with val_summary_writer.as_default():
+                tf.summary.scalar('loss', val_loss.result(), step=epoch)
+                tf.summary.scalar('accuracy', val_accuracy.result(), step=epoch)
+                val_loss.reset_states()           
+                val_accuracy.reset_states()   
                 
         if checkpoints and epoch % save_freq == 0:
             if not os.path.exists(save_directory + models_directory):

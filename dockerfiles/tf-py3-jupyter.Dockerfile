@@ -23,13 +23,13 @@ RUN apt-get update -q && \
 RUN pip install --upgrade pip && \
     pip3 install -e /develop && \
     pip3 install densenet && \
-    git clone --branch=develop https://github.com/midusi/handshape_datasets.git /tf/lib/handshape_datasets && \
+    git clone https://github.com/midusi/handshape_datasets.git /tf/lib/handshape_datasets && \
     pip3 install -e /tf/lib/handshape_datasets && \
     git clone --branch=develop https://github.com/ulises-jeremias/prototypical-networks-tf.git /tf/lib/prototypical-networks-tf && \
     pip3 install -e /tf/lib/prototypical-networks-tf && \
     pip3 install -U tensorflow && \
     pip3 install tensorflow_datasets && \
-    pip3 install seaborn eli5 shap pdpbox sklearn opencv-python IPython && \
+    pip3 install seaborn eli5 shap pydot pdpbox sklearn opencv-python IPython && \
     if [[ "$DOCKER_ENV" = "gpu" ]]; then echo -e "\e[1;31mINSTALLING GPU SUPPORT\e[0;33m"; pip3 install -U tf-nightly-gpu-2.0-preview tb-nightly; fi
 
 # Default dir for handshape datasets lib - use /data instead

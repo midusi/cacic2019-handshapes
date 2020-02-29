@@ -2,10 +2,10 @@ import os
 import glob
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
 import handshape_datasets as hd
+from pathlib import Path
 from src.utils.model_selection import train_test_split_balanced
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 class DataLoader(object):
     def __init__(self, data, n_classes, n_way, n_support, n_query, x_dim):
@@ -44,9 +44,9 @@ def load_ciarp(data_dir, config, splits):
     """
 
     DATASET_NAME = "ciarp"
-    DATASET_PATH = "/develop/data/ciarp/data"
+    DATASET_PATH = "/tf/data/ciarp/data"
 
-    data = hd.load(DATASET_NAME, DATASET_PATH)
+    data = hd.load(dataset_name, Path(dataset_path))
 
     x_train, y_train = data['train_Kinect_WithoutGabor']
     x_test, y_test = data['test_Kinect_WithoutGabor']

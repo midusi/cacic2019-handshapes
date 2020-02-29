@@ -27,21 +27,18 @@ echo $PWD
 u_flag=""
 runtime=""
 
-if ! has_param '--sudo' "$@"
-then
+if ! has_param '--sudo' "$@"; then
     u_flag="-u $(id -u):$(id -g)"
 fi
 
-if [[ $tag == "gpu" ]]
-then
+if [[ $tag == "gpu" ]]; then
     runtime="--runtime=nvidia"
 fi
 
 echo "user flag: ${u_flag:-"-"}"
 echo "runtime: ${runtime:-"-"}"
 
-if has_param '--build' "$@"
-then
+if has_param '--build' "$@"; then
     echo "Build docker image"
     docker build --build-arg DOCKER_ENV=$tag --rm -f dockerfiles/tf-py3-jupyter.Dockerfile -t $name:$tag .
 fi

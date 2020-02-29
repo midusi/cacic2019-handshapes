@@ -1,5 +1,54 @@
 #!/usr/bin/env bash
 
-./bin/protonet --mode train --all
-./bin/densenet_train.py
+has_param() {
+    local term="$1"
+    shift
+    for arg; do
+        if [[ $arg == "$term" ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
 
+. ./scripts/flags/declares.sh
+
+variables["--model"]="model"
+variables["--mode"]="mode"
+variables["--config"]="config"
+
+. ./scripts/flags/arguments.sh
+
+model=${model:-""}
+mode=${mode:-"train"}
+config=${config:-"default"}
+
+echo "Running $mode mode with $config configuration file"
+
+all=""
+
+if has_param '--all' "$@"; then
+    all="_all"
+fi
+
+version="v2"
+if has_param '-v1' "$@"; then
+    version="v1"
+fi
+
+if [ "$model" = "" ]; then
+    echo "The entered model \"$model\" does not exists"
+    exit 1
+fi
+
+if [ ! -f src/${model}/config/config_$config.conf ]; then
+    echo "The entered config file \"src/${model}/config/config_$config.conf\" does not exists"
+    exit 1
+fi
+
+if [ ! -f src/${model}/config/config_$config.conf ]; then
+    echo "The entered execution mode: \"$mode\" does not exists for $model model"
+    exit 1
+fi
+
+python src/${model}/scripts/$mode/run_$mode$all.py --config src/${model}/config/config_$config.conf

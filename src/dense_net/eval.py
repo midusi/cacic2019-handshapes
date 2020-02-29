@@ -9,9 +9,9 @@ from densenet import densenet_model
 from src.datasets import load
 from src.utils.weighted_loss import weightedLoss
 
-def eval_densenet(dataset_name = "rwth", growth_rate = 128, nb_layers = [6,12],
-                  reduction = 0.0, max_patience = 25, batch_size = 16, checkpoints = False,
-                  weight_classes = False, model_path = "", test_size=0.25, train_size=0.75):
+def eval_densenet(dataset_name="lsa16", growth_rate=128, nb_layers=[6,12],
+                  reduction=0.0, max_patience=25, batch_size=16, checkpoints=False,
+                  weight_classes=False, model_path="", test_size=0.25, train_size=0.75):
 
     np.random.seed(2019)
     tf.random.set_seed(2019)
