@@ -1,12 +1,14 @@
 import argparse
 import configparser
 
-from train_setup import train
+from eval_setup import eval
+
+parser = argparse.ArgumentParser(description="Run evaluation")
 
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ["data.batch_size", "data.episodes", "data.gpu", "data.cuda", "train.epochs", "train.patience"]
-    float_params = ["train.lr", "data.train_size", "data.test_size", "data.rotation_range",
+    int_params = ["data.batch_size", "data.episodes", "data.gpu", "data.cuda"]
+    float_params = ["data.train_size", "data.test_size", "data.rotation_range",
                     "data.width_shift_range", "data.height_shift_range"]
     for param in c:
         if param in int_params:
@@ -18,8 +20,8 @@ def preprocess_config(c):
     return conf_dict
 
 
-parser = argparse.ArgumentParser(description='Run training')
-parser.add_argument("--config", type=str, default="./src/tfjs_model/config/config_heart.conf",
+parser = argparse.ArgumentParser(description="Run evaluation")
+parser.add_argument("--config", type=str, default="./src/transfer_learning/config/default/config_default.conf",
                     help="Path to the config file.")
 
 parser.add_argument("--data.dataset", type=str, default=None)
@@ -39,13 +41,12 @@ parser.add_argument("--data.test_size", type=float, default=None)
 
 parser.add_argument("--data.weight_classes", type=bool, default=False)
 
-parser.add_argument("--train.patience", type=int, default=None)
-parser.add_argument("--train.lr", type=float, default=None)
+parser.add_argument("--model.path", type=str, default=None)
 
-# Run training
+# Run test
 args = vars(parser.parse_args())
 config = configparser.ConfigParser()
-config.read(args['config'])
+config.read(args["config"])
 filtered_args = dict((k, v) for (k, v) in args.items() if not v is None)
-config = preprocess_config({ **config['TRAIN'], **filtered_args })
-train(config)
+config = preprocess_config({ **config["EVAL"], **filtered_args })
+eval(config)

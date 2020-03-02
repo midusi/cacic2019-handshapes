@@ -26,14 +26,16 @@ config=${config:-"default"}
 echo "Running $mode mode with $config configuration file"
 
 all=""
+env=""
 
 if has_param '--all' "$@"; then
     all="_all"
 fi
 
-version="v2"
-if has_param '-v1' "$@"; then
-    version="v1"
+if has_param '--tl' "$@"; then
+    env="transfer_learning"
+elif has_param '--ssl' "$@"; then
+    env="ssl"
 fi
 
 if [ "$model" = "" ]; then
@@ -41,14 +43,20 @@ if [ "$model" = "" ]; then
     exit 1
 fi
 
-if [ ! -f src/${model}/config/config_$config.conf ]; then
-    echo "The entered config file \"src/${model}/config/config_$config.conf\" does not exists"
+config_path="src/$env/config/$model/config_$config.conf"
+
+if [ ! -f $config_path ]; then
+    echo "The entered config file \"$config_path\" does not exists"
     exit 1
 fi
 
-if [ ! -f src/${model}/config/config_$config.conf ]; then
+if [ "$env" = "" ]; then
+    env=$model
+fi
+
+if [ ! -d src/$env/scripts/$mode ]; then
     echo "The entered execution mode: \"$mode\" does not exists for $model model"
     exit 1
 fi
 
-python src/${model}/scripts/$mode/run_$mode$all.py --config src/${model}/config/config_$config.conf
+python src/$env/scripts/$mode/run_$mode$all.py --config $config_path

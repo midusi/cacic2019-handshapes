@@ -10,7 +10,7 @@ import numpy as np
 import tensorflow as tf
 from datetime import datetime
 from src.datasets import load
-from src.vgg.model import create_model
+from src.transfer_learning.model import create_model
 from src.utils.weighted_loss import weightedLoss
 
 def train(config):
@@ -130,10 +130,17 @@ def train(config):
 
     time_start = time.time()
     # Compiles a model, prints the model summary, and saves the model diagram into a png file.
-    model = create_model(nb_classes=nb_classes, image_shape=image_shape, optimizer=optimizer, loss_object=loss_object)
+    model = create_model(
+        model_name=config['model.name'],
+        weights=config['model.weights'],
+        nb_classes=nb_classes,
+        image_shape=image_shape,
+        optimizer=optimizer,
+        loss_object=loss_object,
+    )
     
+    tf.keras.utils.plot_model(model, "{}/model.png".format(results_dir), show_shapes=True)
     model.summary()
-    tf.keras.utils.plot_model(model, "vgg_model.png", show_shapes=True)
 
     # Trains the model.
     history = model.fit(
