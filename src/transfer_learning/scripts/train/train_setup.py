@@ -157,7 +157,7 @@ def train(config):
     loss, acc = model.evaluate(val_gen)
     print("Evaluation finished!")
 
-    summary = "{}, {}, df_model, {}, {}, {}\n".format(now_as_str, config['data.dataset'], config_path, loss, acc)
+    summary = "{}, {}, {}, {}, {}, {}\n".format(now_as_str, config['data.dataset'], config['model.name'], config_path, loss, acc)
     print(summary)
 
     file = open(summary_path, 'a+') 

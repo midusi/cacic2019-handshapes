@@ -46,7 +46,7 @@ def load_rwth(data_dir, config, splits):
     DATASET_NAME = "rwth"
     DATASET_PATH = "/tf/data/rwth/data"
 
-    data = hd.load(dataset_name, Path(dataset_path))
+    data = hd.load(config['data.dataset'], Path(DATASET_PATH))
 
     features = data[0]
     classes = data[1]['y']

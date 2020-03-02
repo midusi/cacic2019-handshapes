@@ -138,7 +138,7 @@ def train(config):
         train_acc(acc)
 
     @tf.function
-    def val_step(loss_func, support, query):
+    def test_step(loss_func, support, query):
         loss, acc = loss_func(support, query)
         val_loss(loss)
         val_acc(acc)
@@ -227,7 +227,7 @@ def train(config):
         loss_func = state['loss_func']
         for i_episode in range(config['data.episodes']):
             support, query = val_loader.get_next_episode()
-            val_step(loss_func, support, query)
+            test_step(loss_func, support, query)
     train_engine.hooks['on_end_episode'] = on_end_episode
 
     time_start = time.time()

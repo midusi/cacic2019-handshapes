@@ -33,9 +33,9 @@ if has_param '--all' "$@"; then
 fi
 
 if has_param '--tl' "$@"; then
-    env="transfer_learning"
+    env="transfer_learning/"
 elif has_param '--ssl' "$@"; then
-    env="ssl"
+    env="ssl/"
 fi
 
 if [ "$model" = "" ]; then
@@ -43,20 +43,22 @@ if [ "$model" = "" ]; then
     exit 1
 fi
 
-config_path="src/$env/config/$model/config_$config.conf"
+if [ "$env" = "" ]; then
+    env="${model}/"
+    config_path="src/$model/config/config_$config.conf"
+else
+    config_path="src/${env}/config/$model/config_$config.conf"
+fi
+
 
 if [ ! -f $config_path ]; then
     echo "The entered config file \"$config_path\" does not exists"
     exit 1
 fi
 
-if [ "$env" = "" ]; then
-    env=$model
-fi
-
-if [ ! -d src/$env/scripts/$mode ]; then
+if [ ! -d src/${env}scripts/$mode ]; then
     echo "The entered execution mode: \"$mode\" does not exists for $model model"
     exit 1
 fi
 
-python src/$env/scripts/$mode/run_$mode$all.py --config $config_path
+python src/${env}scripts/$mode/run_$mode$all.py --config $config_path

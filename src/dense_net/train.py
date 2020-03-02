@@ -86,7 +86,7 @@ def train_densenet(dataset_name="rwth", rotation_range=10, width_shift_range=0.1
         train_accuracy(labels, predictions)
 
     @tf.function
-    def val_step(images, labels):
+    def test_step(images, labels):
         predictions = model(tf.cast(images, tf.float32), training=False)
         t_loss = loss_object(labels, predictions)
         val_loss(t_loss)
@@ -114,7 +114,7 @@ def train_densenet(dataset_name="rwth", rotation_range=10, width_shift_range=0.1
 
         batches = 0
         for val_images, val_labels in val_gen:
-            val_step(val_images, val_labels)
+            test_step(val_images, val_labels)
             batches += 1
             if batches >= val_len / batch_size:
                 # we need to break the loop by hand because

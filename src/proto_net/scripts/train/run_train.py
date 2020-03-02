@@ -3,14 +3,13 @@ import configparser
 
 from train_setup import train
 
-
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ['data.train_way', 'data.test_way', 'data.train_support',
+    int_params = ['data.batch_size', 'data.train_way', 'data.test_way', 'data.train_support',
                   'data.test_support', 'data.train_query', 'data.test_query',
                   'data.episodes', 'data.gpu', 'data.cuda', 'model.z_dim', 
                   'train.epochs', 'train.patience', 'model.nb_layers', 'model.nb_filters']
-    float_params = ['train.lr', 'data.rotation_range',
+    float_params = ['data.train_size', 'data.test_size', 'train.lr', 'data.rotation_range',
                     'data.width_shift_range', 'data.height_shift_range']
     for param in c:
         if param in int_params:
@@ -42,6 +41,10 @@ parser.add_argument("--data.rotation_range", type=float, default=None)
 parser.add_argument("--data.width_shift_range", type=float, default=None)
 parser.add_argument("--data.height_shift_range", type=float, default=None)
 parser.add_argument("--data.horizontal_flip", type=bool, default=None)
+
+parser.add_argument("--data.batch_size", type=int, default=None)
+parser.add_argument("--data.train_size", type=float, default=None)
+parser.add_argument("--data.test_size", type=float, default=None)
 
 parser.add_argument("--train.patience", type=int, default=None)
 parser.add_argument("--train.lr", type=float, default=None)

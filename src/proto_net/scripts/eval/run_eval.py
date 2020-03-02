@@ -10,10 +10,10 @@ def preprocess_config(conf):
     """Preprocess config"""
 
     conf_dict = {}
-    int_params = ["data.test_way", "data.test_support", "data.test_query",
+    int_params = ["data.batch_size", "data.test_way", "data.test_support", "data.test_query",
                   "data.query", "data.support", "data.way", "data.episodes",
                   "data.gpu", "data.cuda", "train.patience", "model.nb_layers", "model.nb_filters"]
-    float_params = ["data.rotation_range", "data.width_shift_range", "data.height_shift_range",
+    float_params = ["data.train_size", "data.test_size", "data.rotation_range", "data.width_shift_range", "data.height_shift_range",
                     "data.train_size", "data.test_size"]
     for param in conf:
         if param in int_params:
@@ -42,6 +42,8 @@ parser.add_argument("--data.rotation_range", type=float, default=None)
 parser.add_argument("--data.width_shift_range", type=float, default=None)
 parser.add_argument("--data.height_shift_range", type=float, default=None)
 parser.add_argument("--data.horizontal_flip", type=bool, default=None)
+
+parser.add_argument("--data.batch_size", type=int, default=None)
 parser.add_argument("--data.train_size", type=float, default=None)
 parser.add_argument("--data.test_size", type=float, default=None)
 

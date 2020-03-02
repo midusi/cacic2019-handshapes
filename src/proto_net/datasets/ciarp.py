@@ -46,7 +46,7 @@ def load_ciarp(data_dir, config, splits):
     DATASET_NAME = "ciarp"
     DATASET_PATH = "/tf/data/ciarp/data"
 
-    data = hd.load(dataset_name, Path(dataset_path))
+    data = hd.load(config['data.dataset'], Path(DATASET_PATH))
 
     x_train, y_train = data['train_Kinect_WithoutGabor']
     x_test, y_test = data['test_Kinect_WithoutGabor']
