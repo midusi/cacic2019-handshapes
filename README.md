@@ -5,13 +5,10 @@ Experiments for the article "Handshape Recognition for Small Dataset"
 
 - [Quickstart](#quickstart)
 - [Datasets](#datasets)
-- [Models](#models)
+- [Models and Techniques](#models-&-techniques)
   - [Prototypical Networks for Few-shot Learning](#prototypical-networks-for-few-shot-learning)
-    - [Training](#training)
-    - [Evaluating](#evaluating)
   - [Dense Net](#dense-net)
-    - [Training](#training-1)
-    - [Evaluating](#evaluating-1)
+  - [Transfer Learning](#transfer-learning)
 - [Results](#results)
 
 ## Quickstart
@@ -29,7 +26,7 @@ $ ./bin/start [-n <string>] [-t <tag-name>] [--sudo] [--build]
 For example:
 
 ```sh
-$ ./bin/start -n myContainer -t gpu --sudo --build
+$ ./bin/start -n myContainer -t gpu --build
 ```
 
 Once the docker container is running it will execute the contents of the /bin/execute file.
@@ -45,7 +42,7 @@ to access the running container's shell.
 
 In our paper we used the datasets RWTH-Phoenix, LSA16 and CIARP. We used the library (https://github.com/midusi/handshape_datasets) to fetch the datasets.
 
-## Models
+## Models & Techniques
 
 ### Prototypical Networks for Few-shot Learning
 
@@ -53,12 +50,14 @@ Tensorflow v2 implementation of NIPS 2017 Paper _Prototypical Networks for Few-s
 
 Implementation using [protonet](https://github.com/ulises-jeremias/prototypical-networks-tf).
 
+<details><summary>Training and Eval</summary>
+
 #### Training
 
 Run the following command to run training on `<config>` with default parameters.
 
 ```sh
-$ ./bin/protonet --mode train --config <config>
+$ ./bin/run --model proto_net --mode train --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
@@ -68,17 +67,19 @@ $ ./bin/protonet --mode train --config <config>
 To run evaluation on a specific dataset
 
 ```sh
-$ ./bin/protonet --mode eval --config <config>
+$ ./bin/run --model proto_net --mode eval --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
-
+</details>
 
 ### Dense Net
 
 We implemented Densenet using squeeze and excitation layers in tensorflow 2 for our experiments. To see its implementation go to [densenet](https://github.com/okason97/DenseNet-Tensorflow2).
 
 For more information about densenet please refer to the [original paper](https://arxiv.org/abs/1608.06993).
+
+<details><summary>Training and Eval</summary>
 
 #### Training
 
@@ -105,6 +106,37 @@ from src.dense_net.eval import eval_densenet
 eval_densenet(dataset_name="rwth", growth_rate=128, nb_layers=[6,12],
               reduction=0.0, batch_size=16, weight_classes=False, model_path="")
 ```
+
+</details>
+
+### Transfer Learning
+
+<details><summary>Training and Eval</summary>
+
+#### Training
+
+Run the following command to run training on `<config>` with default parameters.
+
+```sh
+$ ./bin/run --model <model> --mode train --config <config>
+```
+
+`<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201`
+
+`<config> = lsa16 | rwth | ciarp`
+
+#### Evaluating
+
+To run evaluation on a specific dataset
+
+```sh
+$ ./bin/run --model <model> --mode eval --config <config>
+```
+
+`<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201`
+
+`<config> = lsa16 | rwth | ciarp`
+</details>
 
 ## Results
 
