@@ -163,8 +163,8 @@ summaries are listed by date.
 where
 
 ```
-<dataset> = lsa16 | rwth | . . .
-<model> = dense-net | proto-net
+<dataset> = lsa16 | rwth | ciarp
+<model> = dense-net | proto-net | vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201
 ```
 
 To run TensorBoard, use the following command:
