@@ -32,6 +32,6 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
     ])
 
     # compile the model (should be done *after* setting layers to non-trainable)
-    model.compile(optimizer=optimizer, loss=loss_object, metrics=["accuracy"])
+    model.compile(optimizer=optimizer, loss=loss_object, metrics=["accuracy", "sparse_categorical_accuracy"])
 
     return model
