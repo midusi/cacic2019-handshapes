@@ -121,9 +121,10 @@ Run the following command to run training on `<config>` with default parameters.
 $ ./bin/run --model <model> --mode train --config <config>
 ```
 
-`<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201`
-
-`<config> = lsa16 | rwth | ciarp`
+```
+<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201
+<config> = lsa16 | rwth | ciarp
+```
 
 #### Evaluating
 
@@ -133,9 +134,10 @@ To run evaluation on a specific dataset
 $ ./bin/run --model <model> --mode eval --config <config>
 ```
 
-`<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201`
-
-`<config> = lsa16 | rwth | ciarp`
+```
+<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201
+<config> = lsa16 | rwth | ciarp
+```
 </details>
 
 ## Results
