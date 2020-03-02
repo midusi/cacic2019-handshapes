@@ -17,7 +17,9 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
         print('Error: Wrong model name. VGG16 will be used as default.')
         model_name = 'VGG16'
     
-    base_model =  models[model_name](include_top=False, weights=None, input_shape=image_shape)
+    weights = None if weights == '' else weights
+
+    base_model =  models[model_name](include_top=False, weights=weights, input_shape=image_shape)
     base_model.trainable = bm_trainable
     global_average_layer = GlobalAveragePooling2D()
     hidden_dense_layer = Dense(1024, activation='relu')
