@@ -11,6 +11,7 @@ import tensorflow as tf
 import src.engines.train as train_engine
 from datetime import datetime
 from src.datasets import load
+from src.engines.steps import steps
 from src.transfer_learning.model import create_model
 from src.utils.weighted_loss import weightedLoss
 
@@ -117,23 +118,7 @@ def train(config):
     val_loss = tf.keras.metrics.Mean(name='val_loss')
     val_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='val_accuracy')
 
-    @tf.function
-    def train_step(images, labels):
-        with tf.GradientTape() as tape:
-            predictions = model(tf.cast(images, tf.float32), training=True)
-            loss = loss_object(labels, predictions)
-        gradients = tape.gradient(loss, model.trainable_variables)
-        optimizer.apply_gradients(zip(gradients, model.trainable_variables))
-
-        train_loss(loss)
-        train_accuracy(labels, predictions)
-
-    @tf.function
-    def test_step(images, labels):
-        predictions = model(tf.cast(images, tf.float32), training=False)
-        t_loss = loss_object(labels, predictions)
-        val_loss(t_loss)
-        val_accuracy(labels, predictions)
+    train_step, test_step = steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, val_accuracy)
 
     # create summary writers
     train_summary_writer = tf.summary.create_file_writer(train_summary_file_path)

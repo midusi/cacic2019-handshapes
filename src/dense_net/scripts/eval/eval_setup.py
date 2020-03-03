@@ -8,6 +8,7 @@ import tensorflow_datasets as tfds
 from densenet import densenet_model
 from src.datasets import load
 from sklearn.metrics import classification_report, accuracy_score
+from src.engines.steps import steps
 from src.utils.weighted_loss import weightedLoss
 
 def eval(config):
@@ -47,13 +48,7 @@ def eval(config):
     test_loss = tf.keras.metrics.Mean(name='test_loss')
     test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
 
-    @tf.function
-    def test_step(images, labels):
-        predictions = model(tf.cast(images, tf.float32), training=False)
-        t_loss = loss_object(labels, predictions)
-
-        test_loss(t_loss)
-        test_accuracy(labels, predictions)
+    _, test_step = steps(model, loss_object, optimizer, test_loss=test_loss, test_accuracy=test_accuracy)
 
     print("Starting evaluation")
 
