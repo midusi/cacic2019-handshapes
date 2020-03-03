@@ -61,4 +61,6 @@ if [ ! -d src/${env}scripts/$mode ]; then
     exit 1
 fi
 
+echo "Using $config_path file for the execution of src/${env}scripts/$mode/run_$mode$all.py script"
+
 python src/${env}scripts/$mode/run_$mode$all.py --config $config_path
