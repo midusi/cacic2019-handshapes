@@ -8,6 +8,7 @@ import time
 import json
 import numpy as np
 import tensorflow as tf
+import src.engines.train as train_engine
 from datetime import datetime
 from src.datasets import load
 from src.transfer_learning.model import create_model
@@ -25,7 +26,8 @@ def train(config):
     checkpoint_path = f"{config['model.save_path']}"
     config_path = f"{config['output.config_path'].format(now_as_str)}"
     csv_output_path = f"{config['output.train_path'].format(now_as_str)}"
-    tensorboard_summary_dir = f"{config['summary.save_path']}"
+    train_summary_file_path = f"{config['summary.save_path'].format('train', config['data.dataset'], config['model.name'], config['model.type'], now_as_str)}"
+    test_summary_file_path = f"{config['summary.save_path'].format('test', config['data.dataset'], config['model.name'], config['model.type'], now_as_str)}"
     summary_path = f"results/summary.csv"
     
     # Output dirs
@@ -78,8 +80,8 @@ def train(config):
         datagen_flow=True,
     )
 
-    (train_gen, _, _) = train
-    (val_gen, _, _) = val
+    (train_gen, train_len, _) = train
+    (val_gen, val_len, _) = val
 
     # Determine device
     if config['data.cuda']:
@@ -87,38 +89,6 @@ def train(config):
         device_name = f'GPU:{cuda_num}'
     else:
         device_name = 'CPU:0'
-
-    tensorboard_callback = tf.keras.callbacks.TensorBoard(
-        log_dir=tensorboard_summary_dir,
-        histogram_freq=0,
-        write_graph=True,
-        write_grads=False,
-        write_images=False,
-        embeddings_freq=0,
-        embeddings_layer_names=None,
-        embeddings_metadata=None,
-        embeddings_data=None,
-        update_freq='epoch'
-    )
-
-    logs_callback = tf.keras.callbacks.CSVLogger(
-        csv_output_path,
-        separator=',',
-        append=False
-    )
-
-    model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
-        checkpoint_path,
-        monitor='val_loss',
-        verbose=1,
-        save_best_only=True,
-        save_weights_only=False
-    )
-    
-    early_stop = tf.keras.callbacks.EarlyStopping(
-        monitor='val_loss',
-        patience=config['train.patience']
-    )
 
     if config['data.weight_classes']:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
@@ -138,24 +108,53 @@ def train(config):
         optimizer=optimizer,
         loss_object=loss_object,
     )
+    model.summary()
     
     tf.keras.utils.plot_model(model, "{}/model.png".format(results_dir), show_shapes=True)
-    model.summary()
 
-    # Trains the model.
-    history = model.fit(
-        train_gen,
-        validation_data=val_gen,
-        epochs=config['train.epochs'],
-        use_multiprocessing=True,
-        callbacks=[tensorboard_callback, logs_callback, model_checkpoint_callback, early_stop]
+    train_loss = tf.keras.metrics.Mean(name='train_loss')
+    train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
+    val_loss = tf.keras.metrics.Mean(name='val_loss')
+    val_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='val_accuracy')
+
+    @tf.function
+    def train_step(images, labels):
+        with tf.GradientTape() as tape:
+            predictions = model(tf.cast(images, tf.float32), training=True)
+            loss = loss_object(labels, predictions)
+        gradients = tape.gradient(loss, model.trainable_variables)
+        optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+
+        train_loss(loss)
+        train_accuracy(labels, predictions)
+
+    @tf.function
+    def test_step(images, labels):
+        predictions = model(tf.cast(images, tf.float32), training=False)
+        t_loss = loss_object(labels, predictions)
+        val_loss(t_loss)
+        val_accuracy(labels, predictions)
+
+    # create summary writers
+    train_summary_writer = tf.summary.create_file_writer(train_summary_file_path)
+    val_summary_writer = tf.summary.create_file_writer(test_summary_file_path)
+
+    print("Starting training")
+
+    loss, acc = train_engine.train(
+        model=model, batch_size=config['data.batch_size'],
+        epochs=config['train.epochs'], max_patience=config['train.patience'],
+        train_gen=train_gen, train_len=train_len, val_gen=val_gen, val_len=val_len,
+        train_loss=train_loss, train_accuracy=train_accuracy,
+        val_loss=val_loss, val_accuracy=val_accuracy,
+        train_step=train_step, test_step=test_step,
+        checkpoint_path=checkpoint_path,
+        train_summary_writer=train_summary_writer,
+        val_summary_writer=val_summary_writer,
+        csv_output_file=csv_output_path,
     )
 
     time_end = time.time()
-
-    # Evaluates on test data.
-    loss, acc = model.evaluate(val_gen)
-    print("Evaluation finished!")
 
     summary = "{}, {}, {}, {}, {}, {}\n".format(now_as_str, config['data.dataset'], config['model.name'], config_path, loss, acc)
     print(summary)
@@ -163,11 +162,6 @@ def train(config):
     file = open(summary_path, 'a+') 
     file.write(summary)
     file.close()
-
-    # Runs prediction on test data.
-    predictions = model.predict(val_gen)
-    print("Predictions on test data:")
-    print(predictions)
 
     model_path = tf.train.latest_checkpoint(checkpoint_dir, latest_filename=checkpoint_path)
 

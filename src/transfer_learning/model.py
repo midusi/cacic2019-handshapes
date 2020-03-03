@@ -1,14 +1,14 @@
 import tensorflow as tf
 from tensorflow.keras import Model
 from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D
-from tensorflow.keras.applications import InceptionV3, VGG16, VGG19, DenseNet121, DenseNet169, DenseNet201
+from tensorflow.keras.applications import InceptionV3, VGG16, VGG19, DenseNet121, DenseNet201, DenseNet201
 
 models = {
     'VGG16': VGG16,
     'VGG19': VGG19,
     'InceptionV3': InceptionV3,
     'DenseNet121': DenseNet121,
-    'DenseNet169': DenseNet169,
+    'DenseNet201': DenseNet201,
     'DenseNet201': DenseNet201,
 }
 
@@ -32,6 +32,6 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
     ])
 
     # compile the model (should be done *after* setting layers to non-trainable)
-    model.compile(optimizer=optimizer, loss=loss_object, metrics=["accuracy", "sparse_categorical_accuracy"])
+    model.compile(optimizer=optimizer, loss=loss_object)
 
     return model
