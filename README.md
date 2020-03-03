@@ -83,30 +83,23 @@ For more information about densenet please refer to the [original paper](https:/
 
 #### Training
 
-To train Densenet on all the datasets and search for the best configuration execute `/bin/densenet_train_all.py`. This will give you the results of each configuration in the folder `/results` and the summary of the training of each configuration on `/results/summary.csv`.
-If you want to train densenet with your own configurations you can use `/src/dense_net/train.py`. You can customize your training modifying the parameters of train.py. Use it in your python code in the following way
+Run the following command to run training on `<config>` with default parameters.
 
-```python
-from src.dense_net.train import train_densenet
-train_densenet(dataset_name="rwth", rotation_range=10, width_shift_range=0.10,
-               height_shift_range=0.10, horizontal_flip=True, growth_rate=128,
-               nb_layers=[6,12], reduction=0.0, lr=0.001, epochs=400,
-               max_patience=25, batch_size=16, checkpoints=False, weight_classes=False,
-               train_size=None, test_size=None)
+```sh
+$ ./bin/run --model dense_net --mode train --config <config>
 ```
 
-To use your own datasets you can add them to `/src/dense_net/datasets/loader.py` and call `train.py` using the name you chose.
+`<config> = lsa16 | rwth | ciarp`
 
 #### Evaluating
 
-For evaluation you can use `/src/dense_net/eval.py`
+To run evaluation on a specific dataset
 
-```python
-from src.dense_net.eval import eval_densenet
-eval_densenet(dataset_name="rwth", growth_rate=128, nb_layers=[6,12],
-              reduction=0.0, batch_size=16, weight_classes=False, model_path="")
+```sh
+$ ./bin/run --model dense_net --mode eval --config <config>
 ```
 
+`<config> = lsa16 | rwth | ciarp`
 </details>
 
 ### Transfer Learning
@@ -118,20 +111,19 @@ eval_densenet(dataset_name="rwth", growth_rate=128, nb_layers=[6,12],
 Run the following command to run training on `<config>` with default parameters.
 
 ```sh
-$ ./bin/run --model <model> --mode train --config <config>
+$ ./bin/run --tl --model <model> --mode train --config <config>
 ```
 
 ```
 <model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201
 <config> = lsa16 | rwth | ciarp
 ```
-
 #### Evaluating
 
 To run evaluation on a specific dataset
 
 ```sh
-$ ./bin/run --model <model> --mode eval --config <config>
+$ ./bin/run --tl --model <model> --mode eval --config <config>
 ```
 
 ```
