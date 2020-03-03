@@ -5,13 +5,15 @@ Logic for evaluation procedure of saved model.
 import tensorflow as tf
 import tensorflowjs as tfjs
 import tensorflow_datasets as tfds
-from sklearn.metrics import classification_report, accuracy_score
-
+from densenet import densenet_model
 from src.datasets import load
+from sklearn.metrics import classification_report, accuracy_score
+from src.utils.weighted_loss import weightedLoss
+from src.transfer_learning.model import create_model
 
 def eval(config):
     # Files path
-    model_file = f"{config['model.path']}"
+    model_file_path = f"{config['model.path']}"
     data_dir = f"data/"
 
     _, _, test, nb_classes, image_shape, class_weights = load(
@@ -23,7 +25,7 @@ def eval(config):
         datagen_flow=True,
     )
 
-    (test_gen, _, _) = test
+    (test_gen, test_len, _) = test
 
     # Determine device
     if config['data.cuda']:
@@ -32,7 +34,44 @@ def eval(config):
     else:
         device_name = 'CPU:0'
 
-    model = tf.keras.models.load_model(model_file)
+    if config['data.weight_classes']:
+        loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
+        loss_object = weightedLoss(loss_object, class_weights)
+    else:
+        loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
+
+    optimizer = tf.keras.optimizers.Adam()
+    model = create_model(
+        model_name=config['model.name'],
+        weights=config['model.weights'],
+        nb_classes=nb_classes,
+        image_shape=image_shape,
+        optimizer=optimizer,
+        loss_object=loss_object,
+    )
+    model.load_weights(model_file_path)
     model.summary()
 
-    predictions = model.predict(test_gen)
+    test_loss = tf.keras.metrics.Mean(name='test_loss')
+    test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
+
+    @tf.function
+    def test_step(images, labels):
+        predictions = model(tf.cast(images, tf.float32), training=False)
+        t_loss = loss_object(labels, predictions)
+
+        test_loss(t_loss)
+        test_accuracy(labels, predictions)
+
+    print("Starting evaluation")
+
+    batches = 0
+    for test_images, test_labels in test_gen:
+        test_step(test_images, test_labels)
+        batches += 1
+        if batches >= test_len / config['data.batch_size']:
+            # we need to break the loop by hand because
+            # the generator loops indefinitely
+            break
+
+    print ('Test Loss: {} Test Acc: {}'.format(test_loss.result(), test_accuracy.result()*100))
