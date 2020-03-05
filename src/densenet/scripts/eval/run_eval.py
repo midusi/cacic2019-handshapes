@@ -25,7 +25,7 @@ def preprocess_config(c):
 
 
 parser = argparse.ArgumentParser(description="Run evaluation")
-parser.add_argument("--config", type=str, default="./src/dense_net/config/config_dense_net.conf",
+parser.add_argument("--config", type=str, default="./src/densenet/config/config_densenet.conf",
                     help="Path to the config file.")
 
 parser.add_argument("--data.dataset", type=str, default=None)

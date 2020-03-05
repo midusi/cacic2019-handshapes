@@ -85,7 +85,7 @@ def preprocess_config(c):
 
 for dataset in ['ciarp', 'lsa16', 'rwth']:
     config_from_file = configparser.ConfigParser()
-    config_from_file.read("./src/proto_net/config/config_{}.conf".format(dataset))
+    config_from_file.read("./src/protonet/config/config_{}.conf".format(dataset))
 
     ds_config = configs[dataset]
 

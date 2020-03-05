@@ -15,7 +15,7 @@ import tensorflow as tf
 
 from protonet.models import Prototypical
 from protonet import TrainEngine
-from src.proto_net.datasets import load
+from src.protonet.datasets import load
 
 def train(config):
     np.random.seed(2019)

@@ -157,4 +157,3 @@ def train(config):
     sec = elapsed-min*60
 
     print(f"Training took: {h:.2f}h {min:.2f}m {sec:.2f}s!")
-

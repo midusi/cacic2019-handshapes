@@ -57,7 +57,7 @@ Implementation using [protonet](https://github.com/ulises-jeremias/prototypical-
 Run the following command to run training on `<config>` with default parameters.
 
 ```sh
-$ ./bin/run --model proto_net --mode train --config <config>
+$ ./bin/run --model protonet --mode train --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
@@ -67,7 +67,7 @@ $ ./bin/run --model proto_net --mode train --config <config>
 To run evaluation on a specific dataset
 
 ```sh
-$ ./bin/run --model proto_net --mode eval --config <config>
+$ ./bin/run --model protonet --mode eval --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
@@ -86,7 +86,7 @@ For more information about densenet please refer to the [original paper](https:/
 Run the following command to run training on `<config>` with default parameters.
 
 ```sh
-$ ./bin/run --model dense_net --mode train --config <config>
+$ ./bin/run --model densenet --mode train --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
@@ -96,7 +96,7 @@ $ ./bin/run --model dense_net --mode train --config <config>
 To run evaluation on a specific dataset
 
 ```sh
-$ ./bin/run --model dense_net --mode eval --config <config>
+$ ./bin/run --model densenet --mode eval --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
@@ -115,7 +115,7 @@ $ ./bin/run --tl --model <model> --mode train --config <config>
 ```
 
 ```
-<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201
+<model> = vgg16 | vgg19 | inception_v3 | densenet121 | densenet169 | densenet201
 <config> = lsa16 | rwth | ciarp
 ```
 #### Evaluating
@@ -127,7 +127,7 @@ $ ./bin/run --tl --model <model> --mode eval --config <config>
 ```
 
 ```
-<model> = vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201
+<model> = vgg16 | vgg19 | inception_v3 | densenet121 | densenet169 | densenet201
 <config> = lsa16 | rwth | ciarp
 ```
 </details>
@@ -156,7 +156,7 @@ where
 
 ```
 <dataset> = lsa16 | rwth | ciarp
-<model> = dense-net | proto-net | vgg16 | vgg19 | inception_v3 | dense_net121 | dense_net169 | dense_net201
+<model> = dense-net | proto-net | vgg16 | vgg19 | inception_v3 | densenet121 | densenet169 | densenet201
 ```
 
 To run TensorBoard, use the following command:
