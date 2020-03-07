@@ -6,16 +6,13 @@ accomplished during training (metrics monitor, model saving etc.)
 import os
 import time
 import json
-from datetime import datetime
 import numpy as np
 import tensorflow as tf
-
-# tf.config.gpu.set_per_process_memory_growth(True)
-# tf.debugging.set_log_device_placement(True)
-
+from datetime import datetime
 from protonet.models import Prototypical
 from protonet import TrainEngine
 from src.protonet.datasets import load
+from src.protonet.scripts import base_model
 
 def train(config):
     np.random.seed(2019)
@@ -105,7 +102,8 @@ def train(config):
     n_support = config['data.train_support']
     n_query = config['data.train_query']
     w, h, c = list(map(int, config['model.x_dim'].split(',')))
-    model = Prototypical(n_support, n_query, w, h, c, nb_layers=config['model.nb_layers'], nb_filters=config['model.nb_filters'])
+    base_model = create_base_model(config['model.base'], image_shape=(w, h, c)) 
+    model = Prototypical(n_support, n_query, w, h, c, base_model=base_model, nb_layers=config['model.nb_layers'], nb_filters=config['model.nb_filters'])
     optimizer = tf.keras.optimizers.Adam(config['train.lr'])
 
     # Metrics to gather

@@ -24,6 +24,8 @@ def preprocess_config(c):
 parser = argparse.ArgumentParser(description='Run training')
 parser.add_argument("--config", type=str, default="./src/protonet/config/config_lsa16.conf",
                     help="Path to the config file.")
+                    
+parser.add_argument("--model.base", type=str, default="")
 
 parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)
