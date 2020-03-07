@@ -67,7 +67,7 @@ configs = {
 
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ['data.train_way', 'data.test_way', 'data.train_support',
+    int_params = ["data.n_train_per_class", "data.n_test_per_class", 'data.train_way', 'data.test_way', 'data.train_support',
                   'data.test_support', 'data.train_query', 'data.test_query',
                   'data.episodes', 'data.gpu', 'data.cuda', 'model.z_dim', 
                   'train.epochs', 'train.patience']

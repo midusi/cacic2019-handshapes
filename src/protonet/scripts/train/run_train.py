@@ -5,7 +5,7 @@ from train_setup import train
 
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ['data.batch_size', 'data.train_way', 'data.test_way', 'data.train_support',
+    int_params = ["data.n_train_per_class", "data.n_test_per_class", 'data.batch_size', 'data.train_way', 'data.test_way', 'data.train_support',
                   'data.test_support', 'data.train_query', 'data.test_query',
                   'data.episodes', 'data.gpu', 'data.cuda', 'model.z_dim', 
                   'train.epochs', 'train.patience', 'model.nb_layers', 'model.nb_filters']
@@ -47,6 +47,8 @@ parser.add_argument("--data.horizontal_flip", type=bool, default=None)
 parser.add_argument("--data.batch_size", type=int, default=None)
 parser.add_argument("--data.train_size", type=float, default=None)
 parser.add_argument("--data.test_size", type=float, default=None)
+parser.add_argument("--data.n_train_per_class", type=int, default=None)
+parser.add_argument("--data.n_test_per_class", type=int, default=None)
 
 parser.add_argument("--train.patience", type=int, default=None)
 parser.add_argument("--train.lr", type=float, default=None)

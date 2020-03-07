@@ -73,6 +73,8 @@ def train(config):
         batch_size=config['data.batch_size'],
         train_size=config['data.train_size'],
         test_size=config['data.test_size'],
+        n_train_per_class=config['data.n_train_per_class'],
+        n_test_per_class=config['data.n_test_per_class'],
         weight_classes=config['data.weight_classes'],
         rotation_range=config['data.rotation_range'],
         width_shift_range=config['data.width_shift_range'],

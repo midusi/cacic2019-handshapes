@@ -2,6 +2,7 @@
 
 import numpy as np
 from sklearn.model_selection import train_test_split
+from src.utils.model_selection import train_test_split_balanced
 from sklearn.utils.class_weight import compute_class_weight
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -13,7 +14,8 @@ def load(dataset_name, datagen_flow=False,
          weight_classes=False, batch_size=32,
          rotation_range = 10, width_shift_range = 0.10,
          height_shift_range = 0.10, horizontal_flip = True,
-         train_size=None, test_size=None):
+         train_size=None, test_size=None,
+         n_train_per_class=None, n_test_per_class=None):
     """
     Load specific dataset.
 
@@ -34,10 +36,10 @@ def load(dataset_name, datagen_flow=False,
 
     image_shape = np.shape(x)[1:]
 
-    x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=train_size, test_size=test_size, random_state=42)
-    # FIXME this should be improved
-    # x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=train_size, test_size=test_size, random_state=42)
-    x_val, y_val = x_test, y_test
+    split = train_test_split if n_train_per_class == None else train_test_split_balanced
+
+    x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
+    x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.8, test_size=0.2)
     nb_classes = len(np.unique(y))
 
     class_weights = None
