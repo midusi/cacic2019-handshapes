@@ -15,11 +15,13 @@ has_param() {
 
 variables["-t"]="tag"
 variables["-n"]="name"
+variables["-c"]="command"
 
 . ./scripts/flags/arguments.sh
 
 tag=${tag:-"cpu"}
 name=${name:-"handshape-recognition"}
+command=${command:-""}
 
 echo "Creating $name container with tag $tag"
 echo $PWD
@@ -48,4 +50,4 @@ docker run \
     -v $PWD/results:/tf/results \
     -v $PWD/data:/tf/data \
     -v $PWD/src:/tf/src \
-    --rm $u_flag -p 6006:6006 -p 8888:8888 $runtime $name:$tag
+    --rm $u_flag -p 6006:6006 -p 8888:8888 $runtime $name:$tag $command
