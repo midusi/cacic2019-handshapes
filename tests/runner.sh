@@ -26,6 +26,6 @@ for test in "${tests[@]}"; do
     printf "Running test \t%s\n" $test
     $test && echo "Test finished successfuly" || {
         echo "Test $test failed"
-        break
+        exit 1
     }
 done
