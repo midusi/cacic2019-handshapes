@@ -39,7 +39,7 @@ if has_param '-d' "$@"; then
 fi
 
 if [[ $tag == "gpu" ]]; then
-    runtime="--gpus all"
+    runtime="--runtime=nvidia"
 fi
 
 echo "user flag: ${u_flag:-"-"}"
