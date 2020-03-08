@@ -2,14 +2,47 @@
 
 ROOT=$(dirname $0)
 
+has_param() {
+    local term="$1"
+    shift
+    for arg; do
+        if [[ $arg == "$term" ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+. $ROOT/../../scripts/flags/declares.sh
+
+variables["--model"]="model"
+variables["-o"]="output"
+
+. $ROOT/../../scripts/flags/arguments.sh
+
+model=${model:-""}
+output=${output:-"/tmp/tests"}
+
+model_flag=""
+if [ "$model" != "" ]; then
+    model_flag="--model.base $model"
+fi
+
 . $ROOT/../cases.sh
 
-for dataset in ${!tests_cases[*]}; do
-    flags="${tests_cases[$dataset]}"
+echo "" >> "$output"
+echo "ProtoNet tests" >> "$output"
 
-    echo "Executing test case for $dataset dataset with flags $flags"
+for config_path in ${test_cases[*]}; do
+    if [ ! -f "$config_path" ] || [ "${config_path: -5}" != ".conf" ]; then
+        continue
+    fi
 
-    python $ROOT/../../src/protonet/scripts/train/run_train.py \
-        --config $ROOT/../../src/protonet/config/config_$dataset.conf \
-        $flags
+    echo "Executing test case with config at $config_path"
+    echo "Executing test case with config at $config_path" >> "$output"
+
+    python $ROOT/../../src/protonet/scripts/train/run_train.py $model_flag --config $config_path
+    for i in {1..10}; do
+        python $ROOT/../../src/protonet/scripts/eval/run_eval.py $model_flag --config $config_path >> "$output"
+    done
 done

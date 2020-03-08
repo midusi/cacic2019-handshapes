@@ -13,14 +13,29 @@ has_param() {
     return 1
 }
 
+. $ROOT/../../scripts/flags/declares.sh
+
+variables["-o"]="output"
+
+. $ROOT/../../scripts/flags/arguments.sh
+
+output=${output:-"/tmp/tests"}
+
 . $ROOT/../cases.sh
 
-for dataset in ${!tests_cases[*]}; do
-    flags="${tests_cases[$dataset]}"
+echo "" >> "$output"
+echo "DenseNet tests" >> "$output"
 
-    echo "Executing test case for $dataset dataset with flags $flags"
+for config_path in ${test_cases[*]}; do
+    if [ ! -f "$config_path" ] || [ "${config_path: -5}" != ".conf" ]; then
+        continue
+    fi
 
-    python $ROOT/../../src/transfer_learning/scripts/train/run_train.py \
-        --config $ROOT/../../src/transfer_learning/config/densenet/config_$dataset.conf \
-        $flags
+    echo "Executing test case with config at $config_path"
+    echo "Executing test case with config at $config_path" >> "$output"
+
+    python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path
+    for i in {1..10}; do
+        python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path >> "$output"
+    done
 done

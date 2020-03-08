@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+ROOT=$(dirname $0)
+
+$ROOT/densenet/execute $ROOT/densenet/config_rwth.conf -o $ROOT/results && \
+$ROOT/transfer_learning/execute --all -o $ROOT/results
