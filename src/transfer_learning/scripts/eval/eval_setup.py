@@ -60,7 +60,6 @@ def eval(config):
 
     _, test_step = steps(model, loss_object, optimizer, test_loss=test_loss, test_accuracy=test_accuracy)
 
-
     print("Starting evaluation")
 
     batches = 0

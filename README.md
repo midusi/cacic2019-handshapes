@@ -115,7 +115,7 @@ $ ./bin/run --tl --model <model> --mode train --config <config>
 ```
 
 ```
-<model> = vgg16 | vgg19 | inception_v3 | densenet121 | densenet169 | densenet201
+<model> = vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
 <config> = lsa16 | rwth | ciarp
 ```
 #### Evaluating
@@ -127,7 +127,7 @@ $ ./bin/run --tl --model <model> --mode eval --config <config>
 ```
 
 ```
-<model> = vgg16 | vgg19 | inception_v3 | densenet121 | densenet169 | densenet201
+<model> = vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
 <config> = lsa16 | rwth | ciarp
 ```
 </details>
@@ -156,7 +156,7 @@ where
 
 ```
 <dataset> = lsa16 | rwth | ciarp
-<model> = dense-net | proto-net | vgg16 | vgg19 | inception_v3 | densenet121 | densenet169 | densenet201
+<model> = dense-net | proto-net | vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
 ```
 
 To run TensorBoard, use the following command:

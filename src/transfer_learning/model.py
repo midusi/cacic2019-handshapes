@@ -1,15 +1,17 @@
 import tensorflow as tf
+from densenet import densenet_model
 from tensorflow.keras import Model
 from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D
-from tensorflow.keras.applications import InceptionV3, VGG16, VGG19, DenseNet121, DenseNet201, DenseNet201
+from tensorflow.keras.applications import InceptionV3, VGG16, VGG19, densenet, DenseNet201, DenseNet201
 
 models = {
     'VGG16': VGG16,
     'VGG19': VGG19,
     'InceptionV3': InceptionV3,
-    'DenseNet121': DenseNet121,
+    'densenet': densenet,
     'DenseNet201': DenseNet201,
     'DenseNet201': DenseNet201,
+    'DenseNet': None,
 }
 
 def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=None, loss_object=None, weights=None, bm_trainable=False):
@@ -19,8 +21,14 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
     
     weights = None if weights == '' else weights
 
-    base_model =  models[model_name](include_top=False, weights=weights, input_shape=image_shape)
-    base_model.trainable = bm_trainable
+    if model_name == 'DenseNet':
+        base_model = densenet_model(shape=image_shape, growth_rate=64, nb_layers=[6, 12], reduction=0.5, with_output_block=False)
+        if weights != None:
+            base_model.load_weights(weights)
+    else:
+        base_model =  models[model_name](include_top=False, weights=weights, input_shape=image_shape)
+        base_model.trainable = bm_trainable
+
     global_average_layer = GlobalAveragePooling2D()
     hidden_dense_layer = Dense(1024, activation='relu')
     prediction_layer = Dense(nb_classes, activation='softmax')
