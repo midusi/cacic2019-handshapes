@@ -28,9 +28,14 @@ echo $PWD
 
 u_flag=""
 runtime=""
+daemon=""
 
 if ! has_param '--sudo' "$@"; then
     u_flag="-u $(id -u):$(id -g)"
+fi
+
+if has_param '-d' "$@"; then
+    daemon="-d"
 fi
 
 if [[ $tag == "gpu" ]]; then
@@ -50,4 +55,4 @@ docker run \
     -v $PWD/results:/tf/results \
     -v $PWD/data:/tf/data \
     -v $PWD/src:/tf/src \
-    --rm $u_flag -p 6006:6006 -p 8888:8888 $runtime $name:$tag $command
+    --rm $u_flag -p 6006:6006 -p 8888:8888 $daemon $runtime $name:$tag $command
