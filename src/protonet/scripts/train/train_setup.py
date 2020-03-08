@@ -12,7 +12,7 @@ from datetime import datetime
 from protonet.models import Prototypical
 from protonet import TrainEngine
 from src.protonet.datasets import load
-from src.protonet.scripts import base_model
+from src.protonet.scripts.base_model import create_base_model
 
 def train(config):
     np.random.seed(2019)

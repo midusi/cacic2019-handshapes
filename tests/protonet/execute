@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+ROOT=$(dirname $0)
+
+. $ROOT/../cases.sh
+
+for dataset in ${!tests_cases[*]}; do
+    flags="${tests_cases[$dataset]}"
+
+    echo "Executing test case for $dataset dataset with flags $flags"
+
+    python $ROOT/../../src/protonet/scripts/train/run_train.py \
+        --config $ROOT/../../src/protonet/config/config_$dataset.conf \
+        $flags
+done

@@ -49,8 +49,9 @@ parser.add_argument("--model.name", type=str, default=None)
 parser.add_argument("--model.weights", type=str, default=None)
 parser.add_argument("--model.nb_layers", type=str, default=None)
 parser.add_argument("--model.growth_rate", type=int, default=None)
-parser.add_argument("--model.reduction", type=int, default=None)
+parser.add_argument("--model.reduction", type=float, default=None)
 
+parser.add_argument("--train.epochs", type=int, default=None)
 parser.add_argument("--train.patience", type=int, default=None)
 parser.add_argument("--train.lr", type=float, default=None)
 

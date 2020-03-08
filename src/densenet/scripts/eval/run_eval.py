@@ -50,7 +50,7 @@ parser.add_argument("--data.weight_classes", type=bool, default=False)
 parser.add_argument("--model.path", type=str, default=None)
 parser.add_argument("--model.nb_layers", type=str, default=None)
 parser.add_argument("--model.growth_rate", type=int, default=None)
-parser.add_argument("--model.reduction", type=int, default=None)
+parser.add_argument("--model.reduction", type=float, default=None)
 
 # Run test
 args = vars(parser.parse_args())
