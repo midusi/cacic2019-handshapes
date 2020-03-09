@@ -3,7 +3,6 @@ Logic for evaluation procedure of saved model.
 """
 
 import tensorflow as tf
-import tensorflow_datasets as tfds
 from densenet import densenet_model
 from src.datasets import load
 from sklearn.metrics import classification_report, accuracy_score
@@ -52,12 +51,14 @@ def eval(config):
         loss_object=loss_object,
     )
     model.load_weights(model_file_path)
-    model.summary()
+    # model.summary()
 
+    train_loss = tf.keras.metrics.Mean(name='train_loss')
+    train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
     test_loss = tf.keras.metrics.Mean(name='test_loss')
     test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
 
-    _, test_step = steps(model, loss_object, optimizer, test_loss=test_loss, test_accuracy=test_accuracy)
+    _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy, test_loss=test_loss, test_accuracy=test_accuracy)
 
     batches = 0
     for test_images, test_labels in test_gen:

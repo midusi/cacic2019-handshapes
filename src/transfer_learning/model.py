@@ -24,7 +24,7 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
     if model_name == 'DenseNet':
         base_model = densenet_model(shape=image_shape, growth_rate=64, nb_layers=[6, 12], reduction=0.5, with_output_block=False)
         if weights != None:
-            base_model.load_weights(weights)
+            base_model.load_weights(weights, by_name=True)
     else:
         base_model =  models[model_name](include_top=False, weights=weights, input_shape=image_shape)
         base_model.trainable = bm_trainable

@@ -15,7 +15,7 @@ def load(dataset_name, datagen_flow=False,
          rotation_range = 10, width_shift_range = 0.10,
          height_shift_range = 0.10, horizontal_flip = True,
          train_size=None, test_size=None,
-         n_train_per_class=None, n_test_per_class=None):
+         n_train_per_class=0, n_test_per_class=0):
     """
     Load specific dataset.
 
