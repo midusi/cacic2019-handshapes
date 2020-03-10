@@ -58,7 +58,7 @@ def eval(config):
     test_loss = tf.keras.metrics.Mean(name='test_loss')
     test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
 
-    _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy, test_loss=test_loss, test_accuracy=test_accuracy, engine=config['engine'])
+    _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy, test_loss=test_loss, test_accuracy=test_accuracy, engine=config['engine'], lr=config['train.lr'])
 
     batches = 0
     for test_images, test_labels in test_gen:

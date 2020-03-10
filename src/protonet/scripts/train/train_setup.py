@@ -225,8 +225,8 @@ def train(config):
         for i_episode in range(config['data.episodes']):
             support, query = val_loader.get_next_episode()
             val_step(loss_func, support, query)
-        print(f"Episode {state['episode']} ended.")
-        episode = state['episode']
+        print(f"Episode {state['total_episode']} ended.")
+        episode = state['total_episode']
         template = 'episode {}, loss: {}, accuracy: {}, ' \
                    'val Loss: {}, val accuracy: {}'
 
