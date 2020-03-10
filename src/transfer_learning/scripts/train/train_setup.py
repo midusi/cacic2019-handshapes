@@ -120,7 +120,7 @@ def train(config):
     val_loss = tf.keras.metrics.Mean(name='val_loss')
     val_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='val_accuracy')
 
-    train_step, test_step = steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, val_accuracy)
+    train_step, test_step = steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, val_accuracy, engine=config['engine'], lr=config['train.lr'])
 
     # create summary writers
     train_summary_writer = tf.summary.create_file_writer(train_summary_file_path)

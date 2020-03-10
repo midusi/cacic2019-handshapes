@@ -3,8 +3,9 @@
 ROOT=$(dirname $0)
 
 tests=(
-    "$ROOT/densenet/execute $ROOT/densenet/config_rwth.conf -o $ROOT/results"
-    "$ROOT/transfer_learning/execute --all -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/config_rwth.conf -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/config_rwth_maml.conf -o $ROOT/results --engine maml"
+    # "$ROOT/transfer_learning/execute --all -o $ROOT/results"
 )
 
 . $ROOT/runner.sh

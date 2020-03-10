@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-def steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, val_accuracy, lr_inner=0.01):
+def steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, val_accuracy, lr_inner=0.001):
     
     @tf.function
     def train_step(images, labels):
@@ -15,10 +15,12 @@ def steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, v
             k = 0
             model_copy = tf.keras.models.clone_model(model, images)
             for j in range(len(model_copy.layers)):
-                model_copy.layers[j].kernel = tf.subtract(model.layers[j].kernel,
+                # update kernel and bias
+                kernel = tf.subtract(model.layers[j].get_weights()[0],
                             tf.multiply(lr_inner, gradients[k]))
-                model_copy.layers[j].bias = tf.subtract(model.layers[j].bias,
+                bias = tf.subtract(model.layers[j].get_weights()[1],
                             tf.multiply(lr_inner, gradients[k+1]))
+                model.layers[j].set_weights([kernel, bias])
                 k += 2
             # Step 8
             predictions = model(tf.cast(images, tf.float32), training=True)

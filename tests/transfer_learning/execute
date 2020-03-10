@@ -24,7 +24,7 @@ output=${output:-"/tmp/tests"}
 . $ROOT/../cases.sh
 
 echo "" >> "$output"
-echo "DenseNet tests" >> "$output"
+echo "Transfer Learning tests with DenseNet" >> "$output"
 
 for config_path in ${test_cases[*]}; do
     if [ ! -f "$config_path" ] || [ "${config_path: -5}" != ".conf" ]; then
