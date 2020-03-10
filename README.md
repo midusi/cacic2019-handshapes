@@ -7,7 +7,7 @@ Experiments for the article "Handshape Recognition for Small Dataset"
 - [Datasets](#datasets)
 - [Models and Techniques](#models-&-techniques)
   - [Prototypical Networks for Few-shot Learning](#prototypical-networks-for-few-shot-learning)
-  - [Dense Net](#dense-net)
+  - [Dense Net](#densenet)
   - [Transfer Learning](#transfer-learning)
 - [Results](#results)
 
@@ -156,7 +156,7 @@ where
 
 ```
 <dataset> = lsa16 | rwth | ciarp
-<model> = dense-net | proto-net | vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
+<model> = densenet | protonet | vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
 ```
 
 To run TensorBoard, use the following command:

@@ -17,8 +17,8 @@ RUN apt-get update -q && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Install models, scripts, proto-net scripts and handshape-recognition utils
-# Clone and install proto-net
+# Install models, scripts, protonet scripts and handshape-recognition utils
+# Clone and install protonet
 # Clone and install handshape datasets
 RUN pip install --upgrade pip && \
     pip3 install -e /develop && \

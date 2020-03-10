@@ -26,7 +26,7 @@ parser = argparse.ArgumentParser(description='Run training')
 parser.add_argument("--config", type=str, default="./src/densenet/config/config_densenet.conf",
                     help="Path to the config file.")
 
-parser.add_argument("--engine", type=str, default=None)
+parser.add_argument("--engine", type=str, default="")
 
 parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)

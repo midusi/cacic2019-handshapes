@@ -3,8 +3,10 @@
 ROOT=$(dirname $0)
 
 tests=(
-    # "$ROOT/densenet/execute $ROOT/densenet/config_rwth.conf -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/config_rwth_split_5.conf $ROOT/densenet/config_rwth_split_10.conf $ROOT/densenet/config_rwth_split_15.conf -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/config_lsa16_split_5.conf $ROOT/densenet/config_lsa16_split_10.conf $ROOT/densenet/config_lsa16_split_15.conf -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/config_rwth_maml.conf -o $ROOT/results --engine maml"
+    "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf -o $ROOT/results --model DenseNet"
     # "$ROOT/transfer_learning/execute --all -o $ROOT/results"
 )
 

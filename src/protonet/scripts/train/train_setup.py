@@ -29,7 +29,7 @@ def train(config):
     csv_output_file = f"{config['output.train_path'].format(model_type, now_as_str)}"
     train_summary_file = f"{config['summary.save_path'].format('train', model_type, now_as_str)}"
     test_summary_file = f"{config['summary.save_path'].format('test', model_type, now_as_str)}"
-    csv_output_map_file = f"results/{config['data.dataset']}/proto-net/{config['data.dataset']}_protonet_results.csv"
+    csv_output_map_file = f"results/{config['data.dataset']}/protonet/{config['data.dataset']}_protonet_results.csv"
     summary_file = f"results/summary.csv"
     
     # Output dirs
@@ -127,16 +127,15 @@ def train(config):
         # Forward & update gradients
         with tf.GradientTape() as tape:
             loss, acc = model(support, query)
-        gradients = tape.gradient(loss, model.trainable_variables)
-        optimizer.apply_gradients(
-            zip(gradients, model.trainable_variables))
+        gradients = tape.gradient(loss, model.encoder.trainable_variables)
+        optimizer.apply_gradients(zip(gradients, model.encoder.trainable_variables))
 
         # Log loss and accuracy for step
         train_loss(loss)
         train_acc(acc)
 
     @tf.function
-    def test_step(loss_func, support, query):
+    def val_step(loss_func, support, query):
         loss, acc = loss_func(support, query)
         val_loss(loss)
         val_acc(acc)
@@ -225,7 +224,17 @@ def train(config):
         loss_func = state['loss_func']
         for i_episode in range(config['data.episodes']):
             support, query = val_loader.get_next_episode()
-            test_step(loss_func, support, query)
+            val_step(loss_func, support, query)
+        print(f"Episode {state['episode']} ended.")
+        episode = state['episode']
+        template = 'episode {}, loss: {}, accuracy: {}, ' \
+                   'val Loss: {}, val accuracy: {}'
+
+        print(template.format(episode,
+                              train_loss.result(),
+                              train_acc.result() * 100,
+                              val_loss.result(),
+                              val_acc.result() * 100))
     train_engine.hooks['on_end_episode'] = on_end_episode
 
     time_start = time.time()
@@ -241,7 +250,7 @@ def train(config):
     time_end = time.time()
 
     file = open(summary_file, 'a+') 
-    summary = "{}, {}, proto-net, {}, {}, {}\n".format(now_as_str,
+    summary = "{}, {}, protonet, {}, {}, {}\n".format(now_as_str,
                                                      config['data.dataset'],
                                                      config_file,
                                                      min_loss[0],

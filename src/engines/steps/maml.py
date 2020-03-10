@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-def steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, val_accuracy, lr_inner=0.001):
+def steps(model, loss_object, optimizer, train_loss, train_accuracy, test_loss, test_accuracy, lr_inner=0.001):
     
     @tf.function
     def train_step(images, labels):
@@ -35,7 +35,7 @@ def steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, v
     def test_step(images, labels):
         predictions = model(tf.cast(images, tf.float32), training=False)
         t_loss = loss_object(labels, predictions)
-        val_loss(t_loss)
-        val_accuracy(labels, predictions)
+        test_loss(t_loss)
+        test_accuracy(labels, predictions)
 
     return train_step, test_step
