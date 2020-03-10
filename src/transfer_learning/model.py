@@ -34,7 +34,7 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
     prediction_layer = Dense(nb_classes, activation='softmax')
     model = tf.keras.Sequential([
         base_model,
-        # global_average_layer,
+        global_average_layer,
         hidden_dense_layer,
         prediction_layer
     ])
