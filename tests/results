@@ -1,6 +1,6 @@
 
 DenseNet tests
-Executing test case with config at ./tests/densenet/config_rwth.conf
+Executing test case with config at ./tests/tf_learning_densenet/config_rwth.conf
 Model: "model"
 __________________________________________________________________________________________________
 Layer (type)                    Output Shape         Param #     Connected to                     
@@ -3971,32 +3971,6 @@ Total params: 5,110,972
 Trainable params: 5,082,236
 Non-trainable params: 28,736
 __________________________________________________________________________________________________
-
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/config_rwth.conf
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/config_rwth.conf
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/config_rwth.conf
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/config_rwth.conf
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/config_rwth.conf
-Test Loss: 0.14835496246814728 Test Acc: 97.22222137451172
-Test Loss: 0.12061968445777893 Test Acc: 97.22222137451172
-Test Loss: 0.14211589097976685 Test Acc: 96.96969604492188
-Test Loss: 0.1498497575521469 Test Acc: 96.84342956542969
-Test Loss: 0.19240209460258484 Test Acc: 97.3484878540039
-Test Loss: 0.16337351500988007 Test Acc: 96.59090423583984
-Test Loss: 0.1369713544845581 Test Acc: 97.22222137451172
-Test Loss: 0.14652462303638458 Test Acc: 96.96969604492188
-Test Loss: 0.104682058095932 Test Acc: 97.8535385131836
-Test Loss: 0.1717451512813568 Test Acc: 96.84342956542969
 
 
 Transfer Learning tests with DenseNet
@@ -4012,101 +3986,27 @@ Test Loss: 0.26426979899406433 Test Acc: 95.0
 Test Loss: 0.23388837277889252 Test Acc: 96.0
 Test Loss: 0.11048208922147751 Test Acc: 98.0
 
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/config_rwth_split_5.conf
-Test Loss: 6.940465927124023 Test Acc: 27.5
-Test Loss: 7.824345588684082 Test Acc: 25.833332061767578
-Test Loss: 6.32767915725708 Test Acc: 30.83333396911621
-Test Loss: 6.2618303298950195 Test Acc: 29.16666603088379
-Test Loss: 7.477720260620117 Test Acc: 27.5
-Test Loss: 7.099487781524658 Test Acc: 26.666667938232422
-Test Loss: 6.370931148529053 Test Acc: 29.16666603088379
-Test Loss: 6.471522808074951 Test Acc: 32.5
-Test Loss: 6.882078647613525 Test Acc: 28.33333396911621
-Test Loss: 6.70644998550415 Test Acc: 31.66666603088379
-Executing test case with config at ./tests/densenet/config_rwth_split_10.conf
-Test Loss: 3.3487350940704346 Test Acc: 40.0
-Test Loss: 2.6690216064453125 Test Acc: 48.33333206176758
-Test Loss: 2.9742679595947266 Test Acc: 46.66666793823242
-Test Loss: 2.9261093139648438 Test Acc: 43.33333206176758
-Test Loss: 2.9152872562408447 Test Acc: 37.5
-Test Loss: 3.04487943649292 Test Acc: 42.5
-Test Loss: 3.0255587100982666 Test Acc: 48.33333206176758
-Test Loss: 3.0260138511657715 Test Acc: 40.83333206176758
-Test Loss: 3.378324270248413 Test Acc: 40.83333206176758
-Test Loss: 3.078928232192993 Test Acc: 44.16666793823242
-Executing test case with config at ./tests/densenet/config_rwth_split_15.conf
-Test Loss: 3.0962557792663574 Test Acc: 54.16666793823242
-Test Loss: 3.021867275238037 Test Acc: 52.499996185302734
-Test Loss: 2.6660289764404297 Test Acc: 53.333335876464844
-Test Loss: 3.2158470153808594 Test Acc: 51.666664123535156
-Test Loss: 3.5077619552612305 Test Acc: 46.66666793823242
-Test Loss: 3.0634615421295166 Test Acc: 55.0
-Test Loss: 3.21596097946167 Test Acc: 55.0
-Test Loss: 3.100635290145874 Test Acc: 47.5
-Test Loss: 2.882556676864624 Test Acc: 60.000003814697266
-Test Loss: 3.1249279975891113 Test Acc: 49.16666793823242
-Executing test case with config at ./tests/densenet/config_rwth_split_20.conf
-Test Loss: 2.195892572402954 Test Acc: 57.5
-Test Loss: 2.506603479385376 Test Acc: 55.83333206176758
-Test Loss: 3.1659231185913086 Test Acc: 51.666664123535156
-Test Loss: 2.2941269874572754 Test Acc: 56.66666793823242
-Test Loss: 2.8614342212677 Test Acc: 50.83333206176758
-Test Loss: 2.208669662475586 Test Acc: 58.33333206176758
-Test Loss: 2.4102511405944824 Test Acc: 50.83333206176758
-Test Loss: 2.612867593765259 Test Acc: 50.83333206176758
-Test Loss: 3.0429794788360596 Test Acc: 45.833335876464844
-Test Loss: 2.4424314498901367 Test Acc: 55.83333206176758
-
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/config_lsa16_split_5.conf
-Test Loss: 0.2692698538303375 Test Acc: 88.54167175292969
-Test Loss: 0.33626213669776917 Test Acc: 88.54167175292969
-Test Loss: 0.3459503650665283 Test Acc: 88.54167175292969
-Test Loss: 0.44121184945106506 Test Acc: 89.58332824707031
-Test Loss: 0.396504282951355 Test Acc: 86.45832824707031
-Test Loss: 0.6174425482749939 Test Acc: 86.45832824707031
-Test Loss: 0.4396093189716339 Test Acc: 87.5
-Test Loss: 0.6100141406059265 Test Acc: 84.375
-Test Loss: 0.41025853157043457 Test Acc: 89.58332824707031
-Test Loss: 0.7679069638252258 Test Acc: 80.20832824707031
-Executing test case with config at ./tests/densenet/config_lsa16_split_10.conf
-Test Loss: 0.30302461981773376 Test Acc: 93.75
-Test Loss: 0.12403420358896255 Test Acc: 97.91667175292969
-Test Loss: 0.13861382007598877 Test Acc: 96.875
-Test Loss: 0.39424416422843933 Test Acc: 90.625
-Test Loss: 0.3822873532772064 Test Acc: 92.70832824707031
-Test Loss: 0.3015212118625641 Test Acc: 91.66667175292969
-Test Loss: 0.28742319345474243 Test Acc: 92.70832824707031
-Test Loss: 0.3071584105491638 Test Acc: 92.70832824707031
-Test Loss: 0.3514713943004608 Test Acc: 88.54167175292969
-Test Loss: 0.18282125890254974 Test Acc: 94.79167175292969
-Executing test case with config at ./tests/densenet/config_lsa16_split_15.conf
-Test Loss: 0.06022557243704796 Test Acc: 97.91667175292969
-Test Loss: 0.1494515985250473 Test Acc: 95.83332824707031
-Test Loss: 0.14740125834941864 Test Acc: 97.91667175292969
-Test Loss: 0.08546698093414307 Test Acc: 98.95832824707031
-Test Loss: 0.008216616697609425 Test Acc: 100.0
-Test Loss: 0.18475884199142456 Test Acc: 95.83332824707031
-Test Loss: 0.12747661769390106 Test Acc: 96.875
-Test Loss: 0.08633991330862045 Test Acc: 97.91667175292969
-Test Loss: 0.03165378049015999 Test Acc: 98.95832824707031
-Test Loss: 0.048161398619413376 Test Acc: 98.95832824707031
-Executing test case with config at ./tests/densenet/config_lsa16_split_20.conf
-Test Loss: 0.011776350438594818 Test Acc: 100.0
-Test Loss: 0.09901884198188782 Test Acc: 96.875
-Test Loss: 0.0027600720059126616 Test Acc: 100.0
-Test Loss: 0.14776520431041718 Test Acc: 94.79167175292969
-Test Loss: 0.018712734803557396 Test Acc: 100.0
-Test Loss: 0.18029183149337769 Test Acc: 95.83332824707031
-Test Loss: 0.06663378328084946 Test Acc: 95.83332824707031
-Test Loss: 0.11975374072790146 Test Acc: 98.95832824707031
-Test Loss: 0.006838791538029909 Test Acc: 100.0
-Test Loss: 0.027189889922738075 Test Acc: 98.95832824707031
-
-
-
 Transfer Learning tests with DenseNet
 Executing test case with config at ./tests/transfer_learning/config_rwth_split_5.conf
+Test Loss: 1.0874865055084229 Test Acc: 71.66666412353516
+Test Loss: 1.1177082061767578 Test Acc: 68.33333587646484
+Test Loss: 0.8064583539962769 Test Acc: 80.0
+Test Loss: 0.9122881293296814 Test Acc: 77.5
+Test Loss: 1.0148046016693115 Test Acc: 78.33333587646484
+Test Loss: 0.8790043592453003 Test Acc: 75.83333587646484
+Test Loss: 1.3044854402542114 Test Acc: 69.16666412353516
+Test Loss: 1.3306589126586914 Test Acc: 68.33333587646484
+Test Loss: 0.7403977513313293 Test Acc: 80.0
+Test Loss: 1.2564207315444946 Test Acc: 71.66666412353516
+Executing test case with config at ./tests/transfer_learning/config_rwth_split_10.conf
+Test Loss: 0.8245976567268372 Test Acc: 85.0
+Test Loss: 0.4900267422199249 Test Acc: 89.16666412353516
+Test Loss: 0.5820629000663757 Test Acc: 87.5
+Test Loss: 0.818632960319519 Test Acc: 84.16666412353516
+Test Loss: 0.30938854813575745 Test Acc: 92.5
+Test Loss: 0.46692904829978943 Test Acc: 84.16666412353516
+Test Loss: 0.8381010293960571 Test Acc: 81.66666412353516
+Test Loss: 0.4765884578227997 Test Acc: 85.83333587646484
+Test Loss: 0.5066905617713928 Test Acc: 85.83333587646484
+Test Loss: 0.5545549392700195 Test Acc: 86.66666412353516
+Executing test case with config at ./tests/transfer_learning/config_rwth_split_15.conf

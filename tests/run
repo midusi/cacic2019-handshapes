@@ -3,12 +3,17 @@
 ROOT=$(dirname $0)
 
 tests=(
-    # "$ROOT/transfer_learning/execute $ROOT/densenet/config_rwth_split_5.conf $ROOT/densenet/config_rwth_split_10.conf $ROOT/densenet/config_rwth_split_15.conf $ROOT/densenet/config_rwth_split_20.conf -o $ROOT/results"
-    # "$ROOT/densenet/execute $ROOT/densenet/config_lsa16_split_5.conf $ROOT/densenet/config_lsa16_split_10.conf $ROOT/densenet/config_lsa16_split_15.conf $ROOT/densenet/config_lsa16_split_20.conf -o $ROOT/results"
-    # "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf -o $ROOT/results --model DenseNet"
+    # Train DenseNet with all dataset for transfer learning
+    # "$ROOT/densenet/execute $ROOT/densenet/config_rwth.conf -o $ROOT/results"
     # "$ROOT/transfer_learning/execute --all -o $ROOT/results"
+    
+    # "$ROOT/densenet/execute $ROOT/densenet/config_rwth_split_5.conf $ROOT/densenet/config_rwth_split_10.conf $ROOT/densenet/config_rwth_split_15.conf $ROOT/densenet/config_rwth_split_20.conf -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/config_lsa16_split_5.conf $ROOT/densenet/config_lsa16_split_10.conf $ROOT/densenet/config_lsa16_split_15.conf $ROOT/densenet/config_lsa16_split_20.conf -o $ROOT/results"
+    
     "$ROOT/transfer_learning/execute $ROOT/transfer_learning/config_rwth_split_5.conf $ROOT/transfer_learning/config_rwth_split_10.conf $ROOT/transfer_learning/config_rwth_split_15.conf $ROOT/transfer_learning/config_rwth_split_20.conf -o $ROOT/results"
     "$ROOT/transfer_learning/execute $ROOT/transfer_learning/config_lsa16_split_5.conf $ROOT/transfer_learning/config_lsa16_split_10.conf $ROOT/transfer_learning/config_lsa16_split_15.conf $ROOT/transfer_learning/config_lsa16_split_20.conf -o $ROOT/results"
+    
+    # "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf -o $ROOT/results --model DenseNet"
 )
 
 . $ROOT/runner.sh
