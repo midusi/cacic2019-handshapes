@@ -25,3 +25,4 @@ Experimentos
 
 - Optimizar proto
 - Repetir experimentos de Proto
+- ProtoNet + HandCropper + RWTH
