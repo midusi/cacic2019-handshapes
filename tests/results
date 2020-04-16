@@ -1,7 +1,3 @@
-
-DenseNet tests
-
-
 Transfer Learning tests with DenseNet
 
 Executing test case with config at ./tests/transfer_learning/config_lsa16.conf
