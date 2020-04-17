@@ -5,13 +5,10 @@ Experiments for the article "Handshape Recognition for Small Dataset"
 
 - [Quickstart](#quickstart)
 - [Datasets](#datasets)
-- [Models](#models)
+- [Models and Techniques](#models-&-techniques)
   - [Prototypical Networks for Few-shot Learning](#prototypical-networks-for-few-shot-learning)
-    - [Training](#training)
-    - [Evaluating](#evaluating)
-  - [Dense Net](#dense-net)
-    - [Training](#training-1)
-    - [Evaluating](#evaluating-1)
+  - [Dense Net](#densenet)
+  - [Transfer Learning](#transfer-learning)
 - [Results](#results)
 
 ## Quickstart
@@ -29,7 +26,7 @@ $ ./bin/start [-n <string>] [-t <tag-name>] [--sudo] [--build]
 For example:
 
 ```sh
-$ ./bin/start -n myContainer -t gpu --sudo --build
+$ ./bin/start -n myContainer -t gpu --build
 ```
 
 Once the docker container is running it will execute the contents of the /bin/execute file.
@@ -45,7 +42,7 @@ to access the running container's shell.
 
 In our paper we used the datasets RWTH-Phoenix, LSA16 and CIARP. We used the library (https://github.com/midusi/handshape_datasets) to fetch the datasets.
 
-## Models
+## Models & Techniques
 
 ### Prototypical Networks for Few-shot Learning
 
@@ -53,12 +50,14 @@ Tensorflow v2 implementation of NIPS 2017 Paper _Prototypical Networks for Few-s
 
 Implementation using [protonet](https://github.com/ulises-jeremias/prototypical-networks-tf).
 
+<details><summary>Training and Eval</summary>
+
 #### Training
 
 Run the following command to run training on `<config>` with default parameters.
 
 ```sh
-$ ./bin/protonet --mode train --config <config>
+$ ./bin/run --model protonet --mode train --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
@@ -68,11 +67,11 @@ $ ./bin/protonet --mode train --config <config>
 To run evaluation on a specific dataset
 
 ```sh
-$ ./bin/protonet --mode eval --config <config>
+$ ./bin/run --model protonet --mode eval --config <config>
 ```
 
 `<config> = lsa16 | rwth | ciarp`
-
+</details>
 
 ### Dense Net
 
@@ -80,31 +79,58 @@ We implemented Densenet using squeeze and excitation layers in tensorflow 2 for 
 
 For more information about densenet please refer to the [original paper](https://arxiv.org/abs/1608.06993).
 
+<details><summary>Training and Eval</summary>
+
 #### Training
 
-To train Densenet on all the datasets and search for the best configuration execute `/bin/densenet_train_all.py`. This will give you the results of each configuration in the folder `/results` and the summary of the training of each configuration on `/results/summary.csv`.
-If you want to train densenet with your own configurations you can use `/src/dense_net/train.py`. You can customize your training modifying the parameters of train.py. Use it in your python code in the following way
+Run the following command to run training on `<config>` with default parameters.
 
-```python
-from src.dense_net.train import train_densenet
-train_densenet(dataset_name="rwth", rotation_range=10, width_shift_range=0.10,
-               height_shift_range=0.10, horizontal_flip=True, growth_rate=128,
-               nb_layers=[6,12], reduction=0.0, lr=0.001, epochs=400,
-               max_patience=25, batch_size=16, checkpoints=False, weight_classes=False,
-               train_size=None, test_size=None)
+```sh
+$ ./bin/run --model densenet --mode train --config <config>
 ```
 
-To use your own datasets you can add them to `/src/dense_net/datasets/loader.py` and call `train.py` using the name you chose.
+`<config> = lsa16 | rwth | ciarp`
 
 #### Evaluating
 
-For evaluation you can use `/src/dense_net/eval.py`
+To run evaluation on a specific dataset
 
-```python
-from src.dense_net.eval import eval_densenet
-eval_densenet(dataset_name="rwth", growth_rate=128, nb_layers=[6,12],
-              reduction=0.0, batch_size=16, weight_classes=False, model_path="")
+```sh
+$ ./bin/run --model densenet --mode eval --config <config>
 ```
+
+`<config> = lsa16 | rwth | ciarp`
+</details>
+
+### Transfer Learning
+
+<details><summary>Training and Eval</summary>
+
+#### Training
+
+Run the following command to run training on `<config>` with default parameters.
+
+```sh
+$ ./bin/run --tl --model <model> --mode train --config <config>
+```
+
+```
+<model> = vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
+<config> = lsa16 | rwth | ciarp
+```
+#### Evaluating
+
+To run evaluation on a specific dataset
+
+```sh
+$ ./bin/run --tl --model <model> --mode eval --config <config>
+```
+
+```
+<model> = vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
+<config> = lsa16 | rwth | ciarp
+```
+</details>
 
 ## Results
 
@@ -129,8 +155,8 @@ summaries are listed by date.
 where
 
 ```
-<dataset> = lsa16 | rwth | . . .
-<model> = dense-net | proto-net
+<dataset> = lsa16 | rwth | ciarp
+<model> = densenet | protonet | vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
 ```
 
 To run TensorBoard, use the following command:
