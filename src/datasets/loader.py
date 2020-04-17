@@ -25,7 +25,7 @@ def load(dataset_name, datagen_flow=False,
     Returns (train_gen, val_gen, test_gen, nb_classes, image_shape, class_weights):.
     """
 
-    if dataset_name == "ciarp":
+    if dataset_name == "Ciarp":
         x, y = load_ciarp(dataset_name) 
     elif dataset_name == "lsa16":
         x, y = load_lsa16(dataset_name)

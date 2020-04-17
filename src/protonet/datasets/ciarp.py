@@ -32,7 +32,7 @@ class DataLoader(object):
 
 def load_ciarp(data_dir, config, splits):
     """
-    Load ciarp dataset.
+    Load Ciarp dataset.
 
     Args:
         data_dir (str): path of the directory with 'splits', 'data' subdirs.
@@ -43,7 +43,7 @@ def load_ciarp(data_dir, config, splits):
 
     """
 
-    DATASET_NAME = "ciarp"
+    DATASET_NAME = "Ciarp"
     DATASET_PATH = "/tf/data/ciarp/data"
 
     data = hd.load(config['data.dataset'], Path(DATASET_PATH))

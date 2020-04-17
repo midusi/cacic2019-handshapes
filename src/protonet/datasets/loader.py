@@ -16,7 +16,7 @@ def load(data_dir, config, splits):
 
     """
 
-    if config['data.dataset'] == "ciarp":
+    if config['data.dataset'] == "Ciarp":
         ds = load_ciarp(data_dir, config, splits)
     elif config['data.dataset'] == "lsa16":
         ds = load_lsa16(data_dir, config, splits)

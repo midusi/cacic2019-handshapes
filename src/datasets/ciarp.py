@@ -1,4 +1,4 @@
-"""Load ciarp dataset"""
+"""Load Ciarp dataset"""
 
 import os
 import numpy as np
@@ -7,7 +7,7 @@ from pathlib import Path
 
 def load_ciarp(dataset_name):
     """
-    Load ciarp dataset.
+    Load Ciarp dataset.
 
     Returns (x, y): as dataset x and y.
 

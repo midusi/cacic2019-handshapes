@@ -60,7 +60,7 @@ Run the following command to run training on `<config>` with default parameters.
 $ ./bin/run --model protonet --mode train --config <config>
 ```
 
-`<config> = lsa16 | rwth | ciarp`
+`<config> = lsa16 | rwth | Ciarp`
 
 #### Evaluating
 
@@ -70,7 +70,7 @@ To run evaluation on a specific dataset
 $ ./bin/run --model protonet --mode eval --config <config>
 ```
 
-`<config> = lsa16 | rwth | ciarp`
+`<config> = lsa16 | rwth | Ciarp`
 </details>
 
 ### Dense Net
@@ -89,7 +89,7 @@ Run the following command to run training on `<config>` with default parameters.
 $ ./bin/run --model densenet --mode train --config <config>
 ```
 
-`<config> = lsa16 | rwth | ciarp`
+`<config> = lsa16 | rwth | Ciarp`
 
 #### Evaluating
 
@@ -99,7 +99,7 @@ To run evaluation on a specific dataset
 $ ./bin/run --model densenet --mode eval --config <config>
 ```
 
-`<config> = lsa16 | rwth | ciarp`
+`<config> = lsa16 | rwth | Ciarp`
 </details>
 
 ### Transfer Learning
@@ -116,7 +116,7 @@ $ ./bin/run --tl --model <model> --mode train --config <config>
 
 ```
 <model> = vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
-<config> = lsa16 | rwth | ciarp
+<config> = lsa16 | rwth | Ciarp
 ```
 #### Evaluating
 
@@ -128,7 +128,7 @@ $ ./bin/run --tl --model <model> --mode eval --config <config>
 
 ```
 <model> = vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
-<config> = lsa16 | rwth | ciarp
+<config> = lsa16 | rwth | Ciarp
 ```
 </details>
 
@@ -155,7 +155,7 @@ summaries are listed by date.
 where
 
 ```
-<dataset> = lsa16 | rwth | ciarp
+<dataset> = lsa16 | rwth | Ciarp
 <model> = densenet | protonet | vgg16 | vgg19 | inception_v3 | densenet | densenet169 | densenet201
 ```
 
