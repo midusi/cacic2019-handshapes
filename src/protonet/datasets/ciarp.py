@@ -46,13 +46,9 @@ def load_ciarp(data_dir, config, splits):
     DATASET_NAME = "Ciarp"
     DATASET_PATH = "/tf/data/ciarp/data"
 
-    data = hd.load(config['data.dataset'], Path(DATASET_PATH))
+    X, meta = hd.load(config['data.dataset'], Path(DATASET_PATH), version='WithoutGabor')
 
-    x_train, y_train = data['train_Kinect_WithoutGabor']
-    x_test, y_test = data['test_Kinect_WithoutGabor']
-
-    X = np.concatenate((x_train, x_test), axis=0)
-    y = np.concatenate((y_train, y_test), axis=0)
+    y = meta['y']
 
     _, uniqueClasses = np.unique(y, return_counts=True)
 

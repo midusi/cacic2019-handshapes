@@ -16,14 +16,6 @@ def load_ciarp(dataset_name):
 
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
-    data = hd.load(dataset_name, Path(dataset_path))
+    X, meta = hd.load(dataset_name, Path(dataset_path), version='WithoutGabor')
 
-    # TODO: define best way to do this
-
-    x_train, y_train = data['train_Kinect_WithoutGabor']
-    x_test, y_test = data['test_Kinect_WithoutGabor']
-
-    x = np.concatenate((x_train, x_test), axis=0)
-    y = np.concatenate((y_train, y_test), axis=0)
-
-    return x, y
+    return X, meta['y']
