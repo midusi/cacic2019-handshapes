@@ -8,8 +8,8 @@ def steps(model, loss_object, optimizer, train_loss, train_accuracy, test_loss, 
             predictions = model(tf.cast(images, tf.float32), training=True)
             loss = loss_object(labels, predictions)
         gradients = tape.gradient(loss, model.trainable_variables)
-        gradients = [grad if grad is not None else tf.zeros_like(var)
-                     for var, grad in zip(model.trainable_variables, gradients)]
+        # gradients = [grad if grad is not None else tf.zeros_like(var)
+        #              for var, grad in zip(model.trainable_variables, gradients)]
         optimizer.apply_gradients(zip(gradients, model.trainable_variables))
 
         train_loss(loss)
