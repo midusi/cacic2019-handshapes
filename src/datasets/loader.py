@@ -43,7 +43,7 @@ def load(dataset_name, datagen_flow=False,
     else:
         x_train, x_test, y_train, y_test = split(x, y, n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
 
-    x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.8, test_size=0.2)
+    x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.9, test_size=0.1)
     nb_classes = len(np.unique(y))
 
     class_weights = None
