@@ -22,7 +22,7 @@ RUN apt-get update -q && \
 # Clone and install handshape datasets
 RUN pip install --upgrade pip && \
     pip3 install -e /develop && \
-    pip3 install gdown==3.10.0 \
+    pip3 install gdown==3.10.0 && \
     git clone --branch develop https://github.com/midusi/handshape_datasets.git /tf/lib/handshape_datasets && \
     git clone https://github.com/ulises-jeremias/prototypical-networks-tf.git /tf/lib/prototypical-networks-tf && \
     git clone https://github.com/okason97/DenseNet-Tensorflow2 /tf/lib/DenseNet-Tensorflow2 && \
