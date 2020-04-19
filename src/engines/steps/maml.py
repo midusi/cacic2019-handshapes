@@ -25,8 +25,8 @@ def steps(model, loss_object, optimizer, train_loss, train_accuracy, test_loss, 
             # Step 8
             predictions = model(tf.cast(images, tf.float32), training=True)
             loss = loss_object(labels, predictions)
-        gradients = tape.gradient(loss, model.trainable_variables)
-        optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+            gradients = tape.gradient(loss, model.trainable_variables)
+            optimizer.apply_gradients(zip(gradients, model.trainable_variables))
 
         train_loss(loss)
         train_accuracy(labels, predictions)
