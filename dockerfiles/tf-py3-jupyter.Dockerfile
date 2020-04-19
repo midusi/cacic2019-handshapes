@@ -29,7 +29,7 @@ RUN pip install --upgrade pip && \
     pip3 install -e /tf/lib/prototypical-networks-tf && \
     pip3 install -e /tf/lib/DenseNet-Tensorflow2 && \
     pip3 install -e /tf/lib/handshape_datasets && \
-    pip3 install -U grpcio tensorflow && \
+    pip3 install -U tensorflow && \
     pip3 install tensorflow_datasets && \
     pip3 install seaborn eli5 shap pydot pdpbox sklearn opencv-python IPython prettytable
 
