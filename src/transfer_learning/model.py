@@ -36,12 +36,8 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
     model = tf.keras.Sequential()
 
     if c < 3:
-        input_tensor = Input(shape=(w, h, 1))
-        model.add(Conv2D(3, (3, 3), padding='same')(input_tensor))
-        img_inputs = [Input(shape=(w, h, 1)) for _ in range(3)]
-        merged_layer = Concatenate()(img_inputs)
-        model.add(merged_layer)
-
+        model.add(Input(shape=(w, h, 1)))
+        model.add(Conv2D(3, (3, 3), padding='same'))
     
     model.add(base_model)
     model.add(global_average_layer)
