@@ -1,7 +1,7 @@
 import tensorflow as tf
 from densenet import densenet_model
 from tensorflow.keras import Model
-from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D
+from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D, Concatenate
 from tensorflow.keras.applications import InceptionV3, VGG16, VGG19, densenet, DenseNet201, DenseNet201
 
 models = {
@@ -20,14 +20,20 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
         model_name = 'VGG16'
     
     weights = None if weights == '' else weights
+    w, h, c = image_shape
 
     if model_name == 'DenseNet':
-        base_model = densenet_model(shape=image_shape, growth_rate=64, nb_layers=[6, 12], reduction=0.5, with_output_block=False)
+        base_model = densenet_model(shape=(w, h, 3), growth_rate=64, nb_layers=[6, 12], reduction=0.5, with_output_block=False)
         if weights != None:
             base_model.load_weights(weights, by_name=True)
     else:
-        base_model =  models[model_name](include_top=False, weights=weights, input_shape=image_shape)
+        base_model =  models[model_name](include_top=False, weights=weights, input_shape=(w, h, 3))
         base_model.trainable = bm_trainable
+
+    if c < 3:
+        img_inputs = [ Input(shape=(w, h, 1)) for i in range(0, c) ]
+        img_concat = Concatenate()(img_inputs)
+        base_model = base_model(img_concat)
 
     global_average_layer = GlobalAveragePooling2D()
     hidden_dense_layer = Dense(1024, activation='relu')
