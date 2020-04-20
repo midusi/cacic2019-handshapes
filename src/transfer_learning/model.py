@@ -1,7 +1,7 @@
 import tensorflow as tf
 from densenet import densenet_model
 from tensorflow.keras import Model
-from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D, Concatenate
+from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D, concatenate
 from tensorflow.keras.applications import InceptionV3, VGG16, VGG19, densenet, DenseNet201, DenseNet201
 
 models = {
@@ -38,7 +38,7 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
     
     if c < 3:
         img_inputs = [Input(shape=(w, h, 1)) for _ in range(c)]
-        model.add(Concatenate()(img_inputs))
+        model.add(concatenate(img_inputs))
     
     model.add(base_model)
     model.add(global_average_layer)
