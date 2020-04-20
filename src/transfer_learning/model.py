@@ -30,20 +30,20 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
         base_model =  models[model_name](include_top=False, weights=weights, input_shape=(w, h, 3))
         base_model.trainable = bm_trainable
 
-    if c < 3:
-        img_inputs = [ Input(shape=(w, h, 1)) for i in range(0, c) ]
-        img_concat = Concatenate(name='rgb_transform')(img_inputs)
-        base_model = base_model(img_concat)
-
-    global_average_layer = GlobalAveragePooling2D()
+    global_average_layer = 
     hidden_dense_layer = Dense(1024, activation='relu')
     prediction_layer = Dense(nb_classes, activation='softmax')
-    model = tf.keras.Sequential([
-        base_model,
-        global_average_layer,
-        hidden_dense_layer,
-        prediction_layer
-    ])
+    
+    model = tf.keras.Sequential()
+
+    if c < 3:
+        img_inputs = [Input(shape=(w, h, 1)) for _ in range(c)]
+        model.add(Concatenate()(img_inputs))
+    
+    model.add(base_model)
+    model.add(global_average_layer)
+    model.add(hidden_dense_layer)
+    model.add(prediction_layer)
 
     # compile the model (should be done *after* setting layers to non-trainable)
     model.compile(optimizer=optimizer, loss=loss_object)
