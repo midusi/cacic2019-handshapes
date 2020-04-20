@@ -174,3 +174,1093 @@ Test Loss: 0.38336828351020813 Test Acc: 91.66667175292969
 Test Loss: 0.5616477131843567 Test Acc: 87.5
 Test Loss: 0.5743635296821594 Test Acc: 88.54167175292969
 Test Loss: 0.5255415439605713 Test Acc: 88.54167175292969
+
+DenseNet tests
+Executing test case with config at ./tests/densenet/config_rwth.conf
+Test Loss: 0.19231614470481873 Test Acc: 96.21212005615234
+Test Loss: 0.2955264747142792 Test Acc: 95.2020263671875
+Test Loss: 0.24520355463027954 Test Acc: 95.2020263671875
+Test Loss: 0.1589200347661972 Test Acc: 96.21212005615234
+Test Loss: 0.19713491201400757 Test Acc: 96.33838653564453
+Test Loss: 0.15796999633312225 Test Acc: 96.59090423583984
+Test Loss: 0.23412948846817017 Test Acc: 95.9595947265625
+Test Loss: 0.23826290667057037 Test Acc: 94.82323455810547
+Test Loss: 0.24241657555103302 Test Acc: 95.45454406738281
+Test Loss: 0.1890392303466797 Test Acc: 96.59090423583984
+
+DenseNet tests
+Executing test case with config at ./tests/densenet/config_rwth_split_5.conf
+Test Loss: 6.859118938446045 Test Acc: 13.333333969116211
+Test Loss: 6.632702350616455 Test Acc: 14.166666984558105
+Test Loss: 6.718529224395752 Test Acc: 17.5
+Test Loss: 7.356695652008057 Test Acc: 11.666666984558105
+Test Loss: 7.750953674316406 Test Acc: 11.666666984558105
+Test Loss: 7.056594371795654 Test Acc: 13.333333969116211
+Test Loss: 6.761074542999268 Test Acc: 14.166666984558105
+Test Loss: 7.047632217407227 Test Acc: 15.000000953674316
+Test Loss: 7.182024955749512 Test Acc: 13.333333969116211
+Test Loss: 7.291738033294678 Test Acc: 15.000000953674316
+Executing test case with config at ./tests/densenet/config_rwth_split_10.conf
+
+DenseNet tests
+Executing test case with config at ./tests/densenet/config_rwth.conf
+
+DenseNet tests
+Executing test case with config at ./tests/densenet/config_rwth.conf
+Test Loss: 0.12756414711475372 Test Acc: 96.71717071533203
+Test Loss: 0.2039107084274292 Test Acc: 95.70706939697266
+Test Loss: 0.23179011046886444 Test Acc: 95.580810546875
+Test Loss: 0.18065854907035828 Test Acc: 96.71717071533203
+Test Loss: 0.1634901762008667 Test Acc: 96.84342956542969
+Test Loss: 0.2157970666885376 Test Acc: 95.70706939697266
+Test Loss: 0.1867258995771408 Test Acc: 96.59090423583984
+Test Loss: 0.1817188262939453 Test Acc: 95.70706939697266
+Test Loss: 0.18670837581157684 Test Acc: 96.08586120605469
+Test Loss: 0.22306056320667267 Test Acc: 95.580810546875
+
+DenseNet tests
+Executing test case with config at ./tests/densenet/config_rwth_split_5.conf
+Test Loss: 2.8600049018859863 Test Acc: 41.666664123535156
+Test Loss: 3.1060304641723633 Test Acc: 41.666664123535156
+Test Loss: 3.4781792163848877 Test Acc: 36.66666793823242
+Test Loss: 2.495448112487793 Test Acc: 45.833335876464844
+Test Loss: 2.946972608566284 Test Acc: 38.33333206176758
+Test Loss: 2.7221007347106934 Test Acc: 45.833335876464844
+Test Loss: 2.9711458683013916 Test Acc: 45.833335876464844
+Test Loss: 2.884291887283325 Test Acc: 43.33333206176758
+Test Loss: 2.8650460243225098 Test Acc: 47.5
+Test Loss: 3.0627121925354004 Test Acc: 38.33333206176758
+Executing test case with config at ./tests/densenet/config_rwth_split_10.conf
+Test Loss: 2.3152194023132324 Test Acc: 51.666664123535156
+Test Loss: 2.1904163360595703 Test Acc: 57.5
+Test Loss: 1.9190871715545654 Test Acc: 67.5
+Test Loss: 2.199624538421631 Test Acc: 59.166664123535156
+Test Loss: 1.804287075996399 Test Acc: 65.0
+Test Loss: 1.9151006937026978 Test Acc: 63.33333206176758
+Test Loss: 2.0149271488189697 Test Acc: 63.33333206176758
+Test Loss: 2.3198537826538086 Test Acc: 56.66666793823242
+Test Loss: 2.018979787826538 Test Acc: 62.5
+Test Loss: 2.4389190673828125 Test Acc: 59.166664123535156
+Executing test case with config at ./tests/densenet/config_rwth_split_15.conf
+Test Loss: 2.367633104324341 Test Acc: 52.499996185302734
+Test Loss: 2.5620903968811035 Test Acc: 50.83333206176758
+Test Loss: 2.7704217433929443 Test Acc: 49.16666793823242
+Test Loss: 3.2085742950439453 Test Acc: 45.0
+Test Loss: 2.5377087593078613 Test Acc: 48.33333206176758
+Test Loss: 2.6913251876831055 Test Acc: 48.33333206176758
+Test Loss: 2.851126194000244 Test Acc: 46.66666793823242
+Test Loss: 2.532451868057251 Test Acc: 42.5
+Test Loss: 2.312361717224121 Test Acc: 51.666664123535156
+Test Loss: 2.5696659088134766 Test Acc: 45.833335876464844
+Executing test case with config at ./tests/densenet/config_rwth_split_20.conf
+Test Loss: 2.78774356842041 Test Acc: 55.0
+Test Loss: 2.626683235168457 Test Acc: 60.000003814697266
+Test Loss: 2.7764432430267334 Test Acc: 59.166664123535156
+Test Loss: 2.763672113418579 Test Acc: 54.16666793823242
+Test Loss: 2.472903251647949 Test Acc: 59.166664123535156
+Test Loss: 2.56490159034729 Test Acc: 60.833335876464844
+Test Loss: 2.4461398124694824 Test Acc: 59.166664123535156
+Test Loss: 2.43139910697937 Test Acc: 61.66666793823242
+Test Loss: 2.2625153064727783 Test Acc: 60.000003814697266
+Test Loss: 2.7740797996520996 Test Acc: 50.83333206176758
+
+DenseNet tests
+Executing test case with config at ./tests/densenet/config_lsa16_split_5.conf
+Test Loss: 2.321057081222534 Test Acc: 33.333335876464844
+Test Loss: 2.3514225482940674 Test Acc: 30.20833396911621
+Test Loss: 2.3308560848236084 Test Acc: 33.333335876464844
+Test Loss: 2.28940749168396 Test Acc: 41.666664123535156
+Test Loss: 2.3736588954925537 Test Acc: 28.125
+Test Loss: 2.323789596557617 Test Acc: 35.416664123535156
+Test Loss: 2.330362319946289 Test Acc: 35.416664123535156
+Test Loss: 2.362532138824463 Test Acc: 34.375
+Test Loss: 2.333315849304199 Test Acc: 34.375
+Test Loss: 2.270719528198242 Test Acc: 42.708335876464844
+Executing test case with config at ./tests/densenet/config_lsa16_split_10.conf
+Test Loss: 0.31710386276245117 Test Acc: 91.66667175292969
+Test Loss: 0.31942304968833923 Test Acc: 89.58332824707031
+Test Loss: 0.3052182197570801 Test Acc: 91.66667175292969
+Test Loss: 0.3712029457092285 Test Acc: 91.66667175292969
+Test Loss: 0.299093097448349 Test Acc: 92.70832824707031
+Test Loss: 0.40268898010253906 Test Acc: 90.625
+Test Loss: 0.38184961676597595 Test Acc: 90.625
+Test Loss: 0.3234800398349762 Test Acc: 89.58332824707031
+Test Loss: 0.3201596438884735 Test Acc: 91.66667175292969
+Test Loss: 0.3754998743534088 Test Acc: 89.58332824707031
+Executing test case with config at ./tests/densenet/config_lsa16_split_15.conf
+Test Loss: 0.08084108680486679 Test Acc: 98.95832824707031
+Test Loss: 0.0304406750947237 Test Acc: 98.95832824707031
+Test Loss: 0.012500953860580921 Test Acc: 100.0
+Test Loss: 0.12308218330144882 Test Acc: 96.875
+Test Loss: 0.07910130172967911 Test Acc: 95.83332824707031
+Test Loss: 0.12513841688632965 Test Acc: 95.83332824707031
+Test Loss: 0.03896917402744293 Test Acc: 97.91667175292969
+Test Loss: 0.10716423392295837 Test Acc: 97.91667175292969
+Test Loss: 0.10397347062826157 Test Acc: 95.83332824707031
+Test Loss: 0.14304977655410767 Test Acc: 94.79167175292969
+Executing test case with config at ./tests/densenet/config_lsa16_split_20.conf
+Test Loss: 0.00837144535034895 Test Acc: 100.0
+Test Loss: 0.022985994815826416 Test Acc: 98.95832824707031
+Test Loss: 0.026156321167945862 Test Acc: 98.95832824707031
+Test Loss: 0.08531200885772705 Test Acc: 97.91667175292969
+Test Loss: 0.007759473752230406 Test Acc: 100.0
+Test Loss: 0.006609810050576925 Test Acc: 100.0
+Test Loss: 0.019853515550494194 Test Acc: 100.0
+Test Loss: 0.05386149883270264 Test Acc: 97.91667175292969
+Test Loss: 0.1596275269985199 Test Acc: 96.875
+Test Loss: 0.08620769530534744 Test Acc: 97.91667175292969
+
+DenseNet tests
+Executing test case with config at ./tests/densenet/config_ciarp_split_5.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.284902811050415 Test Acc: 11.666666984558105
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.1781091690063477 Test Acc: 11.666666984558105
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.174964666366577 Test Acc: 13.333333969116211
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.2000584602355957 Test Acc: 10.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.191596031188965 Test Acc: 10.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.2227327823638916 Test Acc: 13.333333969116211
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.205007553100586 Test Acc: 11.666666984558105
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.120905637741089 Test Acc: 13.333333969116211
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.1879358291625977 Test Acc: 13.333333969116211
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 2.2381410598754883 Test Acc: 13.333333969116211
+Executing test case with config at ./tests/densenet/config_ciarp_split_10.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.6628331542015076 Test Acc: 83.33332824707031
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 1.4839775562286377 Test Acc: 68.33333587646484
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 1.2307136058807373 Test Acc: 76.66666412353516
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.7350250482559204 Test Acc: 85.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.6458622813224792 Test Acc: 85.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.49254655838012695 Test Acc: 91.66667175292969
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.6207485198974609 Test Acc: 85.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.7231752276420593 Test Acc: 81.66666412353516
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.5373775362968445 Test Acc: 83.33332824707031
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.9645580053329468 Test Acc: 81.66666412353516
+Executing test case with config at ./tests/densenet/config_ciarp_split_15.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.37067097425460815 Test Acc: 95.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.6117281317710876 Test Acc: 90.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.044704288244247437 Test Acc: 100.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.13769103586673737 Test Acc: 95.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.15212300419807434 Test Acc: 95.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.16563577950000763 Test Acc: 98.33333587646484
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.08867425471544266 Test Acc: 96.66666412353516
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.280333936214447 Test Acc: 91.66667175292969
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.16729918122291565 Test Acc: 96.66666412353516
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.1699637770652771 Test Acc: 95.0
+Executing test case with config at ./tests/densenet/config_ciarp_split_20.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.2859286069869995 Test Acc: 90.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.0959024503827095 Test Acc: 96.66666412353516
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.16975000500679016 Test Acc: 93.33333587646484
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.38237664103507996 Test Acc: 90.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.11271906644105911 Test Acc: 95.0
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.04582848772406578 Test Acc: 98.33333587646484
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.22839902341365814 Test Acc: 91.66667175292969
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.08660589903593063 Test Acc: 98.33333587646484
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.13924112915992737 Test Acc: 96.66666412353516
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Test Loss: 0.21121910214424133 Test Acc: 90.0
+
+Transfer Learning tests with DenseNet
+Executing test case with config at ./tests/transfer_learning/config_ciarp.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+
+Transfer Learning tests with DenseNet
+Executing test case with config at ./tests/transfer_learning/config_ciarp_split_5.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Executing test case with config at ./tests/transfer_learning/config_ciarp_split_10.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Executing test case with config at ./tests/transfer_learning/config_ciarp_split_15.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+Executing test case with config at ./tests/transfer_learning/config_ciarp_split_20.conf
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
+/tf/data/Ciarp/data/ciarp/ciarp/test_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/train_Kinect_WithoutGabor.txt
+/tf/data/Ciarp/data/ciarp/ciarp/test_DifferentCamera_WithoutGabor.txt
++-------+----------------------+
+| Valor |  Código de carpeta   |
++-------+----------------------+
+|   0   | test_DifferentCamera |
+|   1   |     test_Kinect      |
+|   2   |     train_Kinect     |
++-------+----------------------+
