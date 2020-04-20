@@ -31,7 +31,7 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
         base_model.trainable = bm_trainable
 
     if c < 3:
-        img_inputs = [ Input(shape=(w, h, 1)) for i in range(3) ]
+        img_inputs = [Input(shape=(w, h, 1)) for _ in range(3)]
         img_concat = Concatenate()(img_inputs)
         base_model = base_model(img_concat)
 
