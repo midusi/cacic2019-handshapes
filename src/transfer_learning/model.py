@@ -32,7 +32,7 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
 
     if c < 3:
         img_inputs = [ Input(shape=(w, h, 1)) for i in range(0, c) ]
-        img_concat = Concatenate()(img_inputs)
+        img_concat = Concatenate(name='rgb_transform')(img_inputs)
         base_model = base_model(img_concat)
 
     global_average_layer = GlobalAveragePooling2D()
