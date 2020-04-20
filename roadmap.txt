@@ -16,6 +16,9 @@ Implementaciones
 Experimentos
 
 + DenseNet + RWTH
++ DenseNet + Splits LSA16
++ DenseNet + Splits RWTH
++ DenseNet + Splits CIARP
 + TF + Splits LSA16
 + TF + Splits RWTH
 - TF + Splits CIARP
