@@ -1,7 +1,7 @@
 import tensorflow as tf
 from densenet import densenet_model
 from tensorflow.keras import Model
-from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D, concatenate
+from tensorflow.keras.layers import Dense, Input, GlobalAveragePooling2D, Concatenate
 from tensorflow.keras.applications import InceptionV3, VGG16, VGG19, densenet, DenseNet201, DenseNet201
 
 models = {
@@ -30,20 +30,20 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
         base_model =  models[model_name](include_top=False, weights=weights, input_shape=(w, h, 3))
         base_model.trainable = bm_trainable
 
+    if c < 3:
+        img_inputs = [ Input(shape=(w, h, 1)) for i in range(3) ]
+        img_concat = Concatenate()(img_inputs)
+        base_model = base_model(img_concat)
+
     global_average_layer = GlobalAveragePooling2D()
     hidden_dense_layer = Dense(1024, activation='relu')
     prediction_layer = Dense(nb_classes, activation='softmax')
-    
-    model = tf.keras.Sequential()
-    
-    if c < 3:
-        img_inputs = [Input(shape=(w, h, 1)) for _ in range(c)]
-        model.add(concatenate(img_inputs))
-    
-    model.add(base_model)
-    model.add(global_average_layer)
-    model.add(hidden_dense_layer)
-    model.add(prediction_layer)
+    model = tf.keras.Sequential([
+        base_model,
+        global_average_layer,
+        hidden_dense_layer,
+        prediction_layer
+    ])
 
     # compile the model (should be done *after* setting layers to non-trainable)
     model.compile(optimizer=optimizer, loss=loss_object)
