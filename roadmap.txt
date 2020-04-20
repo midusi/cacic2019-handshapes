@@ -7,7 +7,7 @@ Implementaciones
 + DenseNet
 + ProtoNet
 + ProtoDenseNet
-+ TF
++ TL
 - MAML
 - HandCropper (Example)
 - Ensemble NN
@@ -19,9 +19,9 @@ Experimentos
 + DenseNet + Splits LSA16
 + DenseNet + Splits RWTH
 + DenseNet + Splits CIARP
-+ TF + Splits LSA16
-+ TF + Splits RWTH
-- TF + Splits CIARP
++ TL + Splits LSA16
++ TL + Splits RWTH
+- TL + Splits CIARP
 - MAML + Splits LSA16
 - MAML + Splits RWTH
 - MAML + Splits CIARP
