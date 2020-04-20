@@ -30,12 +30,12 @@ def create_model(model_name=None, nb_classes=None, image_shape=None, optimizer=N
         base_model =  models[model_name](include_top=False, weights=weights, input_shape=(w, h, 3))
         base_model.trainable = bm_trainable
 
-    global_average_layer = 
+    global_average_layer = GlobalAveragePooling2D()
     hidden_dense_layer = Dense(1024, activation='relu')
     prediction_layer = Dense(nb_classes, activation='softmax')
     
     model = tf.keras.Sequential()
-
+    
     if c < 3:
         img_inputs = [Input(shape=(w, h, 1)) for _ in range(c)]
         model.add(Concatenate()(img_inputs))
