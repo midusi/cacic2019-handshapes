@@ -11,7 +11,6 @@ import tensorflow as tf
 import src.engines.train as train_engine
 from datetime import datetime
 from src.datasets import load
-from src.engines.steps import steps
 from src.transfer_learning.model import create_model
 from src.utils.weighted_loss import weightedLoss
 
@@ -120,8 +119,6 @@ def train(config):
     val_loss = tf.keras.metrics.Mean(name='val_loss')
     val_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='val_accuracy')
 
-    train_step, test_step = steps(model, loss_object, optimizer, train_loss, train_accuracy, val_loss, val_accuracy, engine=config['engine'], lr=config['train.lr'])
-
     # create summary writers
     train_summary_writer = tf.summary.create_file_writer(train_summary_file_path)
     val_summary_writer = tf.summary.create_file_writer(test_summary_file_path)
@@ -133,12 +130,14 @@ def train(config):
         epochs=config['train.epochs'], max_patience=config['train.patience'],
         train_gen=train_gen, train_len=train_len, val_gen=val_gen, val_len=val_len,
         train_loss=train_loss, train_accuracy=train_accuracy,
+        test_loss=val_loss, test_accuracy=val_accuracy,
         val_loss=val_loss, val_accuracy=val_accuracy,
-        train_step=train_step, test_step=test_step,
+        optimizer=optimizer, loss_object=loss_object,
         checkpoint_path=checkpoint_path,
         train_summary_writer=train_summary_writer,
         val_summary_writer=val_summary_writer,
         csv_output_file=csv_output_path,
+        engine=config['engine'], lr=config['train.lr'],
     )
 
     time_end = time.time()
