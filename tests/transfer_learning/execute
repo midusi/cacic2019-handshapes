@@ -23,7 +23,7 @@ output=${output:-"/tmp/tests"}
 
 . $ROOT/../cases.sh
 
-echo "" >> "$output"
+echo >> "$output"
 echo "Transfer Learning tests with DenseNet" >> "$output"
 
 for config_path in ${test_cases[*]}; do

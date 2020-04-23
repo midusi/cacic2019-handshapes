@@ -37,7 +37,7 @@ if [ "$engine" != "" ]; then
     engine_flag="--engine $engine"
 fi
 
-echo "" >> "$output"
+echo >> "$output"
 echo "ProtoNet tests" >> "$output"
 
 for config_path in ${test_cases[*]}; do

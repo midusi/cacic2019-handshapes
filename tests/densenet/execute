@@ -30,8 +30,12 @@ if [ "$engine" != "" ]; then
     engine_flag="--engine $engine"
 fi
 
-echo "" >> "$output"
-echo "DenseNet tests" >> "$output"
+echo >> "$output"
+if [ "$engine" = "" ]; then
+    echo "DenseNet tests using $engine" >> "$output"
+else
+    echo "DenseNet tests" >> "$output"
+fi
 
 for config_path in ${test_cases[*]}; do
     if [ ! -f "$config_path" ] || [ "${config_path: -5}" != ".conf" ]; then
