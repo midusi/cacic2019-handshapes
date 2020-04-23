@@ -15,6 +15,8 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
 
     results = 'epoch,loss,accuracy,val_loss,val_accuracy\n'
 
+    model_copy = tf.keras.models.clone_model(model)
+
     for epoch in range(epochs):
         batches = 0
         for images, labels in train_gen:
@@ -26,7 +28,7 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
                     loss = loss_object(labels, predictions)
                 
                 gradients = train_tape.gradient(loss, model.trainable_variables)
-                model_copy = tf.keras.models.clone_model(model)
+                model_copy.set_weights(model.get_weights())
                 optimizer.apply_gradients(zip(gradients, model_copy.trainable_variables))
 
                 train_loss(loss)
