@@ -5,7 +5,7 @@ ROOT=$(dirname $0)
 tests=(
     # Train DenseNet with all dataset for transfer learning
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf -o $ROOT/results"
-    "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth.conf --engine maml -o $ROOT/results"
     
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth_split_5.conf $ROOT/densenet/normal/config_rwth_split_10.conf $ROOT/densenet/normal/config_rwth_split_15.conf $ROOT/densenet/normal/config_rwth_split_20.conf -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16_split_5.conf $ROOT/densenet/normal/config_lsa16_split_10.conf $ROOT/densenet/normal/config_lsa16_split_15.conf $ROOT/densenet/normal/config_lsa16_split_20.conf -o $ROOT/results"
