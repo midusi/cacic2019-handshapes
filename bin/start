@@ -38,8 +38,8 @@ if has_param '-d' "$@"; then
     daemon="-d"
 fi
 
-if [[ $tag == "gpu" ]]; then
-    runtime="--runtime=nvidia"
+if [[ $tag == *"gpu"* ]]; then
+    runtime="--gpus all"
 fi
 
 echo "user flag: ${u_flag:-"-"}"
