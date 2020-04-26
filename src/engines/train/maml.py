@@ -32,7 +32,7 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
 
             with tf.GradientTape() as test_tape:
                 # test_tape.watch(model.trainable_variables)
-                for images, labels in list(map(None, *k_way_batch)):
+                for images, labels in zip(*k_way_batch):
 
                     with tf.GradientTape() as train_tape:
                         predictions = model(tf.cast(images, tf.float32), training=True)
