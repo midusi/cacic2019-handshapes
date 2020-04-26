@@ -1,5 +1,13 @@
 import os
 import tensorflow as tf
+from itertools import islice
+
+def split_every(n, iterable):
+    i = iter(iterable)
+    piece = list(islice(i, n))
+    while piece:
+        yield piece
+        piece = list(islice(i, n))
 
 def train(model=None, epochs=10, batch_size=32, format_paths=True,
           train_gen=None, train_len=None, val_gen=None, val_len=None,
@@ -7,7 +15,7 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
           val_loss=None, val_accuracy=None, train_step=None, test_step=None,
           checkpoint_path=None, max_patience=25,
           train_summary_writer=None, val_summary_writer=None, csv_output_file=None,
-          optimizer=None, loss_object=None, lr=0.001, **kwargs):
+          optimizer=None, loss_object=None, lr=0.001, k_way=5, **kwargs):
 
     min_loss = 100
     min_loss_acc = 0
@@ -22,17 +30,19 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
         for images, labels in train_gen:
             with tf.GradientTape() as test_tape:
                 # test_tape.watch(model.trainable_variables)
-
-                with tf.GradientTape() as train_tape:
-                    predictions = model(tf.cast(images, tf.float32), training=True)
-                    loss = loss_object(labels, predictions)
                 
-                gradients = train_tape.gradient(loss, model.trainable_variables)
-                model_copy.set_weights(model.get_weights())
-                optimizer.apply_gradients(zip(gradients, model_copy.trainable_variables))
+                for images, labels in split_every(k_way, zip(images, labels)):
 
-                train_loss(loss)
-                train_accuracy(labels, predictions)
+                    with tf.GradientTape() as train_tape:
+                        predictions = model(tf.cast(images, tf.float32), training=True)
+                        loss = loss_object(labels, predictions)
+                    
+                    gradients = train_tape.gradient(loss, model.trainable_variables)
+                    model_copy.set_weights(model.get_weights())
+                    optimizer.apply_gradients(zip(gradients, model_copy.trainable_variables))
+
+                    train_loss(loss)
+                    train_accuracy(labels, predictions)
 
                 predictions = model_copy(tf.cast(images, tf.float32), training=False)
                 t_loss = loss_object(labels, predictions)
