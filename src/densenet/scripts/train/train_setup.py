@@ -103,7 +103,7 @@ def train(config):
     time_start = time.time()
     # Compiles a model, prints the model summary, and saves the model diagram into a png file.
     model = densenet_model(classes=nb_classes, shape=image_shape, growth_rate=config['model.growth_rate'], nb_layers=config['model.nb_layers'], reduction=config['model.reduction'])
-    model.summary()
+    # model.summary()
     
     # tf.keras.utils.plot_model(model, "{}/model.png".format(results_dir), show_shapes=True)
 
@@ -148,7 +148,7 @@ def train(config):
         print("Skipping evaluation. No checkpoint found in: {}".format(checkpoint_dir))
     else:
         model_from_saved = tf.keras.models.load_model(model_path)
-        model_from_saved.summary()
+        # model_from_saved.summary()
 
         # Runs test data through the reloaded model to make sure the results are same.
         predictions_from_saved = model_from_saved.predict(val_gen)
