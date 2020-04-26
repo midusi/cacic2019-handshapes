@@ -32,7 +32,7 @@ RUN pip install --upgrade pip && \
     pip3 install -e /tf/lib/handshape_datasets && \
     pip3 install -U tensorflow && \
     pip3 install tensorflow_datasets && \
-    pip3 install seaborn eli5 shap pydot pdpbox sklearn opencv-python IPython prettytable
+    pip3 install seaborn eli5 shap pydot pdpbox sklearn opencv-python IPython prettytable py7zr
 
 # Default dir for handshape datasets lib - use /data instead
 RUN mkdir -p /.handshape_datasets && \
