@@ -19,7 +19,7 @@ variables["-c"]="command"
 
 . ./scripts/flags/arguments.sh
 
-tag=${tag:-"cpu"}
+tag=${tag:-"latest"}
 name=${name:-"handshape-recognition"}
 command=${command:-""}
 
