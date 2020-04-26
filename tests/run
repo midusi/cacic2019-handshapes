@@ -8,17 +8,21 @@ tests=(
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf -o $ROOT/results"
 
-    "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth_split_5.conf $ROOT/densenet/maml/config_rwth_split_10.conf $ROOT/densenet/maml/config_rwth_split_15.conf $ROOT/densenet/maml/config_rwth_split_20.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16_split_5.conf $ROOT/densenet/maml/config_lsa16_split_10.conf $ROOT/densenet/maml/config_lsa16_split_15.conf $ROOT/densenet/maml/config_lsa16_split_20.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp_split_5.conf $ROOT/densenet/maml/config_ciarp_split_10.conf $ROOT/densenet/maml/config_ciarp_split_15.conf $ROOT/densenet/maml/config_ciarp_split_20.conf --engine maml -o $ROOT/results"
+
     "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16.conf --engine maml -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth.conf --engine maml -o $ROOT/results"
     
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth_split_5.conf $ROOT/densenet/normal/config_rwth_split_10.conf $ROOT/densenet/normal/config_rwth_split_15.conf $ROOT/densenet/normal/config_rwth_split_20.conf -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16_split_5.conf $ROOT/densenet/normal/config_lsa16_split_10.conf $ROOT/densenet/normal/config_lsa16_split_15.conf $ROOT/densenet/normal/config_lsa16_split_20.conf -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp_split_5.conf $ROOT/densenet/normal/config_ciarp_split_10.conf $ROOT/densenet/normal/config_ciarp_split_15.conf $ROOT/densenet/normal/config_ciarp_split_20.conf -o $ROOT/results"
     
-    "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth_split_5.conf $ROOT/densenet/maml/config_rwth_split_10.conf $ROOT/densenet/maml/config_rwth_split_15.conf $ROOT/densenet/maml/config_rwth_split_20.conf --engine maml -o $ROOT/results"
-    "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16_split_5.conf $ROOT/densenet/maml/config_lsa16_split_10.conf $ROOT/densenet/maml/config_lsa16_split_15.conf $ROOT/densenet/maml/config_lsa16_split_20.conf --engine maml -o $ROOT/results"
-    "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp_split_5.conf $ROOT/densenet/maml/config_ciarp_split_10.conf $ROOT/densenet/maml/config_ciarp_split_15.conf $ROOT/densenet/maml/config_ciarp_split_20.conf --engine maml -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth_split_5.conf $ROOT/densenet/maml/config_rwth_split_10.conf $ROOT/densenet/maml/config_rwth_split_15.conf $ROOT/densenet/maml/config_rwth_split_20.conf --engine maml -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16_split_5.conf $ROOT/densenet/maml/config_lsa16_split_10.conf $ROOT/densenet/maml/config_lsa16_split_15.conf $ROOT/densenet/maml/config_lsa16_split_20.conf --engine maml -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp_split_5.conf $ROOT/densenet/maml/config_ciarp_split_10.conf $ROOT/densenet/maml/config_ciarp_split_15.conf $ROOT/densenet/maml/config_ciarp_split_20.conf --engine maml -o $ROOT/results"
     
     # "$ROOT/transfer_learning/execute --all -o $ROOT/results"
     # "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_lsa16.conf -o $ROOT/results"
