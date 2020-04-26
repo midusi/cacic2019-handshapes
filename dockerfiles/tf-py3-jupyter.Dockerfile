@@ -1,6 +1,6 @@
 ARG DOCKER_ENV=cpu
 
-FROM ulisesjeremias/tf-docker:${DOCKER_ENV}-jupyter
+FROM tensorflow/tensorflow:${DOCKER_ENV}-jupyter
 # DOCKER_ENV are specified again because the FROM directive resets ARGs
 # (but their default value is retained if set previously)
 
