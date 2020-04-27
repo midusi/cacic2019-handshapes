@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-def steps(model, loss_object, optimizer, train_loss, train_accuracy, test_loss, test_accuracy, copied_model, **kwargs):
+def steps(model, loss_object, optimizer, train_loss, train_accuracy, test_loss, test_accuracy, copied_model=None, **kwargs):
 
     def train_step(images, labels):
         with tf.GradientTape() as outer_tape:
