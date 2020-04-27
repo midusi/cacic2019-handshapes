@@ -1,13 +1,5 @@
 import os
 import tensorflow as tf
-from itertools import islice
-
-def split_every(n, iterable):
-    i = iter(iterable)
-    piece = list(islice(i, n))
-    while piece:
-        yield piece
-        piece = list(islice(i, n))
 
 def train(model=None, epochs=10, batch_size=32, format_paths=True,
           train_gen=None, train_len=None, val_gen=None, val_len=None,
