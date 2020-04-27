@@ -35,8 +35,7 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
                 for k_way_batch in split_every(k_way, zip(images, labels)):
                     images, labels = zip(*k_way_batch)
 
-                    with tf.GradientTape(watch_accessed_variables=False) as inner_tape:
-                        inner_tape.watch(copied_model.inner_weights)
+                    with tf.GradientTape() as inner_tape:
                         predictions = model(tf.cast(images, tf.float32), training=True)
                         inner_loss = loss_object(labels, predictions)
                     
