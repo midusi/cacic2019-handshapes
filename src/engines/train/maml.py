@@ -26,8 +26,8 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
                     predictions = model(tf.cast(images, tf.float32), training=True)
                     inner_loss = loss_object(labels, predictions)
                 
-                copied_model.set_weights(model.get_weights())
                 gradients = inner_tape.gradient(inner_loss, model.trainable_variables)
+                copied_model.set_weights(model.get_weights())
                 optimizer.apply_gradients(zip(gradients, copied_model.trainable_variables))
 
                 train_loss(inner_loss)
