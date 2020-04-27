@@ -15,13 +15,15 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
 
     results = 'epoch,loss,accuracy,val_loss,val_accuracy\n'
 
+    copied_model = tf.keras.models.clone_model(model)
+
     for epoch in range(epochs):
         batches = 0
         for images, labels in train_gen:
 
             with tf.GradientTape() as outer_tape:
                 # outer_tape.watch(model.trainable_variables)
-                
+
                 with tf.GradientTape() as inner_tape:
                     predictions = model(tf.cast(images, tf.float32), training=True)
                     inner_loss = loss_object(labels, predictions)
@@ -33,8 +35,8 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
                 train_loss(inner_loss)
                 train_accuracy(labels, predictions)
 
-            predictions = copied_model(tf.cast(images, tf.float32), training=False)
-            outer_loss = loss_object(labels, predictions)
+                predictions = copied_model(tf.cast(images, tf.float32), training=False)
+                outer_loss = loss_object(labels, predictions)
 
             gradients = outer_tape.gradient(outer_loss, copied_model.trainable_variables)
             optimizer.apply_gradients(zip(gradients, model.trainable_variables))

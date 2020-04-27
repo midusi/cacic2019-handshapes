@@ -5,7 +5,7 @@ from .maml import train as maml_train
 
 def train(*args, **kwargs):
     model = kwargs.get('model')
-    kwargs['copied_model'] = tf.keras.models.clone_model(model) if kwargs.get('engine') == 'maml' else None
+    # kwargs['copied_model'] = tf.keras.models.clone_model(model) if kwargs.get('engine') == 'maml' else None
 
     train_step, test_step = steps(*args, **kwargs)
     
