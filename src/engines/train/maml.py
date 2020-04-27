@@ -49,7 +49,7 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
                 predictions = copied_model(tf.cast(images, tf.float32), training=False)
                 outer_loss = loss_object(labels, predictions)
 
-            gradients = outer_tape.gradient(outer_loss, model.trainable_variables)
+            gradients = outer_tape.gradient(outer_loss, copied_model.trainable_variables)
             optimizer.apply_gradients(zip(gradients, model.trainable_variables))
 
             test_loss(outer_loss)
