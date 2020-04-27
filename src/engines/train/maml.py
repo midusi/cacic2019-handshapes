@@ -23,36 +23,37 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
 
     results = 'epoch,loss,accuracy,val_loss,val_accuracy\n'
 
-    model_copy = tf.keras.models.clone_model(model)
+    copied_model = tf.keras.models.clone_model(model)
 
     for epoch in range(epochs):
         batches = 0
         for images, labels in train_gen:
 
-            with tf.GradientTape() as test_tape:
-                # test_tape.watch(model.trainable_variables)
+            with tf.GradientTape() as outer_tape:
+                # outer_tape.watch(model.trainable_variables)
                 
                 for k_way_batch in split_every(k_way, zip(images, labels)):
                     images, labels = zip(*k_way_batch)
 
-                    with tf.GradientTape() as train_tape:
+                    with tf.GradientTape(watch_accessed_variables=False) as inner_tape:
+                        inner_tape.watch(copied_model.inner_weights)
                         predictions = model(tf.cast(images, tf.float32), training=True)
-                        loss = loss_object(labels, predictions)
+                        inner_loss = loss_object(labels, predictions)
                     
-                    gradients = train_tape.gradient(loss, model.trainable_variables)
-                    model_copy.set_weights(model.get_weights())
-                    optimizer.apply_gradients(zip(gradients, model_copy.trainable_variables))
+                    gradients = inner_tape.gradient(inner_loss, copied_model.trainable_variables)
+                    copied_model.set_weights(model.get_weights())
+                    optimizer.apply_gradients(zip(gradients, copied_model.trainable_variables))
 
-                    train_loss(loss)
+                    train_loss(inner_loss)
                     train_accuracy(labels, predictions)
 
-                predictions = model_copy(tf.cast(images, tf.float32), training=False)
-                t_loss = loss_object(labels, predictions)
+                predictions = copied_model(tf.cast(images, tf.float32), training=False)
+                outer_loss = loss_object(labels, predictions)
 
-            gradients = test_tape.gradient(t_loss, model_copy.trainable_variables)
+            gradients = outer_tape.gradient(outer_loss, model.trainable_variables)
             optimizer.apply_gradients(zip(gradients, model.trainable_variables))
 
-            test_loss(t_loss)
+            test_loss(outer_loss)
             test_accuracy(labels, predictions)
 
             batches += 1
