@@ -48,6 +48,10 @@ tests=(
 
     "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf -o $ROOT/results"
     "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf -o $ROOT/results --model DenseNet"
+
+    "rm -rf /tf/data/rwth"
+
+    "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf -o $ROOT/results --model DenseNet"
 )
 
 . $ROOT/runner.sh
