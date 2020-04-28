@@ -1,10 +1,11 @@
-ARG DOCKER_ENV=cpu
+ARG DOCKER_ENV=latest
 
 FROM tensorflow/tensorflow:${DOCKER_ENV}
 # DOCKER_ENV are specified again because the FROM directive resets ARGs
 # (but their default value is retained if set previously)
 
 ARG DOCKER_ENV
+ARG NODE_VERSION=12.x
 
 ADD . /develop
 
@@ -37,5 +38,17 @@ RUN pip install --upgrade pip && \
 # Default dir for handshape datasets lib - use /data instead
 RUN mkdir -p /.handshape_datasets && \
     chmod -R a+rwx /.handshape_datasets
+
+## Install node, yarn and hand-cropper dependencies
+### install nodejs and yarn packages from nodesource and yarn apt sources
+RUN echo "deb https://deb.nodesource.com/node_${NODE_VERSION} stretch main" > /etc/apt/sources.list.d/nodesource.list && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
+    curl -sS https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    apt-get update -qq && \
+    apt-get install -qq -y --no-install-recommends nodejs yarn && \
+    rm -rf /var/lib/apt/lists/* && \
+    git clone https://github.com/okason97/hand-cropper.git /tf/lib/hand-cropper && \
+    yarn --cwd /tf/lib/hand-cropper
 
 WORKDIR /develop

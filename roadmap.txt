@@ -22,8 +22,8 @@ Experimentos
 + TL + Splits LSA16
 + TL + Splits RWTH
 + TL + Splits CIARP
-- MAML + Splits LSA16
-- MAML + Splits RWTH
++ MAML + Splits LSA16
++ MAML + Splits RWTH
 - MAML + Splits CIARP
 
 - Optimizar proto
