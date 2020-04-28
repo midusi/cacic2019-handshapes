@@ -811,3 +811,6 @@ Test Loss: 0.416301965713501 Test Acc: 91.79293060302734
 Test Loss: 0.5439890027046204 Test Acc: 89.2676773071289
 Test Loss: 0.4615522623062134 Test Acc: 91.5404052734375
 Test Loss: 0.3965227007865906 Test Acc: 91.66667175292969
+
+ProtoNet tests
+Executing test case with config at ./tests/protonet/config_rwth.conf
