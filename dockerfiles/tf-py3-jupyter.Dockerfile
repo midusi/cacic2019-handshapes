@@ -25,7 +25,8 @@ RUN pip install --upgrade pip && \
     pip3 install -e /develop && \
     pip3 install -U tensorflow && \
     pip3 install gdown==3.10.0 && \
-    git clone --branch 0dc9fcd63cfdf128c00535da9d9fca31b903c4eb https://github.com/midusi/handshape_datasets.git /tf/lib/handshape_datasets && \
+    git clone https://github.com/midusi/handshape_datasets.git /tf/lib/handshape_datasets && \
+    git -C /tf/lib/handshape_datasets checkout 0dc9fcd63cfdf128c00535da9d9fca31b903c4eb && \
     git clone https://github.com/ulises-jeremias/prototypical-networks-tf.git /tf/lib/prototypical-networks-tf && \
     git clone https://github.com/okason97/DenseNet-Tensorflow2 /tf/lib/DenseNet-Tensorflow2 && \
     pip3 install -e /tf/lib/prototypical-networks-tf && \
