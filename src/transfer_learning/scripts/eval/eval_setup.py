@@ -2,6 +2,7 @@
 Logic for evaluation procedure of saved model.
 """
 
+import numpy as np
 import tensorflow as tf
 from densenet import densenet_model
 from src.datasets import load
@@ -60,13 +61,23 @@ def eval(config):
 
     _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy, test_loss=test_loss, test_accuracy=test_accuracy, engine=config['engine'])
 
-    batches = 0
-    for test_images, test_labels in test_gen:
-        test_step(test_images, test_labels)
-        batches += 1
-        if batches >= test_len / config['data.batch_size']:
-            # we need to break the loop by hand because
-            # the generator loops indefinitely
-            break
+    losses = []
+    accuracies = []
+    
+    for _ in range(config['times']):
+        batches = 0
+        for test_images, test_labels in test_gen:
+            test_step(test_images, test_labels)
+            batches += 1
+            if batches >= test_len / config['data.batch_size']:
+                # we need to break the loop by hand because
+                # the generator loops indefinitely
+                break
 
-    print ('Test Loss: {} Test Acc: {}'.format(test_loss.result(), test_accuracy.result()*100))
+        losses.append(test_loss.result())
+        accuracies.append(test_accuracy.result()*100)
+
+        print('Test Loss: {} Test Acc: {}'.format(test_loss.result(), test_accuracy.result()*100))
+
+    print()
+    print('Test Loss: {} (+/-) {} Test Acc: {} (+/-) {}'.format(np.mean(losses), np.std(losses), np.mean(accuracies), np.std(accuracies))

@@ -2,6 +2,7 @@
 Logic for evaluation procedure of saved model.
 """
 
+import numpy as np
 import tensorflow as tf
 
 # tf.config.gpu.set_per_process_memory_growth(True)
@@ -40,18 +41,25 @@ def eval(config):
         loss, acc = model(support, query)
         return loss, acc
 
+    losses = []
+    accuracies = []
+
     with tf.device(device_name):
-        for i_episode in range(config['data.episodes']):
-            support, query = test_loader.get_next_episode()
-            if (i_episode+1)%50 == 0: 
-                print("Episode: ", i_episode + 1)
-            loss, acc = calc_loss(support, query)
-            test_loss(loss)
-            test_acc(acc)
+        for _ in range(config['times']):
+            for i_episode in range(config['data.episodes']):
+                support, query = test_loader.get_next_episode()
+                # if (i_episode+1)%50 == 0: 
+                #    print("Episode: ", i_episode + 1)
+                loss, acc = calc_loss(support, query)
+                losses.append(loss)
+                accuracies.append(acc)
+                test_loss(loss)
+                test_acc(acc)
 
-    print("Loss: ", test_loss.result().numpy())
-    print("Accuracy: ", test_acc.result().numpy())
+                print('Test Loss: {} Test Acc: {}'.format(loss, acc))
 
+    print()
+    print('Test Loss: {} (+/-) {} Test Acc: {} (+/-) {}'.format(np.mean(losses), np.std(losses), np.mean(accuracies), np.std(accuracies))
 
 if __name__ == "__main__":
     pass

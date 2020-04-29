@@ -15,15 +15,17 @@ has_param() {
 
 . $ROOT/../../scripts/flags/declares.sh
 
+variables["-o"]="output"
 variables["--model"]="model"
 variables["--engine"]="engine"
-variables["-o"]="output"
+variables["--times"]="times"
 
 . $ROOT/../../scripts/flags/arguments.sh
 
 model=${model:-""}
 output=${output:-"/tmp/tests"}
 engine=${engine:-""}
+times=${times:-"10"}
 
 . $ROOT/../cases.sh
 
@@ -49,7 +51,5 @@ for config_path in ${test_cases[*]}; do
     echo "Executing test case with config at $config_path" >> "$output"
 
     python $ROOT/../../src/protonet/scripts/train/run_train.py --config $config_path $model_flag $engine_flag
-    for i in {1..10}; do
-        python $ROOT/../../src/protonet/scripts/eval/run_eval.py --config $config_path $model_flag $engine_flag >> "$output"
-    done
+    python $ROOT/../../src/protonet/scripts/eval/run_eval.py --config $config_path $model_flag $engine_flag --times $times >> "$output"
 done
