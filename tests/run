@@ -56,9 +56,9 @@ tests=(
 
     # "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf -o $ROOT/results --model DenseNet"
 
-    "$ROOT/protonet/execute $ROOT/protonet/config_lsa16_split_5.conf $ROOT/protonet/config_lsa16_split_10.conf $ROOT/protonet/config_lsa16_split_15.conf $ROOT/protonet/config_lsa16_split_20.conf -o $ROOT/results"
-    "$ROOT/protonet/execute $ROOT/protonet/config_ciarp_split_5.conf $ROOT/protonet/config_ciarp_split_10.conf $ROOT/protonet/config_ciarp_split_15.conf $ROOT/protonet/config_ciarp_split_20.conf -o $ROOT/results"
-    "$ROOT/protonet/execute $ROOT/protonet/config_rwth_split_5.conf $ROOT/protonet/config_rwth_split_10.conf $ROOT/protonet/config_rwth_split_15.conf $ROOT/protonet/config_rwth_split_20.conf -o $ROOT/results"
+    # "$ROOT/protonet/execute $ROOT/protonet/config_lsa16_split_5.conf $ROOT/protonet/config_lsa16_split_10.conf $ROOT/protonet/config_lsa16_split_15.conf $ROOT/protonet/config_lsa16_split_20.conf -o $ROOT/results"
+    # "$ROOT/protonet/execute $ROOT/protonet/config_ciarp_split_5.conf $ROOT/protonet/config_ciarp_split_10.conf $ROOT/protonet/config_ciarp_split_15.conf $ROOT/protonet/config_ciarp_split_20.conf -o $ROOT/results"
+    # "$ROOT/protonet/execute $ROOT/protonet/config_rwth_split_5.conf $ROOT/protonet/config_rwth_split_10.conf $ROOT/protonet/config_rwth_split_15.conf $ROOT/protonet/config_rwth_split_20.conf -o $ROOT/results"
 
 )
 

@@ -18,14 +18,21 @@ has_param() {
 variables["-o"]="output"
 variables["--engine"]="engine"
 variables["--times"]="times"
+variables["--weights"]="weights"
 
 . $ROOT/../../scripts/flags/arguments.sh
 
 output=${output:-"/tmp/tests"}
 engine=${engine:-""}
 times=${times:-"10"}
+weights=${weights:-""}
 
 . $ROOT/../cases.sh
+
+weights_flag=""
+if [ "$weights" != "" ]; then
+    weights_flag="--model.weights $weights"
+fi
 
 engine_flag=""
 if [ "$engine" != "" ]; then
@@ -47,6 +54,6 @@ for config_path in ${test_cases[*]}; do
     echo "Executing test case with config at $config_path"
     echo "Executing test case with config at $config_path" >> "$output"
 
-    python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path $engine_flag
-    python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path $engine_flag --times $times >> "$output"
+    python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path $engine_flag $weights_flag
+    python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path $engine_flag $weights_flag --times $times >> "$output"
 done

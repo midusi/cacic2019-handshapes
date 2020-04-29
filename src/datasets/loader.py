@@ -1,8 +1,7 @@
 """Dataset loader"""
 
 import numpy as np
-from sklearn.model_selection import train_test_split
-from src.utils.model_selection import train_test_split_balanced
+from tensorflow.keras.datasets import cifar10, cifar100, mnist
 from sklearn.utils.class_weight import compute_class_weight
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -25,26 +24,28 @@ def load(dataset_name, datagen_flow=False,
     Returns (train_gen, val_gen, test_gen, nb_classes, image_shape, class_weights):.
     """
 
-    if dataset_name == "Ciarp":
-        x, y = load_ciarp(dataset_name) 
+    dataset_path = '/tf/data/{}/data'.format(dataset_name)
+
+    # The data, split between train and test sets:
+    if dataset_name == "cifar10":
+        (x_train, y_train), (x_test, y_test) = cifar10.load_data()
+    elif dataset_name == "cifar100":
+        (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')
+    elif dataset_name == "mnist":
+        (x_train, y_train), (x_test, y_test) = mnist.load_data(path=dataset_path)
+    elif dataset_name == "Ciarp":
+        (x_train, y_train), (x_test, y_test) = load_ciarp(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
     elif dataset_name == "lsa16":
-        x, y = load_lsa16(dataset_name)
+        (x_train, y_train), (x_test, y_test) = load_lsa16(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
     elif dataset_name == "rwth":
-        x, y = load_rwth(dataset_name)
+        (x_train, y_train), (x_test, y_test) = load_rwth(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
     else:
         raise ValueError("Unknow dataset: {}".format(dataset_name))
 
-    image_shape = np.shape(x)[1:]
-
-    split = train_test_split if n_train_per_class <= 0 else train_test_split_balanced
-
-    if n_train_per_class <= 0:
-        x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size)
-    else:
-        x_train, x_test, y_train, y_test = split(x, y, n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
-
     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
-    nb_classes = len(np.unique(y))
+    
+    image_shape = np.shape(x_train)[1:]
+    nb_classes = len(np.unique(y_train))
 
     class_weights = None
     if weight_classes:
