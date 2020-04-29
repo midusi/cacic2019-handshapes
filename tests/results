@@ -340,7 +340,10 @@ Test Loss: 0.005983168259263039 Test Acc: 100.0
 Test Loss: 0.0006166220409795642 Test Acc: 100.0
 Test Loss: 0.004592420998960733 Test Acc: 100.0
 
-DenseNet tests
+
+
+DenseNet + MAML + LSA16
+
 Executing test case with config at ./tests/densenet/maml/config_lsa16.conf
 Test Loss: 0.04946351796388626 Test Acc: 99.0
 Test Loss: 0.16189832985401154 Test Acc: 98.5
@@ -353,10 +356,22 @@ Test Loss: 0.010912446305155754 Test Acc: 99.5
 Test Loss: 0.08347083628177643 Test Acc: 98.5
 Test Loss: 0.13167217373847961 Test Acc: 98.0
 
-DenseNet tests
-Executing test case with config at ./tests/densenet/maml/config_ciarp.conf
+DenseNet + MAML + Ciarp
 
-DenseNet tests
+Executing test case with config at ./tests/densenet/maml/config_ciarp.conf
+Test Loss: 0.000570212141610682 Test Acc: 100.0
+Test Loss: 0.0005708119133487344 Test Acc: 100.0
+Test Loss: 0.000547469942830503 Test Acc: 100.0
+Test Loss: 0.0005662112380377948 Test Acc: 100.0
+Test Loss: 0.0005892777699045837 Test Acc: 100.0
+Test Loss: 0.0006115519790910184 Test Acc: 100.0
+Test Loss: 0.0005547647015191615 Test Acc: 100.0
+Test Loss: 0.0006232025916688144 Test Acc: 100.0
+Test Loss: 0.0005480360123328865 Test Acc: 100.0
+Test Loss: 0.0005506698507815599 Test Acc: 100.0
+
+DenseNet + MAML + RWTH
+
 Executing test case with config at ./tests/densenet/maml/config_rwth.conf
 Test Loss: 0.4525171220302582 Test Acc: 90.65657043457031
 Test Loss: 0.498428076505661 Test Acc: 90.27777862548828
@@ -368,6 +383,9 @@ Test Loss: 0.3870261013507843 Test Acc: 92.67676544189453
 Test Loss: 0.3934601843357086 Test Acc: 91.5404052734375
 Test Loss: 0.4018150269985199 Test Acc: 91.79293060302734
 Test Loss: 0.31199172139167786 Test Acc: 92.80303192138672
+
+
+DenseNet + MAML + LSA16 Splits
 
 Executing test case with config at ./tests/densenet/maml/config_lsa16_split_5.conf
 Test Loss: 1.4625498056411743 Test Acc: 67.70832824707031
@@ -417,10 +435,57 @@ Test Loss: 0.08115930110216141 Test Acc: 95.83332824707031
 Test Loss: 0.04821275547146797 Test Acc: 97.91667175292969
 Test Loss: 0.044760268181562424 Test Acc: 98.95832824707031
 
+DenseNet + MAML + Ciarp Splits
+
 Executing test case with config at ./tests/densenet/maml/config_ciarp_split_5.conf
+Test Loss: 0.6415366530418396 Test Acc: 75.0
+Test Loss: 0.7809922695159912 Test Acc: 70.0
+Test Loss: 0.8669431805610657 Test Acc: 75.0
+Test Loss: 0.8467717170715332 Test Acc: 73.33333587646484
+Test Loss: 0.768702507019043 Test Acc: 73.33333587646484
+Test Loss: 0.5448117256164551 Test Acc: 81.66666412353516
+Test Loss: 0.8981896638870239 Test Acc: 70.0
+Test Loss: 0.6801327466964722 Test Acc: 76.66666412353516
+Test Loss: 0.8608713150024414 Test Acc: 71.66666412353516
+Test Loss: 0.7302730083465576 Test Acc: 76.66666412353516
+
 Executing test case with config at ./tests/densenet/maml/config_ciarp_split_10.conf
+Test Loss: 0.26916128396987915 Test Acc: 95.0
+Test Loss: 0.5089251399040222 Test Acc: 90.0
+Test Loss: 0.24944669008255005 Test Acc: 93.33333587646484
+Test Loss: 0.38275444507598877 Test Acc: 91.66667175292969
+Test Loss: 0.5419838428497314 Test Acc: 85.0
+Test Loss: 0.07319259643554688 Test Acc: 98.33333587646484
+Test Loss: 0.16957403719425201 Test Acc: 96.66666412353516
+Test Loss: 0.2293122112751007 Test Acc: 95.0
+Test Loss: 0.29340049624443054 Test Acc: 88.33333587646484
+Test Loss: 0.4565330147743225 Test Acc: 90.0
+
 Executing test case with config at ./tests/densenet/maml/config_ciarp_split_15.conf
+Test Loss: 0.2535063624382019 Test Acc: 88.33333587646484
+Test Loss: 0.06750616431236267 Test Acc: 96.66666412353516
+Test Loss: 0.11091510206460953 Test Acc: 95.0
+Test Loss: 0.1550511121749878 Test Acc: 95.0
+Test Loss: 0.21600167453289032 Test Acc: 90.0
+Test Loss: 0.05327748507261276 Test Acc: 98.33333587646484
+Test Loss: 0.15881195664405823 Test Acc: 93.33333587646484
+Test Loss: 0.08297862857580185 Test Acc: 96.66666412353516
+Test Loss: 0.14458519220352173 Test Acc: 96.66666412353516
+Test Loss: 0.07010088115930557 Test Acc: 98.33333587646484
+
 Executing test case with config at ./tests/densenet/maml/config_ciarp_split_20.conf
+Test Loss: 0.16001896560192108 Test Acc: 98.33333587646484
+Test Loss: 0.21266299486160278 Test Acc: 91.66667175292969
+Test Loss: 0.05655340477824211 Test Acc: 96.66666412353516
+Test Loss: 0.09410630911588669 Test Acc: 98.33333587646484
+Test Loss: 0.33219999074935913 Test Acc: 95.0
+Test Loss: 0.012527825310826302 Test Acc: 100.0
+Test Loss: 0.18096667528152466 Test Acc: 96.66666412353516
+Test Loss: 0.041236452758312225 Test Acc: 98.33333587646484
+Test Loss: 0.12357325851917267 Test Acc: 95.0
+Test Loss: 0.2822216749191284 Test Acc: 90.0
+
+DenseNet + MAML + RWTH Splits
 
 Executing test case with config at ./tests/densenet/maml/config_rwth_split_5.conf
 Test Loss: 5.08045768737793 Test Acc: 30.83333396911621
@@ -470,39 +535,64 @@ Test Loss: 3.9289116859436035 Test Acc: 45.833335876464844
 Test Loss: 4.194572925567627 Test Acc: 44.16666793823242
 Test Loss: 4.006704807281494 Test Acc: 44.16666793823242
 
-Transfer Learning tests with DenseNet
+Transfer Learning tests with [DenseNet + MAML]
+
 Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf
-Test Loss: 0.07692145556211472 Test Acc: 98.0
-Test Loss: 0.1871969848871231 Test Acc: 97.5
-Test Loss: 0.17867745459079742 Test Acc: 98.5
-Test Loss: 0.08556688576936722 Test Acc: 98.0
-Test Loss: 0.02891470678150654 Test Acc: 98.5
-Test Loss: 0.27204325795173645 Test Acc: 95.0
-Test Loss: 0.024759622290730476 Test Acc: 99.5
-Test Loss: 0.04656950756907463 Test Acc: 99.0
-Test Loss: 0.07178865373134613 Test Acc: 98.0
-Test Loss: 0.25225791335105896 Test Acc: 96.5
+Test Loss: 0.024013860151171684 Test Acc: 99.0
+Test Loss: 0.15172600746154785 Test Acc: 97.0
+Test Loss: 0.12347082048654556 Test Acc: 98.0
+Test Loss: 0.11733818054199219 Test Acc: 95.5
+Test Loss: 0.11976878345012665 Test Acc: 97.5
+Test Loss: 0.28785598278045654 Test Acc: 94.5
+Test Loss: 0.04706040397286415 Test Acc: 98.0
+Test Loss: 0.038967493921518326 Test Acc: 98.5
+Test Loss: 0.10550888627767563 Test Acc: 98.0
+Test Loss: 0.24517877399921417 Test Acc: 96.5
 
-Transfer Learning tests with DenseNet
+Transfer Learning tests with [DenseNet + MAML]
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp.conf
+Test Loss: 4.2526559695943433e-07 Test Acc: 100.0
+Test Loss: 3.306050473383948e-07 Test Acc: 100.0
+Test Loss: 3.3140639743578504e-07 Test Acc: 100.0
+Test Loss: 6.718614713463467e-07 Test Acc: 100.0
+Test Loss: 3.530916217187041e-07 Test Acc: 100.0
+Test Loss: 7.791778102728131e-07 Test Acc: 100.0
+Test Loss: 6.623129138461081e-06 Test Acc: 100.0
+Test Loss: 6.316764483926818e-06 Test Acc: 100.0
+Test Loss: 7.308084377655177e-07 Test Acc: 100.0
+Test Loss: 7.246333098009927e-06 Test Acc: 100.0
 
-Transfer Learning tests with DenseNet
+Transfer Learning + MAML tests with [DenseNet + MAML]
+
 Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf
-Test Loss: 0.09913177788257599 Test Acc: 98.0
-Test Loss: 0.15898779034614563 Test Acc: 97.5
-Test Loss: 0.09220221638679504 Test Acc: 98.0
-Test Loss: 0.1925458163022995 Test Acc: 97.5
-Test Loss: 0.3421487808227539 Test Acc: 96.0
-Test Loss: 0.1624089628458023 Test Acc: 97.0
-Test Loss: 0.13468728959560394 Test Acc: 97.5
-Test Loss: 0.22586658596992493 Test Acc: 98.0
-Test Loss: 0.1419185996055603 Test Acc: 97.0
-Test Loss: 0.04001377522945404 Test Acc: 99.0
+Test Loss: 0.06733901798725128 Test Acc: 99.0
+Test Loss: 0.06045655906200409 Test Acc: 98.5
+Test Loss: 0.10232027620077133 Test Acc: 97.5
+Test Loss: 0.07903870940208435 Test Acc: 97.5
+Test Loss: 0.07868480682373047 Test Acc: 99.0
+Test Loss: 0.12484444677829742 Test Acc: 96.0
+Test Loss: 0.0662742555141449 Test Acc: 97.5
+Test Loss: 0.11327123641967773 Test Acc: 98.0
+Test Loss: 0.05344686657190323 Test Acc: 99.5
+Test Loss: 0.13468977808952332 Test Acc: 97.0
 
-Transfer Learning tests with DenseNet
+Transfer Learning + MAML tests with [DenseNet + MAML]
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp.conf
+Test Loss: 1.3304597423768882e-08 Test Acc: 100.0
+Test Loss: 2.2294538837286382e-07 Test Acc: 100.0
+Test Loss: 9.492433861169047e-08 Test Acc: 100.0
+Test Loss: 1.9956862828962585e-08 Test Acc: 100.0
+Test Loss: 1.7672931562628946e-08 Test Acc: 100.0
+Test Loss: 5.281828308056902e-08 Test Acc: 100.0
+Test Loss: 1.4612878018738229e-08 Test Acc: 100.0
+Test Loss: 1.4036346307477743e-08 Test Acc: 100.0
+Test Loss: 8.913642801644528e-08 Test Acc: 100.0
+Test Loss: 8.581467092483308e-09 Test Acc: 100.0
 
-Transfer Learning tests with DenseNet
+Transfer Learning tests with [DenseNet + MAML]
+
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_5.conf
 Test Loss: 2.352473497390747 Test Acc: 46.66666793823242
 Test Loss: 2.5887556076049805 Test Acc: 49.16666793823242
@@ -514,6 +604,7 @@ Test Loss: 1.9301860332489014 Test Acc: 51.666664123535156
 Test Loss: 1.9778498411178589 Test Acc: 46.66666793823242
 Test Loss: 2.6592211723327637 Test Acc: 47.5
 Test Loss: 2.0569353103637695 Test Acc: 51.666664123535156
+
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_10.conf
 Test Loss: 1.4899647235870361 Test Acc: 54.16666793823242
 Test Loss: 1.3437119722366333 Test Acc: 58.33333206176758
@@ -525,6 +616,7 @@ Test Loss: 1.5646861791610718 Test Acc: 54.16666793823242
 Test Loss: 1.7183245420455933 Test Acc: 54.16666793823242
 Test Loss: 1.4242641925811768 Test Acc: 61.66666793823242
 Test Loss: 1.6219767332077026 Test Acc: 52.499996185302734
+
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_15.conf
 Test Loss: 1.5226271152496338 Test Acc: 58.33333206176758
 Test Loss: 1.8609850406646729 Test Acc: 57.5
@@ -536,6 +628,7 @@ Test Loss: 1.9262009859085083 Test Acc: 55.0
 Test Loss: 2.0315725803375244 Test Acc: 60.833335876464844
 Test Loss: 2.215216875076294 Test Acc: 53.333335876464844
 Test Loss: 1.7914471626281738 Test Acc: 58.33333206176758
+
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_20.conf
 Test Loss: 2.300893783569336 Test Acc: 59.166664123535156
 Test Loss: 1.9888038635253906 Test Acc: 60.833335876464844
@@ -560,6 +653,7 @@ Test Loss: 3.6327459812164307 Test Acc: 8.333333969116211
 Test Loss: 3.5831058025360107 Test Acc: 7.291666507720947
 Test Loss: 3.5283639430999756 Test Acc: 10.416666030883789
 Test Loss: 3.508546829223633 Test Acc: 8.333333969116211
+
 Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf
 Test Loss: 4.16680908203125 Test Acc: 10.416666030883789
 Test Loss: 4.194556713104248 Test Acc: 9.375
@@ -571,6 +665,7 @@ Test Loss: 4.305427074432373 Test Acc: 8.333333969116211
 Test Loss: 4.285942554473877 Test Acc: 8.333333969116211
 Test Loss: 4.608746528625488 Test Acc: 8.333333969116211
 Test Loss: 4.234426975250244 Test Acc: 13.541666984558105
+
 Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf
 Test Loss: 0.23180657625198364 Test Acc: 93.75
 Test Loss: 0.3612951934337616 Test Acc: 90.625
@@ -582,6 +677,7 @@ Test Loss: 0.18729454278945923 Test Acc: 90.625
 Test Loss: 0.5114649534225464 Test Acc: 90.625
 Test Loss: 0.5243136286735535 Test Acc: 87.5
 Test Loss: 0.3259260058403015 Test Acc: 92.70832824707031
+
 Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf
 Test Loss: 0.25156912207603455 Test Acc: 94.79167175292969
 Test Loss: 0.2712509334087372 Test Acc: 94.79167175292969
@@ -594,13 +690,8 @@ Test Loss: 0.07641685009002686 Test Acc: 96.875
 Test Loss: 0.18172520399093628 Test Acc: 95.83332824707031
 Test Loss: 0.13711535930633545 Test Acc: 94.79167175292969
 
-Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_5.conf
-Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_10.conf
-Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_15.conf
-Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_20.conf
+Transfer Learning tests with [DenseNet + MAML]
 
-Transfer Learning tests with DenseNet
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_5.conf
 Test Loss: 2.109376907348633 Test Acc: 50.83333206176758
 Test Loss: 2.3375284671783447 Test Acc: 44.16666793823242
@@ -612,6 +703,7 @@ Test Loss: 1.988577961921692 Test Acc: 49.16666793823242
 Test Loss: 2.3169524669647217 Test Acc: 51.666664123535156
 Test Loss: 2.0387210845947266 Test Acc: 50.0
 Test Loss: 2.042558193206787 Test Acc: 50.0
+
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_10.conf
 Test Loss: 1.4958585500717163 Test Acc: 55.83333206176758
 Test Loss: 1.5684850215911865 Test Acc: 59.166664123535156
@@ -623,6 +715,7 @@ Test Loss: 1.769742488861084 Test Acc: 54.16666793823242
 Test Loss: 1.3650505542755127 Test Acc: 60.833335876464844
 Test Loss: 1.8418294191360474 Test Acc: 55.0
 Test Loss: 1.410650372505188 Test Acc: 60.000003814697266
+
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_15.conf
 Test Loss: 2.335664749145508 Test Acc: 56.66666793823242
 Test Loss: 1.7791787385940552 Test Acc: 61.66666793823242
@@ -634,6 +727,7 @@ Test Loss: 1.9671965837478638 Test Acc: 60.000003814697266
 Test Loss: 1.84423828125 Test Acc: 61.66666793823242
 Test Loss: 1.9245655536651611 Test Acc: 57.5
 Test Loss: 1.7853080034255981 Test Acc: 61.66666793823242
+
 Executing test case with config at ./tests/transfer_learning/maml/config_rwth_split_20.conf
 Test Loss: 2.0923049449920654 Test Acc: 59.166664123535156
 Test Loss: 2.3104867935180664 Test Acc: 59.166664123535156
@@ -646,45 +740,8 @@ Test Loss: 2.1628313064575195 Test Acc: 55.83333206176758
 Test Loss: 2.730097770690918 Test Acc: 52.499996185302734
 Test Loss: 2.5735228061676025 Test Acc: 52.499996185302734
 
-ProtoNet tests + Cropper
-
-Executing test case with config at ./tests/protonet/config_rwth.conf
-Loss:  0.5853701 Accuracy:  0.82316023
-Loss:  0.602158 Accuracy:  0.8147604
-Loss:  0.6013668 Accuracy:  0.82092047
-Loss:  0.5635009 Accuracy:  0.8269608
-Loss:  0.59776974 Accuracy:  0.8147602
-Loss:  0.58900756 Accuracy:  0.8226405
-Loss:  0.6059109 Accuracy:  0.8151605
-
-
 Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf
-Test Loss: 0.024013860151171684 Test Acc: 99.0
-Test Loss: 0.15172600746154785 Test Acc: 97.0
-Test Loss: 0.12347082048654556 Test Acc: 98.0
-Test Loss: 0.11733818054199219 Test Acc: 95.5
-Test Loss: 0.11976878345012665 Test Acc: 97.5
-Test Loss: 0.28785598278045654 Test Acc: 94.5
-Test Loss: 0.04706040397286415 Test Acc: 98.0
-Test Loss: 0.038967493921518326 Test Acc: 98.5
-Test Loss: 0.10550888627767563 Test Acc: 98.0
-Test Loss: 0.24517877399921417 Test Acc: 96.5
 
-Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf
-Test Loss: 0.06733901798725128 Test Acc: 99.0
-Test Loss: 0.06045655906200409 Test Acc: 98.5
-Test Loss: 0.10232027620077133 Test Acc: 97.5
-Test Loss: 0.07903870940208435 Test Acc: 97.5
-Test Loss: 0.07868480682373047 Test Acc: 99.0
-Test Loss: 0.12484444677829742 Test Acc: 96.0
-Test Loss: 0.0662742555141449 Test Acc: 97.5
-Test Loss: 0.11327123641967773 Test Acc: 98.0
-Test Loss: 0.05344686657190323 Test Acc: 99.5
-Test Loss: 0.13468977808952332 Test Acc: 97.0
-
-Transfer Learning tests with DenseNet
 Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf
 Test Loss: 1.037845492362976 Test Acc: 84.375
 Test Loss: 1.028420329093933 Test Acc: 82.29167175292969
@@ -696,6 +753,7 @@ Test Loss: 0.9929028153419495 Test Acc: 83.33332824707031
 Test Loss: 1.2573156356811523 Test Acc: 82.29167175292969
 Test Loss: 1.18294095993042 Test Acc: 86.45832824707031
 Test Loss: 1.2266578674316406 Test Acc: 86.45832824707031
+
 Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf
 Test Loss: 0.045280490070581436 Test Acc: 98.95832824707031
 Test Loss: 0.187877357006073 Test Acc: 94.79167175292969
@@ -707,6 +765,7 @@ Test Loss: 0.11598987132310867 Test Acc: 96.875
 Test Loss: 0.27092990279197693 Test Acc: 90.625
 Test Loss: 0.26237010955810547 Test Acc: 96.875
 Test Loss: 0.18019652366638184 Test Acc: 94.79167175292969
+
 Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf
 Test Loss: 0.10528164356946945 Test Acc: 95.83332824707031
 Test Loss: 0.33021029829978943 Test Acc: 90.625
@@ -718,6 +777,7 @@ Test Loss: 0.09176856279373169 Test Acc: 96.875
 Test Loss: 0.010892000049352646 Test Acc: 100.0
 Test Loss: 0.27082496881484985 Test Acc: 93.75
 Test Loss: 0.08827295899391174 Test Acc: 96.875
+
 Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf
 Test Loss: 0.03735541179776192 Test Acc: 97.91667175292969
 Test Loss: 0.21983933448791504 Test Acc: 96.875
@@ -731,189 +791,7 @@ Test Loss: 0.06172532960772514 Test Acc: 98.95832824707031
 Test Loss: 0.21897892653942108 Test Acc: 94.79167175292969
 
 Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_5.conf
-Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_10.conf
-Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_15.conf
-Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_20.conf
 
-Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf
-Test Loss: 4.868107795715332 Test Acc: 6.25
-Test Loss: 4.914753437042236 Test Acc: 6.25
-Test Loss: 4.83821964263916 Test Acc: 6.25
-Test Loss: 4.916133880615234 Test Acc: 6.25
-Test Loss: 4.795142650604248 Test Acc: 6.25
-Test Loss: 4.653954982757568 Test Acc: 6.25
-Test Loss: 4.947195053100586 Test Acc: 6.25
-Test Loss: 5.011113166809082 Test Acc: 6.25
-Test Loss: 4.809469699859619 Test Acc: 6.25
-Test Loss: 4.691275119781494 Test Acc: 6.25
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf
-Test Loss: 0.6489672660827637 Test Acc: 80.20832824707031
-Test Loss: 0.9417427182197571 Test Acc: 75.0
-Test Loss: 1.3492320775985718 Test Acc: 70.83332824707031
-Test Loss: 0.8231041431427002 Test Acc: 83.33332824707031
-Test Loss: 1.2958481311798096 Test Acc: 71.875
-Test Loss: 0.7965129017829895 Test Acc: 82.29167175292969
-Test Loss: 1.4349493980407715 Test Acc: 72.91667175292969
-Test Loss: 1.4455701112747192 Test Acc: 64.58332824707031
-Test Loss: 1.0963364839553833 Test Acc: 72.91667175292969
-Test Loss: 0.835206925868988 Test Acc: 81.25
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf
-Test Loss: 0.5454433560371399 Test Acc: 84.375
-Test Loss: 0.25751110911369324 Test Acc: 92.70832824707031
-Test Loss: 0.33062809705734253 Test Acc: 91.66667175292969
-Test Loss: 0.46790680289268494 Test Acc: 86.45832824707031
-Test Loss: 0.47271373867988586 Test Acc: 88.54167175292969
-Test Loss: 0.8007004261016846 Test Acc: 85.41667175292969
-Test Loss: 0.39385390281677246 Test Acc: 84.375
-Test Loss: 0.30757269263267517 Test Acc: 89.58332824707031
-Test Loss: 0.4788109362125397 Test Acc: 92.70832824707031
-Test Loss: 0.5329376459121704 Test Acc: 88.54167175292969
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf
-Test Loss: 0.18310026824474335 Test Acc: 97.91667175292969
-Test Loss: 0.04757426306605339 Test Acc: 97.91667175292969
-Test Loss: 0.18279613554477692 Test Acc: 95.83332824707031
-Test Loss: 0.22387196123600006 Test Acc: 94.79167175292969
-Test Loss: 0.2333141565322876 Test Acc: 95.83332824707031
-Test Loss: 0.2119794636964798 Test Acc: 93.75
-Test Loss: 0.2599647045135498 Test Acc: 93.75
-Test Loss: 0.24879080057144165 Test Acc: 95.83332824707031
-Test Loss: 0.15664042532444 Test Acc: 97.91667175292969
-Test Loss: 0.10392159223556519 Test Acc: 95.83332824707031
-
-Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf
-Test Loss: 4.7910261154174805 Test Acc: 6.25
-Test Loss: 4.942199230194092 Test Acc: 6.25
-Test Loss: 4.899025917053223 Test Acc: 6.25
-Test Loss: 4.8466668128967285 Test Acc: 6.25
-Test Loss: 4.812280178070068 Test Acc: 6.25
-Test Loss: 4.72909688949585 Test Acc: 6.25
-Test Loss: 4.767547130584717 Test Acc: 6.25
-Test Loss: 4.963850498199463 Test Acc: 6.25
-Test Loss: 4.910182952880859 Test Acc: 6.25
-Test Loss: 4.911196231842041 Test Acc: 6.25
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf
-Test Loss: 1.288578987121582 Test Acc: 73.95832824707031
-Test Loss: 0.8748427033424377 Test Acc: 82.29167175292969
-Test Loss: 1.132824420928955 Test Acc: 79.16667175292969
-Test Loss: 0.8693275451660156 Test Acc: 83.33332824707031
-Test Loss: 0.7711983323097229 Test Acc: 81.25
-Test Loss: 0.8195465207099915 Test Acc: 78.125
-Test Loss: 0.7115564346313477 Test Acc: 79.16667175292969
-Test Loss: 0.8278663754463196 Test Acc: 79.16667175292969
-Test Loss: 0.9321227073669434 Test Acc: 71.875
-Test Loss: 3.03190016746521 Test Acc: 81.25
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf
-Test Loss: 0.5080904960632324 Test Acc: 83.33332824707031
-Test Loss: 0.5886273980140686 Test Acc: 83.33332824707031
-Test Loss: 0.5722076296806335 Test Acc: 90.625
-Test Loss: 0.46864748001098633 Test Acc: 87.5
-Test Loss: 0.3950841426849365 Test Acc: 88.54167175292969
-Test Loss: 0.7695209383964539 Test Acc: 84.375
-Test Loss: 0.6563366055488586 Test Acc: 84.375
-Test Loss: 0.477364182472229 Test Acc: 86.45832824707031
-Test Loss: 0.763457715511322 Test Acc: 82.29167175292969
-Test Loss: 0.4820581376552582 Test Acc: 87.5
-Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf
-Test Loss: 0.3113068640232086 Test Acc: 95.83332824707031
-Test Loss: 0.4085008203983307 Test Acc: 91.66667175292969
-Test Loss: 0.34050020575523376 Test Acc: 90.625
-Test Loss: 0.23032204806804657 Test Acc: 92.70832824707031
-Test Loss: 0.4018814265727997 Test Acc: 91.66667175292969
-Test Loss: 0.3276123106479645 Test Acc: 92.70832824707031
-Test Loss: 0.28152036666870117 Test Acc: 92.70832824707031
-Test Loss: 0.10588020831346512 Test Acc: 95.83332824707031
-Test Loss: 0.1537507176399231 Test Acc: 94.79167175292969
-Test Loss: 0.18634741008281708 Test Acc: 95.83332824707031
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/maml/config_ciarp.conf
-Test Loss: 0.000570212141610682 Test Acc: 100.0
-Test Loss: 0.0005708119133487344 Test Acc: 100.0
-Test Loss: 0.000547469942830503 Test Acc: 100.0
-Test Loss: 0.0005662112380377948 Test Acc: 100.0
-Test Loss: 0.0005892777699045837 Test Acc: 100.0
-Test Loss: 0.0006115519790910184 Test Acc: 100.0
-Test Loss: 0.0005547647015191615 Test Acc: 100.0
-Test Loss: 0.0006232025916688144 Test Acc: 100.0
-Test Loss: 0.0005480360123328865 Test Acc: 100.0
-Test Loss: 0.0005506698507815599 Test Acc: 100.0
-
-DenseNet tests
-Executing test case with config at ./tests/densenet/maml/config_ciarp_split_5.conf
-Test Loss: 0.6415366530418396 Test Acc: 75.0
-Test Loss: 0.7809922695159912 Test Acc: 70.0
-Test Loss: 0.8669431805610657 Test Acc: 75.0
-Test Loss: 0.8467717170715332 Test Acc: 73.33333587646484
-Test Loss: 0.768702507019043 Test Acc: 73.33333587646484
-Test Loss: 0.5448117256164551 Test Acc: 81.66666412353516
-Test Loss: 0.8981896638870239 Test Acc: 70.0
-Test Loss: 0.6801327466964722 Test Acc: 76.66666412353516
-Test Loss: 0.8608713150024414 Test Acc: 71.66666412353516
-Test Loss: 0.7302730083465576 Test Acc: 76.66666412353516
-Executing test case with config at ./tests/densenet/maml/config_ciarp_split_10.conf
-Test Loss: 0.26916128396987915 Test Acc: 95.0
-Test Loss: 0.5089251399040222 Test Acc: 90.0
-Test Loss: 0.24944669008255005 Test Acc: 93.33333587646484
-Test Loss: 0.38275444507598877 Test Acc: 91.66667175292969
-Test Loss: 0.5419838428497314 Test Acc: 85.0
-Test Loss: 0.07319259643554688 Test Acc: 98.33333587646484
-Test Loss: 0.16957403719425201 Test Acc: 96.66666412353516
-Test Loss: 0.2293122112751007 Test Acc: 95.0
-Test Loss: 0.29340049624443054 Test Acc: 88.33333587646484
-Test Loss: 0.4565330147743225 Test Acc: 90.0
-Executing test case with config at ./tests/densenet/maml/config_ciarp_split_15.conf
-Test Loss: 0.2535063624382019 Test Acc: 88.33333587646484
-Test Loss: 0.06750616431236267 Test Acc: 96.66666412353516
-Test Loss: 0.11091510206460953 Test Acc: 95.0
-Test Loss: 0.1550511121749878 Test Acc: 95.0
-Test Loss: 0.21600167453289032 Test Acc: 90.0
-Test Loss: 0.05327748507261276 Test Acc: 98.33333587646484
-Test Loss: 0.15881195664405823 Test Acc: 93.33333587646484
-Test Loss: 0.08297862857580185 Test Acc: 96.66666412353516
-Test Loss: 0.14458519220352173 Test Acc: 96.66666412353516
-Test Loss: 0.07010088115930557 Test Acc: 98.33333587646484
-Executing test case with config at ./tests/densenet/maml/config_ciarp_split_20.conf
-Test Loss: 0.16001896560192108 Test Acc: 98.33333587646484
-Test Loss: 0.21266299486160278 Test Acc: 91.66667175292969
-Test Loss: 0.05655340477824211 Test Acc: 96.66666412353516
-Test Loss: 0.09410630911588669 Test Acc: 98.33333587646484
-Test Loss: 0.33219999074935913 Test Acc: 95.0
-Test Loss: 0.012527825310826302 Test Acc: 100.0
-Test Loss: 0.18096667528152466 Test Acc: 96.66666412353516
-Test Loss: 0.041236452758312225 Test Acc: 98.33333587646484
-Test Loss: 0.12357325851917267 Test Acc: 95.0
-Test Loss: 0.2822216749191284 Test Acc: 90.0
-
-Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/maml/config_ciarp.conf
-Test Loss: 4.2526559695943433e-07 Test Acc: 100.0
-Test Loss: 3.306050473383948e-07 Test Acc: 100.0
-Test Loss: 3.3140639743578504e-07 Test Acc: 100.0
-Test Loss: 6.718614713463467e-07 Test Acc: 100.0
-Test Loss: 3.530916217187041e-07 Test Acc: 100.0
-Test Loss: 7.791778102728131e-07 Test Acc: 100.0
-Test Loss: 6.623129138461081e-06 Test Acc: 100.0
-Test Loss: 6.316764483926818e-06 Test Acc: 100.0
-Test Loss: 7.308084377655177e-07 Test Acc: 100.0
-Test Loss: 7.246333098009927e-06 Test Acc: 100.0
-
-Transfer Learning tests with DenseNet
-Executing test case with config at ./tests/transfer_learning/maml/config_ciarp.conf
-Test Loss: 1.3304597423768882e-08 Test Acc: 100.0
-Test Loss: 2.2294538837286382e-07 Test Acc: 100.0
-Test Loss: 9.492433861169047e-08 Test Acc: 100.0
-Test Loss: 1.9956862828962585e-08 Test Acc: 100.0
-Test Loss: 1.7672931562628946e-08 Test Acc: 100.0
-Test Loss: 5.281828308056902e-08 Test Acc: 100.0
-Test Loss: 1.4612878018738229e-08 Test Acc: 100.0
-Test Loss: 1.4036346307477743e-08 Test Acc: 100.0
-Test Loss: 8.913642801644528e-08 Test Acc: 100.0
-Test Loss: 8.581467092483308e-09 Test Acc: 100.0
-
-Transfer Learning tests with DenseNet
 Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_5.conf
 Test Loss: 0.756882905960083 Test Acc: 91.66667175292969
 Test Loss: 0.49387234449386597 Test Acc: 91.66667175292969
@@ -925,6 +803,7 @@ Test Loss: 0.11174844950437546 Test Acc: 98.33333587646484
 Test Loss: 0.2713674008846283 Test Acc: 96.66666412353516
 Test Loss: 0.9877290725708008 Test Acc: 91.66667175292969
 Test Loss: 0.5726454854011536 Test Acc: 90.0
+
 Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_10.conf
 Test Loss: 0.3412432074546814 Test Acc: 91.66667175292969
 Test Loss: 0.3029686212539673 Test Acc: 91.66667175292969
@@ -936,6 +815,7 @@ Test Loss: 0.7284099459648132 Test Acc: 86.66666412353516
 Test Loss: 0.09165984392166138 Test Acc: 96.66666412353516
 Test Loss: 0.3776776194572449 Test Acc: 95.0
 Test Loss: 0.41526085138320923 Test Acc: 91.66667175292969
+
 Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_15.conf
 Test Loss: 0.09535149484872818 Test Acc: 96.66666412353516
 Test Loss: 0.053021691739559174 Test Acc: 98.33333587646484
@@ -947,6 +827,7 @@ Test Loss: 0.12667784094810486 Test Acc: 96.66666412353516
 Test Loss: 0.0025252853520214558 Test Acc: 100.0
 Test Loss: 0.4017057716846466 Test Acc: 95.0
 Test Loss: 0.024420088157057762 Test Acc: 98.33333587646484
+
 Executing test case with config at ./tests/transfer_learning/normal/config_ciarp_split_20.conf
 Test Loss: 0.04834592714905739 Test Acc: 98.33333587646484
 Test Loss: 0.014894356951117516 Test Acc: 100.0
@@ -959,7 +840,58 @@ Test Loss: 0.011681973934173584 Test Acc: 100.0
 Test Loss: 0.014953900128602982 Test Acc: 100.0
 Test Loss: 0.0006704701809212565 Test Acc: 100.0
 
-Transfer Learning tests with DenseNet
+Transfer Learning tests with [DenseNet + MAML]
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf
+Test Loss: 4.868107795715332 Test Acc: 6.25
+Test Loss: 4.914753437042236 Test Acc: 6.25
+Test Loss: 4.83821964263916 Test Acc: 6.25
+Test Loss: 4.916133880615234 Test Acc: 6.25
+Test Loss: 4.795142650604248 Test Acc: 6.25
+Test Loss: 4.653954982757568 Test Acc: 6.25
+Test Loss: 4.947195053100586 Test Acc: 6.25
+Test Loss: 5.011113166809082 Test Acc: 6.25
+Test Loss: 4.809469699859619 Test Acc: 6.25
+Test Loss: 4.691275119781494 Test Acc: 6.25
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf
+Test Loss: 0.6489672660827637 Test Acc: 80.20832824707031
+Test Loss: 0.9417427182197571 Test Acc: 75.0
+Test Loss: 1.3492320775985718 Test Acc: 70.83332824707031
+Test Loss: 0.8231041431427002 Test Acc: 83.33332824707031
+Test Loss: 1.2958481311798096 Test Acc: 71.875
+Test Loss: 0.7965129017829895 Test Acc: 82.29167175292969
+Test Loss: 1.4349493980407715 Test Acc: 72.91667175292969
+Test Loss: 1.4455701112747192 Test Acc: 64.58332824707031
+Test Loss: 1.0963364839553833 Test Acc: 72.91667175292969
+Test Loss: 0.835206925868988 Test Acc: 81.25
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf
+Test Loss: 0.5454433560371399 Test Acc: 84.375
+Test Loss: 0.25751110911369324 Test Acc: 92.70832824707031
+Test Loss: 0.33062809705734253 Test Acc: 91.66667175292969
+Test Loss: 0.46790680289268494 Test Acc: 86.45832824707031
+Test Loss: 0.47271373867988586 Test Acc: 88.54167175292969
+Test Loss: 0.8007004261016846 Test Acc: 85.41667175292969
+Test Loss: 0.39385390281677246 Test Acc: 84.375
+Test Loss: 0.30757269263267517 Test Acc: 89.58332824707031
+Test Loss: 0.4788109362125397 Test Acc: 92.70832824707031
+Test Loss: 0.5329376459121704 Test Acc: 88.54167175292969
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf
+Test Loss: 0.18310026824474335 Test Acc: 97.91667175292969
+Test Loss: 0.04757426306605339 Test Acc: 97.91667175292969
+Test Loss: 0.18279613554477692 Test Acc: 95.83332824707031
+Test Loss: 0.22387196123600006 Test Acc: 94.79167175292969
+Test Loss: 0.2333141565322876 Test Acc: 95.83332824707031
+Test Loss: 0.2119794636964798 Test Acc: 93.75
+Test Loss: 0.2599647045135498 Test Acc: 93.75
+Test Loss: 0.24879080057144165 Test Acc: 95.83332824707031
+Test Loss: 0.15664042532444 Test Acc: 97.91667175292969
+Test Loss: 0.10392159223556519 Test Acc: 95.83332824707031
+
+Transfer Learning tests with [DenseNet + MAML]
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_5.conf
 Test Loss: 3.303983688354492 Test Acc: 18.33333396911621
 Test Loss: 3.2559850215911865 Test Acc: 13.333333969116211
@@ -971,6 +903,7 @@ Test Loss: 3.211411237716675 Test Acc: 15.000000953674316
 Test Loss: 3.3589255809783936 Test Acc: 10.0
 Test Loss: 3.2756125926971436 Test Acc: 8.333333969116211
 Test Loss: 3.2080414295196533 Test Acc: 10.0
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_10.conf
 Test Loss: 4.469366550445557 Test Acc: 10.0
 Test Loss: 4.559835910797119 Test Acc: 10.0
@@ -982,6 +915,7 @@ Test Loss: 4.482633113861084 Test Acc: 10.0
 Test Loss: 4.440567493438721 Test Acc: 10.0
 Test Loss: 4.589633941650391 Test Acc: 10.0
 Test Loss: 4.44672155380249 Test Acc: 10.0
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_15.conf
 Test Loss: 0.5084774494171143 Test Acc: 90.0
 Test Loss: 0.1948196440935135 Test Acc: 93.33333587646484
@@ -993,6 +927,7 @@ Test Loss: 0.4425048530101776 Test Acc: 93.33333587646484
 Test Loss: 0.32312166690826416 Test Acc: 90.0
 Test Loss: 0.3024308979511261 Test Acc: 93.33333587646484
 Test Loss: 0.3824816942214966 Test Acc: 95.0
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_20.conf
 Test Loss: 0.5657318830490112 Test Acc: 91.66667175292969
 Test Loss: 0.3464861512184143 Test Acc: 90.0
@@ -1005,7 +940,58 @@ Test Loss: 0.13802789151668549 Test Acc: 98.33333587646484
 Test Loss: 0.1923607587814331 Test Acc: 93.33333587646484
 Test Loss: 0.7683291435241699 Test Acc: 76.66666412353516
 
-Transfer Learning tests with DenseNet
+Transfer Learning + MAML tests with [DenseNet + MAML]
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf
+Test Loss: 4.7910261154174805 Test Acc: 6.25
+Test Loss: 4.942199230194092 Test Acc: 6.25
+Test Loss: 4.899025917053223 Test Acc: 6.25
+Test Loss: 4.8466668128967285 Test Acc: 6.25
+Test Loss: 4.812280178070068 Test Acc: 6.25
+Test Loss: 4.72909688949585 Test Acc: 6.25
+Test Loss: 4.767547130584717 Test Acc: 6.25
+Test Loss: 4.963850498199463 Test Acc: 6.25
+Test Loss: 4.910182952880859 Test Acc: 6.25
+Test Loss: 4.911196231842041 Test Acc: 6.25
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf
+Test Loss: 1.288578987121582 Test Acc: 73.95832824707031
+Test Loss: 0.8748427033424377 Test Acc: 82.29167175292969
+Test Loss: 1.132824420928955 Test Acc: 79.16667175292969
+Test Loss: 0.8693275451660156 Test Acc: 83.33332824707031
+Test Loss: 0.7711983323097229 Test Acc: 81.25
+Test Loss: 0.8195465207099915 Test Acc: 78.125
+Test Loss: 0.7115564346313477 Test Acc: 79.16667175292969
+Test Loss: 0.8278663754463196 Test Acc: 79.16667175292969
+Test Loss: 0.9321227073669434 Test Acc: 71.875
+Test Loss: 3.03190016746521 Test Acc: 81.25
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf
+Test Loss: 0.5080904960632324 Test Acc: 83.33332824707031
+Test Loss: 0.5886273980140686 Test Acc: 83.33332824707031
+Test Loss: 0.5722076296806335 Test Acc: 90.625
+Test Loss: 0.46864748001098633 Test Acc: 87.5
+Test Loss: 0.3950841426849365 Test Acc: 88.54167175292969
+Test Loss: 0.7695209383964539 Test Acc: 84.375
+Test Loss: 0.6563366055488586 Test Acc: 84.375
+Test Loss: 0.477364182472229 Test Acc: 86.45832824707031
+Test Loss: 0.763457715511322 Test Acc: 82.29167175292969
+Test Loss: 0.4820581376552582 Test Acc: 87.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf
+Test Loss: 0.3113068640232086 Test Acc: 95.83332824707031
+Test Loss: 0.4085008203983307 Test Acc: 91.66667175292969
+Test Loss: 0.34050020575523376 Test Acc: 90.625
+Test Loss: 0.23032204806804657 Test Acc: 92.70832824707031
+Test Loss: 0.4018814265727997 Test Acc: 91.66667175292969
+Test Loss: 0.3276123106479645 Test Acc: 92.70832824707031
+Test Loss: 0.28152036666870117 Test Acc: 92.70832824707031
+Test Loss: 0.10588020831346512 Test Acc: 95.83332824707031
+Test Loss: 0.1537507176399231 Test Acc: 94.79167175292969
+Test Loss: 0.18634741008281708 Test Acc: 95.83332824707031
+
+Transfer Learning + MAML tests with [DenseNet + MAML]
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_5.conf
 Test Loss: 3.2358059883117676 Test Acc: 8.333333969116211
 Test Loss: 3.2514777183532715 Test Acc: 8.333333969116211
@@ -1017,6 +1003,7 @@ Test Loss: 3.2871432304382324 Test Acc: 8.333333969116211
 Test Loss: 3.2892160415649414 Test Acc: 11.666666984558105
 Test Loss: 3.2769477367401123 Test Acc: 11.666666984558105
 Test Loss: 3.262608289718628 Test Acc: 13.333333969116211
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_10.conf
 Test Loss: 3.6711978912353516 Test Acc: 11.666666984558105
 Test Loss: 3.592784881591797 Test Acc: 16.666667938232422
@@ -1028,6 +1015,7 @@ Test Loss: 3.4182281494140625 Test Acc: 15.000000953674316
 Test Loss: 3.5883772373199463 Test Acc: 15.000000953674316
 Test Loss: 3.3966386318206787 Test Acc: 11.666666984558105
 Test Loss: 3.54013729095459 Test Acc: 15.000000953674316
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_15.conf
 Test Loss: 0.747843325138092 Test Acc: 90.0
 Test Loss: 0.33344924449920654 Test Acc: 90.0
@@ -1039,6 +1027,7 @@ Test Loss: 0.1557934582233429 Test Acc: 95.0
 Test Loss: 0.3095261752605438 Test Acc: 88.33333587646484
 Test Loss: 0.5243182182312012 Test Acc: 91.66667175292969
 Test Loss: 0.275291383266449 Test Acc: 91.66667175292969
+
 Executing test case with config at ./tests/transfer_learning/maml/config_ciarp_split_20.conf
 Test Loss: 0.5685808658599854 Test Acc: 86.66666412353516
 Test Loss: 0.11640758067369461 Test Acc: 98.33333587646484
@@ -1050,3 +1039,14 @@ Test Loss: 0.6031032204627991 Test Acc: 86.66666412353516
 Test Loss: 0.41240283846855164 Test Acc: 91.66667175292969
 Test Loss: 0.3910127282142639 Test Acc: 93.33333587646484
 Test Loss: 0.757483959197998 Test Acc: 81.66666412353516
+
+ProtoNet tests + Cropper
+
+Executing test case with config at ./tests/protonet/config_rwth.conf
+Loss:  0.5853701 Accuracy:  0.82316023
+Loss:  0.602158 Accuracy:  0.8147604
+Loss:  0.6013668 Accuracy:  0.82092047
+Loss:  0.5635009 Accuracy:  0.8269608
+Loss:  0.59776974 Accuracy:  0.8147602
+Loss:  0.58900756 Accuracy:  0.8226405
+Loss:  0.6059109 Accuracy:  0.8151605
