@@ -5,10 +5,16 @@ ROOT=$(dirname $0)
 tests=(
     # "$ROOT/densenet/execute --all -o $ROOT/results"
 
+    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar100.conf -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf -o $ROOT/results"
 
+    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --engine maml -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar100.conf --engine maml -o $ROOT/results"
+    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --engine maml -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth.conf --engine maml -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16.conf --engine maml -o $ROOT/results"
     # "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp.conf --engine maml -o $ROOT/results"
@@ -59,7 +65,6 @@ tests=(
     # "$ROOT/protonet/execute $ROOT/protonet/config_lsa16_split_5.conf $ROOT/protonet/config_lsa16_split_10.conf $ROOT/protonet/config_lsa16_split_15.conf $ROOT/protonet/config_lsa16_split_20.conf -o $ROOT/results"
     # "$ROOT/protonet/execute $ROOT/protonet/config_ciarp_split_5.conf $ROOT/protonet/config_ciarp_split_10.conf $ROOT/protonet/config_ciarp_split_15.conf $ROOT/protonet/config_ciarp_split_20.conf -o $ROOT/results"
     # "$ROOT/protonet/execute $ROOT/protonet/config_rwth_split_5.conf $ROOT/protonet/config_rwth_split_10.conf $ROOT/protonet/config_rwth_split_15.conf $ROOT/protonet/config_rwth_split_20.conf -o $ROOT/results"
-
 )
 
 . $ROOT/runner.sh
