@@ -1,6 +1,6 @@
 """Load mnist dataset"""
 
-import os
+import 
 import numpy as np
 import tensorflow as tf
 from pathlib import Path
