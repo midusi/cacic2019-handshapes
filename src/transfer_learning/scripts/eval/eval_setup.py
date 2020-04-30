@@ -80,4 +80,4 @@ def eval(config):
         print('Test Loss: {} Test Acc: {}'.format(test_loss.result(), test_accuracy.result()*100))
 
     print()
-    print('Test Loss: {} (+/-) {} Test Acc: {} (+/-) {}'.format(np.mean(losses), np.std(losses), np.mean(accuracies), np.std(accuracies))
+    print('Test Loss: {} (+/-) {} Test Acc: {} (+/-) {}'.format(np.mean(losses), np.std(losses), np.mean(accuracies), np.std(accuracies)))
