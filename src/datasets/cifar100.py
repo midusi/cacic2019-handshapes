@@ -1,6 +1,5 @@
 """Load cifar100 dataset"""
 
-import os
 import numpy as np
 import tensorflow as tf
 from pathlib import Path
@@ -14,12 +13,6 @@ def load_cifar100(dataset_name):
 
     """
 
-    if path == None:
-        path = '/tf/data/{}/data'.format(dataset_name)
-
-    if not os.path.exists(path):
-        os.makedirs(path)
-    
     (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')
 
     x_train = x_train.astype('float32') / 255.0
