@@ -3,10 +3,13 @@
 import os
 import numpy as np
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.datasets import cifar10, cifar100, mnist
+from tensorflow.keras.datasets import cifar10, mnist
 from sklearn.utils.class_weight import compute_class_weight
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
+from .cifar10 import load_cifar10
+from .cifar100 import load_cifar100
+from .mnist import load_mnist
 from .ciarp import load_ciarp
 from .lsa16 import load_lsa16
 from .rwth import load_rwth
@@ -27,17 +30,17 @@ def load(dataset_name, datagen_flow=False,
     """
 
     dataset_path = '/tf/data/{}/data'.format(dataset_name)
-    
+
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
 
     # The data, split between train and test sets:
     if dataset_name == "cifar10":
-        (x_train, y_train), (x_test, y_test) = cifar10.load_data()
+        (x_train, y_train), (x_test, y_test) = load_cifar10(dataset_name)
     elif dataset_name == "cifar100":
-        (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')
+        (x_train, y_train), (x_test, y_test) = load_cifar100(dataset_name)
     elif dataset_name == "mnist":
-        (x_train, y_train), (x_test, y_test) = mnist.load_data()
+        (x_train, y_train), (x_test, y_test) = load_mnist(dataset_name)
     elif dataset_name == "Ciarp":
         (x_train, y_train), (x_test, y_test) = load_ciarp(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
     elif dataset_name == "lsa16":
@@ -54,7 +57,7 @@ def load(dataset_name, datagen_flow=False,
 
     class_weights = None
     if weight_classes:
-        class_weights = compute_class_weight('balanced', np.unique(y), y)
+        class_weights = compute_class_weight('balanced', np.unique(y_train), y_train)
     
     train_datagen_args = dict(featurewise_center=True,
                               featurewise_std_normalization=True,
