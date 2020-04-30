@@ -26,6 +26,8 @@ def load(dataset_name, datagen_flow=False,
     """
 
     dataset_path = '/tf/data/{}/data'.format(dataset_name)
+    if not os.path.exists(dataset_path):
+        os.makedirs(dataset_path)
 
     # The data, split between train and test sets:
     if dataset_name == "cifar10":
