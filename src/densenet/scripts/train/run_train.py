@@ -48,7 +48,7 @@ parser.add_argument("--data.n_test_per_class", type=int, default=None)
 parser.add_argument("--data.weight_classes", type=bool, default=False)
 
 parser.add_argument("--model.name", type=str, default=None)
-parser.add_argument("--model.weights", type=str, default=None)
+parser.add_argument("--model.save_path", type=str, default=None)
 parser.add_argument("--model.nb_layers", type=str, default=None)
 parser.add_argument("--model.growth_rate", type=int, default=None)
 parser.add_argument("--model.reduction", type=float, default=None)
