@@ -27,6 +27,7 @@ def load(dataset_name, datagen_flow=False,
     """
 
     dataset_path = '/tf/data/{}/data'.format(dataset_name)
+    
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
 
@@ -36,7 +37,7 @@ def load(dataset_name, datagen_flow=False,
     elif dataset_name == "cifar100":
         (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')
     elif dataset_name == "mnist":
-        (x_train, y_train), (x_test, y_test) = mnist.load_data(path=dataset_path)
+        (x_train, y_train), (x_test, y_test) = mnist.load_data()
     elif dataset_name == "Ciarp":
         (x_train, y_train), (x_test, y_test) = load_ciarp(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
     elif dataset_name == "lsa16":
