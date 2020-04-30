@@ -29,54 +29,54 @@ tl_rwth_weights=${tl_rwth_weights:1}
 tests=(
     # "$ROOT/densenet/execute --all -o $ROOT/results"
 
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $ciarp -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --weights $lsa16 -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --weights $ciarp -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --weights $rwth -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $ciarp -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --weights $lsa16 -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --weights $ciarp -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --weights $rwth -o $ROOT/results"
 
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --engine maml --weights $ciarp_maml -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --engine maml --weights $mnist_maml -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --engine maml --weights $lsa16_maml -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --engine maml --weights $ciarp_maml -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --engine maml --weights $rwth_maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --engine maml --weights $ciarp_maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --engine maml --weights $mnist_maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --engine maml --weights $lsa16_maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --engine maml --weights $ciarp_maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --engine maml --weights $rwth_maml -o $ROOT/results"
 
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16_split_5.conf $ROOT/densenet/normal/config_lsa16_split_10.conf $ROOT/densenet/normal/config_lsa16_split_15.conf $ROOT/densenet/normal/config_lsa16_split_20.conf -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp_split_5.conf $ROOT/densenet/normal/config_ciarp_split_10.conf $ROOT/densenet/normal/config_ciarp_split_15.conf $ROOT/densenet/normal/config_ciarp_split_20.conf -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/normal/config_rwth_split_5.conf $ROOT/densenet/normal/config_rwth_split_10.conf $ROOT/densenet/normal/config_rwth_split_15.conf $ROOT/densenet/normal/config_rwth_split_20.conf $ROOT/densenet/normal/config_rwth_split_30.conf -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16_split_5.conf $ROOT/densenet/normal/config_lsa16_split_10.conf $ROOT/densenet/normal/config_lsa16_split_15.conf $ROOT/densenet/normal/config_lsa16_split_20.conf -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp_split_5.conf $ROOT/densenet/normal/config_ciarp_split_10.conf $ROOT/densenet/normal/config_ciarp_split_15.conf $ROOT/densenet/normal/config_ciarp_split_20.conf -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth_split_5.conf $ROOT/densenet/normal/config_rwth_split_10.conf $ROOT/densenet/normal/config_rwth_split_15.conf $ROOT/densenet/normal/config_rwth_split_20.conf $ROOT/densenet/normal/config_rwth_split_30.conf -o $ROOT/results"
     
-    $ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16_split_5.conf $ROOT/densenet/maml/config_lsa16_split_10.conf $ROOT/densenet/maml/config_lsa16_split_15.conf $ROOT/densenet/maml/config_lsa16_split_20.conf --engine maml -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp_split_5.conf $ROOT/densenet/maml/config_ciarp_split_10.conf $ROOT/densenet/maml/config_ciarp_split_15.conf $ROOT/densenet/maml/config_ciarp_split_20.conf --engine maml -o $ROOT/results"
-    $ROOT/densenet/execute $ROOT/densenet/maml/config_rwth_split_5.conf $ROOT/densenet/maml/config_rwth_split_10.conf $ROOT/densenet/maml/config_rwth_split_15.conf $ROOT/densenet/maml/config_rwth_split_20.conf $ROOT/densenet/maml/config_rwth_split_30.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16_split_5.conf $ROOT/densenet/maml/config_lsa16_split_10.conf $ROOT/densenet/maml/config_lsa16_split_15.conf $ROOT/densenet/maml/config_lsa16_split_20.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp_split_5.conf $ROOT/densenet/maml/config_ciarp_split_10.conf $ROOT/densenet/maml/config_ciarp_split_15.conf $ROOT/densenet/maml/config_ciarp_split_20.conf --engine maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth_split_5.conf $ROOT/densenet/maml/config_rwth_split_10.conf $ROOT/densenet/maml/config_rwth_split_15.conf $ROOT/densenet/maml/config_rwth_split_20.conf $ROOT/densenet/maml/config_rwth_split_30.conf --engine maml -o $ROOT/results"
     
-    # $ROOT/transfer_learning/execute --all -o $ROOT/results"
+    # "$ROOT/transfer_learning/execute --all -o $ROOT/results"
 
     # LSA16
 
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_lsa16.conf --weights $tl_lsa16_weights -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16.conf --weights $tl_lsa16_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16.conf --engine maml --weights $tl_lsa16_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_lsa16_split_5.conf $ROOT/transfer_learning/normal/config_lsa16_split_10.conf $ROOT/transfer_learning/normal/config_lsa16_split_15.conf $ROOT/transfer_learning/normal/config_lsa16_split_20.conf --weights $tl_lsa16_weights -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16_split_5.conf $ROOT/transfer_learning/maml/config_lsa16_split_10.conf $ROOT/transfer_learning/maml/config_lsa16_split_15.conf $ROOT/transfer_learning/maml/config_lsa16_split_20.conf --weights $tl_lsa16_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16_split_5.conf $ROOT/transfer_learning/maml/config_lsa16_split_10.conf $ROOT/transfer_learning/maml/config_lsa16_split_15.conf $ROOT/transfer_learning/maml/config_lsa16_split_20.conf --engine maml --weights $tl_lsa16_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_lsa16.conf --weights $tl_lsa16_weights -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16.conf --weights $tl_lsa16_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16.conf --engine maml --weights $tl_lsa16_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_lsa16_split_5.conf $ROOT/transfer_learning/normal/config_lsa16_split_10.conf $ROOT/transfer_learning/normal/config_lsa16_split_15.conf $ROOT/transfer_learning/normal/config_lsa16_split_20.conf --weights $tl_lsa16_weights -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16_split_5.conf $ROOT/transfer_learning/maml/config_lsa16_split_10.conf $ROOT/transfer_learning/maml/config_lsa16_split_15.conf $ROOT/transfer_learning/maml/config_lsa16_split_20.conf --weights $tl_lsa16_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_lsa16_split_5.conf $ROOT/transfer_learning/maml/config_lsa16_split_10.conf $ROOT/transfer_learning/maml/config_lsa16_split_15.conf $ROOT/transfer_learning/maml/config_lsa16_split_20.conf --engine maml --weights $tl_lsa16_weights_maml -o $ROOT/results"
 
     # Ciarp
 
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_ciarp.conf --weights $tl_ciarp_weights -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp.conf --weights $tl_ciarp_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp.conf --engine maml --weights $tl_ciarp_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_ciarp_split_5.conf $ROOT/transfer_learning/normal/config_ciarp_split_10.conf $ROOT/transfer_learning/normal/config_ciarp_split_15.conf $ROOT/transfer_learning/normal/config_ciarp_split_20.conf --weights $tl_ciarp_weights -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp_split_5.conf $ROOT/transfer_learning/maml/config_ciarp_split_10.conf $ROOT/transfer_learning/maml/config_ciarp_split_15.conf $ROOT/transfer_learning/maml/config_ciarp_split_20.conf --weights $tl_ciarp_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp_split_5.conf $ROOT/transfer_learning/maml/config_ciarp_split_10.conf $ROOT/transfer_learning/maml/config_ciarp_split_15.conf $ROOT/transfer_learning/maml/config_ciarp_split_20.conf --engine maml --weights $tl_ciarp_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_ciarp.conf --weights $tl_ciarp_weights -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp.conf --weights $tl_ciarp_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp.conf --engine maml --weights $tl_ciarp_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_ciarp_split_5.conf $ROOT/transfer_learning/normal/config_ciarp_split_10.conf $ROOT/transfer_learning/normal/config_ciarp_split_15.conf $ROOT/transfer_learning/normal/config_ciarp_split_20.conf --weights $tl_ciarp_weights -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp_split_5.conf $ROOT/transfer_learning/maml/config_ciarp_split_10.conf $ROOT/transfer_learning/maml/config_ciarp_split_15.conf $ROOT/transfer_learning/maml/config_ciarp_split_20.conf --weights $tl_ciarp_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_ciarp_split_5.conf $ROOT/transfer_learning/maml/config_ciarp_split_10.conf $ROOT/transfer_learning/maml/config_ciarp_split_15.conf $ROOT/transfer_learning/maml/config_ciarp_split_20.conf --engine maml --weights $tl_ciarp_weights_maml -o $ROOT/results"
 
     # RWTH
 
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_rwth.conf --weights $tl_rwth_weights -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth.conf --weights $tl_rwth_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth.conf --engine maml --weights $tl_rwth_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_rwth_split_5.conf $ROOT/transfer_learning/normal/config_rwth_split_10.conf $ROOT/transfer_learning/normal/config_rwth_split_15.conf $ROOT/transfer_learning/normal/config_rwth_split_20.conf $ROOT/transfer_learning/normal/config_rwth_split_30.conf --weights $tl_rwth_weights -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth_split_5.conf $ROOT/transfer_learning/maml/config_rwth_split_10.conf $ROOT/transfer_learning/maml/config_rwth_split_15.conf $ROOT/transfer_learning/maml/config_rwth_split_20.conf $ROOT/transfer_learning/maml/config_rwth_split_30.conf --weights $tl_rwth_weights_maml -o $ROOT/results"
-    $ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth_split_5.conf $ROOT/transfer_learning/maml/config_rwth_split_10.conf $ROOT/transfer_learning/maml/config_rwth_split_15.conf $ROOT/transfer_learning/maml/config_rwth_split_20.conf $ROOT/transfer_learning/maml/config_rwth_split_30.conf --engine maml --weights $tl_rwth_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_rwth.conf --weights $tl_rwth_weights -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth.conf --weights $tl_rwth_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth.conf --engine maml --weights $tl_rwth_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_rwth_split_5.conf $ROOT/transfer_learning/normal/config_rwth_split_10.conf $ROOT/transfer_learning/normal/config_rwth_split_15.conf $ROOT/transfer_learning/normal/config_rwth_split_20.conf $ROOT/transfer_learning/normal/config_rwth_split_30.conf --weights $tl_rwth_weights -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth_split_5.conf $ROOT/transfer_learning/maml/config_rwth_split_10.conf $ROOT/transfer_learning/maml/config_rwth_split_15.conf $ROOT/transfer_learning/maml/config_rwth_split_20.conf $ROOT/transfer_learning/maml/config_rwth_split_30.conf --weights $tl_rwth_weights_maml -o $ROOT/results"
+    "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth_split_5.conf $ROOT/transfer_learning/maml/config_rwth_split_10.conf $ROOT/transfer_learning/maml/config_rwth_split_15.conf $ROOT/transfer_learning/maml/config_rwth_split_20.conf $ROOT/transfer_learning/maml/config_rwth_split_30.conf --engine maml --weights $tl_rwth_weights_maml -o $ROOT/results"
 
     # "yarn --cwd /tf/lib/hand-cropper handcropper /tf/data/rwth"
 
