@@ -25,25 +25,20 @@ variables["--weights"]="weights"
 output=${output:-"/tmp/tests"}
 engine=${engine:-""}
 times=${times:-"10"}
-weights=${weights:-""}
+weights=${weights:-","}
 
 . $ROOT/../cases.sh
-
-weights_flag=""
-if [ "$weights" != "" ]; then
-    weights_flag="--model.weights $weights"
-fi
 
 engine_flag=""
 if [ "$engine" != "" ]; then
     engine_flag="--engine $engine"
 fi
 
-echo >> "$output"
+echo >> $output
 if [ "$engine" = "" ]; then
-    echo "Transfer Learning tests with DenseNet using $engine" >> "$output"
+    echo "Transfer Learning tests with DenseNet using $engine" >> $output
 else
-    echo "Transfer Learning tests with DenseNet" >> "$output"
+    echo "Transfer Learning tests with DenseNet" >> $output
 fi
 
 for config_path in ${test_cases[*]}; do
@@ -51,9 +46,23 @@ for config_path in ${test_cases[*]}; do
         continue
     fi
 
-    echo "Executing test case with config at $config_path"
-    echo "Executing test case with config at $config_path" >> "$output"
+    for model_weights in $(echo $weights | tr ',' '\n'); do
+        weights_flag=""
+        if [ "$model_weights" = "" ]; then
+            weights_flag="--model.weights $model_weights"
+        else
 
-    python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path $engine_flag $weights_flag
-    python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path $engine_flag $weights_flag --times $times >> "$output"
+        message="Executing test case with config at $config_path"
+        if [ "$model_weights" != "" ]; then
+            message="Executing test case with config at $config_path with weights $model_weights"
+        fi
+
+        echo >> $output
+        echo $message >> $output
+
+        python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path $engine_flag $weights_flag
+        python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path $engine_flag $weights_flag --times $times >> $output
+    
+        echo >> $output
+    done
 done

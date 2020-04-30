@@ -39,17 +39,20 @@ if [ "$engine" != "" ]; then
     engine_flag="--engine $engine"
 fi
 
-echo >> "$output"
-echo "ProtoNet tests" >> "$output"
+echo >> $output
+echo "ProtoNet tests" >> $output
 
 for config_path in ${test_cases[*]}; do
     if [ ! -f "$config_path" ] || [ "${config_path: -5}" != ".conf" ]; then
         continue
     fi
 
+    echo >> $output
     echo "Executing test case with config at $config_path"
-    echo "Executing test case with config at $config_path" >> "$output"
+    echo "Executing test case with config at $config_path" >> $output
 
     python $ROOT/../../src/protonet/scripts/train/run_train.py --config $config_path $model_flag $engine_flag
-    python $ROOT/../../src/protonet/scripts/eval/run_eval.py --config $config_path $model_flag $engine_flag --times $times >> "$output"
+    python $ROOT/../../src/protonet/scripts/eval/run_eval.py --config $config_path $model_flag $engine_flag --times $times >> $output
+
+    echo >> $output
 done

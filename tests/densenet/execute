@@ -41,11 +41,11 @@ if [ "$engine" != "" ]; then
     engine_flag="--engine $engine"
 fi
 
-echo >> "$output"
+echo >> $output
 if [ "$engine" = "" ]; then
-    echo "DenseNet tests using $engine" >> "$output"
+    echo "DenseNet tests using $engine" >> $output
 else
-    echo "DenseNet tests" >> "$output"
+    echo "DenseNet tests" >> $output
 fi
 
 for config_path in ${test_cases[*]}; do
@@ -53,9 +53,12 @@ for config_path in ${test_cases[*]}; do
         continue
     fi
 
+    echo >> $output
     echo "Executing test case with config at $config_path"
-    echo "Executing test case with config at $config_path" >> "$output"
+    echo "Executing test case with config at $config_path" >> $output
 
     python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path $engine_flag $train_weights_flag
-    python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path $engine_flag $eval_weights_flag --times $times >> "$output"
+    python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path $engine_flag $eval_weights_flag --times $times >> $output
+
+    echo >> $output
 done
