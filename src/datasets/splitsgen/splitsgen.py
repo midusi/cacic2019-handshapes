@@ -11,7 +11,7 @@ from .rwth import load_rwth
 def store_split(x, y, path):
     f = open(path, 'w')
     for img, label in zip(x, y):
-        f.write("{} {}".format(img, label))
+        f.write("{} {}\n".format(img, label))
     f.close()
 
 def generate_splits(args):
