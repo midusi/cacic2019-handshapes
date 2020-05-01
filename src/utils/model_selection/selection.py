@@ -2,11 +2,31 @@
 
 import math
 import numpy as np
+import scipy.sparse as sp
+
+def _make_indexable(iterable):
+    """Ensure iterable supports indexing or convert to an indexable variant.
+    Convert sparse matrices to csr and other non-indexable iterable to arrays.
+    Let `None` and indexable objects (e.g. pandas dataframes) pass unchanged.
+    Parameters
+    ----------
+    iterable : {list, dataframe, array, sparse} or None
+        Object to be converted to an indexable iterable.
+    """
+    if sp.issparse(iterable):
+        return iterable.tocsr()
+    elif hasattr(iterable, "__getitem__") or hasattr(iterable, "iloc"):
+        return iterable
+    elif iterable is None:
+        return iterable
+    return np.array(iterable)
 
 def train_test_split_balanced(data, target, test_size=0.2,
                               train_size=0, n_train_per_class=0,
                               n_test_per_class=0):
     """Returns balanced x_train, x_test_, y_train, y_test for a given dataset"""
+    data = _make_indexable(data)
+    target = _make_indexable(target)
     classes = np.unique(target)
 
     # can give test_size as fraction of input data size of number of samples
