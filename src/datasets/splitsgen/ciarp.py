@@ -4,6 +4,7 @@ import os
 import glob
 import numpy as np
 import handshape_datasets as hd
+from os import listdir
 from pathlib import Path
 
 def read_csv(txt_path):
