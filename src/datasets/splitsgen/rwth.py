@@ -44,6 +44,8 @@ def load_rwth(data_dir, dataset, version):
     for filepath in paths:
         x.append(filepath)
 
+    x = np.array(x)
+
     good_min = 20
     good_classes = []
     n_unique = len(np.unique(y))
