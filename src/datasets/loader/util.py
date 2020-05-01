@@ -23,11 +23,11 @@ def load_ciarp_from_split(version, data_dir, split_file):
 
     with open(split_file, 'r') as f:
         for i, line in enumerate(f.readlines()):
-            filepath, label = line.rstrip('\n').split(' ')
+            filepath, target = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             image = image[:, :, np.newaxis]
             x[i, :] = image
-            y[i] = int(label)
+            y[i] = int(target)
 
     return x, y
 
@@ -39,13 +39,13 @@ def load_lsa16_from_split(version, data_dir, split_file):
 
     with open(split_file, 'r') as f:
         for i, line in enumerate(f.readlines()):
-            filepath, label = line.rstrip('\n').split(' ')
+            filepath, target = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             if version == "colorbg":
                 image = transform.resize(image, (32, 32), preserve_range=True, mode="reflect",
                                          anti_aliasing=True)
             x[i, :, :, :] = image
-            y[i] = int(label)
+            y[i] = int(target)
 
     return x, y
 
@@ -57,13 +57,13 @@ def load_rwth_from_split(version, data_dir, split_file):
 
     with open(split_file, 'r') as f:
         for i, line in enumerate(f.readlines()):
-            filepath, label = line.rstrip('\n').split(' ')
+            filepath, target = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             image = image[np.newaxis, :, :]
             if len(image.shape) == 2:
                 pass
-            x.append(im)
-            y[i] = int(label)
+            x.append(image)
+            y[i] = int(target)
 
     x = np.vstack(x)
 
