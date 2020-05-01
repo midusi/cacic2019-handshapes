@@ -20,7 +20,7 @@ def load_folder(folder, txt_path):
         x.append(filepath)
     return x, y
 
-def extract_ciarp_classes(args):
+def load_ciarp(args):
     """
     Load ciarp dataset.
 

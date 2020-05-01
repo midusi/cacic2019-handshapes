@@ -5,7 +5,7 @@ import glob
 import handshape_datasets as hd
 from pathlib import Path
 
-def extract_lsa16_classes(args):
+def load_lsa16(args):
     """
     Load lsa16 dataset.
 

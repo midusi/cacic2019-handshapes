@@ -6,7 +6,7 @@ import numpy as np
 import handshape_datasets as hd
 from pathlib import Path
 
-def extract_rwth_classes(args):
+def load_rwth(args):
     """
     Load rwth dataset.
 
