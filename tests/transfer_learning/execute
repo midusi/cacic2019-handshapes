@@ -56,9 +56,8 @@ for config_path in ${test_cases[*]}; do
         if [ "$model_weights" != "" ]; then
             message="Executing test case with config at $config_path with weights $model_weights"
         fi
-
         
-        if [[ "${config_path: -6}" = "0.conf" ]] || [[ "${config_path: -6}" = "5.conf" ]]; then
+        if [ "${config_path: -6}" = "0.conf" ] || [ "${config_path: -6}" = "5.conf" ]; then
             echo >> $output
             echo $message >> $output
 
