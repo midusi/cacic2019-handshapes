@@ -1,6 +1,5 @@
-import io
 import numpy as np
-from skimage import transform
+from skimage import io, transform
 
 def load_from_split(dataset, version, data_dir, split_file):
     # The data, split between train and test sets:
