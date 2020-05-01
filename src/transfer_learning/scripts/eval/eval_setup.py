@@ -16,16 +16,7 @@ def eval(config):
     model_file_path = f"{config['model.path']}"
     data_dir = f"data/"
 
-    _, _, test, nb_classes, image_shape, class_weights = load(
-        dataset_name=config['data.dataset'],
-        batch_size=config['data.batch_size'],
-        train_size=config['data.train_size'],
-        test_size=config['data.test_size'],
-        n_train_per_class=config['data.n_train_per_class'],
-        n_test_per_class=config['data.n_test_per_class'],
-        weight_classes=config['data.weight_classes'],
-        datagen_flow=True,
-    )
+    _, _, test, nb_classes, image_shape, class_weights = load(config, datagen_flow=True)
 
     (test_gen, test_len, _) = test
 

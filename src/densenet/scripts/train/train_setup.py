@@ -67,20 +67,7 @@ def train(config):
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
 
-    train, val, _, nb_classes, image_shape, class_weights = load(
-        dataset_name=config['data.dataset'],
-        batch_size=config['data.batch_size'],
-        train_size=config['data.train_size'],
-        test_size=config['data.test_size'],
-        n_train_per_class=config['data.n_train_per_class'],
-        n_test_per_class=config['data.n_test_per_class'],
-        weight_classes=config['data.weight_classes'],
-        rotation_range=config['data.rotation_range'],
-        width_shift_range=config['data.width_shift_range'],
-        height_shift_range=config['data.height_shift_range'],
-        horizontal_flip=config['data.horizontal_flip'],
-        datagen_flow=True,
-    )
+    train, val, _, nb_classes, image_shape, class_weights = load(config, datagen_flow=True)
 
     (train_gen, train_len, _) = train
     (val_gen, val_len, _) = val
