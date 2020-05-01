@@ -50,20 +50,18 @@ def extract_ciarp_classes(args):
     j = 0
     h = 0
     i = 0
-    subject = np.zeros(cant_images)
-    xtot=np.zeros((cant_images, 38, 38, 1), dtype="uint8")
-    ytot=np.zeros(cant_images,dtype='uint8')
+    xtot = np.zeros(cant_images, dtype='str')
+    ytot = np.zeros(cant_images, dtype='uint8')
     #Loop x to copy data into xtot
     for folder in folders:
         txt_name=f"{folder.name}.txt"
         txt_path=os.path.join(dataset_folder,txt_name)
-        x,y=load_folder(folder,txt_path)
+        x, y = load_folder(folder, txt_path)
         for valuesy in y:
             ytot[j] = valuesy
             j += 1
         for valuesx in x:
             xtot[h] = valuesx
-            subject[h] = i
             h += 1
         i += 1
         result[folder.name] = (x,y)
