@@ -1,0 +1,4 @@
+rwth-phoenix/ph2014-dev-set-handshape-annotations/images/final_phoenix_noPause_noCompound_lefthandtag_noClean/09February_2011_Wednesday_heute_default-3/1/*.png_fn000041-0.png 10
+rwth-phoenix/ph2014-dev-set-handshape-annotations/images/final_phoenix_noPause_noCompound_lefthandtag_noClean/22January_2010_Friday_tagesschau_default-3/1/*.png_fn000077-0.png 15
+rwth-phoenix/ph2014-dev-set-handshape-annotations/images/final_phoenix_noPause_noCompound_lefthandtag_noClean/12July_2010_Monday_heute_default-11/1/*.png_fn000013-0.png 19
+rwth-phoenix/ph2014-dev-set-handshape-annotations/images/final_phoenix_noPause_noCompound_lefthandtag_noClean/23August_2010_Monday_tagesschau_default-3/1/*.png_fn000013-0.png 14

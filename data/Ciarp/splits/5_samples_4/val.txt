@@ -1,0 +1,2 @@
+ciarp/ciarp/test_Kinect_WithGabor/img_00179.png 2
+ciarp/ciarp/train_Kinect_WithGabor/img_05106.png 8
