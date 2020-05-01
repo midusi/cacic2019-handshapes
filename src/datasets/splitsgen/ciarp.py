@@ -1,6 +1,7 @@
 """Load ciarp dataset"""
 
 import os
+import csv
 import glob
 import numpy as np
 import handshape_datasets as hd
@@ -12,7 +13,7 @@ def read_csv(txt_path):
         reader = csv.reader(f, delimiter=' ')
         filename, y = zip(*reader)
         y = np.array(list(map(int, y)))
-    return filename, 
+    return filename, y
 
 def load_folder(folder, txt_path):
     filenames, y = read_csv(txt_path)
