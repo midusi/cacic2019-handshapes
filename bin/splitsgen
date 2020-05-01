@@ -4,14 +4,14 @@ ROOT=$(dirname $0)
 
 cli="python $ROOT/../src/datasets/splitsgen/cli.py"
 
-for dataset in rwth lsa16 Ciarp; do
+for dataset in lsa16; do
     echo "Generating splits for $dataset"
     $cli --dataset $dataset --splits_dir /tf/data/$dataset/splits --split full_75_25 --train_size 0.75 --test_size 0.25
     for n in 5 10 15 20; do
         echo "Generating splits for $dataset with $n samples per class"
         $cli --dataset $dataset --splits_dir /tf/data/$dataset/splits --split ${n}_samples \
-             --n_train_per_class $n --test_size 0.25
+             --n_train_per_class $n --n_test_per_class 12
     done
 done
 
-$cli --dataset rwth --splits_dir /tf/data/rwth/splits --split 30_samples --n_train_per_class 30 --test_size 0.25
+# $cli --dataset rwth --splits_dir /tf/data/rwth/splits --split 30_samples --n_train_per_class 30 --test_size 0.25
