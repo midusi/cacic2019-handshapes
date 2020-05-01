@@ -25,8 +25,8 @@ def load_lsa16(config, path=None):
         path = '/tf/data/{}'.format(config['data.dataset'])
         data_dir = os.path.join(path, 'data')
 
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
+    if not os.path.exists(path):
+        os.makedirs(path)
 
     data = hd.load(config['data.dataset'], Path(data_dir))
 
@@ -37,20 +37,18 @@ def load_lsa16(config, path=None):
         x_train, y_train = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('train'))
         x_test, y_test = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('test'))
         x_val, y_val = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('val'))
-
-        return (x_train, y_train), (x_val, y_val), (x_test, y_test)
-
-    x, y = data[0], data[1]['y']
-
-    split = train_test_split if n_train_per_class <= 0 else train_test_split_balanced
-
-    if n_train_per_class <= 0:
-        x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size)
     else:
-        n_train_per_class = math.ceil(n_train_per_class * 1.2)
-        x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size,
-                                                    n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
+        x, y = data[0], data[1]['y']
 
-    x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
+        split = train_test_split if n_train_per_class <= 0 else train_test_split_balanced
+
+        if n_train_per_class <= 0:
+            x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size)
+        else:
+            n_train_per_class = math.ceil(n_train_per_class * 1.2)
+            x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size,
+                                                     n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
+
+        x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
 
     return (x_train, y_train), (x_val, y_val), (x_test, y_test)

@@ -13,6 +13,8 @@ def load_from_split(dataset, version, data_dir, split_file):
     else:
         raise ValueError("Unknow dataset: {}".format(dataset))
 
+    return x, y
+
 def load_ciarp_from_split(version, data_dir, split_file):
     n = sum(1 for _ in open(split_file))
 
