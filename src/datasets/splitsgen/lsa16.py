@@ -28,6 +28,6 @@ def load_lsa16(data_dir, dataset, version):
     for filepath in glob.glob(dataDir):
         x.append(filepath)
         filename = os.path.basename(filepath)
-        y.append(int(filename.split("_")[0]))
+        y.append(int(filename.split("_")[0]) - 1)
     
     return x, y

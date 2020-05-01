@@ -26,6 +26,7 @@ parser.add_argument("--engine", type=str, default="")
 
 parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)
+parser.add_argument("--data.version", type=str, default=None)
 parser.add_argument("--data.batch_size", type=int, default=None)
 parser.add_argument("--data.episodes", type=int, default=None)
 parser.add_argument("--data.cuda", type=int, default=None)

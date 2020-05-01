@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import math
 import numpy as np
 from sklearn.model_selection import train_test_split
 from src.utils.model_selection import train_test_split_balanced
@@ -9,9 +10,10 @@ from .ciarp import load_ciarp
 from .lsa16 import load_lsa16
 from .rwth import load_rwth
 
-def store_split(x, y, path):
+def store_split(x, y, path, data_dir):
     f = open(path, 'w')
     for img, label in zip(x, y):
+        img = os.path.relpath(img, data_dir)
         f.write("{} {}\n".format(img, label))
     f.close()
 
@@ -43,13 +45,13 @@ def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, t
     if n_train_per_class <= 0:
         x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size)
     else:
-        x_train, x_test, y_train, y_test = split(x, y, n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
+        n_train_per_class = math.ceil(n_train_per_class * 1.2)
+        x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size,
+                                                 n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
 
     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
 
-    store_split(x_test, y_test, os.path.join(output_dir, 'test.txt'))
-    store_split(x_train, y_train, os.path.join(output_dir, 'train.txt'))
-    store_split(x_val, y_val, os.path.join(output_dir, 'val.txt'))
-    
-    if dataset == "lsa16":
-        store_split(x_train + x_val, y_train + y_val, os.path.join(output_dir, 'trainval.txt'))
+    store_split(x_test, y_test, os.path.join(output_dir, 'test.txt'), data_dir)
+    store_split(x_train, y_train, os.path.join(output_dir, 'train.txt'), data_dir)
+    store_split(x_val, y_val, os.path.join(output_dir, 'val.txt'), data_dir)    
+    store_split(np.concatenate(x_train, x_val), np.concatenate(y_train, y_val), os.path.join(output_dir, 'trainval.txt'), data_dir)

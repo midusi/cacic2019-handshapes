@@ -43,5 +43,18 @@ def load_rwth(data_dir, dataset, version):
     x = []
     for filepath in paths:
         x.append(filepath)
+
+    good_min = 20
+    good_classes = []
+    n_unique = len(np.unique(y))
+    for i in range(n_unique):
+        images = x[np.equal(i, y)]
+        if len(images) >= good_min:
+            good_classes = good_classes + [i]
+            
+    x = x[np.in1d(y, good_classes)]
+    y = y[np.in1d(y, good_classes)]
+    y_dict = dict(zip(np.unique(y), range(len(np.unique(y)))))
+    y = np.vectorize(y_dict.get)(y)
     
     return x, y

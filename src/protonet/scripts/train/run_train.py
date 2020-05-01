@@ -31,6 +31,7 @@ parser.add_argument("--engine", type=str, default="")
 
 parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)
+parser.add_argument("--data.version", type=str, default=None)
 parser.add_argument("--data.train_way", type=int, default=None)
 parser.add_argument("--data.train_support", type=int, default=None)
 parser.add_argument("--data.train_query", type=int, default=None)

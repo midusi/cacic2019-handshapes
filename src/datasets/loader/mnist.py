@@ -18,4 +18,6 @@ def load_mnist(dataset_name):
     x_train = x_train.reshape(x_train.shape[0], 28, 28, 1).astype('float32') / 255.0
     x_test = x_test.reshape(x_test.shape[0], 28, 28, 1).astype('float32') / 255.0
 
-    return (x_train, y_train), (x_test, y_test)
+    x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
+
+    return (x_train, y_train), (x_val, y_val), (x_test, y_test)

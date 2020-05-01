@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import argparse
 from src.datasets import generate_splits
 

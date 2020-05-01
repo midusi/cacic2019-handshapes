@@ -2,7 +2,6 @@
 
 import os
 import numpy as np
-from sklearn.model_selection import train_test_split
 from tensorflow.keras.datasets import cifar10, mnist
 from sklearn.utils.class_weight import compute_class_weight
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -31,21 +30,19 @@ def load(config, datagen_flow=False):
 
     # The data, split between train and test sets:
     if config['data.dataset'] == "cifar10":
-        (x_train, y_train), (x_test, y_test) = load_cifar10(config['data.dataset'])
+        (x_train, y_train), (x_val, y_val), (x_test, y_test) = load_cifar10(config['data.dataset'])
     elif config['data.dataset'] == "cifar100":
-        (x_train, y_train), (x_test, y_test) = load_cifar100(config['data.dataset'])
+        (x_train, y_train), (x_val, y_val), (x_test, y_test) = load_cifar100(config['data.dataset'])
     elif config['data.dataset'] == "mnist":
-        (x_train, y_train), (x_test, y_test) = load_mnist(config['data.dataset'])
+        (x_train, y_train), (x_val, y_val), (x_test, y_test) = load_mnist(config['data.dataset'])
     elif config['data.dataset'] == "Ciarp":
-        (x_train, y_train), (x_test, y_test) = load_ciarp(config)
+        (x_train, y_train), (x_val, y_val), (x_test, y_test) = load_ciarp(config)
     elif config['data.dataset'] == "lsa16":
-        (x_train, y_train), (x_test, y_test) = load_lsa16(config)
+        (x_train, y_train), (x_val, y_val), (x_test, y_test) = load_lsa16(config)
     elif config['data.dataset'] == "rwth":
-        (x_train, y_train), (x_test, y_test) = load_rwth(config)
+        (x_train, y_train), (x_val, y_val), (x_test, y_test) = load_rwth(config)
     else:
         raise ValueError("Unknow dataset: {}".format(config['data.dataset']))
-
-    x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
     
     image_shape = np.shape(x_train)[1:]
     nb_classes = len(np.unique(y_train))
