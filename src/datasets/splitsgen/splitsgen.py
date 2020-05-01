@@ -30,6 +30,11 @@ def generate_splits(args):
     else:
         raise ValueError("Unknow dataset: {}".format(args['dataset']))
 
+    train_size=args['train_size']
+    test_size=args['test_size']
+    n_train_per_class=args['n_train_per_class']
+    n_test_per_class=args['n_test_per_class']
+
     split = train_test_split if n_train_per_class <= 0 else train_test_split_balanced
 
     if n_train_per_class <= 0:
