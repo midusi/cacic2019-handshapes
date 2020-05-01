@@ -48,5 +48,5 @@ def generate_splits(args):
     store_split(x_train, y_train, os.path.join(output_dir, 'train.txt'))
     store_split(x_val, y_val, os.path.join(output_dir, 'val.txt'))
     
-    if args['dataset'] != "rwth":
+    if args['dataset'] == "lsa16":
         store_split(x_train + x_val, y_train + y_val, os.path.join(output_dir, 'trainval.txt'))
