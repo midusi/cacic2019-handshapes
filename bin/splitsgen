@@ -8,9 +8,14 @@ for dataset in lsa16 Ciarp rwth; do
     echo "Generating splits for $dataset"
     $cli --dataset $dataset --splits_dir /tf/data/$dataset/splits --split full_75_25 --train_size 0.75 --test_size 0.25
     for n in 5 10 15 20; do
-        echo "Generating splits for $dataset with $n samples per class"
-        $cli --dataset $dataset --splits_dir /tf/data/$dataset/splits --split ${n}_samples --n_train_per_class $n --test_size 0.25
+        for i in {1..10}; do
+            echo "Generating splits for $dataset with $n samples per class"
+            $cli --dataset $dataset --splits_dir /tf/data/$dataset/splits --split ${n}_${i}_samples --n_train_per_class $n --test_size 0.25 --seed 4${i}
+        done
     done
 done
 
-$cli --dataset rwth --splits_dir /tf/data/rwth/splits --split 30_samples --n_train_per_class 30 --test_size 0.25
+for i in {1..10}; do
+    echo "Generating splits for rwth with $n samples per class"
+    $cli --dataset rwth --splits_dir /tf/data/rwth/splits --split 30_${i}_samples --n_train_per_class 30 --test_size 0.25 --seed 4${i}
+done
