@@ -20,9 +20,8 @@ def load_ciarp_from_split(version, data_dir, split_file):
     y = np.zeros(n, dtype='uint8')
 
     with open(split_file, 'r') as f:
-        for line in f.readline():
-            print(line)
-            filepath, label = line.split(' ')
+        for line in f.readlines():
+            filepath, label = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             image = image[:, :, np.newaxis]
             x[i, :] = image
@@ -37,9 +36,9 @@ def load_lsa16_from_split(version, data_dir, split_file):
     y = np.zeros(n, dtype='uint8')
 
     with open(split_file, 'r') as f:
-        for line in f.readline():
+        for line in f.readlines():
             print(line)
-            filepath, label = line.split(' ')
+            filepath, label = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             if version == "colorbg":
                 image = transform.resize(image, (32, 32), preserve_range=True, mode="reflect",
@@ -56,8 +55,8 @@ def load_rwth_from_split(version, data_dir, split_file):
     x = []
 
     with open(split_file, 'r') as f:
-        for line in f.readline():
-            filepath, label = line.split(' ')
+        for line in f.readlines():
+            filepath, label = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             image = image[np.newaxis, :, :]
             if len(image.shape) == 2:
