@@ -42,6 +42,6 @@ def load_rwth(args):
     paths = [os.path.join(extracted_folderpath, path) for path in images_paths]
     x = []
     for filepath in paths:
-        x.append(filepath)
+        x.append(os.path.basename(filepath))
     
     return x, y
