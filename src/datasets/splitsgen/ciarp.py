@@ -13,14 +13,13 @@ def read_csv(txt_path):
         reader = csv.reader(f, delimiter=' ')
         filename, y = zip(*reader)
         y = np.array(list(map(int, y)))
-    return os.path.basename(filename), y
+    return filename, y
 
 def load_folder(folder, txt_path):
     filenames, y = read_csv(txt_path)
     x = []
     for filename in filenames:
-        filepath = os.path.join(folder.path, filename)
-        x.append(filepath)
+        x.append(filename)
     return x, y
 
 def load_ciarp(args):
