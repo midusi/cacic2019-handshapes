@@ -6,13 +6,18 @@ from pathlib import Path
 from sklearn.model_selection import train_test_split
 from src.utils.model_selection import train_test_split_balanced
 
-def load_lsa16(dataset_name, path, train_size=None, test_size=None, n_train_per_class=0, n_test_per_class=0):
+def load_lsa16(config, path=None):
     """
     Load lsa16 dataset.
 
     Returns (x, y): as dataset x and y.
 
     """
+
+    train_size=config['data.train_size']
+    test_size=config['data.test_size']
+    n_train_per_class=config['data.n_train_per_class']
+    n_test_per_class=config['data.n_test_per_class']
 
     if path == None:
         path = '/tf/data/{}/data'.format(dataset_name)

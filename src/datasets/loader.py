@@ -14,12 +14,7 @@ from .ciarp import load_ciarp
 from .lsa16 import load_lsa16
 from .rwth import load_rwth
 
-def load(dataset_name, datagen_flow=False,
-         weight_classes=False, batch_size=32,
-         rotation_range = 10, width_shift_range = 0.10,
-         height_shift_range = 0.10, horizontal_flip = True,
-         train_size=None, test_size=None,
-         n_train_per_class=0, n_test_per_class=0):
+def load(config, datagen_flow=False):
     """
     Load specific dataset.
 
@@ -29,26 +24,26 @@ def load(dataset_name, datagen_flow=False,
     Returns (train_gen, val_gen, test_gen, nb_classes, image_shape, class_weights):.
     """
 
-    dataset_path = '/tf/data/{}/data'.format(dataset_name)
+    dataset_path = '/tf/data/{}/data'.format(config['data.dataset'])
 
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
 
     # The data, split between train and test sets:
-    if dataset_name == "cifar10":
-        (x_train, y_train), (x_test, y_test) = load_cifar10(dataset_name)
-    elif dataset_name == "cifar100":
-        (x_train, y_train), (x_test, y_test) = load_cifar100(dataset_name)
-    elif dataset_name == "mnist":
-        (x_train, y_train), (x_test, y_test) = load_mnist(dataset_name)
-    elif dataset_name == "Ciarp":
-        (x_train, y_train), (x_test, y_test) = load_ciarp(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
-    elif dataset_name == "lsa16":
-        (x_train, y_train), (x_test, y_test) = load_lsa16(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
-    elif dataset_name == "rwth":
-        (x_train, y_train), (x_test, y_test) = load_rwth(dataset_name, dataset_path, train_size, test_size, n_train_per_class, n_test_per_class)
+    if config['data.dataset'] == "cifar10":
+        (x_train, y_train), (x_test, y_test) = load_cifar10(config['data.dataset'])
+    elif config['data.dataset'] == "cifar100":
+        (x_train, y_train), (x_test, y_test) = load_cifar100(config['data.dataset'])
+    elif config['data.dataset'] == "mnist":
+        (x_train, y_train), (x_test, y_test) = load_mnist(config['data.dataset'])
+    elif config['data.dataset'] == "Ciarp":
+        (x_train, y_train), (x_test, y_test) = load_ciarp(config)
+    elif config['data.dataset'] == "lsa16":
+        (x_train, y_train), (x_test, y_test) = load_lsa16(config)
+    elif config['data.dataset'] == "rwth":
+        (x_train, y_train), (x_test, y_test) = load_rwth(config)
     else:
-        raise ValueError("Unknow dataset: {}".format(dataset_name))
+        raise ValueError("Unknow dataset: {}".format(config['data.dataset']))
 
     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
     
@@ -56,15 +51,15 @@ def load(dataset_name, datagen_flow=False,
     nb_classes = len(np.unique(y_train))
 
     class_weights = None
-    if weight_classes:
+    if config['data.weight_classes']:
         class_weights = compute_class_weight('balanced', np.unique(y_train), y_train)
     
     train_datagen_args = dict(featurewise_center=True,
                               featurewise_std_normalization=True,
-                              rotation_range=rotation_range,
-                              width_shift_range=width_shift_range,
-                              height_shift_range=height_shift_range,
-                              horizontal_flip=horizontal_flip,
+                              rotation_range=config['data.rotation_range'],
+                              width_shift_range=config['data.width_shift_range'],
+                              height_shift_range=config['data.height_shift_range'],
+                              horizontal_flip=config['data.horizontal_flip'],
                               fill_mode='constant',
                               cval=0)
     train_datagen = ImageDataGenerator(train_datagen_args)
@@ -86,9 +81,9 @@ def load(dataset_name, datagen_flow=False,
 
     if datagen_flow:
         # create data generators
-        train_gen = train_datagen.flow(x_train, y_train, batch_size=batch_size)
-        val_gen = val_datagen.flow(x_test, y_test, batch_size=batch_size, shuffle=False)
-        test_gen = test_datagen.flow(x_test, y_test, batch_size=batch_size, shuffle=False)
+        train_gen = train_datagen.flow(x_train, y_train, batch_size=config['data.batch_size'])
+        val_gen = val_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'], shuffle=False)
+        test_gen = test_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'], shuffle=False)
 
         train = (train_gen, len(x_train), len(y_train))
         val = (val_gen, len(x_val), len(y_val))
