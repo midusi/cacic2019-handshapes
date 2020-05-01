@@ -2,6 +2,7 @@
 
 import numpy as np
 from pathlib import Path
+from sklearn.model_selection import train_test_split
 from tensorflow.keras.datasets import cifar10
 
 def load_cifar10(dataset_name):
