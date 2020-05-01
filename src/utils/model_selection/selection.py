@@ -13,12 +13,12 @@ def _make_indexable(iterable):
     iterable : {list, dataframe, array, sparse} or None
         Object to be converted to an indexable iterable.
     """
-    if sp.issparse(iterable):
-        return iterable.tocsr()
-    elif hasattr(iterable, "__getitem__") or hasattr(iterable, "iloc"):
-        return iterable
-    elif iterable is None:
-        return iterable
+    #if sp.issparse(iterable):
+    #    return iterable.tocsr()
+    #elif hasattr(iterable, "__getitem__") or hasattr(iterable, "iloc"):
+    #    return iterable
+    #elif iterable is None:
+    #    return iterable
     return np.array(iterable)
 
 def train_test_split_balanced(data, target, test_size=0.2,
