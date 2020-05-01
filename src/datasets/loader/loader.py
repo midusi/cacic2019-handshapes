@@ -23,7 +23,7 @@ def load(config, datagen_flow=False):
     Returns (train_gen, val_gen, test_gen, nb_classes, image_shape, class_weights):.
     """
 
-    dataset_path = '/tf/data/{}/data'.format(config['data.dataset'])
+    dataset_path = '/tf/data/{}'.format(config['data.dataset'])
 
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)

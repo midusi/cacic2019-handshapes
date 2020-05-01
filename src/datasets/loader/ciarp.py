@@ -23,20 +23,22 @@ def load_ciarp(config, path=None):
     n_test_per_class=config['data.n_test_per_class']
 
     if path == None:
-        path = '/tf/data/{}/data'.format(dataset_name)
+        path = '/tf/data/{}'.format(config['data.dataset'])
+        data_dir = os.path.join(path, 'data')
 
-    if not os.path.exists(path):
-        os.makedirs(path)
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
+
+    X, meta = hd.load(config['data.dataset'], Path(data_dir), version=config['data.version'])
 
     if config['data.split']:
         split_dir = os.path.join(path, 'splits', config['data.split'])
         split_file = lambda split: os.path.join(split_dir, f"{split}.txt")
 
-        x_train, y_train = load_from_split(config['data.dataset'], config['data.version'], path, split_file('train'))
-        x_test, y_test = load_from_split(config['data.dataset'], config['data.version'], path, split_file('test'))
-        x_val, y_val = load_from_split(config['data.dataset'], config['data.version'], path, split_file('val'))
+        x_train, y_train = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('train'))
+        x_test, y_test = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('test'))
+        x_val, y_val = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('val'))
     else:
-        X, meta = hd.load(dataset_name, Path(path), version=config['data.version'])
 
         x, y = X, meta['y']
 
