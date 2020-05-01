@@ -2,6 +2,7 @@
 
 import os
 import glob
+import numpy as np
 import handshape_datasets as hd
 from pathlib import Path
 
