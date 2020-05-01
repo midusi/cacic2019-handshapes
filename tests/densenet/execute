@@ -53,12 +53,30 @@ for config_path in ${test_cases[*]}; do
         continue
     fi
 
-    echo >> $output
-    echo "Executing test case with config at $config_path"
-    echo "Executing test case with config at $config_path" >> $output
+    if [[ "${config_path: -6}" = "0.conf" ]] || [[ "${config_path: -6}" = "5.conf" ]]; then
+        echo >> $output
+        echo "Executing test case with config at $config_path"
+        echo "Executing test case with config at $config_path" >> $output
 
-    python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path $engine_flag $train_weights_flag
-    python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path $engine_flag $eval_weights_flag --times $times >> $output
+        python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path $engine_flag $train_weights_flag
+        python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path $engine_flag $eval_weights_flag --times $times >> $output
+    else
+        split=""
+        [[ "${config_path: -7}" = "_5.conf" ]] && { split="5_samples" }
+        [[ "${config_path: -7}" = "10.conf" ]] && { split="10_samples" }
+        [[ "${config_path: -7}" = "15.conf" ]] && { split="15_samples" }
+        [[ "${config_path: -7}" = "20.conf" ]] && { split="20_samples" }
+        [[ "${config_path: -7}" = "30.conf" ]] && { split="30_samples" }
+
+        for i in {1..10}; do
+            echo >> $output
+            echo "Executing test case with config at $config_path with split ${split}_$i"
+            echo "Executing test case with config at $config_path with split ${split}_$i" >> $output
+
+            python $ROOT/../../src/densenet/scripts/train/run_train.py --data.split ${split}_$i --config $config_path $engine_flag $train_weights_flag
+            python $ROOT/../../src/densenet/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $eval_weights_flag --times $times >> $output
+        done
+    fi
 
     echo >> $output
 done
