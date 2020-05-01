@@ -23,7 +23,7 @@ def _make_indexable(iterable):
 
 def train_test_split_balanced(data, target, test_size=0.2,
                               train_size=0, n_train_per_class=0,
-                              n_test_per_class=0):
+                              n_test_per_class=0, n_dim=True):
     """Returns balanced x_train, x_test_, y_train, y_test for a given dataset"""
     data = _make_indexable(data)
     target = _make_indexable(target)
@@ -71,8 +71,13 @@ def train_test_split_balanced(data, target, test_size=0.2,
     ix_train = np.concatenate([x[:n_train_per_class] for x in ixs])
     ix_test = np.concatenate([x[n_train_per_class:(amount_per_class)] for x in ixs])
 
-    x_train = data[ix_train, :]
-    x_test = data[ix_test, :]
+    if n_dim:
+        x_train = data[ix_train, :]
+        x_test = data[ix_test, :]
+    else:
+        x_train = data[ix_train]
+        x_test = data[ix_test]
+        
     y_train = target[ix_train]
     y_test = target[ix_test]
 
