@@ -44,18 +44,17 @@ def generate_splits(args):
     store_split(x_train + x_val, y_train + y_val, os.path.join(output_dir, args['split'], 'trainval.txt'))
     store_split(x_val, y_val, os.path.join(output_dir, args['split'], 'val.txt'))
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Generate splits for datasets")
+parser = argparse.ArgumentParser(description="Generate splits for datasets")
 
-    parser.add_argument("--split", type=str, default="")
-    parser.add_argument("--output", type=str, default="", help="Output dir to save the splits")
-    parser.add_argument("--ext", type=str, default="png", help="File extension")
-    parser.add_argument("--dataset", type=str, default="", help="Dataset name")
-    parser.add_argument("--train_size", type=float, default=0.75)
-    parser.add_argument("--test_size", type=float, default=0.25)
-    parser.add_argument("--n_train_per_class", type=int, default=0)
-    parser.add_argument("--n_test_per_class", type=int, default=0)
+parser.add_argument("--split", type=str, default="")
+parser.add_argument("--output", type=str, default="", help="Output dir to save the splits")
+parser.add_argument("--ext", type=str, default="png", help="File extension")
+parser.add_argument("--dataset", type=str, default="", help="Dataset name")
+parser.add_argument("--train_size", type=float, default=0.75)
+parser.add_argument("--test_size", type=float, default=0.25)
+parser.add_argument("--n_train_per_class", type=int, default=0)
+parser.add_argument("--n_test_per_class", type=int, default=0)
 
-    args = vars(parser.parse_args())
+args = vars(parser.parse_args())
 
-    generate_splits(args)
+generate_splits(args)
