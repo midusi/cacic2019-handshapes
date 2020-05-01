@@ -3,9 +3,9 @@
 from sklearn.model_selection import train_test_split
 from src.utils.model_selection import train_test_split_balanced
 
-from .ciarp import load_ciarp_classes
-from .lsa16 import load_lsa16_classes
-from .rwth import load_rwth_classes
+from .ciarp import load_ciarp
+from .lsa16 import load_lsa16
+from .rwth import load_rwth
 
 def store_split(x, y, path):
     f = open(path, 'w')
