@@ -15,7 +15,7 @@ def store_split(x, y, path):
     f.close()
 
 def generate_splits(args):
-    output_dir = args['output']
+    output_dir = os.path.join(args['output'], args['split'])
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -44,7 +44,7 @@ def generate_splits(args):
 
     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
 
-    store_split(x_test, y_test, os.path.join(output_dir, args['split'], 'test.txt'))
-    store_split(x_train, y_train, os.path.join(output_dir, args['split'], 'train.txt'))
-    store_split(x_train + x_val, y_train + y_val, os.path.join(output_dir, args['split'], 'trainval.txt'))
-    store_split(x_val, y_val, os.path.join(output_dir, args['split'], 'val.txt'))
+    store_split(x_test, y_test, os.path.join(output_dir, 'test.txt'))
+    store_split(x_train, y_train, os.path.join(output_dir, 'train.txt'))
+    store_split(x_train + x_val, y_train + y_val, os.path.join(output_dir, 'trainval.txt'))
+    store_split(x_val, y_val, os.path.join(output_dir, 'val.txt'))
