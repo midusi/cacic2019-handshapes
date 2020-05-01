@@ -21,6 +21,7 @@ def load_ciarp_from_split(version, data_dir, split_file):
 
     with open(split_file, 'r') as f:
         for line in f.readline():
+            print(line)
             filepath, label = line.split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             image = image[:, :, np.newaxis]
@@ -37,6 +38,7 @@ def load_lsa16_from_split(version, data_dir, split_file):
 
     with open(split_file, 'r') as f:
         for line in f.readline():
+            print(line)
             filepath, label = line.split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             if version == "colorbg":
