@@ -35,7 +35,7 @@ def load_ciarp(args):
 
     hd.load(args['dataset'], Path(path))
 
-    dataset_folder = os.path.join(path , 'ciarp')
+    dataset_folder = os.path.join(path, 'ciarp/ciarp')
     folder_image=path
     version_string='WithGabor'
     folders = [f for f in os.scandir(dataset_folder) if f.is_dir() and f.path.endswith(version_string)]
