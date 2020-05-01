@@ -1,0 +1,16 @@
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/10_09_03_000.png 9
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/08_02_03_000.png 7
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/12_05_02_000.png 11
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/01_04_03_000.png 0
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/04_09_02_000.png 3
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/09_02_01_000.png 8
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/07_10_02_000.png 6
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/16_06_02_000.png 15
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/06_06_05_000.png 5
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/02_02_03_000.png 1
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/05_08_04_000.png 4
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/03_08_02_000.png 2
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/15_10_03_000.png 14
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/14_01_05_000.png 13
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/13_05_04_000.png 12
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/11_05_02_000.png 10
