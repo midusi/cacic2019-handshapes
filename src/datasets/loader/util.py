@@ -20,7 +20,7 @@ def load_ciarp_from_split(version, data_dir, split_file):
     y = np.zeros(n, dtype='uint8')
 
     with open(split_file, 'r') as f:
-        for line in f.readlines():
+        for i, line in enumerate(f.readlines()):
             filepath, label = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             image = image[:, :, np.newaxis]
@@ -36,7 +36,7 @@ def load_lsa16_from_split(version, data_dir, split_file):
     y = np.zeros(n, dtype='uint8')
 
     with open(split_file, 'r') as f:
-        for line in f.readlines():
+        for i, line in enumerate(f.readlines()):
             print(line)
             filepath, label = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
@@ -55,7 +55,7 @@ def load_rwth_from_split(version, data_dir, split_file):
     x = []
 
     with open(split_file, 'r') as f:
-        for line in f.readlines():
+        for i, line in enumerate(f.readlines()):
             filepath, label = line.rstrip('\n').split(' ')
             image = io.imread(os.path.join(data_dir, filepath))
             image = image[np.newaxis, :, :]
