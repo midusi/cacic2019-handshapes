@@ -19,26 +19,27 @@ def load_folder(folder, txt_path):
     filenames, y = read_csv(txt_path)
     x = []
     for filename in filenames:
-        x.append(filename)
+        filepath = os.path.join(folder, filename)
+        x.append(filepath)
     return x, y
 
-def load_ciarp(args):
+def load_ciarp(data_dir, dataset, version='WithGabor'):
     """
     Load ciarp dataset.
 
-    Returns (x, y): as dataset x and y.
+    Returns (x, y): as dataset x and y.    
 
     """
 
-    path = '/tf/data/{}/data'.format(args['dataset'])
+    path = data_dir if data_dir else '/tf/data/{}/data'.format(dataset)
     if not os.path.exists(path):
         os.makedirs(path)
 
-    hd.load(args['dataset'], Path(path))
+    hd.load(dataset, Path(path))
 
     dataset_folder = os.path.join(path, 'ciarp/ciarp')
     folder_image=path
-    version_string='WithGabor'
+    version_string=version if version else 'WithGabor'
     folders = [f for f in os.scandir(dataset_folder) if f.is_dir() and f.path.endswith(version_string)]
 
     result={}

@@ -7,19 +7,19 @@ import numpy as np
 import handshape_datasets as hd
 from pathlib import Path
 
-def load_rwth(args):
+def load_rwth(data_dir, dataset, version):
     """
     Load rwth dataset.
 
-    Returns (x, y): as dataset x and y.
+    Returns (x, y): as dataset x and y.    
 
     """
 
-    path = '/tf/data/{}/data'.format(args['dataset'])
+    path = data_dir if data_dir else '/tf/data/{}/data'.format(dataset)
     if not os.path.exists(path):
         os.makedirs(path)
 
-    hd.load(args['dataset'], Path(path))
+    hd.load(dataset, Path(path))
 
     extracted_folderpath = os.path.join(path, 'rwth-phoenix',"ph2014-dev-set-handshape-annotations")
     metadata_path = os.path.join(extracted_folderpath, "3359-ph2014-MS-handshape-annotations.txt")
@@ -42,6 +42,6 @@ def load_rwth(args):
     paths = [os.path.join(extracted_folderpath, path) for path in images_paths]
     x = []
     for filepath in paths:
-        x.append(os.path.basename(filepath))
+        x.append(filepath)
     
     return x, y

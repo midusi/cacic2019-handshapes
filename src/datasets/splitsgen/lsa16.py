@@ -5,27 +5,29 @@ import glob
 import handshape_datasets as hd
 from pathlib import Path
 
-def load_lsa16(args):
+def load_lsa16(data_dir, dataset, version):
     """
     Load lsa16 dataset.
 
-    Returns (x, y): as dataset x and y.
+    Returns (x, y): as dataset x and y.    
 
     """
 
-    path = '/tf/data/{}/data'.format(args['dataset'])
+    path = data_dir if data_dir else '/tf/data/{}/data'.format(dataset)
     if not os.path.exists(path):
         os.makedirs(path)
 
-    hd.load(args['dataset'], Path(path))
+    hd.load(dataset, Path(path))
 
-    dataDir = os.path.join(path, 'lsa16/lsa16_images/lsa32x32_nr_rgb_black_background', '*.{}'.format(args['ext']))
-    images = map(os.path.basename, glob.glob(dataDir))
+    version = 'lsa_nr_rgb' if version == 'colorbg' else 'lsa32x32_nr_rgb_black_background'
+
+    dataDir = os.path.join(path, 'lsa16/lsa16_images/{}'.format(version), '*.png')
 
     x, y = [], []
 
-    for filename in images:
-        x.append(filename)
+    for filepath in glob.glob(dataDir):
+        x.append(filepath)
+        filename = os.path.basename(filepath)
         y.append(int(filename.split("_")[0]))
     
     return x, y
