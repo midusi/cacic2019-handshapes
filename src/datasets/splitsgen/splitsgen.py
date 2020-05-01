@@ -20,8 +20,6 @@ def store_split(x, y, path, data_dir, mode='w'):
 def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, test_size, n_train_per_class, n_test_per_class, seed):
     np.random.seed(seed)
 
-    print(train_size, test_size, n_train_per_class, n_test_per_class)
-
     data_dir = data_dir if data_dir else '/tf/data/{}/data'.format(dataset)
 
     if not os.path.exists(data_dir):
@@ -47,7 +45,6 @@ def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, t
     if n_train_per_class <= 0:
         x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size)
     else:
-        n_train_per_class = math.ceil(n_train_per_class * 1.2)
         x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size,
                                                  n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
 
