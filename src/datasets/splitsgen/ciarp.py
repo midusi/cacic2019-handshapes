@@ -53,7 +53,7 @@ def load_ciarp(args):
     j = 0
     h = 0
     i = 0
-    xtot = np.zeros(cant_images, dtype='str')
+    xtot = []
     ytot = np.zeros(cant_images, dtype='uint8')
     #Loop x to copy data into xtot
     for folder in folders:
@@ -64,7 +64,7 @@ def load_ciarp(args):
             ytot[j] = valuesy
             j += 1
         for valuesx in x:
-            xtot[h] = valuesx
+            xtot.append(valuesx)
             h += 1
         i += 1
         result[folder.name] = (x,y)
