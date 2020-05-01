@@ -57,7 +57,7 @@ for config_path in ${test_cases[*]}; do
             message="Executing test case with config at $config_path with weights $model_weights"
         fi
         
-        if [ "${config_path: -6}" = "0.conf" ] || [ "${config_path: -6}" = "5.conf" ]; then
+        if [ "${config_path: -6}" != "0.conf" ] && [ "${config_path: -6}" != "5.conf" ]; then
             echo >> $output
             echo $message >> $output
 
@@ -65,11 +65,11 @@ for config_path in ${test_cases[*]}; do
             python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path $engine_flag $weights_flag --times $times >> $output
         else
             split=""
-            [[ "${config_path: -7}" = "_5.conf" ]] && { split="5_samples" }
-            [[ "${config_path: -7}" = "10.conf" ]] && { split="10_samples" }
-            [[ "${config_path: -7}" = "15.conf" ]] && { split="15_samples" }
-            [[ "${config_path: -7}" = "20.conf" ]] && { split="20_samples" }
-            [[ "${config_path: -7}" = "30.conf" ]] && { split="30_samples" }
+            if [ "${config_path: -7}" = "_5.conf" ]; then split="5_samples"; fi
+            if [ "${config_path: -7}" = "10.conf" ]; then split="10_samples"; fi
+            if [ "${config_path: -7}" = "15.conf" ]; then split="15_samples"; fi
+            if [ "${config_path: -7}" = "20.conf" ]; then split="20_samples"; fi
+            if [ "${config_path: -7}" = "30.conf" ]; then split="30_samples"; fi
 
             for i in {1..10}; do
                 echo >> $output
