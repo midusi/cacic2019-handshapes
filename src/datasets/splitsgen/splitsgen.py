@@ -10,8 +10,8 @@ from .ciarp import load_ciarp
 from .lsa16 import load_lsa16
 from .rwth import load_rwth
 
-def store_split(x, y, path, data_dir):
-    f = open(path, 'w')
+def store_split(x, y, path, data_dir, mode='w'):
+    f = open(path, mode)
     for img, label in zip(x, y):
         img = os.path.relpath(img, data_dir)
         f.write("{} {}\n".format(img, label))
@@ -54,4 +54,5 @@ def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, t
     store_split(x_test, y_test, os.path.join(output_dir, 'test.txt'), data_dir)
     store_split(x_train, y_train, os.path.join(output_dir, 'train.txt'), data_dir)
     store_split(x_val, y_val, os.path.join(output_dir, 'val.txt'), data_dir)    
-    store_split(np.concatenate(x_train, x_val), np.concatenate(y_train, y_val), os.path.join(output_dir, 'trainval.txt'), data_dir)
+    store_split(x_train, y_train, os.path.join(output_dir, 'trainval.txt'), data_dir)
+    store_split(x_val, y_val, os.path.join(output_dir, 'trainval.txt'), data_dir, 'a+')
