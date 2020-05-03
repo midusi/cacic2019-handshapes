@@ -37,7 +37,7 @@ if [ "$engine" != "" ]; then
 fi
 
 echo >> $output
-if [ "$engine" = "" ]; then
+if [ "$engine" != "" ]; then
     echo "Transfer Learning tests with DenseNet using $engine" >> $output
 else
     echo "Transfer Learning tests with DenseNet" >> $output

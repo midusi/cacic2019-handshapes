@@ -44,7 +44,7 @@ if [ "$engine" != "" ]; then
 fi
 
 echo >> $output
-if [ "$engine" = "" ]; then
+if [ "$engine" != "" ]; then
     echo "DenseNet tests using $engine" >> $output
 else
     echo "DenseNet tests" >> $output
