@@ -52,7 +52,4 @@ def eval(config):
             # the generator loops indefinitely
             break
 
-    losses.append(test_loss.result())
-    accuracies.append(test_accuracy.result()*100)
-
     print('Test Loss: {} Test Acc: {}'.format(test_loss.result(), test_accuracy.result()*100))
