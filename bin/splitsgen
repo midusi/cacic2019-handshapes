@@ -6,7 +6,7 @@ cli="python $ROOT/../src/datasets/splitsgen/cli.py"
 
 for dataset in lsa16 Ciarp rwth; do
     echo "Generating splits for $dataset"
-    for i in {}; do
+    for i in {1..10}; do
         $cli --dataset $dataset --splits_dir /tf/data/$dataset/splits --split full_75_25_$i --train_size 0.75 --test_size 0.25 --seed 4${i}
     done
 
