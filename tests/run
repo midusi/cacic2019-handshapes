@@ -6,7 +6,7 @@ N=5
 
 densenet_tests=()
 
-for i in {1..$N}; do
+for i in $(seq 1 $N); do
     ciarp="./results/${i}_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5"
     cifar10="./results/${i}_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5"
     lsa16="./results/${i}_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5"

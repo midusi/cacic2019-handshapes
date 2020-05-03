@@ -73,7 +73,7 @@ for config_path in ${test_cases[*]}; do
             if [ "${config_path: -7}" = "20.conf" ]; then split="20_samples"; fi
             if [ "${config_path: -7}" = "30.conf" ]; then split="30_samples"; fi
 
-            for i in {1..$times}; do
+            for i in $(seq 1 $times); do
                 echo >> $output
                 message="$message with split ${split}_$i"
                 echo $message >> $output
