@@ -45,17 +45,17 @@ def eval(config):
     model.load_weights(model_file_path)
     # model.summary()
 
-    train_loss = tf.keras.metrics.Mean(name='train_loss')
-    train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
-    test_loss = tf.keras.metrics.Mean(name='test_loss')
-    test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
-
-    _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy, test_loss=test_loss, test_accuracy=test_accuracy, engine=config['engine'])
-
     losses = []
     accuracies = []
     
     for _ in range(config['times']):
+        train_loss = tf.keras.metrics.Mean(name='train_loss')
+        train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
+        test_loss = tf.keras.metrics.Mean(name='test_loss')
+        test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
+
+        _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy, test_loss=test_loss, test_accuracy=test_accuracy, engine=config['engine'])
+
         batches = 0
         for test_images, test_labels in test_gen:
             test_step(test_images, test_labels)

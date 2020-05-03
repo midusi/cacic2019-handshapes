@@ -29,17 +29,17 @@ tl_rwth_weights=${tl_rwth_weights:1}
 tests=(
     # "$ROOT/densenet/execute --all -o $ROOT/results"
 
-    "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $cifar10 -o $ROOT/results"
-    "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --weights $lsa16 -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --weights $ciarp -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --weights $rwth -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $cifar10 -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist -o $ROOT/results"
 
-    "$ROOT/densenet/execute $ROOT/densenet/maml/config_cifar10.conf --engine maml --weights $cifar10_maml -o $ROOT/results"
-    "$ROOT/densenet/execute $ROOT/densenet/maml/config_mnist.conf --engine maml --weights $mnist_maml -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16.conf --engine maml --weights $lsa16_maml -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp.conf --engine maml --weights $ciarp_maml -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth.conf --engine maml --weights $rwth_maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_mnist.conf --engine maml --weights $mnist_maml -o $ROOT/results"
+    "$ROOT/densenet/execute $ROOT/densenet/maml/config_cifar10.conf --engine maml --weights $cifar10_maml -o $ROOT/results"
 
     "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16_split_5.conf $ROOT/densenet/normal/config_lsa16_split_10.conf $ROOT/densenet/normal/config_lsa16_split_15.conf $ROOT/densenet/normal/config_lsa16_split_20.conf -o $ROOT/results"
     "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp_split_5.conf $ROOT/densenet/normal/config_ciarp_split_10.conf $ROOT/densenet/normal/config_ciarp_split_15.conf $ROOT/densenet/normal/config_ciarp_split_20.conf -o $ROOT/results"
