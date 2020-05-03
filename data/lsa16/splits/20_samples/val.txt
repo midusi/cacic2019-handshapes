@@ -1,0 +1,4 @@
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/10_05_02_000.png 9
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/01_05_01_000.png 0
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/15_10_02_000.png 14
+lsa16/lsa16_images/lsa32x32_nr_rgb_black_background/13_08_04_000.png 12
