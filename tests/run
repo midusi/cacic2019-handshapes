@@ -80,12 +80,12 @@ densenet_split_tests=(
     "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth_split_5.conf $ROOT/transfer_learning/maml/config_rwth_split_10.conf $ROOT/transfer_learning/maml/config_rwth_split_15.conf $ROOT/transfer_learning/maml/config_rwth_split_20.conf $ROOT/transfer_learning/maml/config_rwth_split_30.conf --engine maml --weights $tl_rwth_weights_maml --times $i -o $ROOT/results_$i"
 )
 
-densenet_tests=( ${densenet_tests[@]} ${densenet_split_tests[@]} )
+densenet_tests=( "${densenet_tests[@]}" "${densenet_split_tests[@]}" )
 
 done
 
 tests=(
-    ${densenet_tests[@]}
+    "${densenet_tests[@]}"
 
     # "$ROOT/densenet/execute --all -o $ROOT/results"
     # "$ROOT/transfer_learning/execute --all -o $ROOT/results"
