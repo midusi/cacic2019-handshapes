@@ -19,6 +19,7 @@ variables["-o"]="output"
 variables["--engine"]="engine"
 variables["--times"]="times"
 variables["--weights"]="weights"
+variables["--split"]="split"
 
 . $ROOT/../../scripts/flags/arguments.sh
 
@@ -26,6 +27,7 @@ output=${output:-"/tmp/tests"}
 engine=${engine:-""}
 times=${times:-"10"}
 weights=${weights:-""}
+split=${split="full_75_25"}
 
 . $ROOT/../cases.sh
 
@@ -60,7 +62,7 @@ for config_path in ${test_cases[*]}; do
         echo "Executing test case with config at $config_path" >> $output
 
         python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path $engine_flag $train_weights_flag
-        python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path $engine_flag $eval_weights_flag --times $times >> $output
+        python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path $engine_flag $eval_weights_flag >> $output
     else
         split=""
         if [ "${config_path: -7}" = "_5.conf" ]; then split="5_samples"; fi
@@ -69,13 +71,13 @@ for config_path in ${test_cases[*]}; do
         if [ "${config_path: -7}" = "20.conf" ]; then split="20_samples"; fi
         if [ "${config_path: -7}" = "30.conf" ]; then split="30_samples"; fi
 
-        for i in {1..10}; do
+        for i in {1..$times}; do
             echo >> $output
             echo "Executing test case with config at $config_path with split ${split}_$i"
             echo "Executing test case with config at $config_path with split ${split}_$i" >> $output
 
             python $ROOT/../../src/densenet/scripts/train/run_train.py --data.split ${split}_$i --config $config_path $engine_flag $train_weights_flag
-            python $ROOT/../../src/densenet/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $eval_weights_flag --times $times >> $output
+            python $ROOT/../../src/densenet/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $eval_weights_flag >> $output
         done
     fi
 
