@@ -55,8 +55,7 @@ for config_path in ${test_cases[*]}; do
         continue
     fi
 
-    is_split=$([ "${config_path: -6}" != "0.conf" ] && [ "${config_path: -6}" != "5.conf" ])
-    if [ $(echo "$config_path" | grep "cifar" | wc -l) -ne 0 ] || $is_split; then
+    if ! has_param '--split' "$@"; then
         echo >> $output
         echo "Executing test case with config at $config_path"
         echo "Executing test case with config at $config_path" >> $output
