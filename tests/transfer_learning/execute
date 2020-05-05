@@ -59,12 +59,12 @@ for config_path in ${test_cases[*]}; do
             message="Executing test case with config at $config_path with weights $model_weights"
         fi
         
-        if ! has_param '--split' "$@"; then
+        if ! has_param '--is-split' "$@"; then
             echo >> $output
             echo $message >> $output
 
-            python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path $engine_flag $weights_flag
-            python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path $engine_flag $weights_flag >> $output
+            python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split} $engine_flag $weights_flag
+            python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path --data.split ${split} $engine_flag $weights_flag >> $output
         else
             split=""
             if [ "${config_path: -7}" = "_5.conf" ]; then split="5_samples"; fi
@@ -78,8 +78,8 @@ for config_path in ${test_cases[*]}; do
                 message="$message with split ${split}_$i"
                 echo $message >> $output
 
-                python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --data.split ${split}_$i --config $config_path $engine_flag $weights_flag
-                python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $weights_flag >> $output
+                python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag
+                python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag >> $output
             done
         fi
 

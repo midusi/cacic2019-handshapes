@@ -55,13 +55,13 @@ for config_path in ${test_cases[*]}; do
         continue
     fi
 
-    if ! has_param '--split' "$@"; then
+    if ! has_param '--is-split' "$@"; then
         echo >> $output
         echo "Executing test case with config at $config_path"
         echo "Executing test case with config at $config_path" >> $output
 
-        python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path $engine_flag $train_weights_flag
-        python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path $engine_flag $eval_weights_flag >> $output
+        python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path --data.split ${split} $engine_flag $train_weights_flag
+        python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path --data.split ${split} $engine_flag $eval_weights_flag >> $output
     else
         split=""
         if [ "${config_path: -7}" = "_5.conf" ]; then split="5_samples"; fi
@@ -75,10 +75,10 @@ for config_path in ${test_cases[*]}; do
             echo "Executing test case with config at $config_path with split ${split}_$i"
             echo "Executing test case with config at $config_path with split ${split}_$i" >> $output
 
-            echo "Running python $ROOT/../../src/densenet/scripts/train/run_train.py --data.split ${split}_$i --config $config_path $engine_flag $train_weights_flag"
-            python $ROOT/../../src/densenet/scripts/train/run_train.py --data.split ${split}_$i --config $config_path $engine_flag $train_weights_flag
-            echo "Running python $ROOT/../../src/densenet/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $eval_weights_flag"
-            python $ROOT/../../src/densenet/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $eval_weights_flag >> $output
+            echo "Running python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $train_weights_flag"
+            python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $train_weights_flag
+            echo "Running python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $eval_weights_flag"
+            python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $eval_weights_flag >> $output
         done
     fi
 
