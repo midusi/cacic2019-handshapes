@@ -76,7 +76,9 @@ for config_path in ${test_cases[*]}; do
             echo "Executing test case with config at $config_path with split ${split}_$i"
             echo "Executing test case with config at $config_path with split ${split}_$i" >> $output
 
+            echo "Running python $ROOT/../../src/densenet/scripts/train/run_train.py --data.split ${split}_$i --config $config_path $engine_flag $train_weights_flag"
             python $ROOT/../../src/densenet/scripts/train/run_train.py --data.split ${split}_$i --config $config_path $engine_flag $train_weights_flag
+            echo "Running python $ROOT/../../src/densenet/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $eval_weights_flag"
             python $ROOT/../../src/densenet/scripts/eval/run_eval.py --data.split ${split}_$i --config $config_path $engine_flag $eval_weights_flag >> $output
         done
     fi
