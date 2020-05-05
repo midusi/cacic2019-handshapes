@@ -1,0 +1,90 @@
+
+DenseNet tests 
+
+Executing test case with config at ./tests/densenet/normal/config_lsa16.conf
+Test Loss: 0.10851633548736572 Test Acc: 97.5
+
+
+DenseNet tests 
+
+Executing test case with config at ./tests/densenet/normal/config_ciarp.conf
+Test Loss: 1.2281298040761612e-06 Test Acc: 100.0
+
+
+DenseNet tests 
+
+Executing test case with config at ./tests/densenet/normal/config_rwth.conf
+Test Loss: 0.286020964384079 Test Acc: 92.42424011230469
+
+
+DenseNet tests 
+
+Executing test case with config at ./tests/densenet/normal/config_cifar10.conf
+Test Loss: 0.6871356964111328 Test Acc: 77.05000305175781
+
+
+DenseNet tests
+
+Executing test case with config at ./tests/densenet/normal/config_mnist.conf
+Test Loss: 0.02093740738928318 Test Acc: 99.44999694824219
+
+
+DenseNet tests using maml
+
+Executing test case with config at ./tests/densenet/maml/config_lsa16.conf
+Test Loss: 0.17016491293907166 Test Acc: 96.0
+
+
+DenseNet tests using maml
+
+Executing test case with config at ./tests/densenet/maml/config_ciarp.conf
+Test Loss: 6.598773779842304e-06 Test Acc: 100.0
+
+
+DenseNet tests using maml
+
+Executing test case with config at ./tests/densenet/maml/config_rwth.conf
+Test Loss: 1.0991199016571045 Test Acc: 82.32323455810547
+
+
+DenseNet tests using maml
+
+Executing test case with config at ./tests/densenet/maml/config_mnist.conf
+Test Loss: 0.04857519268989563 Test Acc: 99.0
+
+
+DenseNet tests using maml
+
+Executing test case with config at ./tests/densenet/maml/config_cifar10.conf
+
+DenseNet tests
+
+Executing test case with config at ./tests/densenet/normal/config_lsa16_split_5.conf
+
+
+Executing test case with config at ./tests/densenet/normal/config_lsa16_split_10.conf
+
+
+Executing test case with config at ./tests/densenet/normal/config_lsa16_split_15.conf
+
+
+Executing test case with config at ./tests/densenet/normal/config_lsa16_split_20.conf
+
+
+DenseNet tests
+
+Executing test case with config at ./tests/densenet/normal/config_ciarp_split_5.conf
+
+
+Executing test case with config at ./tests/densenet/normal/config_ciarp_split_10.conf
+
+
+Executing test case with config at ./tests/densenet/normal/config_ciarp_split_15.conf
+
+
+Executing test case with config at ./tests/densenet/normal/config_ciarp_split_20.conf
+
+
+DenseNet tests
+
+Executing test case with config at ./tests/densenet/normal/config_rwth_split_5.conf
