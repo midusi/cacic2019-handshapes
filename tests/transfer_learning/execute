@@ -78,7 +78,9 @@ for config_path in ${test_cases[*]}; do
                 message="$message with split ${split}_$i"
                 echo $message >> $output
 
+                echo "Running python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag"
                 python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag
+                echo "Running python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag"
                 python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag >> $output
             done
         fi
