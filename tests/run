@@ -20,7 +20,9 @@ densenet_tests=(
     # "$ROOT/densenet/execute $ROOT/densenet/maml/config_cifar10.conf --engine maml --weights $cifar10_maml --times $T --split full_75_25_$i -o $ROOT/results/results_$i"
 )
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main DenseNet tests
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 for i in $(seq $S $N); do
     ciarp="./results/${i}_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5"
     lsa16="./results/${i}_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5"
@@ -55,7 +57,9 @@ for i in $(seq $S $N); do
     densenet_tests=( "${densenet_tests[@]}" "${densenet_split_tests[@]}" )
 done
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Model Agnostic Meta Learning experiments
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 for i in $(seq $S $N); do
     ciarp="./results/${i}_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5"
     lsa16="./results/${i}_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5"
