@@ -49,7 +49,7 @@ def train_test_split_balanced(data, target, test_size=0.2,
     if n_test_per_class <= 0:
         n_test_per_class = max(1, int(np.floor(n_test / len(classes))))
 
-    amount_per_class = n_train_per_class+n_test_per_class
+    amount_per_class = n_train_per_class + n_test_per_class
 
     ixs = []
     for label in classes:
