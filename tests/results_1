@@ -51,3 +51,1401 @@ DenseNet tests using maml
 
 Executing test case with config at ./tests/densenet/maml/config_mnist.conf
 Test Loss: 0.04857519268989563 Test Acc: 99.0
+
+Transfer Learning tests with DenseNet
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.06485795974731445 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.2687576711177826 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.20383335649967194 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.043035976588726044 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.14940200746059418 Test Acc: 98.5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.139135479927063 Test Acc: 96.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.24912379682064056 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.21618983149528503 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.043543290346860886 Test Acc: 99.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.14022402465343475 Test Acc: 98.0
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.06782013922929764 Test Acc: 99.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.22420234978199005 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.20125162601470947 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.06052533909678459 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.11492528021335602 Test Acc: 98.5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.06905025243759155 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.29365459084510803 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.2694918215274811 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.05190877243876457 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.14409908652305603 Test Acc: 99.0
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.05075804516673088 Test Acc: 98.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.23395588994026184 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.3344707489013672 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.03985027223825455 Test Acc: 99.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.16139067709445953 Test Acc: 98.5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.09769035130739212 Test Acc: 98.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.237290620803833 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.23054976761341095 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.09202922135591507 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.13659189641475677 Test Acc: 97.0
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.034450653940439224 Test Acc: 98.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.283709853887558 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.2281840294599533 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.08386524766683578 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.13911685347557068 Test Acc: 98.5
+
+
+Transfer Learning tests with DenseNet
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.07412135601043701 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.19416430592536926 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.179250106215477 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.06486134976148605 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.11799196898937225 Test Acc: 98.5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.09535995870828629 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.23190097510814667 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.25018492341041565 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.07482772320508957 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.14547671377658844 Test Acc: 98.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.04582996293902397 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.20285770297050476 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.2550733685493469 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.06441954523324966 Test Acc: 99.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.13830186426639557 Test Acc: 98.5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.08092276751995087 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.28139472007751465 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.3651537597179413 Test Acc: 95.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.14463533461093903 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.1774563044309616 Test Acc: 97.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.09022730588912964 Test Acc: 98.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.2217956781387329 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.21996687352657318 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.1121038943529129 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.12500068545341492 Test Acc: 98.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.09341132640838623 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.2658933699131012 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.2887726128101349 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.07313559204339981 Test Acc: 98.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.1552419364452362 Test Acc: 98.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.061672572046518326 Test Acc: 98.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.23654161393642426 Test Acc: 97.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.20181331038475037 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.061760906130075455 Test Acc: 98.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.12218121439218521 Test Acc: 97.5
+
+
+Transfer Learning tests with DenseNet using maml
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.16343817114830017 Test Acc: 94.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.46753716468811035 Test Acc: 93.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.3430691063404083 Test Acc: 96.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.30324339866638184 Test Acc: 89.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.4436118006706238 Test Acc: 92.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.1715974658727646 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.48987144231796265 Test Acc: 89.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.36440563201904297 Test Acc: 92.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.2535634934902191 Test Acc: 96.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.3576362729072571 Test Acc: 96.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.1330675631761551 Test Acc: 95.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.5637416243553162 Test Acc: 92.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.5606281757354736 Test Acc: 88.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.4260792136192322 Test Acc: 87.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.30823951959609985 Test Acc: 94.5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.2514342963695526 Test Acc: 93.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.4527052938938141 Test Acc: 93.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.3872232437133789 Test Acc: 96.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.3058931529521942 Test Acc: 92.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.322158545255661 Test Acc: 96.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.2323981672525406 Test Acc: 91.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.41902127861976624 Test Acc: 92.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.44408315420150757 Test Acc: 88.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.2903624176979065 Test Acc: 93.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.32138535380363464 Test Acc: 96.0
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.1533823311328888 Test Acc: 96.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.5168258547782898 Test Acc: 90.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.3662051260471344 Test Acc: 95.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.23254378139972687 Test Acc: 96.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.34650036692619324 Test Acc: 94.5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 0.10938268899917603 Test Acc: 97.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 0.40614527463912964 Test Acc: 90.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 0.4670085906982422 Test Acc: 88.0
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 0.21735356748104095 Test Acc: 95.5
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 0.4533557891845703 Test Acc: 91.0
+
+
+Transfer Learning tests with DenseNet
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/normal/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Transfer Learning tests with DenseNet
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Transfer Learning tests with DenseNet using maml
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_5.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 5_samples_1 with split 5_samples_2 with split 5_samples_3 with split 5_samples_4 with split 5_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_10.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 10_samples_1 with split 10_samples_2 with split 10_samples_3 with split 10_samples_4 with split 10_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_15.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 15_samples_1 with split 15_samples_2 with split 15_samples_3 with split 15_samples_4 with split 15_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4
+
+Executing test case with config at ./tests/transfer_learning/maml/config_lsa16_split_20.conf with weights ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 with split 20_samples_1 with split 20_samples_2 with split 20_samples_3 with split 20_samples_4 with split 20_samples_5
+
+
+Transfer Learning tests with DenseNet
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 2.2413233580209635e-07 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 4.2574677117102055e-09 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 4.879506832367042e-06 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 2.0621993002123418e-08 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 5.987071949320466e-10 Test Acc: 100.0
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 3.961542824981734e-05 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 1.5559537132503465e-05 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 4.718295372185821e-07 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 1.6821881217765622e-05 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 2.810995738400379e-07 Test Acc: 100.0
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 1.3842365831351344e-07 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 1.1109341890858104e-08 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 1.1239127388762427e-06 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 1.9475059787055216e-07 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 1.9593356626046443e-07 Test Acc: 100.0
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 1.929167936509657e-09 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 7.111887523336691e-09 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
+Test Loss: 1.7323733345619985e-06 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4
+Test Loss: 1.2270445104434202e-08 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3 with split full_75_25_4 with split full_75_25_5
+Test Loss: 5.521409995878912e-09 Test Acc: 100.0
+
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1
+Test Loss: 3.754834310143451e-08 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2
+Test Loss: 5.321756901821573e-08 Test Acc: 100.0
+
+Executing test case with config at ./tests/transfer_learning/normal/config_ciarp.conf with weights ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 with split full_75_25_1 with split full_75_25_2 with split full_75_25_3
