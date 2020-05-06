@@ -38,9 +38,9 @@ fi
 
 echo >> $output
 if [ "$engine" != "" ]; then
-    echo "Transfer Learning tests with DenseNet using $engine" >> $output
+    echo "TRANSFER LEARNING TESTS WITH DENSENET USING $engine" >> $output
 else
-    echo "Transfer Learning tests with DenseNet" >> $output
+    echo "TRANSFER LEARNING TESTS WITH DENSENET" >> $output
 fi
 
 for config_path in ${test_cases[*]}; do
@@ -54,18 +54,17 @@ for config_path in ${test_cases[*]}; do
             weights_flag="--model.weights $model_weights"
         fi
 
-        message="Executing test case with config at $config_path"
+        message="EXECUTING TEST CASE WITH CONFIG AT $config_path"
         if [ "$model_weights" != "" ]; then
-            message="Executing test case with config at $config_path with weights $model_weights"
+            message="EXECUTING TEST CASE WITH CONFIG AT $config_path WITH WEIGHTS $model_weights"
         fi
         
         if ! has_param '--is-split' "$@"; then
-            echo >> $output
             echo $message >> $output
 
             for i in $(seq 1 $times); do
                 echo >> $output
-                split_message="$message with split ${split}_$i"
+                split_message="$message WITH SPLIT ${split}_$i"
                 echo $split_message >> $output
                 
                 python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag
@@ -81,7 +80,7 @@ for config_path in ${test_cases[*]}; do
 
             for i in $(seq 1 $times); do
                 echo >> $output
-                split_message="$message with split ${split}_$i"
+                split_message="$message WITH SPLIT ${split}_$i"
                 echo $split_message >> $output
 
                 echo "Running python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag"

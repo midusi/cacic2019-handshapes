@@ -45,9 +45,9 @@ fi
 
 echo >> $output
 if [ "$engine" != "" ]; then
-    echo "DenseNet tests using $engine" >> $output
+    echo "DENSENET TESTS USING $engine" >> $output
 else
-    echo "DenseNet tests" >> $output
+    echo "DENSENET TESTS" >> $output
 fi
 
 for config_path in ${test_cases[*]}; do
@@ -57,8 +57,8 @@ for config_path in ${test_cases[*]}; do
 
     if ! has_param '--is-split' "$@"; then
         echo >> $output
-        echo "Executing test case with config at $config_path"
-        echo "Executing test case with config at $config_path" >> $output
+        echo "EXECUTING TEST CASE WITH CONFIG AT $config_path"
+        echo "EXECUTING TEST CASE WITH CONFIG AT $config_path" >> $output
 
         python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path --data.split ${split} $engine_flag $train_weights_flag
         python $ROOT/../../src/densenet/scripts/eval/run_eval.py --config $config_path --data.split ${split} $engine_flag $eval_weights_flag >> $output
@@ -72,8 +72,8 @@ for config_path in ${test_cases[*]}; do
 
         for i in $(seq 1 $times); do
             echo >> $output
-            echo "Executing test case with config at $config_path with split ${split}_$i"
-            echo "Executing test case with config at $config_path with split ${split}_$i" >> $output
+            echo "EXECUTING TEST CASE WITH CONFIG AT $config_path WITH SPLIT ${split}_$i"
+            echo "EXECUTING TEST CASE WITH CONFIG AT $config_path WITH SPLIT ${split}_$i" >> $output
 
             echo "Running python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $train_weights_flag"
             python $ROOT/../../src/densenet/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $train_weights_flag
