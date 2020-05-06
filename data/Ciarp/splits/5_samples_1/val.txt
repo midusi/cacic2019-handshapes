@@ -1,2 +1,12 @@
-ciarp/ciarp/train_Kinect_WithGabor/img_05355.png 8
-ciarp/ciarp/train_Kinect_WithGabor/img_00339.png 0
+ciarp/ciarp/test_Kinect_WithGabor/img_00677.png 9
+ciarp/ciarp/train_Kinect_WithGabor/img_05979.png 9
+ciarp/ciarp/train_Kinect_WithGabor/img_02860.png 4
+ciarp/ciarp/train_Kinect_WithGabor/img_02039.png 3
+ciarp/ciarp/train_Kinect_WithGabor/img_03759.png 6
+ciarp/ciarp/train_Kinect_WithGabor/img_03244.png 5
+ciarp/ciarp/train_Kinect_WithGabor/img_03603.png 5
+ciarp/ciarp/train_Kinect_WithGabor/img_02571.png 4
+ciarp/ciarp/train_Kinect_WithGabor/img_00659.png 0
+ciarp/ciarp/train_Kinect_WithGabor/img_05301.png 8
+ciarp/ciarp/train_Kinect_WithGabor/img_05695.png 9
+ciarp/ciarp/train_Kinect_WithGabor/img_00389.png 0
