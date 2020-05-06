@@ -2,7 +2,7 @@
 
 ROOT=$(dirname $0)
 
-S=2
+S=1
 N=3
 T=5
 
