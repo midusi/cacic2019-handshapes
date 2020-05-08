@@ -65,9 +65,9 @@ for i in $(seq $S $N); do
     lsa16="./results/${i}_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5"
     rwth="./results/${i}_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5"
 
-    tl_ciarp_weights=( $mnist $lsa16 $rwth )
-    tl_lsa16_weights=( $ciarp $mnist $rwth )
-    tl_rwth_weights=( $ciarp $lsa16 $mnist )
+    tl_ciarp_weights=( $mnist_maml )
+    tl_lsa16_weights=( $mnist_maml )
+    tl_rwth_weights=( $mnist_maml )
 
     tl_ciarp_weights=$(printf ",%s" "${tl_ciarp_weights[@]}"); tl_ciarp_weights=${tl_ciarp_weights:1}
     tl_lsa16_weights=$(printf ",%s" "${tl_lsa16_weights[@]}"); tl_lsa16_weights=${tl_lsa16_weights:1}
