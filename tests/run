@@ -54,7 +54,7 @@ for i in $(seq $S $N); do
         "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_rwth_split_5.conf $ROOT/transfer_learning/normal/config_rwth_split_10.conf $ROOT/transfer_learning/normal/config_rwth_split_15.conf $ROOT/transfer_learning/normal/config_rwth_split_20.conf $ROOT/transfer_learning/normal/config_rwth_split_30.conf --weights $tl_rwth_weights --times $T --is-split -o $ROOT/results/results_$i"
     )
 
-    densenet_tests=( "${densenet_tests[@]}" "${densenet_split_tests[@]}" )
+   # densenet_tests=( "${densenet_tests[@]}" "${densenet_split_tests[@]}" )
 done
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
