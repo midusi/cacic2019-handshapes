@@ -92,7 +92,7 @@ def load(data_dir, config, splits):
 
         # data = np.reshape(x, (nb_classes, amountPerClass[0], w, h, c))
 
-        data_loader = DataLoader(data,
+        data_loader = DataLoader(x,
                                  n_classes=nb_classes,
                                  n_way=n_way,
                                  n_support=n_support,
