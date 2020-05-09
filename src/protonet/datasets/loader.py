@@ -93,7 +93,7 @@ def load(data_dir, config, splits):
 
         data = []
         for index in i:
-            data[y[index]] = x[index]
+            data[y[index]] = x[index, :, :, :]
 
         data_loader = DataLoader(data,
                                  n_classes=nb_classes,
