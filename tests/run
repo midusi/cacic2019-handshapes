@@ -90,7 +90,7 @@ for i in $(seq $S $N); do
         "$ROOT/transfer_learning/execute $ROOT/transfer_learning/maml/config_rwth_split_5.conf $ROOT/transfer_learning/maml/config_rwth_split_10.conf $ROOT/transfer_learning/maml/config_rwth_split_15.conf $ROOT/transfer_learning/maml/config_rwth_split_20.conf $ROOT/transfer_learning/maml/config_rwth_split_30.conf $ROOT/transfer_learning/maml/config_rwth_split_40.conf --engine maml --weights $tl_rwth_weights --times $T --is-split -o $ROOT/results/results_${i}_rwth"
     )
 
-    tests=( "${tests[@]}" "${densenet_split_tests[@]}" )
+    # tests=( "${tests[@]}" "${densenet_split_tests[@]}" )
 done
 
 . $ROOT/runner.sh
