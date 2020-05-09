@@ -39,7 +39,7 @@ def load_rwth(config, path=None):
         x_test, y_test = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('test'))
         x_val, y_val = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('val'))
     else:
-        good_min = 20
+        good_min = 40
         good_classes = []
         n_unique = len(np.unique(data[1]['y']))
         for i in range(n_unique):

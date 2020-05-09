@@ -13,7 +13,7 @@ from .ciarp import load_ciarp
 from .lsa16 import load_lsa16
 from .rwth import load_rwth
 
-def load(config, datagen_flow=False):
+def load(config, datagen_flow=False, with_datasets=False):
     """
     Load specific dataset.
 
@@ -43,6 +43,8 @@ def load(config, datagen_flow=False):
         (x_train, y_train), (x_val, y_val), (x_test, y_test) = load_rwth(config)
     else:
         raise ValueError("Unknow dataset: {}".format(config['data.dataset']))
+
+    x_train, x_test, x_val = x_train / 255.0, x_test / 255.0, x_val / 255.0
     
     image_shape = np.shape(x_train)[1:]
     nb_classes = len(np.unique(y_train))
@@ -73,17 +75,22 @@ def load(config, datagen_flow=False):
     val_datagen.fit(x_train)
 
     train = (train_datagen, train_datagen_args, len(x_train), len(y_train))
-    val = (val_datagen, test_datagen_args, len(x_val), len(y_val))
     test = (test_datagen, test_datagen_args, len(x_test), len(y_test))
+    val = (val_datagen, test_datagen_args, len(x_val), len(y_val))
 
     if datagen_flow:
         # create data generators
         train_gen = train_datagen.flow(x_train, y_train, batch_size=config['data.batch_size'])
-        val_gen = val_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'], shuffle=False)
         test_gen = test_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'], shuffle=False)
+        val_gen = val_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'], shuffle=False)
 
         train = (train_gen, len(x_train), len(y_train))
-        val = (val_gen, len(x_val), len(y_val))
         test = (test_gen, len(x_test), len(y_test))
+        val = (val_gen, len(x_val), len(y_val))
+
+    if with_datasets:
+        train = (x_train, y_train, *train)
+        test = (x_test, y_test, *test)
+        val = (x_val, y_val, *val)
 
     return train, val, test, nb_classes, image_shape, class_weights

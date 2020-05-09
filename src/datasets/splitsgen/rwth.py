@@ -46,7 +46,7 @@ def load_rwth(data_dir, dataset, version):
 
     x = np.array(x)
 
-    good_min = 20
+    good_min = 40
     good_classes = []
     n_unique = len(np.unique(y))
     for i in range(n_unique):

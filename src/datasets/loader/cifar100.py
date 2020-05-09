@@ -15,8 +15,8 @@ def load_cifar100(dataset_name):
 
     (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')
 
-    x_train = x_train.astype('float32') / 255.0
-    x_test = x_test.astype('float32') / 255.0
+    x_train = x_train.astype('float32')
+    x_test = x_test.astype('float32')
 
     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2)
 
