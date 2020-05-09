@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 import handshape_datasets as hd
 from pathlib import Path
-from src.datasets import load
+from src.datasets import load as load_dataset
 from src.utils.model_selection import train_test_split_balanced
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -49,7 +49,7 @@ def load(data_dir, config, splits):
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
 
-    train, val, test, nb_classes, image_shape, _ = load(config, with_datasets=True)
+    train, val, test, nb_classes, image_shape, _ = load_dataset(config, with_datasets=True)
 
     w, h, c = image_shape
 
