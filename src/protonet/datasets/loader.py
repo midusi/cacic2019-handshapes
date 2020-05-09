@@ -83,8 +83,8 @@ def load(data_dir, config, splits):
 
         # _, amountPerClass = np.unique(y, return_counts=True)
 
-        # i = np.argsort(y)
-        # x = x[i, :, :, :]
+        i = np.argsort(y)
+        x = x[i, :, :, :]
         
         # if config['model.type'] in ['processed']:
         #    for index in i:
