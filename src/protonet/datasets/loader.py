@@ -26,7 +26,7 @@ class DataLoader(object):
         for i, i_class in enumerate(classes_ep):
             print(i_class)
             n_examples = self.data[i_class].shape[0]
-            print(self.data[i_class].shape)
+            print(self.data.shape)
             selected = np.random.permutation(n_examples)[:self.n_support + self.n_query]
             support[i] = self.data[i_class, selected[:self.n_support]]
             query[i] = self.data[i_class, selected[self.n_support:]]
