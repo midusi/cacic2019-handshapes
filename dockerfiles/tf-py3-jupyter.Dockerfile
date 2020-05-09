@@ -38,7 +38,9 @@ RUN pip install --upgrade pip && \
 
 # Default dir for handshape datasets lib - use /data instead
 RUN mkdir -p /.handshape_datasets && \
-    chmod -R a+rwx /.handshape_datasets
+    chmod -R a+rwx /.handshape_datasets && \
+    mkdir -p /.cache && \
+    chmod -R a+rwx /.cache
 
 ## Install node, yarn and hand-cropper dependencies
 ### install nodejs and yarn packages from nodesource and yarn apt sources
