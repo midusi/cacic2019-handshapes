@@ -91,10 +91,8 @@ def load(data_dir, config, splits):
            for index in i:
                x[index, :, :, :] = datagen.apply_transform(x[index], datagen_args)
 
-        data = []
-        for index in i:
-            data[y[index]] = x[index, :, :, :]
-
+        data = np.split(x[:, 1], np.cumsum(np.unique(x[:, 0], return_counts=True)[1])[:-1])
+        
         data_loader = DataLoader(data,
                                  n_classes=nb_classes,
                                  n_way=n_way,
