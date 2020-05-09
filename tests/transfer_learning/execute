@@ -77,6 +77,9 @@ for config_path in ${test_cases[*]}; do
             if [ "${config_path: -7}" = "15.conf" ]; then split="15_samples"; fi
             if [ "${config_path: -7}" = "20.conf" ]; then split="20_samples"; fi
             if [ "${config_path: -7}" = "30.conf" ]; then split="30_samples"; fi
+            if [ "${config_path: -7}" = "30.conf" ]; then split="30_samples"; fi
+            if [ "${config_path: -7}" = "40.conf" ]; then split="40_samples"; fi
+            if [ "${config_path: -8}" = "100.conf" ]; then split="100_samples"; fi
 
             for i in $(seq 1 $times); do
                 echo >> $output
