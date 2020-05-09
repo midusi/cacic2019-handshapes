@@ -18,13 +18,13 @@ class DataLoader(object):
         self.x_dim = x_dim
 
     def get_next_episode(self):
-        n_examples = self.data.shape[1]
         w, h, c = self.x_dim
         support = np.zeros([self.n_way, self.n_support, w, h, c], dtype=np.float32)
         query = np.zeros([self.n_way, self.n_query, w, h, c], dtype=np.float32)
         classes_ep = np.random.permutation(self.n_classes)[:self.n_way]
 
         for i, i_class in enumerate(classes_ep):
+            n_examples = self.data[i_class].shape[1]
             selected = np.random.permutation(n_examples)[:self.n_support + self.n_query]
             support[i] = self.data[i_class, selected[:self.n_support]]
             query[i] = self.data[i_class, selected[self.n_support:]]
