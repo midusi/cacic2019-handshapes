@@ -44,6 +44,11 @@ def load(data_dir, config, splits):
     as tensorflow Dataset objects.
 
     """
+    dataset_path = '/tf/data/{}'.format(config['data.dataset'])
+
+    if not os.path.exists(dataset_path):
+        os.makedirs(dataset_path)
+
     train, val, test, nb_classes, image_shape, _ = load(config, with_datasets=True)
 
     w, h, c = image_shape
