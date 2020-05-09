@@ -81,16 +81,16 @@ def load(data_dir, config, splits):
         else:
             (x, y, datagen, datagen_args, _, _) = train
 
-        _, amountPerClass = np.unique(y, return_counts=True)
+        # _, amountPerClass = np.unique(y, return_counts=True)
 
-        i = np.argsort(y)
-        x = x[i, :, :, :]
+        # i = np.argsort(y)
+        # x = x[i, :, :, :]
         
-        if config['model.type'] in ['processed']:
-            for index in i:
-                x[index, :, :, :] = datagen.apply_transform(x[index], datagen_args)
+        # if config['model.type'] in ['processed']:
+        #    for index in i:
+        #        x[index, :, :, :] = datagen.apply_transform(x[index], datagen_args)
 
-        data = np.reshape(x, (nb_classes, amountPerClass[0], w, h, c))
+        # data = np.reshape(x, (nb_classes, amountPerClass[0], w, h, c))
 
         data_loader = DataLoader(data,
                                  n_classes=nb_classes,
