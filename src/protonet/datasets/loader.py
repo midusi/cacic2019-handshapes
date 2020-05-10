@@ -25,9 +25,10 @@ class DataLoader(object):
 
         for i, i_class in enumerate(classes_ep):
             n_examples = self.data[i_class].shape[0]
+            n = self.n_support if n_examples > self.n_support else n_examples
             selected = np.random.permutation(n_examples)[:self.n_support + self.n_query]
-            support[i] = self.data[i_class][selected[:np.max(n_examples, self.n_support)]]
-            query[i] = self.data[i_class][selected[np.max(n_examples, self.n_support):]]
+            support[i] = self.data[i_class][selected[:n]]
+            query[i] = self.data[i_class][selected[n:]]
 
         return support, query
 
