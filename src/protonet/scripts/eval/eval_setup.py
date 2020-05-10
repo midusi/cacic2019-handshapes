@@ -49,7 +49,7 @@ def eval(config):
             test_loss(loss)
             test_acc(acc)
 
-            print('Test Loss: {} Test Acc: {}'.format(loss, acc))
+            print('Test Loss: {} Test Acc: {}'.format(loss, acc*100))
 
 if __name__ == "__main__":
     pass
