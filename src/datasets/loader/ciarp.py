@@ -1,7 +1,6 @@
 """Load Ciarp dataset"""
 
 import os
-import math
 import numpy as np
 import handshape_datasets as hd
 from pathlib import Path
@@ -47,7 +46,7 @@ def load_ciarp(config, path=None):
         if n_train_per_class <= 0:
             x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, stratify=y)
         else:
-            n_train_per_class = math.ceil(n_train_per_class * 1.2)
+            n_train_per_class = np.round(n_train_per_class * 1.2)
             x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size,
                                                      n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
 
