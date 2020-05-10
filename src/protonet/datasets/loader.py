@@ -24,12 +24,12 @@ class DataLoader(object):
         classes_ep = np.random.permutation(self.n_classes)[:self.n_way]
 
         for i, i_class in enumerate(classes_ep):
-            print(i_class)
             n_examples = self.data[i_class].shape[0]
-            print(self.data.shape)
+            if n_examples < self.n_support + self.n_query:
+                continue
             selected = np.random.permutation(n_examples)[:self.n_support + self.n_query]
-            support[i] = self.data[i_class, selected[:self.n_support]]
-            query[i] = self.data[i_class, selected[self.n_support:]]
+            support[i] = self.data[i_class][selected[:self.n_support]]
+            query[i] = self.data[i_class][selected[self.n_support:]]
 
         return support, query
 
@@ -93,9 +93,11 @@ def load(data_dir, config, splits):
            for index in i:
                x[index, :, :, :] = datagen.apply_transform(x[index], datagen_args)
 
-        data = np.split(x[:, 1], np.cumsum(np.unique(x[:, 0], return_counts=True)[1])[:-1])
+        data = [[] for i in range(nb_classes)]
+        for index in i:
+            data[y[index]].append(x[index])
 
-        data_loader = DataLoader(np.vstack(data),
+        data_loader = DataLoader(np.array([ np.array(images) for images in data ]),
                                  n_classes=nb_classes,
                                  n_way=n_way,
                                  n_support=n_support,
