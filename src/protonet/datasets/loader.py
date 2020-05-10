@@ -87,7 +87,7 @@ def load(data_dir, config, splits):
         y = y[i]
         x = x[i, :, :, :]
         
-        if config['model.type'] in ['processed']:
+        if config['model.type'] in ['augmentation']:
            for index in i:
                x[index, :, :, :] = datagen.apply_transform(x[index], datagen_args)
 

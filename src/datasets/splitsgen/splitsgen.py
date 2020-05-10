@@ -42,7 +42,7 @@ def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, t
     split = train_test_split if n_train_per_class <= 0 else train_test_split_balanced
 
     if n_train_per_class <= 0:
-        x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size)
+        x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, stratify=y, random_state=seed)
     else:
         n_train_per_class = np.floor(n_train_per_class * 1.2)
         x_train, x_test, y_train, y_test = split(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
