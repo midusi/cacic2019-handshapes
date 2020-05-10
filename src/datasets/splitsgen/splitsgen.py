@@ -39,18 +39,18 @@ def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, t
     else:
         raise ValueError("Unknow dataset: {}".format(dataset))
 
-    split = train_test_split if not balanced and n_train_per_class <= 0 else train_test_split_balanced
-
     if not balanced and n_train_per_class <= 0:
-        x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, stratify=y, random_state=seed)
-        x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.8, test_size=0.2, stratify=y_train, random_state=seed)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=train_size, test_size=test_size, stratify=y, random_state=seed)
+        x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, train_size=0.8, test_size=0.2, stratify=y_train, random_state=seed)
     else:
         print('Split balanced')
         n_train_per_class = int(np.round(n_train_per_class * 1.6))
-        x_train, x_test, y_train, y_test = split(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
+        x_train, x_test, y_train, y_test = train_test_split_balanced(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
                                                  n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class, n_dim=False)
-        x_train, x_val, y_train, y_val = split(x_train, y_train, n_train_per_class=n_train_per_class, test_size=0.2, n_dim=False)
-
+        if n_train_per_class <= 0:
+            x_train, x_val, y_train, y_val = train_test_split_balanced(x_train, y_train, train_size=0.8, test_size=0.2, n_dim=False)
+        else:
+            x_train, x_val, y_train, y_val = train_test_split_balanced(x_train, y_train, n_train_per_class=n_train_per_class, test_size=0.2, n_dim=False)
 
     store_split(x_test, y_test, os.path.join(output_dir, 'test.txt'), data_dir)
     store_split(x_train, y_train, os.path.join(output_dir, 'train.txt'), data_dir)
