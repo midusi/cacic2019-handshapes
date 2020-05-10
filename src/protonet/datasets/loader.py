@@ -27,7 +27,7 @@ class DataLoader(object):
             n_samples = self.data[i_class].shape[0]
             selected = np.random.permutation(n_samples)[:self.n_support + self.n_query]
             support[i] = self.data[i_class][selected[:self.n_support]]
-            query[i] = self.data[i_class][selected[self.n_support:]]
+            query[i] = self.data[i_class][selected[np.min(self.n_support, n_samples):]]
 
         return support, query
 
