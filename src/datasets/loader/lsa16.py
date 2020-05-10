@@ -46,7 +46,7 @@ def load_lsa16(config, path=None):
             x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, stratify=y)
             x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.8, test_size=0.2, stratify=y_train)
         else:
-            n_train_per_class = np.round(n_train_per_class * 2)
+            n_train_per_class = np.round(n_train_per_class * 1.6)
             x_train, x_test, y_train, y_test = split(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
                                                     n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class, n_dim=False)
             x_train, x_val, y_train, y_val = split(x_train, y_train, n_train_per_class=n_train_per_class, test_size=0.2)
