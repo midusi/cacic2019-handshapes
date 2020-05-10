@@ -19,7 +19,6 @@ def eval(config):
     model = Prototypical(n_support, n_query, w, h, c, nb_layers=config['model.nb_layers'], nb_filters=config['model.nb_filters'])
     model_path = f"{config['model.save_path'].format(config['model.type'])}"
     model.load(model_path)
-    print("Model loaded.")
 
     # Determine device
     if config['data.cuda']:
