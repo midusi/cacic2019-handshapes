@@ -4,7 +4,6 @@ import os
 import numpy as np
 import handshape_datasets as hd
 from pathlib import Path
-from sklearn.model_selection import train_test_split
 from src.utils.model_selection import train_test_split_balanced
 from .util import load_from_split
 
@@ -38,18 +37,11 @@ def load_ciarp(config, path=None):
         x_test, y_test = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('test'))
         x_val, y_val = load_from_split(config['data.dataset'], config['data.version'], data_dir, split_file('val'))
     else:
-
         x, y = X, meta['y']
 
-        split = train_test_split if n_train_per_class <= 0 else train_test_split_balanced
-
-        if n_train_per_class <= 0:
-            x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, stratify=y)
-            x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.8, test_size=0.2, stratify=y_train)
-        else:
-            n_train_per_class = np.round(n_train_per_class * 1.6)
-            x_train, x_test, y_train, y_test = split(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
-                                                    n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
-            x_train, x_val, y_train, y_val = split(x_train, y_train, n_train_per_class=n_train_per_class, test_size=0.2)
+        n_train_per_class = np.round(n_train_per_class * 1.6)
+        x_train, x_test, y_train, y_test = train_test_split_balanced(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
+                                                n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
+        x_train, x_val, y_train, y_val = train_test_split_balanced(x_train, y_train, n_train_per_class=n_train_per_class, test_size=0.2)
 
     return (x_train, y_train), (x_val, y_val), (x_test, y_test)

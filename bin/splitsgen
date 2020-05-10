@@ -6,35 +6,35 @@ splitgen_cli="python $ROOT/../src/datasets/splitsgen/cli.py"
 
 
 echo "Generating splits for Ciarp"
-$splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split full_75_25 --train_size 0.75 --test_size 0.25  --seed 40
+$splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split full_75_25 --train_size 0.75 --test_size 0.25  --seed 40 --balanced True
 
 for i in {1..10}; do
-    $splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split full_75_25_$i --train_size 0.75 --test_size 0.25 --seed 4${i}
+    $splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split full_75_25_$i --train_size 0.75 --test_size 0.25 --seed 4${i} --balanced True
 done
 
 for n in 5 10 15 20 30 40 100; do
-    $splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split ${n}_samples --n_train_per_class $n --test_size 0.25 --seed 40
+    $splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split ${n}_samples --n_train_per_class $n --test_size 0.25 --seed 40 --balanced True
 
     for i in {1..10}; do
         echo "Generating splits for Ciarp with $n samples per class"
-        $splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split ${n}_samples_$i --n_train_per_class $n --test_size 0.25 --seed 4${i}
+        $splitgen_cli --dataset Ciarp --splits_dir /tf/data/Ciarp/splits --split ${n}_samples_$i --n_train_per_class $n --test_size 0.25 --seed 4${i} --balanced True
     done
 done
 
 
 echo "Generating splits for lsa16"
-$splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split full_75_25 --train_size 0.75 --test_size 0.25  --seed 40
+$splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split full_75_25 --train_size 0.75 --test_size 0.25  --seed 40 --balanced True
 
 for i in {1..10}; do
-    $splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split full_75_25_$i --train_size 0.75 --test_size 0.25 --seed 4${i}
+    $splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split full_75_25_$i --train_size 0.75 --test_size 0.25 --seed 4${i} --balanced True
 done
 
 for n in 5 10 15 20; do
-    $splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split ${n}_samples --n_train_per_class $n --test_size 0.25 --seed 40
+    $splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split ${n}_samples --n_train_per_class $n --test_size 0.25 --seed 40 --balanced True
 
     for i in {1..10}; do
         echo "Generating splits for lsa16 with $n samples per class"
-        $splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split ${n}_samples_$i --n_train_per_class $n --test_size 0.25 --seed 4${i}
+        $splitgen_cli --dataset lsa16 --splits_dir /tf/data/lsa16/splits --split ${n}_samples_$i --n_train_per_class $n --test_size 0.25 --seed 4${i} --balanced True
     done
 done
 
@@ -47,11 +47,11 @@ for i in {1..10}; do
 done
 
 for n in 5 10 15 20 30 40; do
-    $splitgen_cli --dataset rwth --splits_dir /tf/data/rwth/splits --split ${n}_samples --n_train_per_class $n --test_size 0.25 --seed 40
+    $splitgen_cli --dataset rwth --splits_dir /tf/data/rwth/splits --split ${n}_samples --n_train_per_class $n --test_size 0.25 --seed 40 --balanced True
 
     for i in {1..10}; do
         echo "Generating splits for rwth with $n samples per class"
-        $splitgen_cli --dataset rwth --splits_dir /tf/data/rwth/splits --split ${n}_samples_$i --n_train_per_class $n --test_size 0.25 --seed 4${i}
+        $splitgen_cli --dataset rwth --splits_dir /tf/data/rwth/splits --split ${n}_samples_$i --n_train_per_class $n --test_size 0.25 --seed 4${i} --balanced True
     done
 done
 

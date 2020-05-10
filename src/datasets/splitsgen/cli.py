@@ -15,6 +15,7 @@ parser.add_argument("--train_size", type=float, default=0)
 parser.add_argument("--test_size", type=float, default=0.2)
 parser.add_argument("--n_train_per_class", type=int, default=0)
 parser.add_argument("--n_test_per_class", type=int, default=0)
+parser.add_argument("--balanced", type=bool, default=False)
 
 args = vars(parser.parse_args())
 

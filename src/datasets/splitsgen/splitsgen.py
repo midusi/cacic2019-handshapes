@@ -16,7 +16,7 @@ def store_split(x, y, path, data_dir, mode='w'):
         f.write("{} {}\n".format(img, label))
     f.close()
 
-def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, test_size, n_train_per_class, n_test_per_class, seed):
+def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, test_size, n_train_per_class, n_test_per_class, seed, balanced = False):
     np.random.seed(seed)
 
     data_dir = data_dir if data_dir else '/tf/data/{}/data'.format(dataset)
@@ -39,12 +39,13 @@ def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, t
     else:
         raise ValueError("Unknow dataset: {}".format(dataset))
 
-    split = train_test_split if n_train_per_class <= 0 else train_test_split_balanced
+    split = train_test_split if not balanced else train_test_split_balanced
 
-    if n_train_per_class <= 0:
+    if not balanced:
         x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, stratify=y, random_state=seed)
         x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.8, test_size=0.2, stratify=y_train, random_state=seed)
     else:
+        print('Split balanced')
         n_train_per_class = np.round(n_train_per_class * 1.6)
         x_train, x_test, y_train, y_test = split(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
                                                  n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class, n_dim=False)
