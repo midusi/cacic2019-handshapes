@@ -39,9 +39,9 @@ def generate_splits(split, data_dir, splits_dir, dataset, version, train_size, t
     else:
         raise ValueError("Unknow dataset: {}".format(dataset))
 
-    split = train_test_split if not balanced else train_test_split_balanced
+    split = train_test_split if not balanced and n_train_per_class <= 0 else train_test_split_balanced
 
-    if not balanced:
+    if not balanced and n_train_per_class <= 0:
         x_train, x_test, y_train, y_test = split(x, y, train_size=train_size, test_size=test_size, stratify=y, random_state=seed)
         x_train, x_val, y_train, y_val = split(x_train, y_train, train_size=0.8, test_size=0.2, stratify=y_train, random_state=seed)
     else:
