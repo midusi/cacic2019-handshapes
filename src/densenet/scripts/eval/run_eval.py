@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser(description="Run evaluation")
 
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ["data.n_train_per_class", "data.n_test_per_class", "data.batch_size", "data.episodes", "data.gpu", "data.cuda", "model.growth_rate"]
+    int_params = ["data.n_train_per_class", "data.n_test_per_class", "data.batch_size", "data.gpu", "data.cuda", "model.growth_rate"]
     float_params = ["data.train_size", "data.test_size", "data.rotation_range",
                     "data.width_shift_range", "data.height_shift_range", "model.reduction"]
 
@@ -35,7 +35,6 @@ parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)
 parser.add_argument("--data.version", type=str, default=None)
 parser.add_argument("--data.batch_size", type=int, default=None)
-parser.add_argument("--data.episodes", type=int, default=None)
 parser.add_argument("--data.cuda", type=int, default=None)
 parser.add_argument("--data.gpu", type=int, default=None)
 
