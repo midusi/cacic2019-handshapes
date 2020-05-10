@@ -42,6 +42,6 @@ def load_ciarp(config, path=None):
         n_train_per_class = int(np.round(n_train_per_class * 1.6))
         x_train, x_test, y_train, y_test = train_test_split_balanced(np.array(x), np.array(y), train_size=train_size, test_size=test_size,
                                                 n_train_per_class=n_train_per_class, n_test_per_class=n_test_per_class)
-        x_train, x_val, y_train, y_val = train_test_split_balanced(x_train, y_train, n_train_per_class=n_train_per_class, test_size=0.2)
+        x_train, x_val, y_train, y_val = train_test_split_balanced(x_train, y_train, train_size=0.8, n_train_per_class=n_train_per_class, test_size=0.2)
 
     return (x_train, y_train), (x_val, y_val), (x_test, y_test)
