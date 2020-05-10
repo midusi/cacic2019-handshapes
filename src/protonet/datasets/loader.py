@@ -24,11 +24,10 @@ class DataLoader(object):
         classes_ep = np.random.permutation(self.n_classes)[:self.n_way]
 
         for i, i_class in enumerate(classes_ep):
-            n_examples = self.data[i_class].shape[0]
-            n = self.n_support if n_examples > self.n_support else n_examples
-            selected = np.random.permutation(n_examples)[:self.n_support + self.n_query]
-            support[i] = self.data[i_class][selected[:n]]
-            query[i] = self.data[i_class][selected[n:]]
+            n_samples = self.data[i_class].shape[0]
+            selected = np.random.permutation(n_samples)[:self.n_support + self.n_query]
+            support[i] = self.data[i_class][selected[:self.n_support]]
+            query[i] = self.data[i_class][selected[self.n_support:]]
 
         return support, query
 
@@ -63,13 +62,13 @@ def load(data_dir, config, splits):
         else:
             n_way = config['data.train_way']
 
-        # n_support (number of support examples per class)
+        # n_support (number of support samples per class)
         if split in ['val', 'test']:
             n_support = config['data.test_support']
         else:
             n_support = config['data.train_support']
 
-        # n_query (number of query examples per class)
+        # n_query (number of query samples per class)
         if split in ['val', 'test']:
             n_query = config['data.test_query']
         else:
