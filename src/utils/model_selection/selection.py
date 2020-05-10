@@ -44,10 +44,10 @@ def train_test_split_balanced(data, target, test_size=0.2,
     n_test_per_class = int(n_test_per_class)
 
     if n_train_per_class <= 0:
-        n_train_per_class = max(1, int(np.floor(n_train / len(classes))))
+        n_train_per_class = max(1, int(np.round(n_train / len(classes))))
 
     if n_test_per_class <= 0:
-        n_test_per_class = max(1, int(np.floor(n_test / len(classes))))
+        n_test_per_class = max(1, int(np.round(n_test / len(classes))))
 
     amount_per_class = n_train_per_class + n_test_per_class
 
