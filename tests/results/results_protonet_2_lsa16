@@ -1,0 +1,66 @@
+
+PROTONET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16.conf
+Test Loss: 0.17287257313728333 Test Acc: 97.22021484375
+
+
+PROTONET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_5.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_5.conf WITH SPLIT 5_samples_1
+Test Loss: 0.7326684594154358 Test Acc: 95.72022247314453
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_5.conf WITH SPLIT 5_samples_2
+Test Loss: 1.7541168928146362 Test Acc: 94.15628051757812
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_5.conf WITH SPLIT 5_samples_3
+Test Loss: 0.9915469884872437 Test Acc: 93.26025390625
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_5.conf WITH SPLIT 5_samples_4
+Test Loss: 0.8893289566040039 Test Acc: 92.45628356933594
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_5.conf WITH SPLIT 5_samples_5
+Test Loss: 0.5621094703674316 Test Acc: 95.30431365966797
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_10.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_10.conf WITH SPLIT 10_samples_1
+Test Loss: 0.34699833393096924 Test Acc: 94.71627807617188
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_10.conf WITH SPLIT 10_samples_2
+Test Loss: 0.6817018389701843 Test Acc: 95.7522964477539
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_10.conf WITH SPLIT 10_samples_3
+Test Loss: 0.30881914496421814 Test Acc: 94.24828338623047
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_10.conf WITH SPLIT 10_samples_4
+Test Loss: 0.3519344627857208 Test Acc: 96.42021179199219
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_10.conf WITH SPLIT 10_samples_5
+Test Loss: 0.5440897941589355 Test Acc: 92.61233520507812
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_15.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_15.conf WITH SPLIT 15_samples_1
+Test Loss: 0.31248289346694946 Test Acc: 95.76822662353516
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_15.conf WITH SPLIT 15_samples_2
+Test Loss: 0.29341787099838257 Test Acc: 94.0962142944336
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_15.conf WITH SPLIT 15_samples_3
+Test Loss: 0.2520277500152588 Test Acc: 96.896240234375
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_15.conf WITH SPLIT 15_samples_4
+Test Loss: 0.7573019862174988 Test Acc: 94.17224884033203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_15.conf WITH SPLIT 15_samples_5
+Test Loss: 0.19333960115909576 Test Acc: 97.12828063964844
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_20.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_lsa16_split_20.conf WITH SPLIT 20_samples_1

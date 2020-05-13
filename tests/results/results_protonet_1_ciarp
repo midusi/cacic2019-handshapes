@@ -1,0 +1,80 @@
+
+PROTONET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp.conf
+Test Loss: 0.0381147675216198 Test Acc: 99.2920913696289
+
+
+PROTONET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_5.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_5.conf WITH SPLIT 5_samples_1
+Test Loss: 0.4937973618507385 Test Acc: 94.65626525878906
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_5.conf WITH SPLIT 5_samples_2
+Test Loss: 0.5512129068374634 Test Acc: 91.98424530029297
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_5.conf WITH SPLIT 5_samples_3
+Test Loss: 0.4702106714248657 Test Acc: 92.46426391601562
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_5.conf WITH SPLIT 5_samples_4
+Test Loss: 1.5517985820770264 Test Acc: 88.33223724365234
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_5.conf WITH SPLIT 5_samples_5
+Test Loss: 2.3542258739471436 Test Acc: 89.84019470214844
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_10.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_10.conf WITH SPLIT 10_samples_1
+Test Loss: 0.293294221162796 Test Acc: 95.69225311279297
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_10.conf WITH SPLIT 10_samples_2
+Test Loss: 0.17904284596443176 Test Acc: 96.65625
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_10.conf WITH SPLIT 10_samples_3
+Test Loss: 0.2780041992664337 Test Acc: 94.22017669677734
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_10.conf WITH SPLIT 10_samples_4
+Test Loss: 0.47961968183517456 Test Acc: 93.8122329711914
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_10.conf WITH SPLIT 10_samples_5
+Test Loss: 0.22106724977493286 Test Acc: 92.03223419189453
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_15.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_15.conf WITH SPLIT 15_samples_1
+Test Loss: 0.4404536187648773 Test Acc: 94.92823791503906
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_15.conf WITH SPLIT 15_samples_2
+Test Loss: 0.31604519486427307 Test Acc: 96.55624389648438
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_15.conf WITH SPLIT 15_samples_3
+Test Loss: 0.19048215448856354 Test Acc: 95.83625030517578
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_15.conf WITH SPLIT 15_samples_4
+Test Loss: 0.15309083461761475 Test Acc: 95.15229034423828
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_15.conf WITH SPLIT 15_samples_5
+Test Loss: 0.23499564826488495 Test Acc: 96.05225372314453
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_20.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_20.conf WITH SPLIT 20_samples_1
+Test Loss: 0.15814317762851715 Test Acc: 96.82425689697266
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_20.conf WITH SPLIT 20_samples_2
+Test Loss: 0.16986915469169617 Test Acc: 97.53221130371094
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_20.conf WITH SPLIT 20_samples_3
+Test Loss: 0.14364685118198395 Test Acc: 97.80823516845703
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_20.conf WITH SPLIT 20_samples_4
+Test Loss: 0.0756981298327446 Test Acc: 98.68421936035156
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp_split_20.conf WITH SPLIT 20_samples_5
+Test Loss: 0.2707415819168091 Test Acc: 97.34025573730469
+
