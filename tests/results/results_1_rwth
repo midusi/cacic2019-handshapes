@@ -1,0 +1,713 @@
+
+DENSENET TESTS USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth.conf
+Test Loss: 0.9132396578788757 Test Acc: 79.34782409667969
+
+
+TRANSFER LEARNING TESTS WITH DENSENET USING maml
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_1
+Test Loss: 0.6608487963676453 Test Acc: 86.14130401611328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_2
+Test Loss: 0.8098345994949341 Test Acc: 80.16304016113281
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_3
+Test Loss: 0.6105821132659912 Test Acc: 83.96739196777344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_4
+Test Loss: 0.7585376501083374 Test Acc: 82.47282409667969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_5
+Test Loss: 0.8396732211112976 Test Acc: 80.7065200805664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_1
+Test Loss: 0.740384042263031 Test Acc: 83.69564819335938
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_2
+Test Loss: 0.8092325329780579 Test Acc: 82.33695983886719
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_3
+Test Loss: 0.8867537379264832 Test Acc: 77.17391204833984
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_4
+Test Loss: 0.987148642539978 Test Acc: 79.61956024169922
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_5
+Test Loss: 0.8241989016532898 Test Acc: 78.53260803222656
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_1
+Test Loss: 0.7885536551475525 Test Acc: 80.84239196777344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_2
+Test Loss: 0.8534649014472961 Test Acc: 80.7065200805664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_3
+Test Loss: 0.8390129208564758 Test Acc: 81.25
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_4
+Test Loss: 0.7493499517440796 Test Acc: 81.7934799194336
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_5
+Test Loss: 0.6874586343765259 Test Acc: 83.42391204833984
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_1
+Test Loss: 0.8504619598388672 Test Acc: 83.28804016113281
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_2
+Test Loss: 0.7887750864028931 Test Acc: 81.38587188720703
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_3
+Test Loss: 0.8889775276184082 Test Acc: 77.71739196777344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_4
+Test Loss: 0.7433220148086548 Test Acc: 83.01630401611328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_5
+Test Loss: 0.8553227782249451 Test Acc: 79.75543975830078
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_1
+Test Loss: 0.9389872550964355 Test Acc: 77.03804016113281
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_2
+Test Loss: 0.8355744481086731 Test Acc: 82.60869598388672
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_3
+Test Loss: 0.7041026949882507 Test Acc: 81.7934799194336
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_4
+Test Loss: 0.7072590589523315 Test Acc: 85.59782409667969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_5
+Test Loss: 0.7352204322814941 Test Acc: 83.55978393554688
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_1
+Test Loss: 0.6467191576957703 Test Acc: 86.14130401611328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_2
+Test Loss: 0.928972065448761 Test Acc: 79.89130401611328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_3
+Test Loss: 1.109370231628418 Test Acc: 72.55435180664062
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_4
+Test Loss: 0.7224261164665222 Test Acc: 81.52173614501953
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT full_75_25_5
+Test Loss: 0.8984599113464355 Test Acc: 81.38587188720703
+
+
+DENSENET TESTS USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_5.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_5.conf WITH SPLIT 5_samples_1
+Test Loss: 6.17732572555542 Test Acc: 22.131147384643555
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_5.conf WITH SPLIT 5_samples_2
+Test Loss: 9.772629737854004 Test Acc: 19.672130584716797
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_5.conf WITH SPLIT 5_samples_3
+Test Loss: 6.916749954223633 Test Acc: 19.125682830810547
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_5.conf WITH SPLIT 5_samples_4
+Test Loss: 6.406968593597412 Test Acc: 22.814208984375
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_5.conf WITH SPLIT 5_samples_5
+Test Loss: 5.977035999298096 Test Acc: 14.890710830688477
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_10.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_10.conf WITH SPLIT 10_samples_1
+Test Loss: 4.838057994842529 Test Acc: 28.00546646118164
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_10.conf WITH SPLIT 10_samples_2
+Test Loss: 4.4410319328308105 Test Acc: 34.83606719970703
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_10.conf WITH SPLIT 10_samples_3
+Test Loss: 4.761160373687744 Test Acc: 29.781421661376953
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_10.conf WITH SPLIT 10_samples_4
+Test Loss: 4.089636325836182 Test Acc: 25.546449661254883
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_10.conf WITH SPLIT 10_samples_5
+Test Loss: 3.83697772026062 Test Acc: 21.448087692260742
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_15.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_15.conf WITH SPLIT 15_samples_1
+Test Loss: 4.324702739715576 Test Acc: 36.33879852294922
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_15.conf WITH SPLIT 15_samples_2
+Test Loss: 4.051212787628174 Test Acc: 33.87977981567383
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_15.conf WITH SPLIT 15_samples_3
+Test Loss: 4.155489921569824 Test Acc: 39.75409698486328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_15.conf WITH SPLIT 15_samples_4
+Test Loss: 4.281154632568359 Test Acc: 39.75409698486328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_15.conf WITH SPLIT 15_samples_5
+Test Loss: 3.7404892444610596 Test Acc: 33.333335876464844
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_20.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_20.conf WITH SPLIT 20_samples_1
+Test Loss: 4.163592338562012 Test Acc: 39.75409698486328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_20.conf WITH SPLIT 20_samples_2
+Test Loss: 4.139340400695801 Test Acc: 38.52458953857422
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_20.conf WITH SPLIT 20_samples_3
+Test Loss: 3.634464740753174 Test Acc: 42.759559631347656
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_20.conf WITH SPLIT 20_samples_4
+Test Loss: 4.606018543243408 Test Acc: 36.612022399902344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_20.conf WITH SPLIT 20_samples_5
+Test Loss: 4.465874195098877 Test Acc: 35.655738830566406
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_30.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_30.conf WITH SPLIT 30_samples_1
+Test Loss: 3.356929063796997 Test Acc: 50.27322006225586
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_30.conf WITH SPLIT 30_samples_2
+Test Loss: 3.672783851623535 Test Acc: 41.803279876708984
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_30.conf WITH SPLIT 30_samples_3
+Test Loss: 3.77061128616333 Test Acc: 46.03825378417969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_30.conf WITH SPLIT 30_samples_4
+Test Loss: 3.2420363426208496 Test Acc: 48.22404479980469
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_30.conf WITH SPLIT 30_samples_5
+Test Loss: 3.7068755626678467 Test Acc: 43.71584701538086
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_40.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_40.conf WITH SPLIT 40_samples_1
+Test Loss: 3.3554537296295166 Test Acc: 51.092899322509766
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_40.conf WITH SPLIT 40_samples_2
+Test Loss: 3.8061678409576416 Test Acc: 50.68305587768555
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_40.conf WITH SPLIT 40_samples_3
+Test Loss: 3.3005030155181885 Test Acc: 45.62841796875
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_40.conf WITH SPLIT 40_samples_4
+Test Loss: 4.080687046051025 Test Acc: 41.666664123535156
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth_split_40.conf WITH SPLIT 40_samples_5
+Test Loss: 3.2491633892059326 Test Acc: 47.540985107421875
+
+
+TRANSFER LEARNING TESTS WITH DENSENET USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+Test Loss: 8.075545310974121 Test Acc: 19.26229476928711
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_2
+Test Loss: 5.67894172668457 Test Acc: 14.480874061584473
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_3
+Test Loss: 14.8812255859375 Test Acc: 10.10929012298584
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_4
+Test Loss: 9.699016571044922 Test Acc: 19.535518646240234
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_5
+Test Loss: 9.220611572265625 Test Acc: 15.027321815490723
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+Test Loss: 11.711557388305664 Test Acc: 15.573769569396973
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_2
+Test Loss: 8.083481788635254 Test Acc: 18.989070892333984
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_3
+Test Loss: 8.414941787719727 Test Acc: 11.885246276855469
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_4
+Test Loss: 7.345541954040527 Test Acc: 15.300546646118164
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_5
+Test Loss: 10.639389991760254 Test Acc: 12.158470153808594
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+Test Loss: 9.267905235290527 Test Acc: 15.437158584594727
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_2
+Test Loss: 7.996507167816162 Test Acc: 22.814208984375
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_3
+Test Loss: 12.04903507232666 Test Acc: 8.606557846069336
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_4
+Test Loss: 12.549023628234863 Test Acc: 15.027321815490723
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_5
+Test Loss: 6.4267988204956055 Test Acc: 11.475409507751465
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+Test Loss: 11.845696449279785 Test Acc: 9.699453353881836
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_2
+Test Loss: 6.108638763427734 Test Acc: 14.754098892211914
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_3
+Test Loss: 4.4615912437438965 Test Acc: 12.295082092285156
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_4
+Test Loss: 6.506877899169922 Test Acc: 17.213115692138672
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_5
+Test Loss: 8.79407024383545 Test Acc: 16.120220184326172
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+Test Loss: 15.85810375213623 Test Acc: 11.74863338470459
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_2
+Test Loss: 9.102251052856445 Test Acc: 22.540983200073242
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_3
+Test Loss: 5.697091102600098 Test Acc: 15.573769569396973
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_4
+Test Loss: 6.737471103668213 Test Acc: 17.213115692138672
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_5
+Test Loss: 9.240114212036133 Test Acc: 19.535518646240234
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+Test Loss: 10.02254867553711 Test Acc: 13.251365661621094
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_2
+Test Loss: 9.754770278930664 Test Acc: 16.939889907836914
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_3
+Test Loss: 10.478726387023926 Test Acc: 10.792349815368652
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_4
+Test Loss: 6.5011982917785645 Test Acc: 15.573769569396973
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_5.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_5
+Test Loss: 11.2672119140625 Test Acc: 15.163934707641602
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+Test Loss: 7.717705726623535 Test Acc: 30.054643630981445
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_2
+Test Loss: 6.105659008026123 Test Acc: 31.147539138793945
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_3
+Test Loss: 8.731431007385254 Test Acc: 14.207651138305664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_4
+Test Loss: 6.9052934646606445 Test Acc: 25.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_5
+Test Loss: 7.741377353668213 Test Acc: 22.95081901550293
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+Test Loss: 6.550540447235107 Test Acc: 19.808744430541992
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_2
+Test Loss: 6.447537422180176 Test Acc: 32.240440368652344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_3
+Test Loss: 7.109644889831543 Test Acc: 24.316940307617188
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_4
+Test Loss: 6.202177047729492 Test Acc: 23.36065673828125
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_5
+Test Loss: 6.686409950256348 Test Acc: 15.983607292175293
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+Test Loss: 7.215213298797607 Test Acc: 28.00546646118164
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_2
+Test Loss: 5.945940017700195 Test Acc: 33.06010818481445
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_3
+Test Loss: 7.710418224334717 Test Acc: 26.502731323242188
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_4
+Test Loss: 7.355730056762695 Test Acc: 27.732240676879883
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_5
+Test Loss: 6.590442657470703 Test Acc: 19.945354461669922
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+Test Loss: 5.0840535163879395 Test Acc: 14.890710830688477
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_2
+Test Loss: 5.699066638946533 Test Acc: 31.83060073852539
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_3
+Test Loss: 7.609455108642578 Test Acc: 25.546449661254883
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_4
+Test Loss: 7.439444541931152 Test Acc: 24.590164184570312
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_5
+Test Loss: 9.395822525024414 Test Acc: 12.295082092285156
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+Test Loss: 5.370957851409912 Test Acc: 29.918033599853516
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_2
+Test Loss: 7.537341117858887 Test Acc: 33.87977981567383
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_3
+Test Loss: 9.295320510864258 Test Acc: 14.754098892211914
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_4
+Test Loss: 6.100943088531494 Test Acc: 29.644807815551758
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_5
+Test Loss: 6.386157035827637 Test Acc: 18.852458953857422
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+Test Loss: 9.064528465270996 Test Acc: 19.672130584716797
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_2
+Test Loss: 7.903715133666992 Test Acc: 17.213115692138672
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_3
+Test Loss: 7.382627964019775 Test Acc: 28.00546646118164
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_4
+Test Loss: 8.679213523864746 Test Acc: 27.595626831054688
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_10.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_5
+Test Loss: 7.732882976531982 Test Acc: 18.306011199951172
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+Test Loss: 5.312530040740967 Test Acc: 25.546449661254883
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_2
+Test Loss: 5.184835433959961 Test Acc: 34.016395568847656
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_3
+Test Loss: 6.29803991317749 Test Acc: 34.15300369262695
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_4
+Test Loss: 6.02471399307251 Test Acc: 32.240440368652344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_5
+Test Loss: 6.1735453605651855 Test Acc: 28.688522338867188
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+Test Loss: 7.171899318695068 Test Acc: 33.196720123291016
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_2
+Test Loss: 5.887256145477295 Test Acc: 31.83060073852539
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_3
+Test Loss: 4.612285614013672 Test Acc: 27.732240676879883
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_4
+Test Loss: 6.416930675506592 Test Acc: 29.644807815551758
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_5
+Test Loss: 5.9048004150390625 Test Acc: 24.043716430664062
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+Test Loss: 6.174523830413818 Test Acc: 31.967214584350586
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_2
+Test Loss: 5.875805377960205 Test Acc: 32.923500061035156
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_3
+Test Loss: 7.262595176696777 Test Acc: 27.185791015625
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_4
+Test Loss: 5.340550422668457 Test Acc: 32.37704849243164
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_5
+Test Loss: 6.3417768478393555 Test Acc: 25.819671630859375
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+Test Loss: 7.743199348449707 Test Acc: 23.49726676940918
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_2
+Test Loss: 5.302208423614502 Test Acc: 29.918033599853516
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_3
+Test Loss: 4.766679763793945 Test Acc: 35.79235076904297
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_4
+Test Loss: 7.108892917633057 Test Acc: 32.240440368652344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_5
+Test Loss: 6.083774089813232 Test Acc: 35.382511138916016
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+Test Loss: 5.363491058349609 Test Acc: 26.229507446289062
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_2
+Test Loss: 5.413423538208008 Test Acc: 29.781421661376953
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_3
+Test Loss: 5.000415802001953 Test Acc: 35.24590301513672
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_4
+Test Loss: 6.400336742401123 Test Acc: 35.655738830566406
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_5
+Test Loss: 5.213411331176758 Test Acc: 33.87977981567383
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+Test Loss: 5.866868495941162 Test Acc: 30.601093292236328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_2
+Test Loss: 6.303845405578613 Test Acc: 36.202186584472656
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_3
+Test Loss: 6.351864814758301 Test Acc: 34.016395568847656
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_4
+Test Loss: 4.784893035888672 Test Acc: 30.464481353759766
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_15.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_5
+Test Loss: 6.405462741851807 Test Acc: 32.5136604309082
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+Test Loss: 5.286932945251465 Test Acc: 39.20764923095703
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_2
+Test Loss: 4.816385746002197 Test Acc: 36.06557083129883
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_3
+Test Loss: 5.322851657867432 Test Acc: 31.147539138793945
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_4
+Test Loss: 4.879035472869873 Test Acc: 42.896175384521484
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_5
+Test Loss: 4.255882740020752 Test Acc: 35.79235076904297
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+Test Loss: 5.474312782287598 Test Acc: 30.327869415283203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_2
+Test Loss: 5.706879138946533 Test Acc: 35.79235076904297
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_3
+Test Loss: 5.6339030265808105 Test Acc: 36.748634338378906
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_4
+Test Loss: 7.524098873138428 Test Acc: 33.196720123291016
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_5
+Test Loss: 6.016457557678223 Test Acc: 33.6065559387207
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+Test Loss: 6.4048261642456055 Test Acc: 31.83060073852539
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_2
+Test Loss: 5.568045616149902 Test Acc: 35.79235076904297
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_3
+Test Loss: 4.468008518218994 Test Acc: 39.07103729248047
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_4
+Test Loss: 5.092850685119629 Test Acc: 36.33879852294922
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_5
+Test Loss: 4.648694038391113 Test Acc: 33.74317169189453
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+Test Loss: 4.219202995300293 Test Acc: 38.93442916870117
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_2
+Test Loss: 4.580341815948486 Test Acc: 36.748634338378906
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_3
+Test Loss: 4.5744733810424805 Test Acc: 40.02732467651367
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_4
+Test Loss: 5.814484119415283 Test Acc: 33.87977981567383
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_5
+Test Loss: 4.690435409545898 Test Acc: 35.109291076660156
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+Test Loss: 4.212704658508301 Test Acc: 38.93442916870117
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_2
+Test Loss: 4.971861362457275 Test Acc: 39.344261169433594
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_3
+Test Loss: 5.365222454071045 Test Acc: 40.43716049194336
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_4
+Test Loss: 4.320618152618408 Test Acc: 40.43716049194336
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_5
+Test Loss: 4.968589782714844 Test Acc: 31.5573787689209
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+Test Loss: 6.4486846923828125 Test Acc: 31.147539138793945
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_2
+Test Loss: 5.871405124664307 Test Acc: 33.333335876464844
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_3
+Test Loss: 4.034293174743652 Test Acc: 24.45355224609375
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_4
+Test Loss: 6.101269721984863 Test Acc: 37.02185821533203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_20.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_5
+Test Loss: 5.099057674407959 Test Acc: 35.92896270751953
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+Test Loss: 5.6917266845703125 Test Acc: 43.71584701538086
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_2
+Test Loss: 4.243142604827881 Test Acc: 46.7213134765625
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_3
+Test Loss: 4.5348124504089355 Test Acc: 44.80874252319336
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_4
+Test Loss: 4.091616630554199 Test Acc: 42.076499938964844
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_5
+Test Loss: 5.970372200012207 Test Acc: 39.890708923339844
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+Test Loss: 5.1115312576293945 Test Acc: 46.31147766113281
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_2
+Test Loss: 5.344655990600586 Test Acc: 35.109291076660156
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_3
+Test Loss: 4.289420127868652 Test Acc: 46.8579216003418
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_4
+Test Loss: 4.998011589050293 Test Acc: 38.93442916870117
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_5
+Test Loss: 3.553422689437866 Test Acc: 36.06557083129883
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+Test Loss: 4.829675674438477 Test Acc: 46.58469772338867
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_2
+Test Loss: 6.55112361907959 Test Acc: 35.519126892089844
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_3
+Test Loss: 4.025374412536621 Test Acc: 37.295082092285156
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_4
+Test Loss: 5.209667205810547 Test Acc: 43.16939926147461
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_5
+Test Loss: 4.395959377288818 Test Acc: 44.39890670776367
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+Test Loss: 4.758920192718506 Test Acc: 46.58469772338867
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_2
+Test Loss: 4.295150279998779 Test Acc: 44.94535446166992
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_3
+Test Loss: 4.107959747314453 Test Acc: 45.62841796875
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_4
+Test Loss: 4.876939296722412 Test Acc: 43.30601119995117
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_5
+Test Loss: 4.7873101234436035 Test Acc: 41.53005599975586
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+Test Loss: 5.974200248718262 Test Acc: 47.40437316894531
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_2
+Test Loss: 3.9264187812805176 Test Acc: 44.94535446166992
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_3
+Test Loss: 3.9177439212799072 Test Acc: 46.174861907958984
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_4
+Test Loss: 4.172936916351318 Test Acc: 45.62841796875
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_5
+Test Loss: 4.513879299163818 Test Acc: 44.6721305847168
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+Test Loss: 5.145934581756592 Test Acc: 45.081966400146484
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_2
+Test Loss: 4.999216556549072 Test Acc: 42.896175384521484
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_3
+Test Loss: 4.685412406921387 Test Acc: 34.15300369262695
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_4
+Test Loss: 4.145101547241211 Test Acc: 44.6721305847168
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_30.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_5
+Test Loss: 5.550401210784912 Test Acc: 32.37704849243164
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_40.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+Test Loss: 3.5010733604431152 Test Acc: 51.77595520019531
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_40.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_2
+Test Loss: 4.855923652648926 Test Acc: 44.6721305847168
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_40.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_3
+Test Loss: 4.799144744873047 Test Acc: 41.12022018432617
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/maml/config_rwth_split_40.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_4
