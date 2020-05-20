@@ -25,7 +25,7 @@ for i in $(seq $S $N); do
         "$ROOT/protonet/execute $ROOT/protonet/config_rwth_split_5.conf $ROOT/protonet/config_rwth_split_10.conf $ROOT/protonet/config_rwth_split_15.conf $ROOT/protonet/config_rwth_split_20.conf $ROOT/protonet/config_rwth_split_30.conf $ROOT/protonet/config_rwth_split_40.conf $ROOT/protonet/config_rwth_split_100.conf --times $T --is-split -o $ROOT/results/results_protonet_${i}_rwth"
     )
 
-    #tests=( "${tests[@]}" "${protonet_split_tests[@]}" )
+    tests=( "${tests[@]}" "${protonet_split_tests[@]}" )
 done
 
 densenet_tests=(
