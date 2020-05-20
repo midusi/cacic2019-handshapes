@@ -21,7 +21,7 @@ for i in $(seq $S $N); do
         "$ROOT/protonet/execute $ROOT/protonet/config_rwth.conf --times $T --split full_75_25_${i} -o $ROOT/results/results_protonet_${i}_rwth"
 
         "$ROOT/protonet/execute $ROOT/protonet/config_lsa16_split_5.conf $ROOT/protonet/config_lsa16_split_10.conf $ROOT/protonet/config_lsa16_split_15.conf $ROOT/protonet/config_lsa16_split_20.conf $ROOT/protonet/config_lsa16_split_30.conf --times $T --is-split -o $ROOT/results/results_protonet_${i}_lsa16"
-        "$ROOT/protonet/execute $ROOT/protonet/config_ciarp_split_5.conf $ROOT/protonet/config_ciarp_split_10.conf $ROOT/protonet/config_ciarp_split_15.conf $ROOT/protonet/config_ciarp_split_20.conf --times $T --is-split -o $ROOT/results/results_protonet_${i}_ciarp"
+        "$ROOT/protonet/execute $ROOT/protonet/config_ciarp_split_5.conf $ROOT/protonet/config_ciarp_split_10.conf $ROOT/protonet/config_ciarp_split_15.conf $ROOT/protonet/config_ciarp_split_20.conf $ROOT/protonet/config_ciarp_split_30.conf $ROOT/protonet/config_ciarp_split_40.conf $ROOT/protonet/config_ciarp_split_100.conf --times $T --is-split -o $ROOT/results/results_protonet_${i}_ciarp"
         "$ROOT/protonet/execute $ROOT/protonet/config_rwth_split_5.conf $ROOT/protonet/config_rwth_split_10.conf $ROOT/protonet/config_rwth_split_15.conf $ROOT/protonet/config_rwth_split_20.conf $ROOT/protonet/config_rwth_split_30.conf $ROOT/protonet/config_rwth_split_40.conf $ROOT/protonet/config_rwth_split_100.conf --times $T --is-split -o $ROOT/results/results_protonet_${i}_rwth"
     )
 
