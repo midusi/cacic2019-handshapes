@@ -6,7 +6,7 @@ import tensorflow as tf
 def train(model=None, epochs=10, batch_len=32, format_paths=True,
           train_gen=None, train_len=None, val_gen=None, val_len=None,
           train_loss=None, train_accuracy=None, test_loss=None, test_accuracy=None,
-          val_loss=None, val_accuracy=None, train_step=None, test_step=None,
+          val_loss=None, val_accuracy=None, train_step=None, test_step=None, meta_step=None,
           checkpoint_path=None, max_patience=25, nb_classes=None,
           train_summary_writer=None, val_summary_writer=None, csv_output_file=None,
           optimizer=None, meta_optimizer=None, loss_object=None, lr=0.001,
@@ -22,6 +22,8 @@ def train(model=None, epochs=10, batch_len=32, format_paths=True,
         meta_optimizer = tf.keras.optimizers.Adam()
 
     for epoch in range(epochs):
+
+        batches = 0
         while not ((batches + task_train_len + meta_train_len) >= train_len / batch_len):
             # get the weights of the initial model that will do the meta learning
             meta_model_weights = model.get_weights()
