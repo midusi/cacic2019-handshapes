@@ -7,6 +7,7 @@ import numpy as np
 import handshape_datasets as hd
 from pathlib import Path
 
+
 def load_rwth(data_dir, dataset, version):
     """
     Load rwth dataset.
@@ -21,10 +22,12 @@ def load_rwth(data_dir, dataset, version):
 
     hd.load(dataset, Path(path))
 
-    extracted_folderpath = os.path.join(path, 'rwth-phoenix',"ph2014-dev-set-handshape-annotations")
-    metadata_path = os.path.join(extracted_folderpath, "3359-ph2014-MS-handshape-annotations.txt")
-    search="*"
-    replace1="_"
+    extracted_folderpath = os.path.join(
+        path, 'rwth-phoenix', "ph2014-dev-set-handshape-annotations")
+    metadata_path = os.path.join(
+        extracted_folderpath, "3359-ph2014-MS-handshape-annotations.txt")
+    search = "*"
+    replace1 = "_"
     with open(metadata_path) as f:
         lines = f.readlines()
     lines = [x.strip().split(" ") for x in lines]
@@ -33,10 +36,10 @@ def load_rwth(data_dir, dataset, version):
     images_paths = [x[0] for x in lines]
     images_class_names = [x[1] for x in lines]
     if platform.system() == "Windows":
-        i=0
+        i = 0
         for im in images_paths:
-            images_paths[i]=im.replace(search, replace1)
-            i=i+1
+            images_paths[i] = im.replace(search, replace1)
+            i = i+1
     classes = sorted(list(set(images_class_names)))
     y = np.array([classes.index(name) for name in images_class_names])
     paths = [os.path.join(extracted_folderpath, path) for path in images_paths]
@@ -53,10 +56,10 @@ def load_rwth(data_dir, dataset, version):
         images = x[np.equal(i, y)]
         if len(images) >= good_min:
             good_classes = good_classes + [i]
-            
+
     x = x[np.in1d(y, good_classes)]
     y = y[np.in1d(y, good_classes)]
     y_dict = dict(zip(np.unique(y), range(len(np.unique(y)))))
     y = np.vectorize(y_dict.get)(y)
-    
+
     return x, y

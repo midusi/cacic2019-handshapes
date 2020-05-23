@@ -14,6 +14,7 @@ from densenet import densenet_model
 from src.datasets import load
 from src.utils.weighted_loss import weightedLoss
 
+
 def train(config):
     np.random.seed(2020)
     tf.random.set_seed(2020)
@@ -29,7 +30,7 @@ def train(config):
     train_summary_file_path = f"{config['summary.save_path'].format('train', config['data.dataset'], config['model.name'], config['model.type'], now_as_str)}"
     test_summary_file_path = f"{config['summary.save_path'].format('test', config['data.dataset'], config['model.name'], config['model.type'], now_as_str)}"
     summary_path = f"results/summary.csv"
-    
+
     # Output dirs
     data_dir = f"data/"
     checkpoint_dir = checkpoint_path[:checkpoint_path.rfind('/')]
@@ -44,7 +45,7 @@ def train(config):
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
 
-    file = open(f"{csv_output_path}", 'w') 
+    file = open(f"{csv_output_path}", 'w')
     file.write("")
     file.close()
 
@@ -67,7 +68,8 @@ def train(config):
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
 
-    train, val, _, nb_classes, image_shape, class_weights = load(config, datagen_flow=True)
+    train, val, _, nb_classes, image_shape, class_weights = load(
+        config, datagen_flow=True)
 
     (train_gen, train_len, _) = train
     (val_gen, val_len, _) = val
@@ -89,59 +91,55 @@ def train(config):
 
     time_start = time.time()
     # Compiles a model, prints the model summary, and saves the model diagram into a png file.
-    model = densenet_model(classes=nb_classes, shape=image_shape, growth_rate=config['model.growth_rate'], nb_layers=config['model.nb_layers'], reduction=config['model.reduction'])
+    model = densenet_model(classes=nb_classes, shape=image_shape,
+                           growth_rate=config['model.growth_rate'], nb_layers=config['model.nb_layers'], reduction=config['model.reduction'])
     # model.summary()
-    
+
     # tf.keras.utils.plot_model(model, "{}/model.png".format(results_dir), show_shapes=True)
 
     train_loss = tf.keras.metrics.Mean(name='train_loss')
-    train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
+    train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(
+        name='train_accuracy')
     val_loss = tf.keras.metrics.Mean(name='val_loss')
-    val_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='val_accuracy')
+    val_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(
+        name='val_accuracy')
 
     # create summary writers
-    train_summary_writer = tf.summary.create_file_writer(train_summary_file_path)
+    train_summary_writer = tf.summary.create_file_writer(
+        train_summary_file_path)
     val_summary_writer = tf.summary.create_file_writer(test_summary_file_path)
 
     print("Starting training")
 
-    loss, acc = train_engine.train(
-        model=model, batch_size=config['data.batch_size'],
-        epochs=config['train.epochs'], max_patience=config['train.patience'],
-        train_gen=train_gen, train_len=train_len, val_gen=val_gen, val_len=val_len,
-        train_loss=train_loss, train_accuracy=train_accuracy,
-        test_loss=val_loss, test_accuracy=val_accuracy,
-        val_loss=val_loss, val_accuracy=val_accuracy,
-        optimizer=optimizer, loss_object=loss_object,
-        checkpoint_path=checkpoint_path,
-        train_summary_writer=train_summary_writer,
-        val_summary_writer=val_summary_writer,
-        csv_output_file=csv_output_path,
-        engine=config['engine'], lr=config['train.lr'],
-    )
+    with tf.device(device_name):
+        loss, acc = train_engine.train(
+            model=model, batch_size=config['data.batch_size'],
+            epochs=config['train.epochs'], max_patience=config['train.patience'],
+            train_gen=train_gen, train_len=train_len, val_gen=val_gen, val_len=val_len,
+            train_loss=train_loss, train_accuracy=train_accuracy,
+            test_loss=val_loss, test_accuracy=val_accuracy,
+            val_loss=val_loss, val_accuracy=val_accuracy,
+            optimizer=optimizer, loss_object=loss_object,
+            checkpoint_path=checkpoint_path,
+            train_summary_writer=train_summary_writer,
+            val_summary_writer=val_summary_writer,
+            csv_output_file=csv_output_path,
+            nb_classes=nb_classes,
+            engine=config['engine'], lr=config['train.lr'],
+        )
 
     time_end = time.time()
 
-    summary = "{}, {}, {}, {}, {}, {}\n".format(now_as_str, config['data.dataset'], config['model.name'], config_path, loss, acc)
+    summary = "{}, {}, {}, {}, {}, {}\n".format(
+        now_as_str, config['data.dataset'], config['model.name'], config_path, loss, acc)
     print(summary)
 
-    file = open(summary_path, 'a+') 
+    file = open(summary_path, 'a+')
     file.write(summary)
     file.close()
 
-    model_path = tf.train.latest_checkpoint(checkpoint_dir, latest_filename=checkpoint_path)
-
-    if not model_path:
-        print("Skipping evaluation. No checkpoint found in: {}".format(checkpoint_dir))
-    else:
-        model_from_saved = tf.keras.models.load_model(model_path)
-        # model_from_saved.summary()
-
-        # Runs test data through the reloaded model to make sure the results are same.
-        predictions_from_saved = model_from_saved.predict(val_gen)
-
     elapsed = time_end - time_start
-    h, min = elapsed//3600, elapsed%3600//60
+    h, min = elapsed//3600, elapsed % 3600//60
     sec = elapsed-min*60
 
     print(f"Training took: {h:.2f}h {min:.2f}m {sec:.2f}s!")

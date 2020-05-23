@@ -5,9 +5,11 @@ from eval_setup import eval
 
 parser = argparse.ArgumentParser(description="Run evaluation")
 
+
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ["data.n_train_per_class", "data.n_test_per_class", "data.batch_size", "data.gpu", "data.cuda", "model.growth_rate"]
+    int_params = ["data.n_train_per_class", "data.n_test_per_class",
+                  "data.batch_size", "data.gpu", "data.cuda", "model.growth_rate"]
     float_params = ["data.train_size", "data.test_size", "data.rotation_range",
                     "data.width_shift_range", "data.height_shift_range", "model.reduction"]
 
@@ -19,8 +21,9 @@ def preprocess_config(c):
         else:
             conf_dict[param] = c[param]
 
-    conf_dict['model.nb_layers'] = list(map(int, c['model.nb_layers'].split(',')))
-    
+    conf_dict['model.nb_layers'] = list(
+        map(int, c['model.nb_layers'].split(',')))
+
     return conf_dict
 
 
@@ -60,5 +63,5 @@ args = vars(parser.parse_args())
 config = configparser.ConfigParser()
 config.read(args["config"])
 filtered_args = dict((k, v) for (k, v) in args.items() if not v is None)
-config = preprocess_config({ **config["EVAL"], **filtered_args })
+config = preprocess_config({**config["EVAL"], **filtered_args})
 eval(config)

@@ -7,8 +7,10 @@ parser = argparse.ArgumentParser(description="Generate splits for datasets")
 
 parser.add_argument("--seed", type=int, default=42)
 parser.add_argument("--split", type=str)
-parser.add_argument("--data_dir", type=str, default="", help="Input dir to load data")
-parser.add_argument("--splits_dir", type=str, default="/tmp/splits", help="Output dir to save the splits")
+parser.add_argument("--data_dir", type=str, default="",
+                    help="Input dir to load data")
+parser.add_argument("--splits_dir", type=str,
+                    default="/tmp/splits", help="Output dir to save the splits")
 parser.add_argument("--dataset", type=str, default="", help="Dataset name")
 parser.add_argument("--version", type=str, default="", help="Dataset version")
 parser.add_argument("--train_size", type=float, default=0)

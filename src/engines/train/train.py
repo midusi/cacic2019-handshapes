@@ -1,6 +1,7 @@
 import os
 import tensorflow as tf
 
+
 def train(model=None, epochs=10, batch_size=32, format_paths=True,
           train_gen=None, train_len=None, val_gen=None, val_len=None,
           train_loss=None, train_accuracy=None, val_loss=None, val_accuracy=None,
@@ -39,7 +40,7 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
             train_accuracy.result()*100,
             val_loss.result(),
             val_accuracy.result()*100)
-        print ('Epoch: {}, Train Loss: {}, Train Acc:{}, Test Loss: {}, Test Acc: {}'.format(
+        print('Epoch: {}, Train Loss: {}, Train Acc:{}, Test Loss: {}, Test Acc: {}'.format(
             epoch,
             train_loss.result(),
             train_accuracy.result()*100,
@@ -52,7 +53,8 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
             patience = 0
             # serialize weights to HDF5
             if format_paths:
-                checkpoint_path = checkpoint_path.format(epoch=epoch, val_loss=min_loss, val_accuracy=min_loss_acc)
+                checkpoint_path = checkpoint_path.format(
+                    epoch=epoch, val_loss=min_loss, val_accuracy=min_loss_acc)
             model.save_weights(checkpoint_path)
         else:
             patience += 1
@@ -60,20 +62,20 @@ def train(model=None, epochs=10, batch_size=32, format_paths=True,
         with train_summary_writer.as_default():
             tf.summary.scalar('loss', train_loss.result(), step=epoch)
             tf.summary.scalar('accuracy', train_accuracy.result(), step=epoch)
-            train_loss.reset_states()           
-            train_accuracy.reset_states()           
+            train_loss.reset_states()
+            train_accuracy.reset_states()
 
         with val_summary_writer.as_default():
             tf.summary.scalar('loss', val_loss.result(), step=epoch)
             tf.summary.scalar('accuracy', val_accuracy.result(), step=epoch)
-            val_loss.reset_states()           
+            val_loss.reset_states()
             val_accuracy.reset_states()
-            
+
         if patience >= max_patience:
             break
 
-    file = open(csv_output_file, 'w') 
-    file.write(results) 
+    file = open(csv_output_file, 'w')
+    file.write(results)
     file.close()
 
     return min_loss, min_loss_acc

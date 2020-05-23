@@ -11,12 +11,13 @@ from src.engines.steps import steps
 from src.utils.weighted_loss import weightedLoss
 from src.transfer_learning.model import create_model
 
+
 def eval(config):
     # Files path
     model_file_path = f"{config['model.path']}"
-    data_dir = f"data/"
 
-    _, _, test, nb_classes, image_shape, class_weights = load(config, datagen_flow=True)
+    _, _, test, nb_classes, image_shape, class_weights = load(
+        config, datagen_flow=True)
 
     (test_gen, test_len, _) = test
 
@@ -46,19 +47,24 @@ def eval(config):
     # model.summary()
 
     train_loss = tf.keras.metrics.Mean(name='train_loss')
-    train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
+    train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(
+        name='train_accuracy')
     test_loss = tf.keras.metrics.Mean(name='test_loss')
-    test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
+    test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(
+        name='test_accuracy')
 
-    _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy, test_loss=test_loss, test_accuracy=test_accuracy, engine=config['engine'])
+    _, _, test_step = steps(model, loss_object, optimizer, train_loss=train_loss, train_accuracy=train_accuracy,
+                            test_loss=test_loss, test_accuracy=test_accuracy, engine=config['engine'])
 
-    batches = 0
-    for test_images, test_labels in test_gen:
-        test_step(test_images, test_labels)
-        batches += 1
-        if batches >= test_len / config['data.batch_size']:
-            # we need to break the loop by hand because
-            # the generator loops indefinitely
-            break
+    with tf.device(device_name):
+        batches = 0
+        for test_images, test_labels in test_gen:
+            test_step(test_images, test_labels)
+            batches += 1
+            if batches >= test_len / config['data.batch_size']:
+                # we need to break the loop by hand because
+                # the generator loops indefinitely
+                break
 
-    print('Test Loss: {} Test Acc: {}'.format(test_loss.result(), test_accuracy.result()*100))
+    print('Test Loss: {} Test Acc: {}'.format(
+        test_loss.result(), test_accuracy.result()*100))
