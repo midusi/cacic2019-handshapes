@@ -76,15 +76,15 @@ def train(model=None, epochs=10, batch_len=32, format_paths=True,
 
         # test the newly trained model on the training set
         batches = 0
-        all_predictions = np.array([]).reshape(0, n_classes)
-        all_labels = np.array([]).reshape(0, n_classes)
-        for test_images, test_labels in test_gen:
+        all_predictions = np.array([]).reshape(0, nb_classes)
+        all_labels = np.array([]).reshape(0, nb_classes)
+        for test_images, test_labels in val_gen:
             test_predictions = test_step(test_images, test_labels)
             all_predictions = np.vstack((all_predictions, test_predictions))
             all_labels = np.vstack(
-                (all_labels, tf.one_hot(test_labels, n_classes)))
+                (all_labels, tf.one_hot(test_labels, nb_classes)))
             batches += 1
-            if batches >= test_len / batch_len:
+            if batches >= val_len / batch_len:
                 # we need to break the loop by hand because
                 # the generator loops indefinitely
                 break
