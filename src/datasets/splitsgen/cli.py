@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 
 import argparse
-from src.datasets import generate_splits
+from tf_tools.datasets import generate_splits
+
+from .ciarp import load_ciarp
+from .lsa16 import load_lsa16
+from .rwth import load_rwth
 
 parser = argparse.ArgumentParser(description="Generate splits for datasets")
 
@@ -21,4 +25,14 @@ parser.add_argument("--balanced", type=bool, default=False)
 
 args = vars(parser.parse_args())
 
-generate_splits(**args)
+# The data, split between train and test sets:
+if args['dataset'] == "Ciarp":
+    x, y = load_ciarp(args['data_dir'], args['dataset'], args['version'])
+elif args['dataset'] == "lsa16":
+    x, y = load_lsa16(args['data_dir'], args['dataset'], args['version'])
+elif args['dataset'] == "rwth":
+    x, y = load_rwth(args['data_dir'], args['dataset'], args['version'])
+else:
+    raise ValueError("Unknow args['dataset']: {}".format(args['dataset']))
+
+generate_splits(x, y, **args)

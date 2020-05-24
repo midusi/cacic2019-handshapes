@@ -8,11 +8,11 @@ import time
 import json
 import numpy as np
 import tensorflow as tf
-import src.engines.train as train_engine
+import tf_tools.engines.train as train_engine
 from datetime import datetime
 from src.datasets import load
 from src.transfer_learning.model import create_model
-from src.utils.weighted_loss import weightedLoss
+from tf_tools.weighted_loss import weighted_loss
 
 
 def train(config):
@@ -71,8 +71,8 @@ def train(config):
     train, val, _, nb_classes, image_shape, class_weights = load(
         config, datagen_flow=True)
 
-    (train_gen, train_len, _) = train
-    (val_gen, val_len, _) = val
+    (train_gen, train_size, _) = train
+    (val_gen, val_size, _) = val
 
     # Determine device
     if config['data.cuda']:
@@ -83,7 +83,7 @@ def train(config):
 
     if config['data.weight_classes']:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
-        loss_object = weightedLoss(loss_object, class_weights)
+        loss_object = weighted_loss(loss_object, class_weights)
     else:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
 
@@ -122,7 +122,7 @@ def train(config):
         loss, acc = train_engine.train(
             model=model, batch_size=config['data.batch_size'],
             epochs=config['train.epochs'], max_patience=config['train.patience'],
-            train_gen=train_gen, train_len=train_len, val_gen=val_gen, val_len=val_len,
+            train_gen=train_gen, train_size=train_size, val_gen=val_gen, val_size=val_size,
             train_loss=train_loss, train_accuracy=train_accuracy,
             test_loss=val_loss, test_accuracy=val_accuracy,
             val_loss=val_loss, val_accuracy=val_accuracy,

@@ -7,8 +7,8 @@ import tensorflow as tf
 from densenet import densenet_model
 from src.datasets import load
 from sklearn.metrics import classification_report, accuracy_score
-from src.engines.steps import steps
-from src.utils.weighted_loss import weightedLoss
+from tf_tools.engines.steps import steps
+from tf_tools.weighted_loss import weighted_loss
 
 
 def eval(config):
@@ -18,7 +18,7 @@ def eval(config):
     _, _, test, nb_classes, image_shape, class_weights = load(
         config, datagen_flow=True)
 
-    (test_gen, test_len, _) = test
+    (test_gen, test_size, _) = test
 
     # Determine device
     if config['data.cuda']:
@@ -29,7 +29,7 @@ def eval(config):
 
     if config['data.weight_classes']:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
-        loss_object = weightedLoss(loss_object, class_weights)
+        loss_object = weighted_loss(loss_object, class_weights)
     else:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
 
@@ -53,7 +53,7 @@ def eval(config):
         for test_images, test_labels in test_gen:
             test_step(test_images, test_labels)
             batches += 1
-            if batches >= test_len / config['data.batch_size']:
+            if batches >= test_size / config['data.batch_size']:
                 # we need to break the loop by hand because
                 # the generator loops indefinitely
                 break

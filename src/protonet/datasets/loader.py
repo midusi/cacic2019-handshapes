@@ -5,8 +5,9 @@ import tensorflow as tf
 import handshape_datasets as hd
 from pathlib import Path
 from src.datasets import load as load_dataset
-from src.utils.model_selection import train_test_split_balanced
+from tf_tools.model_selection import train_test_split_balanced
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
 
 class DataLoader(object):
     def __init__(self, data, n_classes, n_way, n_support, n_query, x_dim):
@@ -19,17 +20,20 @@ class DataLoader(object):
 
     def get_next_episode(self):
         w, h, c = self.x_dim
-        support = np.zeros([self.n_way, self.n_support, w, h, c], dtype=np.float32)
+        support = np.zeros(
+            [self.n_way, self.n_support, w, h, c], dtype=np.float32)
         query = np.zeros([self.n_way, self.n_query, w, h, c], dtype=np.float32)
         classes_ep = np.random.permutation(self.n_classes)[:self.n_way]
 
         for i, i_class in enumerate(classes_ep):
             n_samples = self.data[i_class].shape[0]
-            selected = np.random.permutation(n_samples)[:self.n_support + self.n_query]
+            selected = np.random.permutation(
+                n_samples)[:self.n_support + self.n_query]
             support[i] = self.data[i_class][selected[:self.n_support]]
             query[i] = self.data[i_class][selected[self.n_support:]]
 
         return support, query
+
 
 def load(data_dir, config, splits):
     """
@@ -49,7 +53,8 @@ def load(data_dir, config, splits):
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
 
-    train, val, test, nb_classes, image_shape, _ = load_dataset(config, with_datasets=True)
+    train, val, test, nb_classes, image_shape, _ = load_dataset(
+        config, with_datasets=True)
 
     w, h, c = image_shape
 
@@ -86,16 +91,17 @@ def load(data_dir, config, splits):
         i = np.argsort(y)
         y = y[i]
         x = x[i, :, :, :]
-        
+
         if config['model.type'] in ['augmentation']:
-           for index in i:
-               x[index, :, :, :] = datagen.apply_transform(x[index], datagen_args)
+            for index in i:
+                x[index, :, :, :] = datagen.apply_transform(
+                    x[index], datagen_args)
 
         data = [[] for i in range(nb_classes)]
         for index in i:
             data[y[index]].append(x[index])
 
-        data_loader = DataLoader(np.array([ np.array(images) for images in data ]),
+        data_loader = DataLoader(np.array([np.array(images) for images in data]),
                                  n_classes=nb_classes,
                                  n_way=n_way,
                                  n_support=n_support,
