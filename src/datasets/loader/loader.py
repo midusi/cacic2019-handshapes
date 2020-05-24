@@ -45,14 +45,15 @@ def load(config, datagen_flow=False, with_datasets=False):
         raise ValueError("Unknow dataset: {}".format(config['data.dataset']))
 
     x_train, x_test, x_val = x_train / 255.0, x_test / 255.0, x_val / 255.0
-    
+
     image_shape = np.shape(x_train)[1:]
     nb_classes = len(np.unique(y_train))
 
     class_weights = None
     if config['data.weight_classes']:
-        class_weights = compute_class_weight('balanced', np.unique(y_train), y_train)
-    
+        class_weights = compute_class_weight(
+            'balanced', np.unique(y_train), y_train)
+
     train_datagen_args = dict(featurewise_center=True,
                               featurewise_std_normalization=True,
                               rotation_range=config['data.rotation_range'],
@@ -65,32 +66,29 @@ def load(config, datagen_flow=False, with_datasets=False):
     train_datagen.fit(x_train)
 
     test_datagen_args = dict(featurewise_center=True,
-                            featurewise_std_normalization=True,
-                            fill_mode='constant',
-                            cval=0)
+                             featurewise_std_normalization=True,
+                             fill_mode='constant',
+                             cval=0)
     test_datagen = ImageDataGenerator(test_datagen_args)
     test_datagen.fit(x_train)
 
     val_datagen = ImageDataGenerator(test_datagen_args)
     val_datagen.fit(x_train)
 
-    train = (train_datagen, train_datagen_args, len(x_train), len(y_train))
-    test = (test_datagen, test_datagen_args, len(x_test), len(y_test))
-    val = (val_datagen, test_datagen_args, len(x_val), len(y_val))
+    data = dict(train_datagen=train_datagen, train_datagen_args=train_datagen_args, train_size=len(x_train),
+                test_datagen=test_datagen, test_datagen_args=test_datagen_args, test_size=len(x_test),
+                val_datagen=val_datagen, val_datagen_args=test_datagen_args, val_size=len(x_val),
+                nb_classes=nb_classes, image_shape=image_shape, class_weights=class_weights)
 
     if datagen_flow:
         # create data generators
-        train_gen = train_datagen.flow(x_train, y_train, batch_size=config['data.batch_size'])
-        test_gen = test_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'], shuffle=False)
-        val_gen = val_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'], shuffle=False)
-
-        train = (train_gen, len(x_train), len(y_train))
-        test = (test_gen, len(x_test), len(y_test))
-        val = (val_gen, len(x_val), len(y_val))
+        data["train_gen"] = train_datagen.flow(x_train, y_train, batch_size=config['data.batch_size'])
+        data["test_gen"] = test_datagen.flow(x_test, y_test, batch_size=config['data.batch_size'])
+        data["val_gen"] = val_datagen.flow(x_val, y_val, batch_size=config['data.batch_size'])
 
     if with_datasets:
-        train = (x_train, y_train, *train)
-        test = (x_test, y_test, *test)
-        val = (x_val, y_val, *val)
+        data["x_train"], data["y_train"] = x_train, y_train
+        data["x_test"], data["y_test"] = x_test, y_test
+        data["x_val"], data["y_val"] = x_val, y_val
 
-    return train, val, test, nb_classes, image_shape, class_weights
+    return data

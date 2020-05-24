@@ -15,10 +15,7 @@ def eval(config):
     # Files path
     model_file_path = f"{config['model.path']}"
 
-    _, _, test, nb_classes, image_shape, class_weights = load(
-        config, datagen_flow=True)
-
-    (test_gen, test_size, _) = test
+    data = load(config, datagen_flow=True)
 
     # Determine device
     if config['data.cuda']:
@@ -29,12 +26,12 @@ def eval(config):
 
     if config['data.weight_classes']:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
-        loss_object = weighted_loss(loss_object, class_weights)
+        loss_object = weighted_loss(loss_object, data["class_weights"])
     else:
         loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
 
     optimizer = tf.keras.optimizers.Adam()
-    model = densenet_model(classes=nb_classes, shape=image_shape,
+    model = densenet_model(classes=data["nb_classes"], shape=data["image_shape"],
                            growth_rate=config['model.growth_rate'], nb_layers=config['model.nb_layers'], reduction=config['model.reduction'])
     model.load_weights(model_file_path)
 
@@ -50,10 +47,10 @@ def eval(config):
 
     with tf.device(device_name):
         batches = 0
-        for test_images, test_labels in test_gen:
+        for test_images, test_labels in data["test_gen"]:
             test_step(test_images, test_labels)
             batches += 1
-            if batches >= test_size / config['data.batch_size']:
+            if batches >= data["test_size"] / config['data.batch_size']:
                 # we need to break the loop by hand because
                 # the generator loops indefinitely
                 break

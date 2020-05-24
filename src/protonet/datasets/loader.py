@@ -53,10 +53,7 @@ def load(data_dir, config, splits):
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
 
-    train, val, test, nb_classes, image_shape, _ = load_dataset(
-        config, with_datasets=True)
-
-    w, h, c = image_shape
+    data = load_dataset(config, with_datasets=True)
 
     ret = {}
 
@@ -79,12 +76,7 @@ def load(data_dir, config, splits):
         else:
             n_query = config['data.train_query']
 
-        if split == 'test':
-            (x, y, datagen, datagen_args, _, _) = test
-        elif split == 'val':
-            (x, y, datagen, datagen_args, _, _) = val
-        else:
-            (x, y, datagen, datagen_args, _, _) = train
+        x, y = data[f"x_{split}"], data[f"y_{split}"]
 
         # _, amountPerClass = np.unique(y, return_counts=True)
 
@@ -94,19 +86,19 @@ def load(data_dir, config, splits):
 
         if config['model.type'] in ['augmentation']:
             for index in i:
-                x[index, :, :, :] = datagen.apply_transform(
-                    x[index], datagen_args)
+                x[index, :, :, :] = data[f"{split}_datagen"].apply_transform(
+                    x[index], data[f"{split}_datagen_args"])
 
-        data = [[] for i in range(nb_classes)]
+        data = [[] for i in range(data["nb_classes"])]
         for index in i:
             data[y[index]].append(x[index])
 
         data_loader = DataLoader(np.array([np.array(images) for images in data]),
-                                 n_classes=nb_classes,
+                                 n_classes=data["nb_classes"],
                                  n_way=n_way,
                                  n_support=n_support,
                                  n_query=n_query,
-                                 x_dim=(w, h, c))
+                                 x_dim=data["image_shape"])
 
         ret[split] = data_loader
 
