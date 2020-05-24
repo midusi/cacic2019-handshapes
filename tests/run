@@ -8,12 +8,6 @@ T=5
 
 tests=()
 
-cifar10="./results/cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5"
-mnist="./results/mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5"
-
-cifar10_maml="./results/cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5"
-mnist_maml="./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5"
-
 for i in $(seq $S $N); do
     protonet_split_tests=(
         "$ROOT/protonet/execute $ROOT/protonet/config_lsa16.conf --times $T --split full_75_25_${i} -o $ROOT/results/results_protonet_${i}_lsa16"
@@ -28,18 +22,16 @@ for i in $(seq $S $N); do
     # tests=( "${tests[@]}" "${protonet_split_tests[@]}" )
 done
 
-densenet_tests=(
-    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $cifar10 --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
-    # "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
-
-    # "$ROOT/densenet/execute $ROOT/densenet/maml/config_mnist.conf --engine maml --weights $mnist_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
-    "$ROOT/densenet/execute $ROOT/densenet/maml/config_cifar10.conf --engine maml --weights $cifar10_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
-)
-
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Transfer Learning & Model Agnostic Meta Learning experiments using DenseNet
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 for i in $(seq $S $N); do
+    cifar10="./results/${i}_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5"
+    mnist="./results/${i}_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5"
+
+    cifar10_maml="./results/${i}_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5"
+    mnist_maml="./results/${i}_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5"
+
     ciarp="./results/${i}_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5"
     lsa16="./results/${i}_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5"
     rwth="./results/${i}_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5"
@@ -61,6 +53,12 @@ for i in $(seq $S $N); do
     tl_rwth_weights=$(printf ",%s" "${tl_rwth_weights[@]}"); tl_rwth_weights=${tl_rwth_weights:1}
 
     densenet_split_tests=(
+        # "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $cifar10 --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
+        # "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
+
+        # "$ROOT/densenet/execute $ROOT/densenet/maml/config_mnist.conf --engine maml --weights $mnist_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
+        "$ROOT/densenet/execute $ROOT/densenet/maml/config_cifar10.conf --engine maml --weights $cifar10_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}"
+
         # "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --weights $lsa16 --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}_lsa16"
         # "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --weights $ciarp --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}_ciarp"
         # "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --weights $rwth --times $T --split full_75_25_${i} -o $ROOT/results/results_densenet_${i}_rwth"
