@@ -41,9 +41,6 @@ def train(config):
     )
     # model.summary()
 
-    tf.keras.utils.plot_model(
-        model, "{}/model.png".format(results_dir), show_shapes=True)
-
     train_loss = tf.keras.metrics.Mean(name='train_loss')
     train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
     val_loss = tf.keras.metrics.Mean(name='val_loss')
