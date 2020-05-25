@@ -40,27 +40,27 @@ for i in $(seq $S $N); do
     lsa16_maml="./results/${i}_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5"
     rwth_maml="./results/${i}_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5"
 
-    tl_ciarp_weights=( $cifar10 $cifar10_maml $mnist $mnist_maml $lsa16 $lsa16_maml $rwth $rwth_maml )
-    tl_lsa16_weights=( $ciarp_maml $cifar10 $cifar10_maml $mnist $mnist_maml $rwth $rwth_maml )
-    tl_rwth_weights=( $ciarp_maml $cifar10 $cifar10_maml $lsa16 $lsa16_maml $mnist $mnist_maml )
+    tl_ciarp_weights=( $ciarp_maml $cifar10 $cifar10_maml $mnist $mnist_maml $lsa16 $lsa16_maml $rwth $rwth_maml )
+    tl_lsa16_weights=( $lsa16_maml $ciarp_maml $cifar10 $cifar10_maml $mnist $mnist_maml $rwth $rwth_maml )
+    tl_rwth_weights=( $rwth_maml $ciarp_maml $cifar10 $cifar10_maml $lsa16 $lsa16_maml $mnist $mnist_maml )
 
     tl_ciarp_weights=$(printf ",%s" "${tl_ciarp_weights[@]}"); tl_ciarp_weights=${tl_ciarp_weights:1}
     tl_lsa16_weights=$(printf ",%s" "${tl_lsa16_weights[@]}"); tl_lsa16_weights=${tl_lsa16_weights:1}
     tl_rwth_weights=$(printf ",%s" "${tl_rwth_weights[@]}"); tl_rwth_weights=${tl_rwth_weights:1}
 
     densenet_split_tests=(
-        "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --weights $lsa16 --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_lsa16"
-        "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --weights $ciarp --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_ciarp"
-        "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --weights $rwth --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_rwth"
+        # "$ROOT/densenet/execute $ROOT/densenet/normal/config_lsa16.conf --weights $lsa16 --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_lsa16"
+        # "$ROOT/densenet/execute $ROOT/densenet/normal/config_ciarp.conf --weights $ciarp --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_ciarp"
+        # "$ROOT/densenet/execute $ROOT/densenet/normal/config_rwth.conf --weights $rwth --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_rwth"
 
-        "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16.conf --engine maml --weights $lsa16_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_maml_lsa16"
-        "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp.conf --engine maml --weights $ciarp_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_maml_ciarp"
-        "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth.conf --engine maml --weights $rwth_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_maml_rwth"
+        # "$ROOT/densenet/execute $ROOT/densenet/maml/config_lsa16.conf --engine maml --weights $lsa16_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_maml_lsa16"
+        # "$ROOT/densenet/execute $ROOT/densenet/maml/config_ciarp.conf --engine maml --weights $ciarp_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_maml_ciarp"
+        # "$ROOT/densenet/execute $ROOT/densenet/maml/config_rwth.conf --engine maml --weights $rwth_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_maml_rwth"
         
-        "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $cifar10 --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_${i}"
-        "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_${i}"
+        # "$ROOT/densenet/execute $ROOT/densenet/normal/config_cifar10.conf --weights $cifar10 --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_${i}"
+        # "$ROOT/densenet/execute $ROOT/densenet/normal/config_mnist.conf --weights $mnist --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_${i}"
 
-        "$ROOT/densenet/execute $ROOT/densenet/maml/config_mnist.conf --engine maml --weights $mnist_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_${i}"
+        # "$ROOT/densenet/execute $ROOT/densenet/maml/config_mnist.conf --engine maml --weights $mnist_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_${i}"
         "$ROOT/densenet/execute $ROOT/densenet/maml/config_cifar10.conf --engine maml --weights $cifar10_maml --times $T --split full_75_25_${i} -o $ROOT/results/results_${i}_densenet_${i}"
 
         "$ROOT/transfer_learning/execute $ROOT/transfer_learning/normal/config_lsa16.conf --weights $tl_lsa16_weights --times $T -o $ROOT/results/results_${i}_densenet_lsa16"
