@@ -1,0 +1,16 @@
+
+DENSENET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_cifar10.conf
+Test Loss: 0.705022931098938 Test Acc: 77.22000122070312
+
+
+DENSENET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_mnist.conf
+Test Loss: 0.021220993250608444 Test Acc: 99.4000015258789
+
+
+DENSENET TESTS USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_mnist.conf
