@@ -14,3 +14,15 @@ Test Loss: 0.021220993250608444 Test Acc: 99.4000015258789
 DENSENET TESTS USING maml
 
 EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_mnist.conf
+
+DENSENET TESTS USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_mnist.conf
+Test Loss: 2.2360646724700928 Test Acc: 19.239999771118164
+
+
+DENSENET TESTS USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_cifar10.conf
+Test Loss: 2.2869765758514404 Test Acc: 10.0
+
