@@ -53,7 +53,7 @@ def load(data_dir, config, splits):
     if not os.path.exists(dataset_path):
         os.makedirs(dataset_path)
 
-    data = load_dataset(config, with_datasets=True)
+    data = load_dataset(config, datagen_flow = True, with_datasets=True)
 
     ret = {}
 
@@ -76,24 +76,30 @@ def load(data_dir, config, splits):
         else:
             n_query = config['data.train_query']
 
-        x, y = data[f"x_{split}"], data[f"y_{split}"]
+        batch_size = config['data.batch_size']
+        split_size = data[f"{split}_size"]
 
-        # _, amountPerClass = np.unique(y, return_counts=True)
+        x , y = data[f"{split}_gen"].next()
+
+        batches = 0
+        for images, labels in data[f"{split}_gen"]:
+            x = np.concatenate([x, images])
+            y = np.concatenate([y, labels])
+            batches += 1
+            if batches >= split_size / batch_size:
+                # we need to break the loop by hand because
+                # the generator loops indefinitely
+                break
 
         i = np.argsort(y)
         y = y[i]
         x = x[i, :, :, :]
 
-        if config['model.type'] in ['augmentation']:
-            for index in i:
-                x[index, :, :, :] = data[f"{split}_datagen"].apply_transform(
-                    x[index], data[f"{split}_datagen_args"])
-
-        data = [[] for i in range(data["nb_classes"])]
+        split_data = [[] for i in range(data["nb_classes"])]
         for index in i:
-            data[y[index]].append(x[index])
+            split_data[y[index]].append(x[index])
 
-        data_loader = DataLoader(np.array([np.array(images) for images in data]),
+        data_loader = DataLoader(np.array([np.array(images) for images in split_data]),
                                  n_classes=data["nb_classes"],
                                  n_way=n_way,
                                  n_support=n_support,
