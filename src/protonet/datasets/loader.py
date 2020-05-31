@@ -81,7 +81,7 @@ def load(data_dir, config, splits):
 
         x , y = data[f"{split}_gen"].next()
 
-        batches = 0
+        batches = 1
         for images, labels in data[f"{split}_gen"]:
             x = np.concatenate([x, images])
             y = np.concatenate([y, labels])
