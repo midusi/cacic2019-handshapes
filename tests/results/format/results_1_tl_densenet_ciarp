@@ -1,0 +1,263 @@
+
+DENSENET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_5.conf
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_10.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_10.conf
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_15.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_15.conf
+97.64044952392578, 99.77527618408203, 98.37078094482422, 98.37078094482422, 99.43820190429688
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_20.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_20.conf
+99.2134780883789, 98.48314666748047, 98.93257904052734, 98.98876190185547, 99.15730285644531
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_30.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_30.conf
+99.38202667236328, 99.88764190673828, 99.49437713623047, 99.88764190673828, 99.88764190673828
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_40.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_40.conf
+99.2134780883789, 100.0, 99.5505599975586, 99.88764190673828, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_100.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_100.conf
+100.0, 99.9438247680664, 100.0, 100.0, 100.0
+
+
+TRANSFER LEARNING TESTS WITH DENSENET
+10.0, 10.0, 10.0, 15.617977142333984, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_5.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+10.0, 18.483144760131836, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_5.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+10.0, 10.0, 10.0, 15.955056190490723, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_5.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+10.056180000305176, 10.0, 10.0, 10.168539047241211, 16.685394287109375
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_5.conf WITH WEIGHTS ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+10.0, 10.0, 10.0, 10.0, 11.235955238342285
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_5.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.0, 92.6966323852539, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.0, 94.32584381103516, 10.337078094482422, 11.573033332824707, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.0, 10.056180000305176, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.842696189880371, 16.404495239257812, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.0, 10.112359046936035, 10.0, 10.056180000305176, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+95.84269714355469, 10.0, 98.08988952636719, 98.98876190185547, 98.25843048095703
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+97.80899047851562, 98.37078094482422, 98.98876190185547, 98.98876190185547, 98.08988952636719
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+98.14607238769531, 97.19100952148438, 94.77528381347656, 97.7528076171875, 98.70787048339844
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+96.17977905273438, 97.47190856933594, 98.2022476196289, 98.82022857666016, 98.42697143554688
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+10.0, 99.2134780883789, 97.13482666015625, 95.39325714111328, 98.76404571533203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+97.6966323852539, 99.77527618408203, 99.0449447631836, 98.87640380859375, 97.58427429199219
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+97.80899047851562, 98.14607238769531, 97.19100952148438, 98.48314666748047, 97.13482666015625
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+96.96629333496094, 99.0449447631836, 99.0449447631836, 99.88764190673828, 99.32584381103516
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+97.97753143310547, 97.86517333984375, 98.70787048339844, 99.66292572021484, 99.38202667236328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+98.59550476074219, 99.2134780883789, 99.26966094970703, 99.5505599975586, 99.66292572021484
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+98.31460571289062, 99.71910095214844, 99.10112762451172, 99.0449447631836, 99.2134780883789
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+98.2022476196289, 99.71910095214844, 98.76404571533203, 98.37078094482422, 99.71910095214844
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+96.7977523803711, 98.76404571533203, 99.0449447631836, 97.19100952148438, 99.88764190673828
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+97.80899047851562, 99.43820190429688, 99.38202667236328, 99.2134780883789, 99.5505599975586
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.66292572021484, 99.77527618408203, 99.43820190429688, 99.83145904541016, 99.88764190673828
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.83145904541016, 99.38202667236328, 99.38202667236328, 99.60674285888672, 99.88764190673828
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.2134780883789, 99.43820190429688, 99.5505599975586, 98.42697143554688, 99.88764190673828
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.10112762451172, 99.77527618408203, 99.38202667236328, 99.71910095214844, 99.60674285888672
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+98.65167999267578, 99.83145904541016, 99.43820190429688, 99.88764190673828, 99.77527618408203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.66292572021484, 99.71910095214844, 99.26966094970703, 99.83145904541016, 99.43820190429688
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.5505599975586, 99.60674285888672, 99.38202667236328, 99.9438247680664, 99.71910095214844
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+98.93257904052734, 99.77527618408203, 99.43820190429688, 99.88764190673828, 99.77527618408203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+99.10112762451172, 99.66292572021484, 99.5505599975586, 99.9438247680664, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+99.10112762451172, 100.0, 99.77527618408203, 99.83145904541016, 99.83145904541016
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+99.77527618408203, 100.0, 99.10112762451172, 99.77527618408203, 100.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+99.71910095214844, 99.77527618408203, 98.25843048095703, 99.9438247680664, 99.83145904541016
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+99.49437713623047, 99.83145904541016, 99.60674285888672, 99.83145904541016, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+99.60674285888672, 99.88764190673828, 99.43820190429688, 99.49437713623047, 99.83145904541016
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 99.88764190673828, 99.9438247680664, 99.9438247680664, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 99.9438247680664, 99.83145904541016, 99.88764190673828, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 99.88764190673828, 99.9438247680664, 99.9438247680664, 100.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 99.88764190673828, 100.0, 99.83145904541016, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+99.9438247680664, 99.9438247680664, 100.0, 99.77527618408203, 100.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_rwth/densenet/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 99.9438247680664, 99.77527618408203, 99.77527618408203, 99.77527618408203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 99.9438247680664, 99.9438247680664, 100.0, 100.0
+
+
+DENSENET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_5.conf
+10.0, 10.056180000305176, 10.0, 10.0, 14.49438190460205
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_10.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_10.conf
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_15.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_15.conf
+97.7528076171875, 99.49437713623047, 97.6966323852539, 98.5393295288086, 98.5393295288086
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_20.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_20.conf
+99.60674285888672, 99.66292572021484, 99.0449447631836, 99.49437713623047, 99.26966094970703
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_30.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_30.conf
+99.5505599975586, 99.88764190673828, 99.26966094970703, 99.9438247680664, 99.77527618408203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_40.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_40.conf
+99.83145904541016, 99.88764190673828, 99.83145904541016, 100.0, 100.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_100.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp_split_100.conf
+100.0, 99.9438247680664, 100.0, 99.9438247680664, 100.0
+
+
+TRANSFER LEARNING TESTS WITH DENSENET
+12.359550476074219, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_5.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+10.0, 10.0, 10.0, 10.0, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_10.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+16.966291427612305, 10.0, 16.460674285888672, 10.112359046936035, 10.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+97.02247619628906, 96.85392761230469, 91.2921371459961, 96.62921142578125, 95.78651428222656
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_15.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+10.0, 99.10112762451172, 97.35955047607422, 97.86517333984375, 96.34831237792969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+96.46067810058594, 99.49437713623047, 99.0449447631836, 97.6966323852539, 99.38202667236328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_20.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+98.14607238769531, 98.76404571533203, 98.82022857666016, 99.43820190429688, 99.38202667236328
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.32584381103516, 99.9438247680664, 99.38202667236328, 100.0, 100.0
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_30.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 30_samples_1
+99.60674285888672, 99.66292572021484, 99.38202667236328, 99.66292572021484, 99.88764190673828
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+95.505615234375, 99.9438247680664, 99.26966094970703, 99.9438247680664, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_40.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 40_samples_1
+99.71910095214844, 99.88764190673828, 99.49437713623047, 99.66292572021484, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 99.9438247680664, 100.0, 99.9438247680664, 99.9438247680664
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_ciarp_split_100.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 100_samples_1
+100.0, 100.0, 100.0, 99.88764190673828, 100.0
+

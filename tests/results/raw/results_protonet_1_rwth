@@ -1,0 +1,116 @@
+
+PROTONET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth.conf
+Test Loss: 1.313979148864746 Test Acc: 47.01996612548828
+
+
+PROTONET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_5.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_5.conf WITH SPLIT 5_samples_1
+Test Loss: 2.9280972480773926 Test Acc: 48.16395950317383
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_5.conf WITH SPLIT 5_samples_2
+Test Loss: 2.4682531356811523 Test Acc: 47.58396911621094
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_5.conf WITH SPLIT 5_samples_3
+Test Loss: 2.1597046852111816 Test Acc: 52.84401321411133
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_5.conf WITH SPLIT 5_samples_4
+Test Loss: 2.205937385559082 Test Acc: 45.092002868652344
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_5.conf WITH SPLIT 5_samples_5
+Test Loss: 2.0638487339019775 Test Acc: 50.96800231933594
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_10.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_10.conf WITH SPLIT 10_samples_1
+Test Loss: 1.3959925174713135 Test Acc: 47.592018127441406
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_10.conf WITH SPLIT 10_samples_2
+Test Loss: 1.3988605737686157 Test Acc: 48.79598617553711
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_10.conf WITH SPLIT 10_samples_3
+Test Loss: 1.3249419927597046 Test Acc: 51.14002227783203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_10.conf WITH SPLIT 10_samples_4
+Test Loss: 1.4417402744293213 Test Acc: 48.123966217041016
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_10.conf WITH SPLIT 10_samples_5
+Test Loss: 1.3873724937438965 Test Acc: 47.04798126220703
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_15.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_15.conf WITH SPLIT 15_samples_1
+Test Loss: 1.2913187742233276 Test Acc: 48.40800476074219
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_15.conf WITH SPLIT 15_samples_2
+Test Loss: 1.274632215499878 Test Acc: 50.10399627685547
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_15.conf WITH SPLIT 15_samples_3
+Test Loss: 1.297311782836914 Test Acc: 50.16399002075195
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_15.conf WITH SPLIT 15_samples_4
+Test Loss: 1.3411145210266113 Test Acc: 49.38794708251953
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_15.conf WITH SPLIT 15_samples_5
+Test Loss: 1.439957618713379 Test Acc: 46.299957275390625
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_20.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_20.conf WITH SPLIT 20_samples_1
+Test Loss: 1.5863888263702393 Test Acc: 45.11995315551758
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_20.conf WITH SPLIT 20_samples_2
+Test Loss: 1.3391969203948975 Test Acc: 45.99999237060547
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_20.conf WITH SPLIT 20_samples_3
+Test Loss: 1.3057140111923218 Test Acc: 47.5319709777832
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_20.conf WITH SPLIT 20_samples_4
+Test Loss: 1.294050931930542 Test Acc: 47.87596893310547
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_20.conf WITH SPLIT 20_samples_5
+Test Loss: 1.3216702938079834 Test Acc: 47.1319694519043
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_30.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_30.conf WITH SPLIT 30_samples_1
+Test Loss: 1.2855623960494995 Test Acc: 49.20800018310547
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_30.conf WITH SPLIT 30_samples_2
+Test Loss: 1.307706356048584 Test Acc: 47.68001937866211
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_30.conf WITH SPLIT 30_samples_3
+Test Loss: 1.3206373453140259 Test Acc: 47.872005462646484
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_30.conf WITH SPLIT 30_samples_4
+Test Loss: 1.3476134538650513 Test Acc: 47.67997741699219
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_30.conf WITH SPLIT 30_samples_5
+Test Loss: 1.352682113647461 Test Acc: 45.487998962402344
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_40.conf
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_40.conf WITH SPLIT 40_samples_1
+Test Loss: 1.0344808101654053 Test Acc: 62.1920280456543
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_40.conf WITH SPLIT 40_samples_2
+Test Loss: 1.2732040882110596 Test Acc: 48.63997268676758
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_40.conf WITH SPLIT 40_samples_3
+Test Loss: 1.344701886177063 Test Acc: 44.68396759033203
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_40.conf WITH SPLIT 40_samples_4
+Test Loss: 1.2556122541427612 Test Acc: 48.96000671386719
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth_split_40.conf WITH SPLIT 40_samples_5
+Test Loss: 1.3165981769561768 Test Acc: 47.343994140625
+

@@ -1,0 +1,32 @@
+
+DENSENET TESTS
+96.19564819335938
+
+
+TRANSFER LEARNING TESTS WITH DENSENET
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_rwth/densenet_maml/checkpoints/checkpoint.rwth_densenet_test_growth_rate_64_layers_6_12.h5
+95.78804016113281, 94.42935180664062, 93.88587188720703, 96.60326385498047, 97.01087188720703
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_ciarp/densenet_maml/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5
+96.3315200805664, 95.51630401611328, 95.65217590332031, 96.3315200805664, 96.19564819335938
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_cifar10/densenet/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5
+93.34239196777344, 94.56521606445312, 96.875, 96.05978393554688, 95.65217590332031
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5
+95.92391204833984, 95.24456024169922, 95.24456024169922, 95.78804016113281, 95.24456024169922
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_lsa16/densenet_maml/checkpoints/checkpoint.lsa16_densenet_test_growth_rate_64_layers_6_12.h5
+96.05978393554688, 92.93478393554688, 95.78804016113281, 96.46739196777344, 96.19564819335938
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+95.65217590332031, 96.46739196777344, 95.38043975830078, 97.01087188720703, 96.3315200805664
+
+
+TRANSFER LEARNING TESTS WITH DENSENET
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_cifar10/densenet_maml/checkpoints/checkpoint.cifar10_densenet_test_growth_rate_64_layers_6_12.h5
+95.65217590332031, 96.46739196777344, 95.78804016113281, 95.92391204833984, 96.60326385498047
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_rwth.conf WITH WEIGHTS ./results/1_mnist/densenet_maml/checkpoints/checkpoint.mnist_densenet_test_growth_rate_64_layers_6_12.h5
+95.51630401611328, 96.46739196777344, 96.19564819335938, 95.65217590332031, 94.83695983886719
+
