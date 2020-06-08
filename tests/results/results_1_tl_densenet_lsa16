@@ -1,0 +1,66 @@
+
+TRANSFER LEARNING TESTS WITH DENSENET
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_1
+Test Loss: 2.77226185798645 Test Acc: 6.25
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_2
+Test Loss: 2.771496534347534 Test Acc: 6.25
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_3
+Test Loss: 2.771743059158325 Test Acc: 6.25
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_4
+Test Loss: 2.772111654281616 Test Acc: 6.25
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_5.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 5_samples_5
+Test Loss: 2.772205352783203 Test Acc: 6.25
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_1
+Test Loss: 0.38012149930000305 Test Acc: 91.66667175292969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_2
+Test Loss: 0.3810310363769531 Test Acc: 94.27082824707031
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_3
+Test Loss: 0.4321938455104828 Test Acc: 91.66667175292969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_4
+Test Loss: 0.24985142052173615 Test Acc: 95.3125
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_10.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 10_samples_5
+Test Loss: 0.49981892108917236 Test Acc: 90.625
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_1
+Test Loss: 0.260872483253479 Test Acc: 94.27082824707031
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_2
+Test Loss: 0.27873626351356506 Test Acc: 94.79167175292969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_3
+Test Loss: 0.4687514007091522 Test Acc: 91.66667175292969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_4
+Test Loss: 0.48507097363471985 Test Acc: 89.58332824707031
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_15.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 15_samples_5
+Test Loss: 0.29586198925971985 Test Acc: 92.70832824707031
+
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_1
+Test Loss: 0.29507771134376526 Test Acc: 95.3125
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_2
+Test Loss: 0.21026195585727692 Test Acc: 95.83332824707031
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_3
+Test Loss: 0.14590434730052948 Test Acc: 97.39582824707031
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_4
+Test Loss: 0.26691582798957825 Test Acc: 96.35417175292969
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/transfer_learning/normal/config_lsa16_split_20.conf WITH WEIGHTS ./results/1_ciarp/densenet/checkpoints/checkpoint.ciarp_densenet_test_growth_rate_64_layers_6_12.h5 WITH SPLIT 20_samples_5
+Test Loss: 0.12399351596832275 Test Acc: 98.4375
+
