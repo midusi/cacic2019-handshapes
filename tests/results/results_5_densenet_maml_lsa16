@@ -1,0 +1,6 @@
+
+DENSENET TESTS USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_lsa16.conf
+Test Loss: 2.769399881362915 Test Acc: 6.25
+
