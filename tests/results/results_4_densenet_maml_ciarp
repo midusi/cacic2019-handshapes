@@ -1,6 +1,0 @@
-
-DENSENET TESTS USING maml
-
-EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_ciarp.conf
-Test Loss: 2.2918245792388916 Test Acc: 19.269662857055664
-

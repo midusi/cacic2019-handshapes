@@ -1,6 +1,0 @@
-
-DENSENET TESTS
-
-EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_ciarp.conf
-Test Loss: 0.013073863461613655 Test Acc: 99.38202667236328
-
