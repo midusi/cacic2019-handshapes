@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import argparse
-from tf_tools.datasets import generate_splits
+from tf_tools.datasets.splitsgen import generate_splits
 
 from .ciarp import load_ciarp
 from .lsa16 import load_lsa16
