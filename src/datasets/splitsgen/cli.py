@@ -3,9 +3,9 @@
 import argparse
 from tf_tools.datasets.splitsgen import generate_splits
 
-from .ciarp import load_ciarp
-from .lsa16 import load_lsa16
-from .rwth import load_rwth
+from src.datasets.splitsgen.ciarp import load_ciarp
+from src.datasets.splitsgen.lsa16 import load_lsa16
+from src.datasets.splitsgen.rwth import load_rwth
 
 parser = argparse.ArgumentParser(description="Generate splits for datasets")
 
