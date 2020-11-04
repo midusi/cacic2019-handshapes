@@ -3,9 +3,11 @@ import configparser
 
 from train_setup import train
 
+
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ["data.n_train_per_class", "data.n_test_per_class", "data.batch_size", "data.episodes", "data.gpu", "data.cuda", "train.epochs", "train.patience"]
+    int_params = ["data.n_train_per_class", "data.n_test_per_class",
+                  "data.batch_size", "data.gpu", "data.cuda", "train.epochs", "train.patience"]
     float_params = ["train.lr", "data.train_size", "data.test_size", "data.rotation_range",
                     "data.width_shift_range", "data.height_shift_range"]
     for param in c:
@@ -26,8 +28,8 @@ parser.add_argument("--engine", type=str, default="")
 
 parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)
+parser.add_argument("--data.version", type=str, default=None)
 parser.add_argument("--data.batch_size", type=int, default=None)
-parser.add_argument("--data.episodes", type=int, default=None)
 parser.add_argument("--data.cuda", type=int, default=None)
 parser.add_argument("--data.gpu", type=int, default=None)
 
@@ -55,5 +57,5 @@ args = vars(parser.parse_args())
 config = configparser.ConfigParser()
 config.read(args['config'])
 filtered_args = dict((k, v) for (k, v) in args.items() if not v is None)
-config = preprocess_config({ **config['TRAIN'], **filtered_args })
+config = preprocess_config({**config['TRAIN'], **filtered_args})
 train(config)

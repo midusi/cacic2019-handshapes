@@ -2,6 +2,7 @@
 Logic for evaluation procedure of saved model.
 """
 
+import numpy as np
 import tensorflow as tf
 
 # tf.config.gpu.set_per_process_memory_growth(True)
@@ -18,7 +19,6 @@ def eval(config):
     model = Prototypical(n_support, n_query, w, h, c, nb_layers=config['model.nb_layers'], nb_filters=config['model.nb_filters'])
     model_path = f"{config['model.save_path'].format(config['model.type'])}"
     model.load(model_path)
-    print("Model loaded.")
 
     # Determine device
     if config['data.cuda']:
@@ -43,15 +43,13 @@ def eval(config):
     with tf.device(device_name):
         for i_episode in range(config['data.episodes']):
             support, query = test_loader.get_next_episode()
-            if (i_episode+1)%50 == 0: 
-                print("Episode: ", i_episode + 1)
+            # if (i_episode+1)%50 == 0: 
+            #    print("Episode: ", i_episode + 1)
             loss, acc = calc_loss(support, query)
             test_loss(loss)
             test_acc(acc)
 
-    print("Loss: ", test_loss.result().numpy())
-    print("Accuracy: ", test_acc.result().numpy())
-
+    print('Test Loss: {} Test Acc: {}'.format(test_loss.result(), test_acc.result()*100))
 
 if __name__ == "__main__":
     pass

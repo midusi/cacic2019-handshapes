@@ -32,9 +32,11 @@ parser.add_argument("--config", type=str, default="./src/protonet/config/config_
 parser.add_argument("--model.base", type=str, default="")
 
 parser.add_argument("--engine", type=str, default="")
+parser.add_argument("--times", type=int, default=10)
 
 parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)
+parser.add_argument("--data.version", type=str, default=None)
 parser.add_argument("--data.test_way", type=int, default=None)
 parser.add_argument("--data.test_support", type=int, default=None)
 parser.add_argument("--data.test_query", type=int, default=None)
@@ -52,6 +54,8 @@ parser.add_argument("--data.train_size", type=float, default=None)
 parser.add_argument("--data.test_size", type=float, default=None)
 parser.add_argument("--data.n_train_per_class", type=int, default=None)
 parser.add_argument("--data.n_test_per_class", type=int, default=None)
+
+parser.add_argument("--data.weight_classes", type=bool, default=False)
 
 parser.add_argument("--model.x_dim", type=str, default=None)
 parser.add_argument("--model.type", type=str, default=None)

@@ -16,26 +16,83 @@ has_param() {
 . $ROOT/../../scripts/flags/declares.sh
 
 variables["-o"]="output"
+variables["--engine"]="engine"
+variables["--times"]="times"
+variables["--weights"]="weights"
+variables["--split"]="split"
 
 . $ROOT/../../scripts/flags/arguments.sh
 
 output=${output:-"/tmp/tests"}
+engine=${engine:-""}
+times=${times:-"10"}
+weights=${weights:-","}
+split=${split:-"full_75_25"}
 
 . $ROOT/../cases.sh
 
-echo "" >> "$output"
-echo "Transfer Learning tests with DenseNet" >> "$output"
+engine_flag=""
+if [ "$engine" != "" ]; then
+    engine_flag="--engine $engine"
+fi
+
+echo >> $output
+if [ "$engine" != "" ]; then
+    echo "TRANSFER LEARNING TESTS WITH DENSENET USING $engine" >> $output
+else
+    echo "TRANSFER LEARNING TESTS WITH DENSENET" >> $output
+fi
 
 for config_path in ${test_cases[*]}; do
     if [ ! -f "$config_path" ] || [ "${config_path: -5}" != ".conf" ]; then
         continue
     fi
 
-    echo "Executing test case with config at $config_path"
-    echo "Executing test case with config at $config_path" >> "$output"
+    for model_weights in $(echo $weights | tr ',' '\n'); do
+        weights_flag=""
+        if [ "$model_weights" = "" ]; then
+            weights_flag="--model.weights $model_weights"
+        fi
 
-    python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path
-    for i in {1..10}; do
-        python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path >> "$output"
+        message="EXECUTING TEST CASE WITH CONFIG AT $config_path"
+        if [ "$model_weights" != "" ]; then
+            message="EXECUTING TEST CASE WITH CONFIG AT $config_path WITH WEIGHTS $model_weights"
+        fi
+        
+        if ! has_param '--is-split' "$@"; then
+            echo $message >> $output
+
+            for i in $(seq 1 $times); do
+                echo >> $output
+                split_message="$message WITH SPLIT ${split}_$i"
+                echo $split_message >> $output
+                
+                python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag
+                python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag >> $output
+            done
+        else
+            split=""
+            if [ "${config_path: -7}" = "_5.conf" ]; then split="5_samples"; fi
+            if [ "${config_path: -7}" = "10.conf" ]; then split="10_samples"; fi
+            if [ "${config_path: -7}" = "15.conf" ]; then split="15_samples"; fi
+            if [ "${config_path: -7}" = "20.conf" ]; then split="20_samples"; fi
+            if [ "${config_path: -7}" = "30.conf" ]; then split="30_samples"; fi
+            if [ "${config_path: -7}" = "30.conf" ]; then split="30_samples"; fi
+            if [ "${config_path: -7}" = "40.conf" ]; then split="40_samples"; fi
+            if [ "${config_path: -8}" = "100.conf" ]; then split="100_samples"; fi
+
+            for i in $(seq 1 $times); do
+                echo >> $output
+                split_message="$message WITH SPLIT ${split}_$i"
+                echo $split_message >> $output
+
+                echo "Running python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag"
+                python $ROOT/../../src/transfer_learning/scripts/train/run_train.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag
+                echo "Running python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag"
+                python $ROOT/../../src/transfer_learning/scripts/eval/run_eval.py --config $config_path --data.split ${split}_$i $engine_flag $weights_flag >> $output
+            done
+        fi
+
+        echo >> $output
     done
 done

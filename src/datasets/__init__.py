@@ -1,3 +1,3 @@
-"""Datasets loader"""
+"""Datasets logic"""
 
 from .loader import load

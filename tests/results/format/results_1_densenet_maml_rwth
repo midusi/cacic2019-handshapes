@@ -1,0 +1,6 @@
+
+DENSENET TESTS USING maml
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/maml/config_rwth.conf
+Test Loss: 887730.1875 Test Acc: 2.9891304969787598
+

@@ -1,0 +1,2 @@
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_rwth.conf
+Test Loss: 1.3202136754989624 Test Acc: 47.16398239135742

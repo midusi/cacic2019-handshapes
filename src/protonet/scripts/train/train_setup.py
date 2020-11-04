@@ -74,7 +74,7 @@ def train(config):
         file.write("datetime,config,trained_model,result,train_summary,test_summary\n")
         file.close()
 
-    file = open(csv_output_map_file, 'a+') 
+    file = open(csv_output_map_file, 'a+' if not os.path.exists(csv_output_map_file) else 'w') 
     file.write("{},{},{},{},{},{}\n".format(now_as_str,
                                             config_file,
                                             model_file,

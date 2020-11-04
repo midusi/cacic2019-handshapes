@@ -5,7 +5,7 @@ from train_setup import train
 
 def preprocess_config(c):
     conf_dict = {}
-    int_params = ["data.n_train_per_class", "data.n_test_per_class", "data.batch_size", "data.episodes", "data.gpu", "data.cuda", "model.growth_rate", "train.epochs", "train.patience"]
+    int_params = ["data.n_train_per_class", "data.n_test_per_class", "data.batch_size", "data.gpu", "data.cuda", "model.growth_rate", "train.epochs", "train.patience"]
     float_params = ["train.lr", "data.train_size", "data.test_size", "data.rotation_range",
                     "data.width_shift_range", "data.height_shift_range", "model.reduction"]
 
@@ -23,15 +23,15 @@ def preprocess_config(c):
 
 
 parser = argparse.ArgumentParser(description='Run training')
-parser.add_argument("--config", type=str, default="./src/densenet/config/config_densenet.conf",
+parser.add_argument("--config", type=str, default="./src/densenet/config/config_default.conf",
                     help="Path to the config file.")
 
 parser.add_argument("--engine", type=str, default="")
 
 parser.add_argument("--data.dataset", type=str, default=None)
 parser.add_argument("--data.split", type=str, default=None)
+parser.add_argument("--data.version", type=str, default=None)
 parser.add_argument("--data.batch_size", type=int, default=None)
-parser.add_argument("--data.episodes", type=int, default=None)
 parser.add_argument("--data.cuda", type=int, default=None)
 parser.add_argument("--data.gpu", type=int, default=None)
 
@@ -48,7 +48,7 @@ parser.add_argument("--data.n_test_per_class", type=int, default=None)
 parser.add_argument("--data.weight_classes", type=bool, default=False)
 
 parser.add_argument("--model.name", type=str, default=None)
-parser.add_argument("--model.weights", type=str, default=None)
+parser.add_argument("--model.save_path", type=str, default=None)
 parser.add_argument("--model.nb_layers", type=str, default=None)
 parser.add_argument("--model.growth_rate", type=int, default=None)
 parser.add_argument("--model.reduction", type=float, default=None)

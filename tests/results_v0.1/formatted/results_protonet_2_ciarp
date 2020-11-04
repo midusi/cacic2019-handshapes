@@ -1,0 +1,2 @@
+EXECUTING TEST CASE WITH CONFIG AT ./tests/protonet/config_ciarp.conf
+Test Loss: 0.0258499626070261 Test Acc: 99.52006530761719

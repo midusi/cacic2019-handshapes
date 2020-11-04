@@ -1,0 +1,6 @@
+
+DENSENET TESTS
+
+EXECUTING TEST CASE WITH CONFIG AT ./tests/densenet/normal/config_rwth.conf
+Test Loss: 0.14691579341888428 Test Acc: 95.38043975830078
+
